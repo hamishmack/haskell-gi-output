@@ -1,0 +1,43 @@
+module GI.Gtk.Objects.Stack where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Stack = Stack (ForeignPtr Stack)
+instance GObject Stack where
+class GObject o => StackK o
+instance (GObject o, IsDescendantOf Stack o) => StackK o
+data StackHhomogeneousPropertyInfo
+data StackHomogeneousPropertyInfo
+data StackInterpolateSizePropertyInfo
+data StackTransitionDurationPropertyInfo
+data StackTransitionRunningPropertyInfo
+data StackTransitionTypePropertyInfo
+data StackVhomogeneousPropertyInfo
+data StackVisibleChildPropertyInfo
+data StackVisibleChildNamePropertyInfo
+data StackAddNamedMethodInfo
+data StackAddTitledMethodInfo
+data StackGetChildByNameMethodInfo
+data StackGetHhomogeneousMethodInfo
+data StackGetHomogeneousMethodInfo
+data StackGetInterpolateSizeMethodInfo
+data StackGetTransitionDurationMethodInfo
+data StackGetTransitionRunningMethodInfo
+data StackGetTransitionTypeMethodInfo
+data StackGetVhomogeneousMethodInfo
+data StackGetVisibleChildMethodInfo
+data StackGetVisibleChildNameMethodInfo
+data StackSetHhomogeneousMethodInfo
+data StackSetHomogeneousMethodInfo
+data StackSetInterpolateSizeMethodInfo
+data StackSetTransitionDurationMethodInfo
+data StackSetTransitionTypeMethodInfo
+data StackSetVhomogeneousMethodInfo
+data StackSetVisibleChildMethodInfo
+data StackSetVisibleChildFullMethodInfo
+data StackSetVisibleChildNameMethodInfo

@@ -1,0 +1,48 @@
+module GI.Gdk.Objects.Screen where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Screen = Screen (ForeignPtr Screen)
+instance GObject Screen where
+class GObject o => ScreenK o
+instance (GObject o, IsDescendantOf Screen o) => ScreenK o
+data ScreenFontOptionsPropertyInfo
+data ScreenResolutionPropertyInfo
+data ScreenCompositedChangedSignalInfo
+data ScreenMonitorsChangedSignalInfo
+data ScreenSizeChangedSignalInfo
+data ScreenGetActiveWindowMethodInfo
+data ScreenGetDisplayMethodInfo
+data ScreenGetFontOptionsMethodInfo
+data ScreenGetHeightMethodInfo
+data ScreenGetHeightMmMethodInfo
+data ScreenGetMonitorAtPointMethodInfo
+data ScreenGetMonitorAtWindowMethodInfo
+data ScreenGetMonitorGeometryMethodInfo
+data ScreenGetMonitorHeightMmMethodInfo
+data ScreenGetMonitorPlugNameMethodInfo
+data ScreenGetMonitorScaleFactorMethodInfo
+data ScreenGetMonitorWidthMmMethodInfo
+data ScreenGetMonitorWorkareaMethodInfo
+data ScreenGetNMonitorsMethodInfo
+data ScreenGetNumberMethodInfo
+data ScreenGetPrimaryMonitorMethodInfo
+data ScreenGetResolutionMethodInfo
+data ScreenGetRgbaVisualMethodInfo
+data ScreenGetRootWindowMethodInfo
+data ScreenGetSettingMethodInfo
+data ScreenGetSystemVisualMethodInfo
+data ScreenGetToplevelWindowsMethodInfo
+data ScreenGetWidthMethodInfo
+data ScreenGetWidthMmMethodInfo
+data ScreenGetWindowStackMethodInfo
+data ScreenIsCompositedMethodInfo
+data ScreenListVisualsMethodInfo
+data ScreenMakeDisplayNameMethodInfo
+data ScreenSetFontOptionsMethodInfo
+data ScreenSetResolutionMethodInfo

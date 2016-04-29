@@ -1,0 +1,48 @@
+module GI.GLib.Structs.BookmarkFile where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype BookmarkFile = BookmarkFile (ForeignPtr BookmarkFile)
+data BookmarkFileAddApplicationMethodInfo
+data BookmarkFileAddGroupMethodInfo
+data BookmarkFileFreeMethodInfo
+data BookmarkFileGetAddedMethodInfo
+data BookmarkFileGetAppInfoMethodInfo
+data BookmarkFileGetApplicationsMethodInfo
+data BookmarkFileGetDescriptionMethodInfo
+data BookmarkFileGetGroupsMethodInfo
+data BookmarkFileGetIconMethodInfo
+data BookmarkFileGetIsPrivateMethodInfo
+data BookmarkFileGetMimeTypeMethodInfo
+data BookmarkFileGetModifiedMethodInfo
+data BookmarkFileGetSizeMethodInfo
+data BookmarkFileGetTitleMethodInfo
+data BookmarkFileGetUrisMethodInfo
+data BookmarkFileGetVisitedMethodInfo
+data BookmarkFileHasApplicationMethodInfo
+data BookmarkFileHasGroupMethodInfo
+data BookmarkFileHasItemMethodInfo
+data BookmarkFileLoadFromDataMethodInfo
+data BookmarkFileLoadFromDataDirsMethodInfo
+data BookmarkFileLoadFromFileMethodInfo
+data BookmarkFileMoveItemMethodInfo
+data BookmarkFileRemoveApplicationMethodInfo
+data BookmarkFileRemoveGroupMethodInfo
+data BookmarkFileRemoveItemMethodInfo
+data BookmarkFileSetAddedMethodInfo
+data BookmarkFileSetAppInfoMethodInfo
+data BookmarkFileSetDescriptionMethodInfo
+data BookmarkFileSetGroupsMethodInfo
+data BookmarkFileSetIconMethodInfo
+data BookmarkFileSetIsPrivateMethodInfo
+data BookmarkFileSetMimeTypeMethodInfo
+data BookmarkFileSetModifiedMethodInfo
+data BookmarkFileSetTitleMethodInfo
+data BookmarkFileSetVisitedMethodInfo
+data BookmarkFileToDataMethodInfo
+data BookmarkFileToFileMethodInfo

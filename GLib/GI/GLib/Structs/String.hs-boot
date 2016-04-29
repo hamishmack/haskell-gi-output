@@ -1,0 +1,38 @@
+module GI.GLib.Structs.String where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype String = String (ForeignPtr String)
+instance BoxedObject String where
+data StringAppendMethodInfo
+data StringAppendCMethodInfo
+data StringAppendLenMethodInfo
+data StringAppendUnicharMethodInfo
+data StringAppendUriEscapedMethodInfo
+data StringAsciiDownMethodInfo
+data StringAsciiUpMethodInfo
+data StringAssignMethodInfo
+data StringDownMethodInfo
+data StringEqualMethodInfo
+data StringEraseMethodInfo
+data StringFreeMethodInfo
+data StringFreeToBytesMethodInfo
+data StringHashMethodInfo
+data StringInsertMethodInfo
+data StringInsertCMethodInfo
+data StringInsertLenMethodInfo
+data StringInsertUnicharMethodInfo
+data StringOverwriteMethodInfo
+data StringOverwriteLenMethodInfo
+data StringPrependMethodInfo
+data StringPrependCMethodInfo
+data StringPrependLenMethodInfo
+data StringPrependUnicharMethodInfo
+data StringSetSizeMethodInfo
+data StringTruncateMethodInfo
+data StringUpMethodInfo

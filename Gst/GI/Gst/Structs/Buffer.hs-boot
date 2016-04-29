@@ -1,0 +1,54 @@
+module GI.Gst.Structs.Buffer where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Buffer = Buffer (ForeignPtr Buffer)
+instance BoxedObject Buffer where
+data BufferAddMetaMethodInfo
+data BufferAddParentBufferMetaMethodInfo
+data BufferAddProtectionMetaMethodInfo
+data BufferAppendMethodInfo
+data BufferAppendMemoryMethodInfo
+data BufferAppendRegionMethodInfo
+data BufferCopyDeepMethodInfo
+data BufferCopyIntoMethodInfo
+data BufferCopyRegionMethodInfo
+data BufferExtractMethodInfo
+data BufferExtractDupMethodInfo
+data BufferFillMethodInfo
+data BufferFindMemoryMethodInfo
+data BufferForeachMetaMethodInfo
+data BufferGetAllMemoryMethodInfo
+data BufferGetMemoryMethodInfo
+data BufferGetMemoryRangeMethodInfo
+data BufferGetMetaMethodInfo
+data BufferGetSizeMethodInfo
+data BufferGetSizesMethodInfo
+data BufferGetSizesRangeMethodInfo
+data BufferInsertMemoryMethodInfo
+data BufferIsAllMemoryWritableMethodInfo
+data BufferIsMemoryRangeWritableMethodInfo
+data BufferIterateMetaMethodInfo
+data BufferMapMethodInfo
+data BufferMapRangeMethodInfo
+data BufferMemcmpMethodInfo
+data BufferMemsetMethodInfo
+data BufferNMemoryMethodInfo
+data BufferPeekMemoryMethodInfo
+data BufferPrependMemoryMethodInfo
+data BufferRemoveAllMemoryMethodInfo
+data BufferRemoveMemoryMethodInfo
+data BufferRemoveMemoryRangeMethodInfo
+data BufferRemoveMetaMethodInfo
+data BufferReplaceAllMemoryMethodInfo
+data BufferReplaceMemoryMethodInfo
+data BufferReplaceMemoryRangeMethodInfo
+data BufferResizeMethodInfo
+data BufferResizeRangeMethodInfo
+data BufferSetSizeMethodInfo
+data BufferUnmapMethodInfo

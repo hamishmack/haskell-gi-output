@@ -1,0 +1,49 @@
+module GI.GstBase.Structs.ByteWriter where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ByteWriter = ByteWriter (ForeignPtr ByteWriter)
+data ByteWriterEnsureFreeSpaceMethodInfo
+data ByteWriterFillMethodInfo
+data ByteWriterFreeMethodInfo
+data ByteWriterFreeAndGetBufferMethodInfo
+data ByteWriterFreeAndGetDataMethodInfo
+data ByteWriterGetRemainingMethodInfo
+data ByteWriterInitMethodInfo
+data ByteWriterInitWithDataMethodInfo
+data ByteWriterInitWithSizeMethodInfo
+data ByteWriterPutBufferMethodInfo
+data ByteWriterPutDataMethodInfo
+data ByteWriterPutFloat32BeMethodInfo
+data ByteWriterPutFloat32LeMethodInfo
+data ByteWriterPutFloat64BeMethodInfo
+data ByteWriterPutFloat64LeMethodInfo
+data ByteWriterPutInt16BeMethodInfo
+data ByteWriterPutInt16LeMethodInfo
+data ByteWriterPutInt24BeMethodInfo
+data ByteWriterPutInt24LeMethodInfo
+data ByteWriterPutInt32BeMethodInfo
+data ByteWriterPutInt32LeMethodInfo
+data ByteWriterPutInt64BeMethodInfo
+data ByteWriterPutInt64LeMethodInfo
+data ByteWriterPutInt8MethodInfo
+data ByteWriterPutStringUtf16MethodInfo
+data ByteWriterPutStringUtf32MethodInfo
+data ByteWriterPutStringUtf8MethodInfo
+data ByteWriterPutUint16BeMethodInfo
+data ByteWriterPutUint16LeMethodInfo
+data ByteWriterPutUint24BeMethodInfo
+data ByteWriterPutUint24LeMethodInfo
+data ByteWriterPutUint32BeMethodInfo
+data ByteWriterPutUint32LeMethodInfo
+data ByteWriterPutUint64BeMethodInfo
+data ByteWriterPutUint64LeMethodInfo
+data ByteWriterPutUint8MethodInfo
+data ByteWriterResetMethodInfo
+data ByteWriterResetAndGetBufferMethodInfo
+data ByteWriterResetAndGetDataMethodInfo

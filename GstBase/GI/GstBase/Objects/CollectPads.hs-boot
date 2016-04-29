@@ -1,0 +1,36 @@
+module GI.GstBase.Objects.CollectPads where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype CollectPads = CollectPads (ForeignPtr CollectPads)
+instance GObject CollectPads where
+class GObject o => CollectPadsK o
+instance (GObject o, IsDescendantOf CollectPads o) => CollectPadsK o
+data CollectPadsAddPadMethodInfo
+data CollectPadsAvailableMethodInfo
+data CollectPadsClipRunningTimeMethodInfo
+data CollectPadsEventDefaultMethodInfo
+data CollectPadsFlushMethodInfo
+data CollectPadsPeekMethodInfo
+data CollectPadsPopMethodInfo
+data CollectPadsQueryDefaultMethodInfo
+data CollectPadsReadBufferMethodInfo
+data CollectPadsRemovePadMethodInfo
+data CollectPadsSetBufferFunctionMethodInfo
+data CollectPadsSetClipFunctionMethodInfo
+data CollectPadsSetCompareFunctionMethodInfo
+data CollectPadsSetEventFunctionMethodInfo
+data CollectPadsSetFlushFunctionMethodInfo
+data CollectPadsSetFlushingMethodInfo
+data CollectPadsSetFunctionMethodInfo
+data CollectPadsSetQueryFunctionMethodInfo
+data CollectPadsSetWaitingMethodInfo
+data CollectPadsSrcEventDefaultMethodInfo
+data CollectPadsStartMethodInfo
+data CollectPadsStopMethodInfo
+data CollectPadsTakeBufferMethodInfo

@@ -1,0 +1,50 @@
+module GI.Gtk.Objects.ListBox where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ListBox = ListBox (ForeignPtr ListBox)
+instance GObject ListBox where
+class GObject o => ListBoxK o
+instance (GObject o, IsDescendantOf ListBox o) => ListBoxK o
+data ListBoxActivateOnSingleClickPropertyInfo
+data ListBoxSelectionModePropertyInfo
+data ListBoxActivateCursorRowSignalInfo
+data ListBoxMoveCursorSignalInfo
+data ListBoxRowActivatedSignalInfo
+data ListBoxRowSelectedSignalInfo
+data ListBoxSelectAllSignalInfo
+data ListBoxSelectedRowsChangedSignalInfo
+data ListBoxToggleCursorRowSignalInfo
+data ListBoxUnselectAllSignalInfo
+data ListBoxBindModelMethodInfo
+data ListBoxDragHighlightRowMethodInfo
+data ListBoxDragUnhighlightRowMethodInfo
+data ListBoxGetActivateOnSingleClickMethodInfo
+data ListBoxGetAdjustmentMethodInfo
+data ListBoxGetRowAtIndexMethodInfo
+data ListBoxGetRowAtYMethodInfo
+data ListBoxGetSelectedRowMethodInfo
+data ListBoxGetSelectedRowsMethodInfo
+data ListBoxGetSelectionModeMethodInfo
+data ListBoxInsertMethodInfo
+data ListBoxInvalidateFilterMethodInfo
+data ListBoxInvalidateHeadersMethodInfo
+data ListBoxInvalidateSortMethodInfo
+data ListBoxPrependMethodInfo
+data ListBoxSelectAllMethodInfo
+data ListBoxSelectRowMethodInfo
+data ListBoxSelectedForeachMethodInfo
+data ListBoxSetActivateOnSingleClickMethodInfo
+data ListBoxSetAdjustmentMethodInfo
+data ListBoxSetFilterFuncMethodInfo
+data ListBoxSetHeaderFuncMethodInfo
+data ListBoxSetPlaceholderMethodInfo
+data ListBoxSetSelectionModeMethodInfo
+data ListBoxSetSortFuncMethodInfo
+data ListBoxUnselectAllMethodInfo
+data ListBoxUnselectRowMethodInfo

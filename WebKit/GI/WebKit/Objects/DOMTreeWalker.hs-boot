@@ -1,0 +1,31 @@
+module GI.WebKit.Objects.DOMTreeWalker where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMTreeWalker = DOMTreeWalker (ForeignPtr DOMTreeWalker)
+instance GObject DOMTreeWalker where
+class GObject o => DOMTreeWalkerK o
+instance (GObject o, IsDescendantOf DOMTreeWalker o) => DOMTreeWalkerK o
+data DOMTreeWalkerCurrentNodePropertyInfo
+data DOMTreeWalkerExpandEntityReferencesPropertyInfo
+data DOMTreeWalkerFilterPropertyInfo
+data DOMTreeWalkerRootPropertyInfo
+data DOMTreeWalkerWhatToShowPropertyInfo
+data DOMTreeWalkerFirstChildMethodInfo
+data DOMTreeWalkerGetCurrentNodeMethodInfo
+data DOMTreeWalkerGetExpandEntityReferencesMethodInfo
+data DOMTreeWalkerGetFilterMethodInfo
+data DOMTreeWalkerGetRootMethodInfo
+data DOMTreeWalkerGetWhatToShowMethodInfo
+data DOMTreeWalkerLastChildMethodInfo
+data DOMTreeWalkerNextNodeMethodInfo
+data DOMTreeWalkerNextSiblingMethodInfo
+data DOMTreeWalkerParentNodeMethodInfo
+data DOMTreeWalkerPreviousNodeMethodInfo
+data DOMTreeWalkerPreviousSiblingMethodInfo
+data DOMTreeWalkerSetCurrentNodeMethodInfo

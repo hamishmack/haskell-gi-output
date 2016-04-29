@@ -1,0 +1,23 @@
+module GI.Gio.Structs.UnixMountPoint where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype UnixMountPoint = UnixMountPoint (ForeignPtr UnixMountPoint)
+data UnixMountPointCompareMethodInfo
+data UnixMountPointFreeMethodInfo
+data UnixMountPointGetDevicePathMethodInfo
+data UnixMountPointGetFsTypeMethodInfo
+data UnixMountPointGetMountPathMethodInfo
+data UnixMountPointGetOptionsMethodInfo
+data UnixMountPointGuessCanEjectMethodInfo
+data UnixMountPointGuessIconMethodInfo
+data UnixMountPointGuessNameMethodInfo
+data UnixMountPointGuessSymbolicIconMethodInfo
+data UnixMountPointIsLoopbackMethodInfo
+data UnixMountPointIsReadonlyMethodInfo
+data UnixMountPointIsUserMountableMethodInfo

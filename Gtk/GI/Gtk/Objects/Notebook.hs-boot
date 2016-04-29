@@ -1,0 +1,74 @@
+module GI.Gtk.Objects.Notebook where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Notebook = Notebook (ForeignPtr Notebook)
+instance GObject Notebook where
+class GObject o => NotebookK o
+instance (GObject o, IsDescendantOf Notebook o) => NotebookK o
+data NotebookEnablePopupPropertyInfo
+data NotebookGroupNamePropertyInfo
+data NotebookPagePropertyInfo
+data NotebookScrollablePropertyInfo
+data NotebookShowBorderPropertyInfo
+data NotebookShowTabsPropertyInfo
+data NotebookTabPosPropertyInfo
+data NotebookChangeCurrentPageSignalInfo
+data NotebookCreateWindowSignalInfo
+data NotebookFocusTabSignalInfo
+data NotebookMoveFocusOutSignalInfo
+data NotebookPageAddedSignalInfo
+data NotebookPageRemovedSignalInfo
+data NotebookPageReorderedSignalInfo
+data NotebookReorderTabSignalInfo
+data NotebookSelectPageSignalInfo
+data NotebookSwitchPageSignalInfo
+data NotebookAppendPageMethodInfo
+data NotebookAppendPageMenuMethodInfo
+data NotebookDetachTabMethodInfo
+data NotebookGetActionWidgetMethodInfo
+data NotebookGetCurrentPageMethodInfo
+data NotebookGetGroupNameMethodInfo
+data NotebookGetMenuLabelMethodInfo
+data NotebookGetMenuLabelTextMethodInfo
+data NotebookGetNPagesMethodInfo
+data NotebookGetNthPageMethodInfo
+data NotebookGetScrollableMethodInfo
+data NotebookGetShowBorderMethodInfo
+data NotebookGetShowTabsMethodInfo
+data NotebookGetTabDetachableMethodInfo
+data NotebookGetTabHborderMethodInfo
+data NotebookGetTabLabelMethodInfo
+data NotebookGetTabLabelTextMethodInfo
+data NotebookGetTabPosMethodInfo
+data NotebookGetTabReorderableMethodInfo
+data NotebookGetTabVborderMethodInfo
+data NotebookInsertPageMethodInfo
+data NotebookInsertPageMenuMethodInfo
+data NotebookNextPageMethodInfo
+data NotebookPageNumMethodInfo
+data NotebookPopupDisableMethodInfo
+data NotebookPopupEnableMethodInfo
+data NotebookPrependPageMethodInfo
+data NotebookPrependPageMenuMethodInfo
+data NotebookPrevPageMethodInfo
+data NotebookRemovePageMethodInfo
+data NotebookReorderChildMethodInfo
+data NotebookSetActionWidgetMethodInfo
+data NotebookSetCurrentPageMethodInfo
+data NotebookSetGroupNameMethodInfo
+data NotebookSetMenuLabelMethodInfo
+data NotebookSetMenuLabelTextMethodInfo
+data NotebookSetScrollableMethodInfo
+data NotebookSetShowBorderMethodInfo
+data NotebookSetShowTabsMethodInfo
+data NotebookSetTabDetachableMethodInfo
+data NotebookSetTabLabelMethodInfo
+data NotebookSetTabLabelTextMethodInfo
+data NotebookSetTabPosMethodInfo
+data NotebookSetTabReorderableMethodInfo

@@ -1,0 +1,69 @@
+module GI.Pango.Objects.Layout where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Layout = Layout (ForeignPtr Layout)
+instance GObject Layout where
+class GObject o => LayoutK o
+instance (GObject o, IsDescendantOf Layout o) => LayoutK o
+data LayoutContextChangedMethodInfo
+data LayoutCopyMethodInfo
+data LayoutGetAlignmentMethodInfo
+data LayoutGetAttributesMethodInfo
+data LayoutGetAutoDirMethodInfo
+data LayoutGetBaselineMethodInfo
+data LayoutGetCharacterCountMethodInfo
+data LayoutGetContextMethodInfo
+data LayoutGetCursorPosMethodInfo
+data LayoutGetEllipsizeMethodInfo
+data LayoutGetExtentsMethodInfo
+data LayoutGetFontDescriptionMethodInfo
+data LayoutGetHeightMethodInfo
+data LayoutGetIndentMethodInfo
+data LayoutGetIterMethodInfo
+data LayoutGetJustifyMethodInfo
+data LayoutGetLineMethodInfo
+data LayoutGetLineCountMethodInfo
+data LayoutGetLineReadonlyMethodInfo
+data LayoutGetLinesMethodInfo
+data LayoutGetLinesReadonlyMethodInfo
+data LayoutGetLogAttrsMethodInfo
+data LayoutGetLogAttrsReadonlyMethodInfo
+data LayoutGetPixelExtentsMethodInfo
+data LayoutGetPixelSizeMethodInfo
+data LayoutGetSerialMethodInfo
+data LayoutGetSingleParagraphModeMethodInfo
+data LayoutGetSizeMethodInfo
+data LayoutGetSpacingMethodInfo
+data LayoutGetTabsMethodInfo
+data LayoutGetTextMethodInfo
+data LayoutGetUnknownGlyphsCountMethodInfo
+data LayoutGetWidthMethodInfo
+data LayoutGetWrapMethodInfo
+data LayoutIndexToLineXMethodInfo
+data LayoutIndexToPosMethodInfo
+data LayoutIsEllipsizedMethodInfo
+data LayoutIsWrappedMethodInfo
+data LayoutMoveCursorVisuallyMethodInfo
+data LayoutSetAlignmentMethodInfo
+data LayoutSetAttributesMethodInfo
+data LayoutSetAutoDirMethodInfo
+data LayoutSetEllipsizeMethodInfo
+data LayoutSetFontDescriptionMethodInfo
+data LayoutSetHeightMethodInfo
+data LayoutSetIndentMethodInfo
+data LayoutSetJustifyMethodInfo
+data LayoutSetMarkupMethodInfo
+data LayoutSetMarkupWithAccelMethodInfo
+data LayoutSetSingleParagraphModeMethodInfo
+data LayoutSetSpacingMethodInfo
+data LayoutSetTabsMethodInfo
+data LayoutSetTextMethodInfo
+data LayoutSetWidthMethodInfo
+data LayoutSetWrapMethodInfo
+data LayoutXyToIndexMethodInfo

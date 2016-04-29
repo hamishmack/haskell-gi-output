@@ -1,0 +1,26 @@
+module GI.Gst.Structs.CapsFeatures where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype CapsFeatures = CapsFeatures (ForeignPtr CapsFeatures)
+instance BoxedObject CapsFeatures where
+data CapsFeaturesAddMethodInfo
+data CapsFeaturesAddIdMethodInfo
+data CapsFeaturesContainsMethodInfo
+data CapsFeaturesContainsIdMethodInfo
+data CapsFeaturesCopyMethodInfo
+data CapsFeaturesFreeMethodInfo
+data CapsFeaturesGetNthMethodInfo
+data CapsFeaturesGetNthIdMethodInfo
+data CapsFeaturesGetSizeMethodInfo
+data CapsFeaturesIsAnyMethodInfo
+data CapsFeaturesIsEqualMethodInfo
+data CapsFeaturesRemoveMethodInfo
+data CapsFeaturesRemoveIdMethodInfo
+data CapsFeaturesSetParentRefcountMethodInfo
+data CapsFeaturesToStringMethodInfo

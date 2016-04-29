@@ -1,0 +1,28 @@
+module GI.WebKit.Objects.ViewportAttributes where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ViewportAttributes = ViewportAttributes (ForeignPtr ViewportAttributes)
+instance GObject ViewportAttributes where
+class GObject o => ViewportAttributesK o
+instance (GObject o, IsDescendantOf ViewportAttributes o) => ViewportAttributesK o
+data ViewportAttributesAvailableHeightPropertyInfo
+data ViewportAttributesAvailableWidthPropertyInfo
+data ViewportAttributesDesktopWidthPropertyInfo
+data ViewportAttributesDeviceDpiPropertyInfo
+data ViewportAttributesDeviceHeightPropertyInfo
+data ViewportAttributesDevicePixelRatioPropertyInfo
+data ViewportAttributesDeviceWidthPropertyInfo
+data ViewportAttributesHeightPropertyInfo
+data ViewportAttributesInitialScaleFactorPropertyInfo
+data ViewportAttributesMaximumScaleFactorPropertyInfo
+data ViewportAttributesMinimumScaleFactorPropertyInfo
+data ViewportAttributesUserScalablePropertyInfo
+data ViewportAttributesValidPropertyInfo
+data ViewportAttributesWidthPropertyInfo
+data ViewportAttributesRecomputeMethodInfo

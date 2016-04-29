@@ -1,0 +1,56 @@
+module GI.Poppler.Objects.Document where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Document = Document (ForeignPtr Document)
+instance GObject Document where
+class GObject o => DocumentK o
+instance (GObject o, IsDescendantOf Document o) => DocumentK o
+data DocumentAuthorPropertyInfo
+data DocumentCreationDatePropertyInfo
+data DocumentCreatorPropertyInfo
+data DocumentFormatPropertyInfo
+data DocumentFormatMajorPropertyInfo
+data DocumentFormatMinorPropertyInfo
+data DocumentKeywordsPropertyInfo
+data DocumentLinearizedPropertyInfo
+data DocumentMetadataPropertyInfo
+data DocumentModDatePropertyInfo
+data DocumentPageLayoutPropertyInfo
+data DocumentPageModePropertyInfo
+data DocumentPermissionsPropertyInfo
+data DocumentProducerPropertyInfo
+data DocumentSubjectPropertyInfo
+data DocumentTitlePropertyInfo
+data DocumentViewerPreferencesPropertyInfo
+data DocumentFindDestMethodInfo
+data DocumentGetAttachmentsMethodInfo
+data DocumentGetAuthorMethodInfo
+data DocumentGetCreationDateMethodInfo
+data DocumentGetCreatorMethodInfo
+data DocumentGetFormFieldMethodInfo
+data DocumentGetIdMethodInfo
+data DocumentGetKeywordsMethodInfo
+data DocumentGetMetadataMethodInfo
+data DocumentGetModificationDateMethodInfo
+data DocumentGetNAttachmentsMethodInfo
+data DocumentGetNPagesMethodInfo
+data DocumentGetPageMethodInfo
+data DocumentGetPageByLabelMethodInfo
+data DocumentGetPageLayoutMethodInfo
+data DocumentGetPageModeMethodInfo
+data DocumentGetPdfVersionMethodInfo
+data DocumentGetPdfVersionStringMethodInfo
+data DocumentGetPermissionsMethodInfo
+data DocumentGetProducerMethodInfo
+data DocumentGetSubjectMethodInfo
+data DocumentGetTitleMethodInfo
+data DocumentHasAttachmentsMethodInfo
+data DocumentIsLinearizedMethodInfo
+data DocumentSaveMethodInfo
+data DocumentSaveACopyMethodInfo

@@ -1,0 +1,45 @@
+module GI.Gtk.Objects.Image where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Image = Image (ForeignPtr Image)
+instance GObject Image where
+class GObject o => ImageK o
+instance (GObject o, IsDescendantOf Image o) => ImageK o
+data ImageFilePropertyInfo
+data ImageGiconPropertyInfo
+data ImageIconNamePropertyInfo
+data ImageIconSetPropertyInfo
+data ImageIconSizePropertyInfo
+data ImagePixbufPropertyInfo
+data ImagePixbufAnimationPropertyInfo
+data ImagePixelSizePropertyInfo
+data ImageResourcePropertyInfo
+data ImageStockPropertyInfo
+data ImageStorageTypePropertyInfo
+data ImageSurfacePropertyInfo
+data ImageUseFallbackPropertyInfo
+data ImageClearMethodInfo
+data ImageGetAnimationMethodInfo
+data ImageGetGiconMethodInfo
+data ImageGetIconNameMethodInfo
+data ImageGetIconSetMethodInfo
+data ImageGetPixbufMethodInfo
+data ImageGetPixelSizeMethodInfo
+data ImageGetStockMethodInfo
+data ImageGetStorageTypeMethodInfo
+data ImageSetFromAnimationMethodInfo
+data ImageSetFromFileMethodInfo
+data ImageSetFromGiconMethodInfo
+data ImageSetFromIconNameMethodInfo
+data ImageSetFromIconSetMethodInfo
+data ImageSetFromPixbufMethodInfo
+data ImageSetFromResourceMethodInfo
+data ImageSetFromStockMethodInfo
+data ImageSetFromSurfaceMethodInfo
+data ImageSetPixelSizeMethodInfo

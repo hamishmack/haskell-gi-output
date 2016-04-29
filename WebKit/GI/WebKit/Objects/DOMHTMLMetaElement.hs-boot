@@ -1,0 +1,25 @@
+module GI.WebKit.Objects.DOMHTMLMetaElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLMetaElement = DOMHTMLMetaElement (ForeignPtr DOMHTMLMetaElement)
+instance GObject DOMHTMLMetaElement where
+class GObject o => DOMHTMLMetaElementK o
+instance (GObject o, IsDescendantOf DOMHTMLMetaElement o) => DOMHTMLMetaElementK o
+data DOMHTMLMetaElementContentPropertyInfo
+data DOMHTMLMetaElementHttpEquivPropertyInfo
+data DOMHTMLMetaElementNamePropertyInfo
+data DOMHTMLMetaElementSchemePropertyInfo
+data DOMHTMLMetaElementGetContentMethodInfo
+data DOMHTMLMetaElementGetHttpEquivMethodInfo
+data DOMHTMLMetaElementGetNameMethodInfo
+data DOMHTMLMetaElementGetSchemeMethodInfo
+data DOMHTMLMetaElementSetContentMethodInfo
+data DOMHTMLMetaElementSetHttpEquivMethodInfo
+data DOMHTMLMetaElementSetNameMethodInfo
+data DOMHTMLMetaElementSetSchemeMethodInfo

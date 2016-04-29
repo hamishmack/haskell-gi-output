@@ -1,0 +1,40 @@
+module GI.Notify.Objects.Notification where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Notification = Notification (ForeignPtr Notification)
+instance GObject Notification where
+class GObject o => NotificationK o
+instance (GObject o, IsDescendantOf Notification o) => NotificationK o
+data NotificationAppNamePropertyInfo
+data NotificationBodyPropertyInfo
+data NotificationClosedReasonPropertyInfo
+data NotificationIconNamePropertyInfo
+data NotificationIdPropertyInfo
+data NotificationSummaryPropertyInfo
+data NotificationClosedSignalInfo
+data NotificationAddActionMethodInfo
+data NotificationClearActionsMethodInfo
+data NotificationClearHintsMethodInfo
+data NotificationCloseMethodInfo
+data NotificationGetClosedReasonMethodInfo
+data NotificationSetAppNameMethodInfo
+data NotificationSetCategoryMethodInfo
+data NotificationSetHintMethodInfo
+data NotificationSetHintByteMethodInfo
+data NotificationSetHintByteArrayMethodInfo
+data NotificationSetHintDoubleMethodInfo
+data NotificationSetHintInt32MethodInfo
+data NotificationSetHintStringMethodInfo
+data NotificationSetHintUint32MethodInfo
+data NotificationSetIconFromPixbufMethodInfo
+data NotificationSetImageFromPixbufMethodInfo
+data NotificationSetTimeoutMethodInfo
+data NotificationSetUrgencyMethodInfo
+data NotificationShowMethodInfo
+data NotificationUpdateMethodInfo

@@ -1,0 +1,48 @@
+module GI.Gtk.Structs.WidgetPath where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype WidgetPath = WidgetPath (ForeignPtr WidgetPath)
+instance BoxedObject WidgetPath where
+data WidgetPathAppendForWidgetMethodInfo
+data WidgetPathAppendTypeMethodInfo
+data WidgetPathAppendWithSiblingsMethodInfo
+data WidgetPathCopyMethodInfo
+data WidgetPathFreeMethodInfo
+data WidgetPathGetObjectTypeMethodInfo
+data WidgetPathHasParentMethodInfo
+data WidgetPathIsTypeMethodInfo
+data WidgetPathIterAddClassMethodInfo
+data WidgetPathIterAddRegionMethodInfo
+data WidgetPathIterClearClassesMethodInfo
+data WidgetPathIterClearRegionsMethodInfo
+data WidgetPathIterGetNameMethodInfo
+data WidgetPathIterGetObjectNameMethodInfo
+data WidgetPathIterGetObjectTypeMethodInfo
+data WidgetPathIterGetSiblingIndexMethodInfo
+data WidgetPathIterGetSiblingsMethodInfo
+data WidgetPathIterGetStateMethodInfo
+data WidgetPathIterHasClassMethodInfo
+data WidgetPathIterHasNameMethodInfo
+data WidgetPathIterHasQclassMethodInfo
+data WidgetPathIterHasQnameMethodInfo
+data WidgetPathIterHasQregionMethodInfo
+data WidgetPathIterHasRegionMethodInfo
+data WidgetPathIterListClassesMethodInfo
+data WidgetPathIterListRegionsMethodInfo
+data WidgetPathIterRemoveClassMethodInfo
+data WidgetPathIterRemoveRegionMethodInfo
+data WidgetPathIterSetNameMethodInfo
+data WidgetPathIterSetObjectNameMethodInfo
+data WidgetPathIterSetObjectTypeMethodInfo
+data WidgetPathIterSetStateMethodInfo
+data WidgetPathLengthMethodInfo
+data WidgetPathPrependTypeMethodInfo
+data WidgetPathRefMethodInfo
+data WidgetPathToStringMethodInfo
+data WidgetPathUnrefMethodInfo

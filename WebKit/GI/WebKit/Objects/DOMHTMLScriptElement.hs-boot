@@ -1,0 +1,41 @@
+module GI.WebKit.Objects.DOMHTMLScriptElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLScriptElement = DOMHTMLScriptElement (ForeignPtr DOMHTMLScriptElement)
+instance GObject DOMHTMLScriptElement where
+class GObject o => DOMHTMLScriptElementK o
+instance (GObject o, IsDescendantOf DOMHTMLScriptElement o) => DOMHTMLScriptElementK o
+data DOMHTMLScriptElementAsyncPropertyInfo
+data DOMHTMLScriptElementCharsetPropertyInfo
+data DOMHTMLScriptElementCrossOriginPropertyInfo
+data DOMHTMLScriptElementDeferPropertyInfo
+data DOMHTMLScriptElementEventPropertyInfo
+data DOMHTMLScriptElementHtmlForPropertyInfo
+data DOMHTMLScriptElementNoncePropertyInfo
+data DOMHTMLScriptElementSrcPropertyInfo
+data DOMHTMLScriptElementTextPropertyInfo
+data DOMHTMLScriptElementTypePropertyInfo
+data DOMHTMLScriptElementGetAsyncMethodInfo
+data DOMHTMLScriptElementGetCharsetMethodInfo
+data DOMHTMLScriptElementGetCrossOriginMethodInfo
+data DOMHTMLScriptElementGetDeferMethodInfo
+data DOMHTMLScriptElementGetEventMethodInfo
+data DOMHTMLScriptElementGetHtmlForMethodInfo
+data DOMHTMLScriptElementGetNonceMethodInfo
+data DOMHTMLScriptElementGetSrcMethodInfo
+data DOMHTMLScriptElementGetTextMethodInfo
+data DOMHTMLScriptElementSetAsyncMethodInfo
+data DOMHTMLScriptElementSetCharsetMethodInfo
+data DOMHTMLScriptElementSetCrossOriginMethodInfo
+data DOMHTMLScriptElementSetDeferMethodInfo
+data DOMHTMLScriptElementSetEventMethodInfo
+data DOMHTMLScriptElementSetHtmlForMethodInfo
+data DOMHTMLScriptElementSetNonceMethodInfo
+data DOMHTMLScriptElementSetSrcMethodInfo
+data DOMHTMLScriptElementSetTextMethodInfo

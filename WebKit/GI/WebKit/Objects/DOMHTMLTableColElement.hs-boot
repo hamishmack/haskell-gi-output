@@ -1,0 +1,31 @@
+module GI.WebKit.Objects.DOMHTMLTableColElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLTableColElement = DOMHTMLTableColElement (ForeignPtr DOMHTMLTableColElement)
+instance GObject DOMHTMLTableColElement where
+class GObject o => DOMHTMLTableColElementK o
+instance (GObject o, IsDescendantOf DOMHTMLTableColElement o) => DOMHTMLTableColElementK o
+data DOMHTMLTableColElementAlignPropertyInfo
+data DOMHTMLTableColElementChPropertyInfo
+data DOMHTMLTableColElementChOffPropertyInfo
+data DOMHTMLTableColElementSpanPropertyInfo
+data DOMHTMLTableColElementVAlignPropertyInfo
+data DOMHTMLTableColElementWidthPropertyInfo
+data DOMHTMLTableColElementGetAlignMethodInfo
+data DOMHTMLTableColElementGetChMethodInfo
+data DOMHTMLTableColElementGetChOffMethodInfo
+data DOMHTMLTableColElementGetSpanMethodInfo
+data DOMHTMLTableColElementGetVAlignMethodInfo
+data DOMHTMLTableColElementGetWidthMethodInfo
+data DOMHTMLTableColElementSetAlignMethodInfo
+data DOMHTMLTableColElementSetChMethodInfo
+data DOMHTMLTableColElementSetChOffMethodInfo
+data DOMHTMLTableColElementSetSpanMethodInfo
+data DOMHTMLTableColElementSetVAlignMethodInfo
+data DOMHTMLTableColElementSetWidthMethodInfo

@@ -1,0 +1,48 @@
+module GI.GstAudio.Objects.AudioEncoder where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AudioEncoder = AudioEncoder (ForeignPtr AudioEncoder)
+instance GObject AudioEncoder where
+class GObject o => AudioEncoderK o
+instance (GObject o, IsDescendantOf AudioEncoder o) => AudioEncoderK o
+data AudioEncoderHardResyncPropertyInfo
+data AudioEncoderMarkGranulePropertyInfo
+data AudioEncoderPerfectTimestampPropertyInfo
+data AudioEncoderTolerancePropertyInfo
+data AudioEncoderAllocateOutputBufferMethodInfo
+data AudioEncoderFinishFrameMethodInfo
+data AudioEncoderGetAllocatorMethodInfo
+data AudioEncoderGetAudioInfoMethodInfo
+data AudioEncoderGetDrainableMethodInfo
+data AudioEncoderGetFrameMaxMethodInfo
+data AudioEncoderGetFrameSamplesMaxMethodInfo
+data AudioEncoderGetFrameSamplesMinMethodInfo
+data AudioEncoderGetHardMinMethodInfo
+data AudioEncoderGetHardResyncMethodInfo
+data AudioEncoderGetLatencyMethodInfo
+data AudioEncoderGetLookaheadMethodInfo
+data AudioEncoderGetMarkGranuleMethodInfo
+data AudioEncoderGetPerfectTimestampMethodInfo
+data AudioEncoderGetToleranceMethodInfo
+data AudioEncoderMergeTagsMethodInfo
+data AudioEncoderNegotiateMethodInfo
+data AudioEncoderProxyGetcapsMethodInfo
+data AudioEncoderSetDrainableMethodInfo
+data AudioEncoderSetFrameMaxMethodInfo
+data AudioEncoderSetFrameSamplesMaxMethodInfo
+data AudioEncoderSetFrameSamplesMinMethodInfo
+data AudioEncoderSetHardMinMethodInfo
+data AudioEncoderSetHardResyncMethodInfo
+data AudioEncoderSetHeadersMethodInfo
+data AudioEncoderSetLatencyMethodInfo
+data AudioEncoderSetLookaheadMethodInfo
+data AudioEncoderSetMarkGranuleMethodInfo
+data AudioEncoderSetOutputFormatMethodInfo
+data AudioEncoderSetPerfectTimestampMethodInfo
+data AudioEncoderSetToleranceMethodInfo

@@ -1,0 +1,47 @@
+module GI.Gst.Structs.Caps where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Caps = Caps (ForeignPtr Caps)
+instance BoxedObject Caps where
+data CapsAppendMethodInfo
+data CapsAppendStructureMethodInfo
+data CapsAppendStructureFullMethodInfo
+data CapsCanIntersectMethodInfo
+data CapsCopyNthMethodInfo
+data CapsFilterAndMapInPlaceMethodInfo
+data CapsFixateMethodInfo
+data CapsForeachMethodInfo
+data CapsGetFeaturesMethodInfo
+data CapsGetSizeMethodInfo
+data CapsGetStructureMethodInfo
+data CapsIntersectMethodInfo
+data CapsIntersectFullMethodInfo
+data CapsIsAlwaysCompatibleMethodInfo
+data CapsIsAnyMethodInfo
+data CapsIsEmptyMethodInfo
+data CapsIsEqualMethodInfo
+data CapsIsEqualFixedMethodInfo
+data CapsIsFixedMethodInfo
+data CapsIsStrictlyEqualMethodInfo
+data CapsIsSubsetMethodInfo
+data CapsIsSubsetStructureMethodInfo
+data CapsIsSubsetStructureFullMethodInfo
+data CapsMapInPlaceMethodInfo
+data CapsMergeMethodInfo
+data CapsMergeStructureMethodInfo
+data CapsMergeStructureFullMethodInfo
+data CapsNormalizeMethodInfo
+data CapsRemoveStructureMethodInfo
+data CapsSetFeaturesMethodInfo
+data CapsSetValueMethodInfo
+data CapsSimplifyMethodInfo
+data CapsStealStructureMethodInfo
+data CapsSubtractMethodInfo
+data CapsToStringMethodInfo
+data CapsTruncateMethodInfo

@@ -1,0 +1,25 @@
+module GI.Gio.Interfaces.TlsClientConnection where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype TlsClientConnection = TlsClientConnection (ForeignPtr TlsClientConnection)
+data TlsClientConnectionAcceptedCasPropertyInfo
+data TlsClientConnectionServerIdentityPropertyInfo
+data TlsClientConnectionUseSsl3PropertyInfo
+data TlsClientConnectionValidationFlagsPropertyInfo
+instance GObject TlsClientConnection where
+class GObject o => TlsClientConnectionK o
+instance (GObject o, IsDescendantOf TlsClientConnection o) => TlsClientConnectionK o
+data TlsClientConnectionCopySessionStateMethodInfo
+data TlsClientConnectionGetAcceptedCasMethodInfo
+data TlsClientConnectionGetServerIdentityMethodInfo
+data TlsClientConnectionGetUseSsl3MethodInfo
+data TlsClientConnectionGetValidationFlagsMethodInfo
+data TlsClientConnectionSetServerIdentityMethodInfo
+data TlsClientConnectionSetUseSsl3MethodInfo
+data TlsClientConnectionSetValidationFlagsMethodInfo

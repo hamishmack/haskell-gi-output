@@ -1,0 +1,36 @@
+module GI.Gtk.Objects.MenuShell where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MenuShell = MenuShell (ForeignPtr MenuShell)
+instance GObject MenuShell where
+class GObject o => MenuShellK o
+instance (GObject o, IsDescendantOf MenuShell o) => MenuShellK o
+data MenuShellTakeFocusPropertyInfo
+data MenuShellActivateCurrentSignalInfo
+data MenuShellCancelSignalInfo
+data MenuShellCycleFocusSignalInfo
+data MenuShellDeactivateSignalInfo
+data MenuShellInsertSignalInfo
+data MenuShellMoveCurrentSignalInfo
+data MenuShellMoveSelectedSignalInfo
+data MenuShellSelectionDoneSignalInfo
+data MenuShellActivateItemMethodInfo
+data MenuShellAppendMethodInfo
+data MenuShellBindModelMethodInfo
+data MenuShellCancelMethodInfo
+data MenuShellDeactivateMethodInfo
+data MenuShellDeselectMethodInfo
+data MenuShellGetParentShellMethodInfo
+data MenuShellGetSelectedItemMethodInfo
+data MenuShellGetTakeFocusMethodInfo
+data MenuShellInsertMethodInfo
+data MenuShellPrependMethodInfo
+data MenuShellSelectFirstMethodInfo
+data MenuShellSelectItemMethodInfo
+data MenuShellSetTakeFocusMethodInfo

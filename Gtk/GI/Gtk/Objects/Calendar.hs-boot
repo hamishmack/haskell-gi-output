@@ -1,0 +1,44 @@
+module GI.Gtk.Objects.Calendar where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Calendar = Calendar (ForeignPtr Calendar)
+instance GObject Calendar where
+class GObject o => CalendarK o
+instance (GObject o, IsDescendantOf Calendar o) => CalendarK o
+data CalendarDayPropertyInfo
+data CalendarDetailHeightRowsPropertyInfo
+data CalendarDetailWidthCharsPropertyInfo
+data CalendarMonthPropertyInfo
+data CalendarNoMonthChangePropertyInfo
+data CalendarShowDayNamesPropertyInfo
+data CalendarShowDetailsPropertyInfo
+data CalendarShowHeadingPropertyInfo
+data CalendarShowWeekNumbersPropertyInfo
+data CalendarYearPropertyInfo
+data CalendarDaySelectedSignalInfo
+data CalendarDaySelectedDoubleClickSignalInfo
+data CalendarMonthChangedSignalInfo
+data CalendarNextMonthSignalInfo
+data CalendarNextYearSignalInfo
+data CalendarPrevMonthSignalInfo
+data CalendarPrevYearSignalInfo
+data CalendarClearMarksMethodInfo
+data CalendarGetDateMethodInfo
+data CalendarGetDayIsMarkedMethodInfo
+data CalendarGetDetailHeightRowsMethodInfo
+data CalendarGetDetailWidthCharsMethodInfo
+data CalendarGetDisplayOptionsMethodInfo
+data CalendarMarkDayMethodInfo
+data CalendarSelectDayMethodInfo
+data CalendarSelectMonthMethodInfo
+data CalendarSetDetailFuncMethodInfo
+data CalendarSetDetailHeightRowsMethodInfo
+data CalendarSetDetailWidthCharsMethodInfo
+data CalendarSetDisplayOptionsMethodInfo
+data CalendarUnmarkDayMethodInfo

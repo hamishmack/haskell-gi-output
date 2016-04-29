@@ -1,0 +1,29 @@
+module GI.WebKit.Objects.DOMKeyboardEvent where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMKeyboardEvent = DOMKeyboardEvent (ForeignPtr DOMKeyboardEvent)
+instance GObject DOMKeyboardEvent where
+class GObject o => DOMKeyboardEventK o
+instance (GObject o, IsDescendantOf DOMKeyboardEvent o) => DOMKeyboardEventK o
+data DOMKeyboardEventAltGraphKeyPropertyInfo
+data DOMKeyboardEventAltKeyPropertyInfo
+data DOMKeyboardEventCtrlKeyPropertyInfo
+data DOMKeyboardEventKeyIdentifierPropertyInfo
+data DOMKeyboardEventKeyLocationPropertyInfo
+data DOMKeyboardEventMetaKeyPropertyInfo
+data DOMKeyboardEventShiftKeyPropertyInfo
+data DOMKeyboardEventGetAltGraphKeyMethodInfo
+data DOMKeyboardEventGetAltKeyMethodInfo
+data DOMKeyboardEventGetCtrlKeyMethodInfo
+data DOMKeyboardEventGetKeyIdentifierMethodInfo
+data DOMKeyboardEventGetKeyLocationMethodInfo
+data DOMKeyboardEventGetMetaKeyMethodInfo
+data DOMKeyboardEventGetModifierStateMethodInfo
+data DOMKeyboardEventGetShiftKeyMethodInfo
+data DOMKeyboardEventInitKeyboardEventMethodInfo

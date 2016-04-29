@@ -1,0 +1,57 @@
+module GI.Atk.Objects.Object where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Object = Object (ForeignPtr Object)
+instance GObject Object where
+class GObject o => ObjectK o
+instance (GObject o, IsDescendantOf Object o) => ObjectK o
+data ObjectAccessibleComponentLayerPropertyInfo
+data ObjectAccessibleComponentMdiZorderPropertyInfo
+data ObjectAccessibleDescriptionPropertyInfo
+data ObjectAccessibleHypertextNlinksPropertyInfo
+data ObjectAccessibleNamePropertyInfo
+data ObjectAccessibleParentPropertyInfo
+data ObjectAccessibleRolePropertyInfo
+data ObjectAccessibleTableCaptionPropertyInfo
+data ObjectAccessibleTableCaptionObjectPropertyInfo
+data ObjectAccessibleTableColumnDescriptionPropertyInfo
+data ObjectAccessibleTableColumnHeaderPropertyInfo
+data ObjectAccessibleTableRowDescriptionPropertyInfo
+data ObjectAccessibleTableRowHeaderPropertyInfo
+data ObjectAccessibleTableSummaryPropertyInfo
+data ObjectAccessibleValuePropertyInfo
+data ObjectActiveDescendantChangedSignalInfo
+data ObjectChildrenChangedSignalInfo
+data ObjectFocusEventSignalInfo
+data ObjectPropertyChangeSignalInfo
+data ObjectStateChangeSignalInfo
+data ObjectVisibleDataChangedSignalInfo
+data ObjectAddRelationshipMethodInfo
+data ObjectGetAttributesMethodInfo
+data ObjectGetDescriptionMethodInfo
+data ObjectGetIndexInParentMethodInfo
+data ObjectGetLayerMethodInfo
+data ObjectGetMdiZorderMethodInfo
+data ObjectGetNAccessibleChildrenMethodInfo
+data ObjectGetNameMethodInfo
+data ObjectGetObjectLocaleMethodInfo
+data ObjectGetParentMethodInfo
+data ObjectGetRoleMethodInfo
+data ObjectInitializeMethodInfo
+data ObjectNotifyStateChangeMethodInfo
+data ObjectPeekParentMethodInfo
+data ObjectRefAccessibleChildMethodInfo
+data ObjectRefRelationSetMethodInfo
+data ObjectRefStateSetMethodInfo
+data ObjectRemovePropertyChangeHandlerMethodInfo
+data ObjectRemoveRelationshipMethodInfo
+data ObjectSetDescriptionMethodInfo
+data ObjectSetNameMethodInfo
+data ObjectSetParentMethodInfo
+data ObjectSetRoleMethodInfo

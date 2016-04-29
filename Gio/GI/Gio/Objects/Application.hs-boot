@@ -1,0 +1,58 @@
+module GI.Gio.Objects.Application where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Application = Application (ForeignPtr Application)
+instance GObject Application where
+class GObject o => ApplicationK o
+instance (GObject o, IsDescendantOf Application o) => ApplicationK o
+data ApplicationActionGroupPropertyInfo
+data ApplicationApplicationIdPropertyInfo
+data ApplicationFlagsPropertyInfo
+data ApplicationInactivityTimeoutPropertyInfo
+data ApplicationIsBusyPropertyInfo
+data ApplicationIsRegisteredPropertyInfo
+data ApplicationIsRemotePropertyInfo
+data ApplicationResourceBasePathPropertyInfo
+data ApplicationActivateSignalInfo
+data ApplicationCommandLineSignalInfo
+data ApplicationHandleLocalOptionsSignalInfo
+data ApplicationOpenSignalInfo
+data ApplicationShutdownSignalInfo
+data ApplicationStartupSignalInfo
+data ApplicationActivateMethodInfo
+data ApplicationAddMainOptionMethodInfo
+data ApplicationAddMainOptionEntriesMethodInfo
+data ApplicationAddOptionGroupMethodInfo
+data ApplicationBindBusyPropertyMethodInfo
+data ApplicationGetApplicationIdMethodInfo
+data ApplicationGetDbusConnectionMethodInfo
+data ApplicationGetDbusObjectPathMethodInfo
+data ApplicationGetFlagsMethodInfo
+data ApplicationGetInactivityTimeoutMethodInfo
+data ApplicationGetIsBusyMethodInfo
+data ApplicationGetIsRegisteredMethodInfo
+data ApplicationGetIsRemoteMethodInfo
+data ApplicationGetResourceBasePathMethodInfo
+data ApplicationHoldMethodInfo
+data ApplicationMarkBusyMethodInfo
+data ApplicationOpenMethodInfo
+data ApplicationQuitMethodInfo
+data ApplicationRegisterMethodInfo
+data ApplicationReleaseMethodInfo
+data ApplicationRunMethodInfo
+data ApplicationSendNotificationMethodInfo
+data ApplicationSetActionGroupMethodInfo
+data ApplicationSetApplicationIdMethodInfo
+data ApplicationSetDefaultMethodInfo
+data ApplicationSetFlagsMethodInfo
+data ApplicationSetInactivityTimeoutMethodInfo
+data ApplicationSetResourceBasePathMethodInfo
+data ApplicationUnbindBusyPropertyMethodInfo
+data ApplicationUnmarkBusyMethodInfo
+data ApplicationWithdrawNotificationMethodInfo

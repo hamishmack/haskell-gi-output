@@ -1,0 +1,61 @@
+module GI.Gst.Structs.Structure where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Structure = Structure (ForeignPtr Structure)
+instance BoxedObject Structure where
+data StructureCanIntersectMethodInfo
+data StructureCopyMethodInfo
+data StructureFilterAndMapInPlaceMethodInfo
+data StructureFixateMethodInfo
+data StructureFixateFieldMethodInfo
+data StructureFixateFieldBooleanMethodInfo
+data StructureFixateFieldNearestDoubleMethodInfo
+data StructureFixateFieldNearestFractionMethodInfo
+data StructureFixateFieldNearestIntMethodInfo
+data StructureFixateFieldStringMethodInfo
+data StructureForeachMethodInfo
+data StructureFreeMethodInfo
+data StructureGetBooleanMethodInfo
+data StructureGetClockTimeMethodInfo
+data StructureGetDateMethodInfo
+data StructureGetDateTimeMethodInfo
+data StructureGetDoubleMethodInfo
+data StructureGetEnumMethodInfo
+data StructureGetFieldTypeMethodInfo
+data StructureGetFlagsetMethodInfo
+data StructureGetFractionMethodInfo
+data StructureGetIntMethodInfo
+data StructureGetInt64MethodInfo
+data StructureGetNameMethodInfo
+data StructureGetNameIdMethodInfo
+data StructureGetStringMethodInfo
+data StructureGetUintMethodInfo
+data StructureGetUint64MethodInfo
+data StructureGetValueMethodInfo
+data StructureHasFieldMethodInfo
+data StructureHasFieldTypedMethodInfo
+data StructureHasNameMethodInfo
+data StructureIdGetValueMethodInfo
+data StructureIdHasFieldMethodInfo
+data StructureIdHasFieldTypedMethodInfo
+data StructureIdSetValueMethodInfo
+data StructureIdTakeValueMethodInfo
+data StructureIntersectMethodInfo
+data StructureIsEqualMethodInfo
+data StructureIsSubsetMethodInfo
+data StructureMapInPlaceMethodInfo
+data StructureNFieldsMethodInfo
+data StructureNthFieldNameMethodInfo
+data StructureRemoveAllFieldsMethodInfo
+data StructureRemoveFieldMethodInfo
+data StructureSetNameMethodInfo
+data StructureSetParentRefcountMethodInfo
+data StructureSetValueMethodInfo
+data StructureTakeValueMethodInfo
+data StructureToStringMethodInfo

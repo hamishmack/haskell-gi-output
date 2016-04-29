@@ -1,0 +1,29 @@
+module GI.Gio.Objects.DesktopAppInfo where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DesktopAppInfo = DesktopAppInfo (ForeignPtr DesktopAppInfo)
+instance GObject DesktopAppInfo where
+class GObject o => DesktopAppInfoK o
+instance (GObject o, IsDescendantOf DesktopAppInfo o) => DesktopAppInfoK o
+data DesktopAppInfoFilenamePropertyInfo
+data DesktopAppInfoGetActionNameMethodInfo
+data DesktopAppInfoGetBooleanMethodInfo
+data DesktopAppInfoGetCategoriesMethodInfo
+data DesktopAppInfoGetFilenameMethodInfo
+data DesktopAppInfoGetGenericNameMethodInfo
+data DesktopAppInfoGetIsHiddenMethodInfo
+data DesktopAppInfoGetKeywordsMethodInfo
+data DesktopAppInfoGetNodisplayMethodInfo
+data DesktopAppInfoGetShowInMethodInfo
+data DesktopAppInfoGetStartupWmClassMethodInfo
+data DesktopAppInfoGetStringMethodInfo
+data DesktopAppInfoHasKeyMethodInfo
+data DesktopAppInfoLaunchActionMethodInfo
+data DesktopAppInfoLaunchUrisAsManagerMethodInfo
+data DesktopAppInfoListActionsMethodInfo

@@ -1,0 +1,43 @@
+module GI.Gio.Interfaces.Mount where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Mount = Mount (ForeignPtr Mount)
+data MountChangedSignalInfo
+data MountPreUnmountSignalInfo
+data MountUnmountedSignalInfo
+instance GObject Mount where
+class GObject o => MountK o
+instance (GObject o, IsDescendantOf Mount o) => MountK o
+data MountCanEjectMethodInfo
+data MountCanUnmountMethodInfo
+data MountEjectMethodInfo
+data MountEjectFinishMethodInfo
+data MountEjectWithOperationMethodInfo
+data MountEjectWithOperationFinishMethodInfo
+data MountGetDefaultLocationMethodInfo
+data MountGetDriveMethodInfo
+data MountGetIconMethodInfo
+data MountGetNameMethodInfo
+data MountGetRootMethodInfo
+data MountGetSortKeyMethodInfo
+data MountGetSymbolicIconMethodInfo
+data MountGetUuidMethodInfo
+data MountGetVolumeMethodInfo
+data MountGuessContentTypeMethodInfo
+data MountGuessContentTypeFinishMethodInfo
+data MountGuessContentTypeSyncMethodInfo
+data MountIsShadowedMethodInfo
+data MountRemountMethodInfo
+data MountRemountFinishMethodInfo
+data MountShadowMethodInfo
+data MountUnmountMethodInfo
+data MountUnmountFinishMethodInfo
+data MountUnmountWithOperationMethodInfo
+data MountUnmountWithOperationFinishMethodInfo
+data MountUnshadowMethodInfo

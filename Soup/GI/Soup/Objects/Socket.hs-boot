@@ -1,0 +1,49 @@
+module GI.Soup.Objects.Socket where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Socket = Socket (ForeignPtr Socket)
+instance GObject Socket where
+class GObject o => SocketK o
+instance (GObject o, IsDescendantOf Socket o) => SocketK o
+data SocketAsyncContextPropertyInfo
+data SocketFdPropertyInfo
+data SocketGsocketPropertyInfo
+data SocketIostreamPropertyInfo
+data SocketIpv6OnlyPropertyInfo
+data SocketIsServerPropertyInfo
+data SocketLocalAddressPropertyInfo
+data SocketNonBlockingPropertyInfo
+data SocketRemoteAddressPropertyInfo
+data SocketSslCredsPropertyInfo
+data SocketSslFallbackPropertyInfo
+data SocketSslStrictPropertyInfo
+data SocketTimeoutPropertyInfo
+data SocketTlsCertificatePropertyInfo
+data SocketTlsErrorsPropertyInfo
+data SocketTrustedCertificatePropertyInfo
+data SocketUseThreadContextPropertyInfo
+data SocketDisconnectedSignalInfo
+data SocketEventSignalInfo
+data SocketNewConnectionSignalInfo
+data SocketReadableSignalInfo
+data SocketWritableSignalInfo
+data SocketConnectAsyncMethodInfo
+data SocketConnectSyncMethodInfo
+data SocketDisconnectMethodInfo
+data SocketGetFdMethodInfo
+data SocketGetLocalAddressMethodInfo
+data SocketGetRemoteAddressMethodInfo
+data SocketIsConnectedMethodInfo
+data SocketIsSslMethodInfo
+data SocketListenMethodInfo
+data SocketReadMethodInfo
+data SocketReadUntilMethodInfo
+data SocketStartProxySslMethodInfo
+data SocketStartSslMethodInfo
+data SocketWriteMethodInfo

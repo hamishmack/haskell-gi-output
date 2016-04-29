@@ -1,0 +1,34 @@
+module GI.Gtk.Objects.AppChooserWidget where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AppChooserWidget = AppChooserWidget (ForeignPtr AppChooserWidget)
+instance GObject AppChooserWidget where
+class GObject o => AppChooserWidgetK o
+instance (GObject o, IsDescendantOf AppChooserWidget o) => AppChooserWidgetK o
+data AppChooserWidgetDefaultTextPropertyInfo
+data AppChooserWidgetShowAllPropertyInfo
+data AppChooserWidgetShowDefaultPropertyInfo
+data AppChooserWidgetShowFallbackPropertyInfo
+data AppChooserWidgetShowOtherPropertyInfo
+data AppChooserWidgetShowRecommendedPropertyInfo
+data AppChooserWidgetApplicationActivatedSignalInfo
+data AppChooserWidgetApplicationSelectedSignalInfo
+data AppChooserWidgetPopulatePopupSignalInfo
+data AppChooserWidgetGetDefaultTextMethodInfo
+data AppChooserWidgetGetShowAllMethodInfo
+data AppChooserWidgetGetShowDefaultMethodInfo
+data AppChooserWidgetGetShowFallbackMethodInfo
+data AppChooserWidgetGetShowOtherMethodInfo
+data AppChooserWidgetGetShowRecommendedMethodInfo
+data AppChooserWidgetSetDefaultTextMethodInfo
+data AppChooserWidgetSetShowAllMethodInfo
+data AppChooserWidgetSetShowDefaultMethodInfo
+data AppChooserWidgetSetShowFallbackMethodInfo
+data AppChooserWidgetSetShowOtherMethodInfo
+data AppChooserWidgetSetShowRecommendedMethodInfo

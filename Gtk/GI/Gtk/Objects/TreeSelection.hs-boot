@@ -1,0 +1,33 @@
+module GI.Gtk.Objects.TreeSelection where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype TreeSelection = TreeSelection (ForeignPtr TreeSelection)
+instance GObject TreeSelection where
+class GObject o => TreeSelectionK o
+instance (GObject o, IsDescendantOf TreeSelection o) => TreeSelectionK o
+data TreeSelectionModePropertyInfo
+data TreeSelectionChangedSignalInfo
+data TreeSelectionCountSelectedRowsMethodInfo
+data TreeSelectionGetModeMethodInfo
+data TreeSelectionGetSelectedMethodInfo
+data TreeSelectionGetSelectedRowsMethodInfo
+data TreeSelectionGetTreeViewMethodInfo
+data TreeSelectionIterIsSelectedMethodInfo
+data TreeSelectionPathIsSelectedMethodInfo
+data TreeSelectionSelectAllMethodInfo
+data TreeSelectionSelectIterMethodInfo
+data TreeSelectionSelectPathMethodInfo
+data TreeSelectionSelectRangeMethodInfo
+data TreeSelectionSelectedForeachMethodInfo
+data TreeSelectionSetModeMethodInfo
+data TreeSelectionSetSelectFunctionMethodInfo
+data TreeSelectionUnselectAllMethodInfo
+data TreeSelectionUnselectIterMethodInfo
+data TreeSelectionUnselectPathMethodInfo
+data TreeSelectionUnselectRangeMethodInfo

@@ -1,0 +1,48 @@
+module GI.Gtk.Objects.SpinButton where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype SpinButton = SpinButton (ForeignPtr SpinButton)
+instance GObject SpinButton where
+class GObject o => SpinButtonK o
+instance (GObject o, IsDescendantOf SpinButton o) => SpinButtonK o
+data SpinButtonAdjustmentPropertyInfo
+data SpinButtonClimbRatePropertyInfo
+data SpinButtonDigitsPropertyInfo
+data SpinButtonNumericPropertyInfo
+data SpinButtonSnapToTicksPropertyInfo
+data SpinButtonUpdatePolicyPropertyInfo
+data SpinButtonValuePropertyInfo
+data SpinButtonWrapPropertyInfo
+data SpinButtonChangeValueSignalInfo
+data SpinButtonInputSignalInfo
+data SpinButtonOutputSignalInfo
+data SpinButtonValueChangedSignalInfo
+data SpinButtonWrappedSignalInfo
+data SpinButtonConfigureMethodInfo
+data SpinButtonGetAdjustmentMethodInfo
+data SpinButtonGetDigitsMethodInfo
+data SpinButtonGetIncrementsMethodInfo
+data SpinButtonGetNumericMethodInfo
+data SpinButtonGetRangeMethodInfo
+data SpinButtonGetSnapToTicksMethodInfo
+data SpinButtonGetUpdatePolicyMethodInfo
+data SpinButtonGetValueMethodInfo
+data SpinButtonGetValueAsIntMethodInfo
+data SpinButtonGetWrapMethodInfo
+data SpinButtonSetAdjustmentMethodInfo
+data SpinButtonSetDigitsMethodInfo
+data SpinButtonSetIncrementsMethodInfo
+data SpinButtonSetNumericMethodInfo
+data SpinButtonSetRangeMethodInfo
+data SpinButtonSetSnapToTicksMethodInfo
+data SpinButtonSetUpdatePolicyMethodInfo
+data SpinButtonSetValueMethodInfo
+data SpinButtonSetWrapMethodInfo
+data SpinButtonSpinMethodInfo
+data SpinButtonUpdateMethodInfo

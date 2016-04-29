@@ -1,0 +1,28 @@
+module GI.GstBase.Objects.BaseTransform where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype BaseTransform = BaseTransform (ForeignPtr BaseTransform)
+instance GObject BaseTransform where
+class GObject o => BaseTransformK o
+instance (GObject o, IsDescendantOf BaseTransform o) => BaseTransformK o
+data BaseTransformQosPropertyInfo
+data BaseTransformGetAllocatorMethodInfo
+data BaseTransformGetBufferPoolMethodInfo
+data BaseTransformIsInPlaceMethodInfo
+data BaseTransformIsPassthroughMethodInfo
+data BaseTransformIsQosEnabledMethodInfo
+data BaseTransformReconfigureSinkMethodInfo
+data BaseTransformReconfigureSrcMethodInfo
+data BaseTransformSetGapAwareMethodInfo
+data BaseTransformSetInPlaceMethodInfo
+data BaseTransformSetPassthroughMethodInfo
+data BaseTransformSetPreferPassthroughMethodInfo
+data BaseTransformSetQosEnabledMethodInfo
+data BaseTransformUpdateQosMethodInfo
+data BaseTransformUpdateSrcCapsMethodInfo

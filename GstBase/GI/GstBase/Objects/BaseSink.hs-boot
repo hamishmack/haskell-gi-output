@@ -1,0 +1,51 @@
+module GI.GstBase.Objects.BaseSink where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype BaseSink = BaseSink (ForeignPtr BaseSink)
+instance GObject BaseSink where
+class GObject o => BaseSinkK o
+instance (GObject o, IsDescendantOf BaseSink o) => BaseSinkK o
+data BaseSinkAsyncPropertyInfo
+data BaseSinkBlocksizePropertyInfo
+data BaseSinkEnableLastSamplePropertyInfo
+data BaseSinkLastSamplePropertyInfo
+data BaseSinkMaxBitratePropertyInfo
+data BaseSinkMaxLatenessPropertyInfo
+data BaseSinkQosPropertyInfo
+data BaseSinkRenderDelayPropertyInfo
+data BaseSinkSyncPropertyInfo
+data BaseSinkThrottleTimePropertyInfo
+data BaseSinkTsOffsetPropertyInfo
+data BaseSinkDoPrerollMethodInfo
+data BaseSinkGetBlocksizeMethodInfo
+data BaseSinkGetLastSampleMethodInfo
+data BaseSinkGetLatencyMethodInfo
+data BaseSinkGetMaxBitrateMethodInfo
+data BaseSinkGetMaxLatenessMethodInfo
+data BaseSinkGetRenderDelayMethodInfo
+data BaseSinkGetSyncMethodInfo
+data BaseSinkGetThrottleTimeMethodInfo
+data BaseSinkGetTsOffsetMethodInfo
+data BaseSinkIsAsyncEnabledMethodInfo
+data BaseSinkIsLastSampleEnabledMethodInfo
+data BaseSinkIsQosEnabledMethodInfo
+data BaseSinkQueryLatencyMethodInfo
+data BaseSinkSetAsyncEnabledMethodInfo
+data BaseSinkSetBlocksizeMethodInfo
+data BaseSinkSetLastSampleEnabledMethodInfo
+data BaseSinkSetMaxBitrateMethodInfo
+data BaseSinkSetMaxLatenessMethodInfo
+data BaseSinkSetQosEnabledMethodInfo
+data BaseSinkSetRenderDelayMethodInfo
+data BaseSinkSetSyncMethodInfo
+data BaseSinkSetThrottleTimeMethodInfo
+data BaseSinkSetTsOffsetMethodInfo
+data BaseSinkWaitMethodInfo
+data BaseSinkWaitClockMethodInfo
+data BaseSinkWaitPrerollMethodInfo

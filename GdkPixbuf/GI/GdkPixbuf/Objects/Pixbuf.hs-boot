@@ -1,0 +1,52 @@
+module GI.GdkPixbuf.Objects.Pixbuf where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Pixbuf = Pixbuf (ForeignPtr Pixbuf)
+instance GObject Pixbuf where
+class GObject o => PixbufK o
+instance (GObject o, IsDescendantOf Pixbuf o) => PixbufK o
+data PixbufBitsPerSamplePropertyInfo
+data PixbufColorspacePropertyInfo
+data PixbufHasAlphaPropertyInfo
+data PixbufHeightPropertyInfo
+data PixbufNChannelsPropertyInfo
+data PixbufPixelBytesPropertyInfo
+data PixbufPixelsPropertyInfo
+data PixbufRowstridePropertyInfo
+data PixbufWidthPropertyInfo
+data PixbufAddAlphaMethodInfo
+data PixbufApplyEmbeddedOrientationMethodInfo
+data PixbufCompositeMethodInfo
+data PixbufCompositeColorMethodInfo
+data PixbufCompositeColorSimpleMethodInfo
+data PixbufCopyMethodInfo
+data PixbufCopyAreaMethodInfo
+data PixbufFillMethodInfo
+data PixbufFlipMethodInfo
+data PixbufGetBitsPerSampleMethodInfo
+data PixbufGetByteLengthMethodInfo
+data PixbufGetColorspaceMethodInfo
+data PixbufGetHasAlphaMethodInfo
+data PixbufGetHeightMethodInfo
+data PixbufGetNChannelsMethodInfo
+data PixbufGetOptionMethodInfo
+data PixbufGetOptionsMethodInfo
+data PixbufGetPixelsMethodInfo
+data PixbufGetRowstrideMethodInfo
+data PixbufGetWidthMethodInfo
+data PixbufNewSubpixbufMethodInfo
+data PixbufReadPixelBytesMethodInfo
+data PixbufReadPixelsMethodInfo
+data PixbufRotateSimpleMethodInfo
+data PixbufSaturateAndPixelateMethodInfo
+data PixbufSaveToBuffervMethodInfo
+data PixbufSaveToCallbackvMethodInfo
+data PixbufSavevMethodInfo
+data PixbufScaleMethodInfo
+data PixbufScaleSimpleMethodInfo

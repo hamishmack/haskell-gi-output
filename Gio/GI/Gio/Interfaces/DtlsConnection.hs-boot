@@ -1,0 +1,44 @@
+module GI.Gio.Interfaces.DtlsConnection where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DtlsConnection = DtlsConnection (ForeignPtr DtlsConnection)
+data DtlsConnectionBaseSocketPropertyInfo
+data DtlsConnectionCertificatePropertyInfo
+data DtlsConnectionDatabasePropertyInfo
+data DtlsConnectionInteractionPropertyInfo
+data DtlsConnectionPeerCertificatePropertyInfo
+data DtlsConnectionPeerCertificateErrorsPropertyInfo
+data DtlsConnectionRehandshakeModePropertyInfo
+data DtlsConnectionRequireCloseNotifyPropertyInfo
+data DtlsConnectionAcceptCertificateSignalInfo
+instance GObject DtlsConnection where
+class GObject o => DtlsConnectionK o
+instance (GObject o, IsDescendantOf DtlsConnection o) => DtlsConnectionK o
+data DtlsConnectionCloseMethodInfo
+data DtlsConnectionCloseAsyncMethodInfo
+data DtlsConnectionCloseFinishMethodInfo
+data DtlsConnectionEmitAcceptCertificateMethodInfo
+data DtlsConnectionGetCertificateMethodInfo
+data DtlsConnectionGetDatabaseMethodInfo
+data DtlsConnectionGetInteractionMethodInfo
+data DtlsConnectionGetPeerCertificateMethodInfo
+data DtlsConnectionGetPeerCertificateErrorsMethodInfo
+data DtlsConnectionGetRehandshakeModeMethodInfo
+data DtlsConnectionGetRequireCloseNotifyMethodInfo
+data DtlsConnectionHandshakeMethodInfo
+data DtlsConnectionHandshakeAsyncMethodInfo
+data DtlsConnectionHandshakeFinishMethodInfo
+data DtlsConnectionSetCertificateMethodInfo
+data DtlsConnectionSetDatabaseMethodInfo
+data DtlsConnectionSetInteractionMethodInfo
+data DtlsConnectionSetRehandshakeModeMethodInfo
+data DtlsConnectionSetRequireCloseNotifyMethodInfo
+data DtlsConnectionShutdownMethodInfo
+data DtlsConnectionShutdownAsyncMethodInfo
+data DtlsConnectionShutdownFinishMethodInfo

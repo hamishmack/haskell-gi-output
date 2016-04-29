@@ -1,0 +1,27 @@
+module GI.Gio.Objects.DBusInterfaceSkeleton where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DBusInterfaceSkeleton = DBusInterfaceSkeleton (ForeignPtr DBusInterfaceSkeleton)
+instance GObject DBusInterfaceSkeleton where
+class GObject o => DBusInterfaceSkeletonK o
+instance (GObject o, IsDescendantOf DBusInterfaceSkeleton o) => DBusInterfaceSkeletonK o
+data DBusInterfaceSkeletonGFlagsPropertyInfo
+data DBusInterfaceSkeletonGAuthorizeMethodSignalInfo
+data DBusInterfaceSkeletonExportMethodInfo
+data DBusInterfaceSkeletonFlushMethodInfo
+data DBusInterfaceSkeletonGetConnectionMethodInfo
+data DBusInterfaceSkeletonGetConnectionsMethodInfo
+data DBusInterfaceSkeletonGetFlagsMethodInfo
+data DBusInterfaceSkeletonGetInfoMethodInfo
+data DBusInterfaceSkeletonGetObjectPathMethodInfo
+data DBusInterfaceSkeletonGetPropertiesMethodInfo
+data DBusInterfaceSkeletonHasConnectionMethodInfo
+data DBusInterfaceSkeletonSetFlagsMethodInfo
+data DBusInterfaceSkeletonUnexportMethodInfo
+data DBusInterfaceSkeletonUnexportFromConnectionMethodInfo

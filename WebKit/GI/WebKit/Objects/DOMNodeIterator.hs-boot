@@ -1,0 +1,28 @@
+module GI.WebKit.Objects.DOMNodeIterator where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMNodeIterator = DOMNodeIterator (ForeignPtr DOMNodeIterator)
+instance GObject DOMNodeIterator where
+class GObject o => DOMNodeIteratorK o
+instance (GObject o, IsDescendantOf DOMNodeIterator o) => DOMNodeIteratorK o
+data DOMNodeIteratorExpandEntityReferencesPropertyInfo
+data DOMNodeIteratorFilterPropertyInfo
+data DOMNodeIteratorPointerBeforeReferenceNodePropertyInfo
+data DOMNodeIteratorReferenceNodePropertyInfo
+data DOMNodeIteratorRootPropertyInfo
+data DOMNodeIteratorWhatToShowPropertyInfo
+data DOMNodeIteratorDetachMethodInfo
+data DOMNodeIteratorGetExpandEntityReferencesMethodInfo
+data DOMNodeIteratorGetFilterMethodInfo
+data DOMNodeIteratorGetPointerBeforeReferenceNodeMethodInfo
+data DOMNodeIteratorGetReferenceNodeMethodInfo
+data DOMNodeIteratorGetRootMethodInfo
+data DOMNodeIteratorGetWhatToShowMethodInfo
+data DOMNodeIteratorNextNodeMethodInfo
+data DOMNodeIteratorPreviousNodeMethodInfo

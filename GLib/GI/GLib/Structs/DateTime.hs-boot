@@ -1,0 +1,45 @@
+module GI.GLib.Structs.DateTime where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DateTime = DateTime (ForeignPtr DateTime)
+instance BoxedObject DateTime where
+data DateTimeAddMethodInfo
+data DateTimeAddDaysMethodInfo
+data DateTimeAddFullMethodInfo
+data DateTimeAddHoursMethodInfo
+data DateTimeAddMinutesMethodInfo
+data DateTimeAddMonthsMethodInfo
+data DateTimeAddSecondsMethodInfo
+data DateTimeAddWeeksMethodInfo
+data DateTimeAddYearsMethodInfo
+data DateTimeDifferenceMethodInfo
+data DateTimeFormatMethodInfo
+data DateTimeGetDayOfMonthMethodInfo
+data DateTimeGetDayOfWeekMethodInfo
+data DateTimeGetDayOfYearMethodInfo
+data DateTimeGetHourMethodInfo
+data DateTimeGetMicrosecondMethodInfo
+data DateTimeGetMinuteMethodInfo
+data DateTimeGetMonthMethodInfo
+data DateTimeGetSecondMethodInfo
+data DateTimeGetSecondsMethodInfo
+data DateTimeGetTimezoneAbbreviationMethodInfo
+data DateTimeGetUtcOffsetMethodInfo
+data DateTimeGetWeekNumberingYearMethodInfo
+data DateTimeGetWeekOfYearMethodInfo
+data DateTimeGetYearMethodInfo
+data DateTimeGetYmdMethodInfo
+data DateTimeIsDaylightSavingsMethodInfo
+data DateTimeRefMethodInfo
+data DateTimeToLocalMethodInfo
+data DateTimeToTimevalMethodInfo
+data DateTimeToTimezoneMethodInfo
+data DateTimeToUnixMethodInfo
+data DateTimeToUtcMethodInfo
+data DateTimeUnrefMethodInfo

@@ -1,0 +1,28 @@
+module GI.GtkSource.Objects.SearchSettings where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype SearchSettings = SearchSettings (ForeignPtr SearchSettings)
+instance GObject SearchSettings where
+class GObject o => SearchSettingsK o
+instance (GObject o, IsDescendantOf SearchSettings o) => SearchSettingsK o
+data SearchSettingsAtWordBoundariesPropertyInfo
+data SearchSettingsCaseSensitivePropertyInfo
+data SearchSettingsRegexEnabledPropertyInfo
+data SearchSettingsSearchTextPropertyInfo
+data SearchSettingsWrapAroundPropertyInfo
+data SearchSettingsGetAtWordBoundariesMethodInfo
+data SearchSettingsGetCaseSensitiveMethodInfo
+data SearchSettingsGetRegexEnabledMethodInfo
+data SearchSettingsGetSearchTextMethodInfo
+data SearchSettingsGetWrapAroundMethodInfo
+data SearchSettingsSetAtWordBoundariesMethodInfo
+data SearchSettingsSetCaseSensitiveMethodInfo
+data SearchSettingsSetRegexEnabledMethodInfo
+data SearchSettingsSetSearchTextMethodInfo
+data SearchSettingsSetWrapAroundMethodInfo

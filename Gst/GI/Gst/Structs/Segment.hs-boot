@@ -1,0 +1,29 @@
+module GI.Gst.Structs.Segment where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Segment = Segment (ForeignPtr Segment)
+instance BoxedObject Segment where
+data SegmentClipMethodInfo
+data SegmentCopyMethodInfo
+data SegmentCopyIntoMethodInfo
+data SegmentDoSeekMethodInfo
+data SegmentFreeMethodInfo
+data SegmentInitMethodInfo
+data SegmentIsEqualMethodInfo
+data SegmentOffsetRunningTimeMethodInfo
+data SegmentPositionFromRunningTimeMethodInfo
+data SegmentPositionFromRunningTimeFullMethodInfo
+data SegmentPositionFromStreamTimeMethodInfo
+data SegmentPositionFromStreamTimeFullMethodInfo
+data SegmentSetRunningTimeMethodInfo
+data SegmentToPositionMethodInfo
+data SegmentToRunningTimeMethodInfo
+data SegmentToRunningTimeFullMethodInfo
+data SegmentToStreamTimeMethodInfo
+data SegmentToStreamTimeFullMethodInfo

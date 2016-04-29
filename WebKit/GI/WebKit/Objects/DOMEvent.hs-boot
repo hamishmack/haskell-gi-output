@@ -1,0 +1,40 @@
+module GI.WebKit.Objects.DOMEvent where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMEvent = DOMEvent (ForeignPtr DOMEvent)
+instance GObject DOMEvent where
+class GObject o => DOMEventK o
+instance (GObject o, IsDescendantOf DOMEvent o) => DOMEventK o
+data DOMEventBubblesPropertyInfo
+data DOMEventCancelBubblePropertyInfo
+data DOMEventCancelablePropertyInfo
+data DOMEventCurrentTargetPropertyInfo
+data DOMEventDefaultPreventedPropertyInfo
+data DOMEventEventPhasePropertyInfo
+data DOMEventReturnValuePropertyInfo
+data DOMEventSrcElementPropertyInfo
+data DOMEventTargetPropertyInfo
+data DOMEventTimeStampPropertyInfo
+data DOMEventTypePropertyInfo
+data DOMEventGetBubblesMethodInfo
+data DOMEventGetCancelBubbleMethodInfo
+data DOMEventGetCancelableMethodInfo
+data DOMEventGetCurrentTargetMethodInfo
+data DOMEventGetDefaultPreventedMethodInfo
+data DOMEventGetEventPhaseMethodInfo
+data DOMEventGetReturnValueMethodInfo
+data DOMEventGetSrcElementMethodInfo
+data DOMEventGetTargetMethodInfo
+data DOMEventGetTimeStampMethodInfo
+data DOMEventInitEventMethodInfo
+data DOMEventPreventDefaultMethodInfo
+data DOMEventSetCancelBubbleMethodInfo
+data DOMEventSetReturnValueMethodInfo
+data DOMEventStopImmediatePropagationMethodInfo
+data DOMEventStopPropagationMethodInfo

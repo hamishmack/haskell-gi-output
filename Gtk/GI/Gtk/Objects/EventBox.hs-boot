@@ -1,0 +1,19 @@
+module GI.Gtk.Objects.EventBox where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype EventBox = EventBox (ForeignPtr EventBox)
+instance GObject EventBox where
+class GObject o => EventBoxK o
+instance (GObject o, IsDescendantOf EventBox o) => EventBoxK o
+data EventBoxAboveChildPropertyInfo
+data EventBoxVisibleWindowPropertyInfo
+data EventBoxGetAboveChildMethodInfo
+data EventBoxGetVisibleWindowMethodInfo
+data EventBoxSetAboveChildMethodInfo
+data EventBoxSetVisibleWindowMethodInfo

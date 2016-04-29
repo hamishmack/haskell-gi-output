@@ -1,0 +1,40 @@
+module GI.GstAudio.Objects.AudioRingBuffer where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AudioRingBuffer = AudioRingBuffer (ForeignPtr AudioRingBuffer)
+instance GObject AudioRingBuffer where
+class GObject o => AudioRingBufferK o
+instance (GObject o, IsDescendantOf AudioRingBuffer o) => AudioRingBufferK o
+data AudioRingBufferAcquireMethodInfo
+data AudioRingBufferActivateMethodInfo
+data AudioRingBufferAdvanceMethodInfo
+data AudioRingBufferClearMethodInfo
+data AudioRingBufferClearAllMethodInfo
+data AudioRingBufferCloseDeviceMethodInfo
+data AudioRingBufferCommitMethodInfo
+data AudioRingBufferConvertMethodInfo
+data AudioRingBufferDelayMethodInfo
+data AudioRingBufferDeviceIsOpenMethodInfo
+data AudioRingBufferIsAcquiredMethodInfo
+data AudioRingBufferIsActiveMethodInfo
+data AudioRingBufferIsFlushingMethodInfo
+data AudioRingBufferMayStartMethodInfo
+data AudioRingBufferOpenDeviceMethodInfo
+data AudioRingBufferPauseMethodInfo
+data AudioRingBufferPrepareReadMethodInfo
+data AudioRingBufferReadMethodInfo
+data AudioRingBufferReleaseMethodInfo
+data AudioRingBufferSamplesDoneMethodInfo
+data AudioRingBufferSetCallbackMethodInfo
+data AudioRingBufferSetChannelPositionsMethodInfo
+data AudioRingBufferSetFlushingMethodInfo
+data AudioRingBufferSetSampleMethodInfo
+data AudioRingBufferSetTimestampMethodInfo
+data AudioRingBufferStartMethodInfo
+data AudioRingBufferStopMethodInfo

@@ -1,0 +1,68 @@
+module GI.Gst.Objects.Element where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Element = Element (ForeignPtr Element)
+instance GObject Element where
+class GObject o => ElementK o
+instance (GObject o, IsDescendantOf Element o) => ElementK o
+data ElementNoMorePadsSignalInfo
+data ElementPadAddedSignalInfo
+data ElementPadRemovedSignalInfo
+data ElementAbortStateMethodInfo
+data ElementAddPadMethodInfo
+data ElementChangeStateMethodInfo
+data ElementContinueStateMethodInfo
+data ElementCreateAllPadsMethodInfo
+data ElementGetBaseTimeMethodInfo
+data ElementGetBusMethodInfo
+data ElementGetClockMethodInfo
+data ElementGetCompatiblePadMethodInfo
+data ElementGetCompatiblePadTemplateMethodInfo
+data ElementGetContextMethodInfo
+data ElementGetContextUnlockedMethodInfo
+data ElementGetContextsMethodInfo
+data ElementGetFactoryMethodInfo
+data ElementGetRequestPadMethodInfo
+data ElementGetStartTimeMethodInfo
+data ElementGetStateMethodInfo
+data ElementGetStaticPadMethodInfo
+data ElementIsLockedStateMethodInfo
+data ElementIteratePadsMethodInfo
+data ElementIterateSinkPadsMethodInfo
+data ElementIterateSrcPadsMethodInfo
+data ElementLinkMethodInfo
+data ElementLinkFilteredMethodInfo
+data ElementLinkPadsMethodInfo
+data ElementLinkPadsFilteredMethodInfo
+data ElementLinkPadsFullMethodInfo
+data ElementLostStateMethodInfo
+data ElementMessageFullMethodInfo
+data ElementNoMorePadsMethodInfo
+data ElementPostMessageMethodInfo
+data ElementProvideClockMethodInfo
+data ElementQueryMethodInfo
+data ElementQueryConvertMethodInfo
+data ElementQueryDurationMethodInfo
+data ElementQueryPositionMethodInfo
+data ElementReleaseRequestPadMethodInfo
+data ElementRemovePadMethodInfo
+data ElementRequestPadMethodInfo
+data ElementSeekMethodInfo
+data ElementSeekSimpleMethodInfo
+data ElementSendEventMethodInfo
+data ElementSetBaseTimeMethodInfo
+data ElementSetBusMethodInfo
+data ElementSetClockMethodInfo
+data ElementSetContextMethodInfo
+data ElementSetLockedStateMethodInfo
+data ElementSetStartTimeMethodInfo
+data ElementSetStateMethodInfo
+data ElementSyncStateWithParentMethodInfo
+data ElementUnlinkMethodInfo
+data ElementUnlinkPadsMethodInfo

@@ -1,0 +1,51 @@
+module GI.GtkSource.Objects.GutterRenderer where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype GutterRenderer = GutterRenderer (ForeignPtr GutterRenderer)
+instance GObject GutterRenderer where
+class GObject o => GutterRendererK o
+instance (GObject o, IsDescendantOf GutterRenderer o) => GutterRendererK o
+data GutterRendererAlignmentModePropertyInfo
+data GutterRendererBackgroundRgbaPropertyInfo
+data GutterRendererBackgroundSetPropertyInfo
+data GutterRendererSizePropertyInfo
+data GutterRendererViewPropertyInfo
+data GutterRendererVisiblePropertyInfo
+data GutterRendererWindowTypePropertyInfo
+data GutterRendererXalignPropertyInfo
+data GutterRendererXpadPropertyInfo
+data GutterRendererYalignPropertyInfo
+data GutterRendererYpadPropertyInfo
+data GutterRendererActivateSignalInfo
+data GutterRendererQueryActivatableSignalInfo
+data GutterRendererQueryDataSignalInfo
+data GutterRendererQueryTooltipSignalInfo
+data GutterRendererQueueDrawSignalInfo
+data GutterRendererActivateMethodInfo
+data GutterRendererBeginMethodInfo
+data GutterRendererDrawMethodInfo
+data GutterRendererEndMethodInfo
+data GutterRendererGetAlignmentMethodInfo
+data GutterRendererGetAlignmentModeMethodInfo
+data GutterRendererGetBackgroundMethodInfo
+data GutterRendererGetPaddingMethodInfo
+data GutterRendererGetSizeMethodInfo
+data GutterRendererGetViewMethodInfo
+data GutterRendererGetVisibleMethodInfo
+data GutterRendererGetWindowTypeMethodInfo
+data GutterRendererQueryActivatableMethodInfo
+data GutterRendererQueryDataMethodInfo
+data GutterRendererQueryTooltipMethodInfo
+data GutterRendererQueueDrawMethodInfo
+data GutterRendererSetAlignmentMethodInfo
+data GutterRendererSetAlignmentModeMethodInfo
+data GutterRendererSetBackgroundMethodInfo
+data GutterRendererSetPaddingMethodInfo
+data GutterRendererSetSizeMethodInfo
+data GutterRendererSetVisibleMethodInfo

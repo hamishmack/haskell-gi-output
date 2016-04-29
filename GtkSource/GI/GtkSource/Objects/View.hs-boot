@@ -1,0 +1,74 @@
+module GI.GtkSource.Objects.View where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype View = View (ForeignPtr View)
+instance GObject View where
+class GObject o => ViewK o
+instance (GObject o, IsDescendantOf View o) => ViewK o
+data ViewAutoIndentPropertyInfo
+data ViewBackgroundPatternPropertyInfo
+data ViewCompletionPropertyInfo
+data ViewDrawSpacesPropertyInfo
+data ViewHighlightCurrentLinePropertyInfo
+data ViewIndentOnTabPropertyInfo
+data ViewIndentWidthPropertyInfo
+data ViewInsertSpacesInsteadOfTabsPropertyInfo
+data ViewRightMarginPositionPropertyInfo
+data ViewShowLineMarksPropertyInfo
+data ViewShowLineNumbersPropertyInfo
+data ViewShowRightMarginPropertyInfo
+data ViewSmartBackspacePropertyInfo
+data ViewSmartHomeEndPropertyInfo
+data ViewTabWidthPropertyInfo
+data ViewChangeCaseSignalInfo
+data ViewChangeNumberSignalInfo
+data ViewJoinLinesSignalInfo
+data ViewLineMarkActivatedSignalInfo
+data ViewMoveLinesSignalInfo
+data ViewMoveToMatchingBracketSignalInfo
+data ViewMoveWordsSignalInfo
+data ViewRedoSignalInfo
+data ViewShowCompletionSignalInfo
+data ViewSmartHomeEndSignalInfo
+data ViewUndoSignalInfo
+data ViewGetAutoIndentMethodInfo
+data ViewGetBackgroundPatternMethodInfo
+data ViewGetCompletionMethodInfo
+data ViewGetDrawSpacesMethodInfo
+data ViewGetGutterMethodInfo
+data ViewGetHighlightCurrentLineMethodInfo
+data ViewGetIndentOnTabMethodInfo
+data ViewGetIndentWidthMethodInfo
+data ViewGetInsertSpacesInsteadOfTabsMethodInfo
+data ViewGetMarkAttributesMethodInfo
+data ViewGetRightMarginPositionMethodInfo
+data ViewGetShowLineMarksMethodInfo
+data ViewGetShowLineNumbersMethodInfo
+data ViewGetShowRightMarginMethodInfo
+data ViewGetSmartBackspaceMethodInfo
+data ViewGetSmartHomeEndMethodInfo
+data ViewGetTabWidthMethodInfo
+data ViewGetVisualColumnMethodInfo
+data ViewIndentLinesMethodInfo
+data ViewSetAutoIndentMethodInfo
+data ViewSetBackgroundPatternMethodInfo
+data ViewSetDrawSpacesMethodInfo
+data ViewSetHighlightCurrentLineMethodInfo
+data ViewSetIndentOnTabMethodInfo
+data ViewSetIndentWidthMethodInfo
+data ViewSetInsertSpacesInsteadOfTabsMethodInfo
+data ViewSetMarkAttributesMethodInfo
+data ViewSetRightMarginPositionMethodInfo
+data ViewSetShowLineMarksMethodInfo
+data ViewSetShowLineNumbersMethodInfo
+data ViewSetShowRightMarginMethodInfo
+data ViewSetSmartBackspaceMethodInfo
+data ViewSetSmartHomeEndMethodInfo
+data ViewSetTabWidthMethodInfo
+data ViewUnindentLinesMethodInfo

@@ -1,0 +1,52 @@
+module GI.Soup.Objects.Server where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Server = Server (ForeignPtr Server)
+instance GObject Server where
+class GObject o => ServerK o
+instance (GObject o, IsDescendantOf Server o) => ServerK o
+data ServerAsyncContextPropertyInfo
+data ServerHttpAliasesPropertyInfo
+data ServerHttpsAliasesPropertyInfo
+data ServerInterfacePropertyInfo
+data ServerPortPropertyInfo
+data ServerRawPathsPropertyInfo
+data ServerServerHeaderPropertyInfo
+data ServerSslCertFilePropertyInfo
+data ServerSslKeyFilePropertyInfo
+data ServerTlsCertificatePropertyInfo
+data ServerRequestAbortedSignalInfo
+data ServerRequestFinishedSignalInfo
+data ServerRequestReadSignalInfo
+data ServerRequestStartedSignalInfo
+data ServerAcceptIostreamMethodInfo
+data ServerAddAuthDomainMethodInfo
+data ServerAddEarlyHandlerMethodInfo
+data ServerAddHandlerMethodInfo
+data ServerAddWebsocketHandlerMethodInfo
+data ServerDisconnectMethodInfo
+data ServerGetAsyncContextMethodInfo
+data ServerGetListenerMethodInfo
+data ServerGetListenersMethodInfo
+data ServerGetPortMethodInfo
+data ServerGetUrisMethodInfo
+data ServerIsHttpsMethodInfo
+data ServerListenMethodInfo
+data ServerListenAllMethodInfo
+data ServerListenFdMethodInfo
+data ServerListenLocalMethodInfo
+data ServerListenSocketMethodInfo
+data ServerPauseMessageMethodInfo
+data ServerQuitMethodInfo
+data ServerRemoveAuthDomainMethodInfo
+data ServerRemoveHandlerMethodInfo
+data ServerRunMethodInfo
+data ServerRunAsyncMethodInfo
+data ServerSetSslCertFileMethodInfo
+data ServerUnpauseMessageMethodInfo

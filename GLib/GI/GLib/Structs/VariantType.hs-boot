@@ -1,0 +1,32 @@
+module GI.GLib.Structs.VariantType where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype VariantType = VariantType (ForeignPtr VariantType)
+instance BoxedObject VariantType where
+data VariantTypeCopyMethodInfo
+data VariantTypeDupStringMethodInfo
+data VariantTypeElementMethodInfo
+data VariantTypeEqualMethodInfo
+data VariantTypeFirstMethodInfo
+data VariantTypeFreeMethodInfo
+data VariantTypeGetStringLengthMethodInfo
+data VariantTypeHashMethodInfo
+data VariantTypeIsArrayMethodInfo
+data VariantTypeIsBasicMethodInfo
+data VariantTypeIsContainerMethodInfo
+data VariantTypeIsDefiniteMethodInfo
+data VariantTypeIsDictEntryMethodInfo
+data VariantTypeIsMaybeMethodInfo
+data VariantTypeIsSubtypeOfMethodInfo
+data VariantTypeIsTupleMethodInfo
+data VariantTypeIsVariantMethodInfo
+data VariantTypeKeyMethodInfo
+data VariantTypeNItemsMethodInfo
+data VariantTypeNextMethodInfo
+data VariantTypeValueMethodInfo

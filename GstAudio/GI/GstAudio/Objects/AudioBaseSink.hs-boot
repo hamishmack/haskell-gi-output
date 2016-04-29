@@ -1,0 +1,34 @@
+module GI.GstAudio.Objects.AudioBaseSink where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AudioBaseSink = AudioBaseSink (ForeignPtr AudioBaseSink)
+instance GObject AudioBaseSink where
+class GObject o => AudioBaseSinkK o
+instance (GObject o, IsDescendantOf AudioBaseSink o) => AudioBaseSinkK o
+data AudioBaseSinkAlignmentThresholdPropertyInfo
+data AudioBaseSinkBufferTimePropertyInfo
+data AudioBaseSinkCanActivatePullPropertyInfo
+data AudioBaseSinkDiscontWaitPropertyInfo
+data AudioBaseSinkDriftTolerancePropertyInfo
+data AudioBaseSinkLatencyTimePropertyInfo
+data AudioBaseSinkProvideClockPropertyInfo
+data AudioBaseSinkSlaveMethodPropertyInfo
+data AudioBaseSinkCreateRingbufferMethodInfo
+data AudioBaseSinkGetAlignmentThresholdMethodInfo
+data AudioBaseSinkGetDiscontWaitMethodInfo
+data AudioBaseSinkGetDriftToleranceMethodInfo
+data AudioBaseSinkGetProvideClockMethodInfo
+data AudioBaseSinkGetSlaveMethodMethodInfo
+data AudioBaseSinkReportDeviceFailureMethodInfo
+data AudioBaseSinkSetAlignmentThresholdMethodInfo
+data AudioBaseSinkSetCustomSlavingCallbackMethodInfo
+data AudioBaseSinkSetDiscontWaitMethodInfo
+data AudioBaseSinkSetDriftToleranceMethodInfo
+data AudioBaseSinkSetProvideClockMethodInfo
+data AudioBaseSinkSetSlaveMethodMethodInfo

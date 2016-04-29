@@ -1,0 +1,29 @@
+module GI.WebKit.Objects.WebInspector where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype WebInspector = WebInspector (ForeignPtr WebInspector)
+instance GObject WebInspector where
+class GObject o => WebInspectorK o
+instance (GObject o, IsDescendantOf WebInspector o) => WebInspectorK o
+data WebInspectorInspectedUriPropertyInfo
+data WebInspectorJavascriptProfilingEnabledPropertyInfo
+data WebInspectorTimelineProfilingEnabledPropertyInfo
+data WebInspectorWebViewPropertyInfo
+data WebInspectorAttachWindowSignalInfo
+data WebInspectorCloseWindowSignalInfo
+data WebInspectorDetachWindowSignalInfo
+data WebInspectorFinishedSignalInfo
+data WebInspectorInspectWebViewSignalInfo
+data WebInspectorShowWindowSignalInfo
+data WebInspectorCloseMethodInfo
+data WebInspectorGetInspectedUriMethodInfo
+data WebInspectorGetWebViewMethodInfo
+data WebInspectorInspectCoordinatesMethodInfo
+data WebInspectorInspectNodeMethodInfo
+data WebInspectorShowMethodInfo

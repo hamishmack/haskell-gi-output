@@ -1,0 +1,26 @@
+module GI.GstBase.Structs.BitReader where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype BitReader = BitReader (ForeignPtr BitReader)
+data BitReaderFreeMethodInfo
+data BitReaderGetBitsUint16MethodInfo
+data BitReaderGetBitsUint32MethodInfo
+data BitReaderGetBitsUint64MethodInfo
+data BitReaderGetBitsUint8MethodInfo
+data BitReaderGetPosMethodInfo
+data BitReaderGetRemainingMethodInfo
+data BitReaderGetSizeMethodInfo
+data BitReaderInitMethodInfo
+data BitReaderPeekBitsUint16MethodInfo
+data BitReaderPeekBitsUint32MethodInfo
+data BitReaderPeekBitsUint64MethodInfo
+data BitReaderPeekBitsUint8MethodInfo
+data BitReaderSetPosMethodInfo
+data BitReaderSkipMethodInfo
+data BitReaderSkipToByteMethodInfo

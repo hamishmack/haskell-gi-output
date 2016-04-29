@@ -1,0 +1,26 @@
+module GI.WebKit.Objects.DOMWebKitNamedFlow where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMWebKitNamedFlow = DOMWebKitNamedFlow (ForeignPtr DOMWebKitNamedFlow)
+instance GObject DOMWebKitNamedFlow where
+class GObject o => DOMWebKitNamedFlowK o
+instance (GObject o, IsDescendantOf DOMWebKitNamedFlow o) => DOMWebKitNamedFlowK o
+data DOMWebKitNamedFlowFirstEmptyRegionIndexPropertyInfo
+data DOMWebKitNamedFlowNamePropertyInfo
+data DOMWebKitNamedFlowOversetPropertyInfo
+data DOMWebKitNamedFlowDispatchEventMethodInfo
+data DOMWebKitNamedFlowGetContentMethodInfo
+data DOMWebKitNamedFlowGetContentNodesMethodInfo
+data DOMWebKitNamedFlowGetFirstEmptyRegionIndexMethodInfo
+data DOMWebKitNamedFlowGetNameMethodInfo
+data DOMWebKitNamedFlowGetOverflowMethodInfo
+data DOMWebKitNamedFlowGetOversetMethodInfo
+data DOMWebKitNamedFlowGetRegionsMethodInfo
+data DOMWebKitNamedFlowGetRegionsByContentMethodInfo
+data DOMWebKitNamedFlowGetRegionsByContentNodeMethodInfo

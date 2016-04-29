@@ -1,0 +1,29 @@
+module GI.WebKit.Objects.DOMHTMLEmbedElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLEmbedElement = DOMHTMLEmbedElement (ForeignPtr DOMHTMLEmbedElement)
+instance GObject DOMHTMLEmbedElement where
+class GObject o => DOMHTMLEmbedElementK o
+instance (GObject o, IsDescendantOf DOMHTMLEmbedElement o) => DOMHTMLEmbedElementK o
+data DOMHTMLEmbedElementAlignPropertyInfo
+data DOMHTMLEmbedElementHeightPropertyInfo
+data DOMHTMLEmbedElementNamePropertyInfo
+data DOMHTMLEmbedElementSrcPropertyInfo
+data DOMHTMLEmbedElementTypePropertyInfo
+data DOMHTMLEmbedElementWidthPropertyInfo
+data DOMHTMLEmbedElementGetAlignMethodInfo
+data DOMHTMLEmbedElementGetHeightMethodInfo
+data DOMHTMLEmbedElementGetNameMethodInfo
+data DOMHTMLEmbedElementGetSrcMethodInfo
+data DOMHTMLEmbedElementGetWidthMethodInfo
+data DOMHTMLEmbedElementSetAlignMethodInfo
+data DOMHTMLEmbedElementSetHeightMethodInfo
+data DOMHTMLEmbedElementSetNameMethodInfo
+data DOMHTMLEmbedElementSetSrcMethodInfo
+data DOMHTMLEmbedElementSetWidthMethodInfo

@@ -1,0 +1,69 @@
+module GI.Soup.Objects.Session where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Session = Session (ForeignPtr Session)
+instance GObject Session where
+class GObject o => SessionK o
+instance (GObject o, IsDescendantOf Session o) => SessionK o
+data SessionAcceptLanguagePropertyInfo
+data SessionAcceptLanguageAutoPropertyInfo
+data SessionAsyncContextPropertyInfo
+data SessionHttpAliasesPropertyInfo
+data SessionHttpsAliasesPropertyInfo
+data SessionIdleTimeoutPropertyInfo
+data SessionLocalAddressPropertyInfo
+data SessionMaxConnsPropertyInfo
+data SessionMaxConnsPerHostPropertyInfo
+data SessionProxyResolverPropertyInfo
+data SessionProxyUriPropertyInfo
+data SessionSslCaFilePropertyInfo
+data SessionSslStrictPropertyInfo
+data SessionSslUseSystemCaFilePropertyInfo
+data SessionTimeoutPropertyInfo
+data SessionTlsDatabasePropertyInfo
+data SessionTlsInteractionPropertyInfo
+data SessionUseNtlmPropertyInfo
+data SessionUseThreadContextPropertyInfo
+data SessionUserAgentPropertyInfo
+data SessionAuthenticateSignalInfo
+data SessionConnectionCreatedSignalInfo
+data SessionRequestQueuedSignalInfo
+data SessionRequestStartedSignalInfo
+data SessionRequestUnqueuedSignalInfo
+data SessionTunnelingSignalInfo
+data SessionAbortMethodInfo
+data SessionAddFeatureMethodInfo
+data SessionAddFeatureByTypeMethodInfo
+data SessionCancelMessageMethodInfo
+data SessionGetAsyncContextMethodInfo
+data SessionGetFeatureMethodInfo
+data SessionGetFeatureForMessageMethodInfo
+data SessionGetFeaturesMethodInfo
+data SessionHasFeatureMethodInfo
+data SessionPauseMessageMethodInfo
+data SessionPrefetchDnsMethodInfo
+data SessionPrepareForUriMethodInfo
+data SessionQueueMessageMethodInfo
+data SessionRedirectMessageMethodInfo
+data SessionRemoveFeatureMethodInfo
+data SessionRemoveFeatureByTypeMethodInfo
+data SessionRequestMethodInfo
+data SessionRequestHttpMethodInfo
+data SessionRequestHttpUriMethodInfo
+data SessionRequestUriMethodInfo
+data SessionRequeueMessageMethodInfo
+data SessionSendMethodInfo
+data SessionSendAsyncMethodInfo
+data SessionSendFinishMethodInfo
+data SessionSendMessageMethodInfo
+data SessionStealConnectionMethodInfo
+data SessionUnpauseMessageMethodInfo
+data SessionWebsocketConnectAsyncMethodInfo
+data SessionWebsocketConnectFinishMethodInfo
+data SessionWouldRedirectMethodInfo

@@ -1,0 +1,43 @@
+module GI.Gio.Objects.DBusProxy where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DBusProxy = DBusProxy (ForeignPtr DBusProxy)
+instance GObject DBusProxy where
+class GObject o => DBusProxyK o
+instance (GObject o, IsDescendantOf DBusProxy o) => DBusProxyK o
+data DBusProxyGBusTypePropertyInfo
+data DBusProxyGConnectionPropertyInfo
+data DBusProxyGDefaultTimeoutPropertyInfo
+data DBusProxyGFlagsPropertyInfo
+data DBusProxyGInterfaceInfoPropertyInfo
+data DBusProxyGInterfaceNamePropertyInfo
+data DBusProxyGNamePropertyInfo
+data DBusProxyGNameOwnerPropertyInfo
+data DBusProxyGObjectPathPropertyInfo
+data DBusProxyGPropertiesChangedSignalInfo
+data DBusProxyGSignalSignalInfo
+data DBusProxyCallMethodInfo
+data DBusProxyCallFinishMethodInfo
+data DBusProxyCallSyncMethodInfo
+data DBusProxyCallWithUnixFdListMethodInfo
+data DBusProxyCallWithUnixFdListFinishMethodInfo
+data DBusProxyCallWithUnixFdListSyncMethodInfo
+data DBusProxyGetCachedPropertyMethodInfo
+data DBusProxyGetCachedPropertyNamesMethodInfo
+data DBusProxyGetConnectionMethodInfo
+data DBusProxyGetDefaultTimeoutMethodInfo
+data DBusProxyGetFlagsMethodInfo
+data DBusProxyGetInterfaceInfoMethodInfo
+data DBusProxyGetInterfaceNameMethodInfo
+data DBusProxyGetNameMethodInfo
+data DBusProxyGetNameOwnerMethodInfo
+data DBusProxyGetObjectPathMethodInfo
+data DBusProxySetCachedPropertyMethodInfo
+data DBusProxySetDefaultTimeoutMethodInfo
+data DBusProxySetInterfaceInfoMethodInfo

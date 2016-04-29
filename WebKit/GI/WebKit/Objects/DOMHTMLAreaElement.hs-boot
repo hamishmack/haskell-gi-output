@@ -1,0 +1,48 @@
+module GI.WebKit.Objects.DOMHTMLAreaElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLAreaElement = DOMHTMLAreaElement (ForeignPtr DOMHTMLAreaElement)
+instance GObject DOMHTMLAreaElement where
+class GObject o => DOMHTMLAreaElementK o
+instance (GObject o, IsDescendantOf DOMHTMLAreaElement o) => DOMHTMLAreaElementK o
+data DOMHTMLAreaElementAltPropertyInfo
+data DOMHTMLAreaElementCoordsPropertyInfo
+data DOMHTMLAreaElementHashPropertyInfo
+data DOMHTMLAreaElementHostPropertyInfo
+data DOMHTMLAreaElementHostnamePropertyInfo
+data DOMHTMLAreaElementHrefPropertyInfo
+data DOMHTMLAreaElementNoHrefPropertyInfo
+data DOMHTMLAreaElementPathnamePropertyInfo
+data DOMHTMLAreaElementPingPropertyInfo
+data DOMHTMLAreaElementPortPropertyInfo
+data DOMHTMLAreaElementProtocolPropertyInfo
+data DOMHTMLAreaElementSearchPropertyInfo
+data DOMHTMLAreaElementShapePropertyInfo
+data DOMHTMLAreaElementTargetPropertyInfo
+data DOMHTMLAreaElementGetAltMethodInfo
+data DOMHTMLAreaElementGetCoordsMethodInfo
+data DOMHTMLAreaElementGetHashMethodInfo
+data DOMHTMLAreaElementGetHostMethodInfo
+data DOMHTMLAreaElementGetHostnameMethodInfo
+data DOMHTMLAreaElementGetHrefMethodInfo
+data DOMHTMLAreaElementGetNoHrefMethodInfo
+data DOMHTMLAreaElementGetPathnameMethodInfo
+data DOMHTMLAreaElementGetPingMethodInfo
+data DOMHTMLAreaElementGetPortMethodInfo
+data DOMHTMLAreaElementGetProtocolMethodInfo
+data DOMHTMLAreaElementGetSearchMethodInfo
+data DOMHTMLAreaElementGetShapeMethodInfo
+data DOMHTMLAreaElementGetTargetMethodInfo
+data DOMHTMLAreaElementSetAltMethodInfo
+data DOMHTMLAreaElementSetCoordsMethodInfo
+data DOMHTMLAreaElementSetHrefMethodInfo
+data DOMHTMLAreaElementSetNoHrefMethodInfo
+data DOMHTMLAreaElementSetPingMethodInfo
+data DOMHTMLAreaElementSetShapeMethodInfo
+data DOMHTMLAreaElementSetTargetMethodInfo

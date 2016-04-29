@@ -1,0 +1,39 @@
+module GI.GtkSource.Objects.Completion where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Completion = Completion (ForeignPtr Completion)
+instance GObject Completion where
+class GObject o => CompletionK o
+instance (GObject o, IsDescendantOf Completion o) => CompletionK o
+data CompletionAcceleratorsPropertyInfo
+data CompletionAutoCompleteDelayPropertyInfo
+data CompletionProposalPageSizePropertyInfo
+data CompletionProviderPageSizePropertyInfo
+data CompletionRememberInfoVisibilityPropertyInfo
+data CompletionSelectOnShowPropertyInfo
+data CompletionShowHeadersPropertyInfo
+data CompletionShowIconsPropertyInfo
+data CompletionViewPropertyInfo
+data CompletionActivateProposalSignalInfo
+data CompletionHideSignalInfo
+data CompletionMoveCursorSignalInfo
+data CompletionMovePageSignalInfo
+data CompletionPopulateContextSignalInfo
+data CompletionShowSignalInfo
+data CompletionAddProviderMethodInfo
+data CompletionBlockInteractiveMethodInfo
+data CompletionCreateContextMethodInfo
+data CompletionGetInfoWindowMethodInfo
+data CompletionGetProvidersMethodInfo
+data CompletionGetViewMethodInfo
+data CompletionHideMethodInfo
+data CompletionMoveWindowMethodInfo
+data CompletionRemoveProviderMethodInfo
+data CompletionShowMethodInfo
+data CompletionUnblockInteractiveMethodInfo

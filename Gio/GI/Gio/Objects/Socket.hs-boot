@@ -1,0 +1,79 @@
+module GI.Gio.Objects.Socket where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Socket = Socket (ForeignPtr Socket)
+instance GObject Socket where
+class GObject o => SocketK o
+instance (GObject o, IsDescendantOf Socket o) => SocketK o
+data SocketBlockingPropertyInfo
+data SocketBroadcastPropertyInfo
+data SocketFamilyPropertyInfo
+data SocketFdPropertyInfo
+data SocketKeepalivePropertyInfo
+data SocketListenBacklogPropertyInfo
+data SocketLocalAddressPropertyInfo
+data SocketMulticastLoopbackPropertyInfo
+data SocketMulticastTtlPropertyInfo
+data SocketProtocolPropertyInfo
+data SocketRemoteAddressPropertyInfo
+data SocketTimeoutPropertyInfo
+data SocketTtlPropertyInfo
+data SocketTypePropertyInfo
+data SocketAcceptMethodInfo
+data SocketBindMethodInfo
+data SocketCheckConnectResultMethodInfo
+data SocketCloseMethodInfo
+data SocketConditionCheckMethodInfo
+data SocketConditionTimedWaitMethodInfo
+data SocketConditionWaitMethodInfo
+data SocketConnectMethodInfo
+data SocketConnectionFactoryCreateConnectionMethodInfo
+data SocketGetAvailableBytesMethodInfo
+data SocketGetBlockingMethodInfo
+data SocketGetBroadcastMethodInfo
+data SocketGetCredentialsMethodInfo
+data SocketGetFamilyMethodInfo
+data SocketGetFdMethodInfo
+data SocketGetKeepaliveMethodInfo
+data SocketGetListenBacklogMethodInfo
+data SocketGetLocalAddressMethodInfo
+data SocketGetMulticastLoopbackMethodInfo
+data SocketGetMulticastTtlMethodInfo
+data SocketGetOptionMethodInfo
+data SocketGetProtocolMethodInfo
+data SocketGetRemoteAddressMethodInfo
+data SocketGetSocketTypeMethodInfo
+data SocketGetTimeoutMethodInfo
+data SocketGetTtlMethodInfo
+data SocketIsClosedMethodInfo
+data SocketIsConnectedMethodInfo
+data SocketJoinMulticastGroupMethodInfo
+data SocketLeaveMulticastGroupMethodInfo
+data SocketListenMethodInfo
+data SocketReceiveMethodInfo
+data SocketReceiveFromMethodInfo
+data SocketReceiveMessageMethodInfo
+data SocketReceiveMessagesMethodInfo
+data SocketReceiveWithBlockingMethodInfo
+data SocketSendMethodInfo
+data SocketSendMessageMethodInfo
+data SocketSendMessagesMethodInfo
+data SocketSendToMethodInfo
+data SocketSendWithBlockingMethodInfo
+data SocketSetBlockingMethodInfo
+data SocketSetBroadcastMethodInfo
+data SocketSetKeepaliveMethodInfo
+data SocketSetListenBacklogMethodInfo
+data SocketSetMulticastLoopbackMethodInfo
+data SocketSetMulticastTtlMethodInfo
+data SocketSetOptionMethodInfo
+data SocketSetTimeoutMethodInfo
+data SocketSetTtlMethodInfo
+data SocketShutdownMethodInfo
+data SocketSpeaksIpv4MethodInfo

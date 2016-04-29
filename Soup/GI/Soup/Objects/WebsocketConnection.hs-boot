@@ -1,0 +1,34 @@
+module GI.Soup.Objects.WebsocketConnection where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype WebsocketConnection = WebsocketConnection (ForeignPtr WebsocketConnection)
+instance GObject WebsocketConnection where
+class GObject o => WebsocketConnectionK o
+instance (GObject o, IsDescendantOf WebsocketConnection o) => WebsocketConnectionK o
+data WebsocketConnectionConnectionTypePropertyInfo
+data WebsocketConnectionIoStreamPropertyInfo
+data WebsocketConnectionOriginPropertyInfo
+data WebsocketConnectionProtocolPropertyInfo
+data WebsocketConnectionStatePropertyInfo
+data WebsocketConnectionUriPropertyInfo
+data WebsocketConnectionClosedSignalInfo
+data WebsocketConnectionClosingSignalInfo
+data WebsocketConnectionErrorSignalInfo
+data WebsocketConnectionMessageSignalInfo
+data WebsocketConnectionCloseMethodInfo
+data WebsocketConnectionGetCloseCodeMethodInfo
+data WebsocketConnectionGetCloseDataMethodInfo
+data WebsocketConnectionGetConnectionTypeMethodInfo
+data WebsocketConnectionGetIoStreamMethodInfo
+data WebsocketConnectionGetOriginMethodInfo
+data WebsocketConnectionGetProtocolMethodInfo
+data WebsocketConnectionGetStateMethodInfo
+data WebsocketConnectionGetUriMethodInfo
+data WebsocketConnectionSendBinaryMethodInfo
+data WebsocketConnectionSendTextMethodInfo

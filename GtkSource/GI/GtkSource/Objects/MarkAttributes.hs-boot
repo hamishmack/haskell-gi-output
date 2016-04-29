@@ -1,0 +1,33 @@
+module GI.GtkSource.Objects.MarkAttributes where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MarkAttributes = MarkAttributes (ForeignPtr MarkAttributes)
+instance GObject MarkAttributes where
+class GObject o => MarkAttributesK o
+instance (GObject o, IsDescendantOf MarkAttributes o) => MarkAttributesK o
+data MarkAttributesBackgroundPropertyInfo
+data MarkAttributesGiconPropertyInfo
+data MarkAttributesIconNamePropertyInfo
+data MarkAttributesPixbufPropertyInfo
+data MarkAttributesStockIdPropertyInfo
+data MarkAttributesQueryTooltipMarkupSignalInfo
+data MarkAttributesQueryTooltipTextSignalInfo
+data MarkAttributesGetBackgroundMethodInfo
+data MarkAttributesGetGiconMethodInfo
+data MarkAttributesGetIconNameMethodInfo
+data MarkAttributesGetPixbufMethodInfo
+data MarkAttributesGetStockIdMethodInfo
+data MarkAttributesGetTooltipMarkupMethodInfo
+data MarkAttributesGetTooltipTextMethodInfo
+data MarkAttributesRenderIconMethodInfo
+data MarkAttributesSetBackgroundMethodInfo
+data MarkAttributesSetGiconMethodInfo
+data MarkAttributesSetIconNameMethodInfo
+data MarkAttributesSetPixbufMethodInfo
+data MarkAttributesSetStockIdMethodInfo

@@ -1,0 +1,34 @@
+module GI.Gtk.Objects.Builder where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Builder = Builder (ForeignPtr Builder)
+instance GObject Builder where
+class GObject o => BuilderK o
+instance (GObject o, IsDescendantOf Builder o) => BuilderK o
+data BuilderTranslationDomainPropertyInfo
+data BuilderAddCallbackSymbolMethodInfo
+data BuilderAddFromFileMethodInfo
+data BuilderAddFromResourceMethodInfo
+data BuilderAddFromStringMethodInfo
+data BuilderAddObjectsFromFileMethodInfo
+data BuilderAddObjectsFromResourceMethodInfo
+data BuilderAddObjectsFromStringMethodInfo
+data BuilderConnectSignalsMethodInfo
+data BuilderConnectSignalsFullMethodInfo
+data BuilderExposeObjectMethodInfo
+data BuilderExtendWithTemplateMethodInfo
+data BuilderGetApplicationMethodInfo
+data BuilderGetObjectMethodInfo
+data BuilderGetObjectsMethodInfo
+data BuilderGetTranslationDomainMethodInfo
+data BuilderGetTypeFromNameMethodInfo
+data BuilderSetApplicationMethodInfo
+data BuilderSetTranslationDomainMethodInfo
+data BuilderValueFromStringMethodInfo
+data BuilderValueFromStringTypeMethodInfo

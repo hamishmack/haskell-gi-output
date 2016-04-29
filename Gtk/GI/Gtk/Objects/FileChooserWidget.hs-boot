@@ -1,0 +1,27 @@
+module GI.Gtk.Objects.FileChooserWidget where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype FileChooserWidget = FileChooserWidget (ForeignPtr FileChooserWidget)
+instance GObject FileChooserWidget where
+class GObject o => FileChooserWidgetK o
+instance (GObject o, IsDescendantOf FileChooserWidget o) => FileChooserWidgetK o
+data FileChooserWidgetSearchModePropertyInfo
+data FileChooserWidgetSubtitlePropertyInfo
+data FileChooserWidgetDesktopFolderSignalInfo
+data FileChooserWidgetDownFolderSignalInfo
+data FileChooserWidgetHomeFolderSignalInfo
+data FileChooserWidgetLocationPopupSignalInfo
+data FileChooserWidgetLocationPopupOnPasteSignalInfo
+data FileChooserWidgetLocationTogglePopupSignalInfo
+data FileChooserWidgetPlacesShortcutSignalInfo
+data FileChooserWidgetQuickBookmarkSignalInfo
+data FileChooserWidgetRecentShortcutSignalInfo
+data FileChooserWidgetSearchShortcutSignalInfo
+data FileChooserWidgetShowHiddenSignalInfo
+data FileChooserWidgetUpFolderSignalInfo

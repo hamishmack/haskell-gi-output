@@ -1,0 +1,25 @@
+module GI.WebKit.Objects.WebNavigationAction where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype WebNavigationAction = WebNavigationAction (ForeignPtr WebNavigationAction)
+instance GObject WebNavigationAction where
+class GObject o => WebNavigationActionK o
+instance (GObject o, IsDescendantOf WebNavigationAction o) => WebNavigationActionK o
+data WebNavigationActionButtonPropertyInfo
+data WebNavigationActionModifierStatePropertyInfo
+data WebNavigationActionOriginalUriPropertyInfo
+data WebNavigationActionReasonPropertyInfo
+data WebNavigationActionTargetFramePropertyInfo
+data WebNavigationActionGetButtonMethodInfo
+data WebNavigationActionGetModifierStateMethodInfo
+data WebNavigationActionGetOriginalUriMethodInfo
+data WebNavigationActionGetReasonMethodInfo
+data WebNavigationActionGetTargetFrameMethodInfo
+data WebNavigationActionSetOriginalUriMethodInfo
+data WebNavigationActionSetReasonMethodInfo

@@ -1,0 +1,30 @@
+module GI.Gio.Objects.VolumeMonitor where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype VolumeMonitor = VolumeMonitor (ForeignPtr VolumeMonitor)
+instance GObject VolumeMonitor where
+class GObject o => VolumeMonitorK o
+instance (GObject o, IsDescendantOf VolumeMonitor o) => VolumeMonitorK o
+data VolumeMonitorDriveChangedSignalInfo
+data VolumeMonitorDriveConnectedSignalInfo
+data VolumeMonitorDriveDisconnectedSignalInfo
+data VolumeMonitorDriveEjectButtonSignalInfo
+data VolumeMonitorDriveStopButtonSignalInfo
+data VolumeMonitorMountAddedSignalInfo
+data VolumeMonitorMountChangedSignalInfo
+data VolumeMonitorMountPreUnmountSignalInfo
+data VolumeMonitorMountRemovedSignalInfo
+data VolumeMonitorVolumeAddedSignalInfo
+data VolumeMonitorVolumeChangedSignalInfo
+data VolumeMonitorVolumeRemovedSignalInfo
+data VolumeMonitorGetConnectedDrivesMethodInfo
+data VolumeMonitorGetMountForUuidMethodInfo
+data VolumeMonitorGetMountsMethodInfo
+data VolumeMonitorGetVolumeForUuidMethodInfo
+data VolumeMonitorGetVolumesMethodInfo

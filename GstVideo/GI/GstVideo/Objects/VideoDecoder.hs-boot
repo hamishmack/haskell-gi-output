@@ -1,0 +1,44 @@
+module GI.GstVideo.Objects.VideoDecoder where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype VideoDecoder = VideoDecoder (ForeignPtr VideoDecoder)
+instance GObject VideoDecoder where
+class GObject o => VideoDecoderK o
+instance (GObject o, IsDescendantOf VideoDecoder o) => VideoDecoderK o
+data VideoDecoderAddToFrameMethodInfo
+data VideoDecoderAllocateOutputBufferMethodInfo
+data VideoDecoderAllocateOutputFrameMethodInfo
+data VideoDecoderDropFrameMethodInfo
+data VideoDecoderFinishFrameMethodInfo
+data VideoDecoderGetAllocatorMethodInfo
+data VideoDecoderGetBufferPoolMethodInfo
+data VideoDecoderGetEstimateRateMethodInfo
+data VideoDecoderGetFrameMethodInfo
+data VideoDecoderGetFramesMethodInfo
+data VideoDecoderGetLatencyMethodInfo
+data VideoDecoderGetMaxDecodeTimeMethodInfo
+data VideoDecoderGetMaxErrorsMethodInfo
+data VideoDecoderGetNeedsFormatMethodInfo
+data VideoDecoderGetOldestFrameMethodInfo
+data VideoDecoderGetOutputStateMethodInfo
+data VideoDecoderGetPacketizedMethodInfo
+data VideoDecoderGetPendingFrameSizeMethodInfo
+data VideoDecoderGetQosProportionMethodInfo
+data VideoDecoderHaveFrameMethodInfo
+data VideoDecoderMergeTagsMethodInfo
+data VideoDecoderNegotiateMethodInfo
+data VideoDecoderProxyGetcapsMethodInfo
+data VideoDecoderReleaseFrameMethodInfo
+data VideoDecoderSetEstimateRateMethodInfo
+data VideoDecoderSetLatencyMethodInfo
+data VideoDecoderSetMaxErrorsMethodInfo
+data VideoDecoderSetNeedsFormatMethodInfo
+data VideoDecoderSetOutputStateMethodInfo
+data VideoDecoderSetPacketizedMethodInfo
+data VideoDecoderSetUseDefaultPadAcceptcapsMethodInfo

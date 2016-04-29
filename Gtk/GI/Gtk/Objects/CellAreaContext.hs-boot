@@ -1,0 +1,28 @@
+module GI.Gtk.Objects.CellAreaContext where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype CellAreaContext = CellAreaContext (ForeignPtr CellAreaContext)
+instance GObject CellAreaContext where
+class GObject o => CellAreaContextK o
+instance (GObject o, IsDescendantOf CellAreaContext o) => CellAreaContextK o
+data CellAreaContextAreaPropertyInfo
+data CellAreaContextMinimumHeightPropertyInfo
+data CellAreaContextMinimumWidthPropertyInfo
+data CellAreaContextNaturalHeightPropertyInfo
+data CellAreaContextNaturalWidthPropertyInfo
+data CellAreaContextAllocateMethodInfo
+data CellAreaContextGetAllocationMethodInfo
+data CellAreaContextGetAreaMethodInfo
+data CellAreaContextGetPreferredHeightMethodInfo
+data CellAreaContextGetPreferredHeightForWidthMethodInfo
+data CellAreaContextGetPreferredWidthMethodInfo
+data CellAreaContextGetPreferredWidthForHeightMethodInfo
+data CellAreaContextPushPreferredHeightMethodInfo
+data CellAreaContextPushPreferredWidthMethodInfo
+data CellAreaContextResetMethodInfo

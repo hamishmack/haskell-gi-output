@@ -1,0 +1,32 @@
+module GI.WebKit.Objects.DOMHTMLFieldSetElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLFieldSetElement = DOMHTMLFieldSetElement (ForeignPtr DOMHTMLFieldSetElement)
+instance GObject DOMHTMLFieldSetElement where
+class GObject o => DOMHTMLFieldSetElementK o
+instance (GObject o, IsDescendantOf DOMHTMLFieldSetElement o) => DOMHTMLFieldSetElementK o
+data DOMHTMLFieldSetElementDisabledPropertyInfo
+data DOMHTMLFieldSetElementElementsPropertyInfo
+data DOMHTMLFieldSetElementFormPropertyInfo
+data DOMHTMLFieldSetElementNamePropertyInfo
+data DOMHTMLFieldSetElementTypePropertyInfo
+data DOMHTMLFieldSetElementValidationMessagePropertyInfo
+data DOMHTMLFieldSetElementValidityPropertyInfo
+data DOMHTMLFieldSetElementWillValidatePropertyInfo
+data DOMHTMLFieldSetElementCheckValidityMethodInfo
+data DOMHTMLFieldSetElementGetDisabledMethodInfo
+data DOMHTMLFieldSetElementGetElementsMethodInfo
+data DOMHTMLFieldSetElementGetFormMethodInfo
+data DOMHTMLFieldSetElementGetNameMethodInfo
+data DOMHTMLFieldSetElementGetValidationMessageMethodInfo
+data DOMHTMLFieldSetElementGetValidityMethodInfo
+data DOMHTMLFieldSetElementGetWillValidateMethodInfo
+data DOMHTMLFieldSetElementSetCustomValidityMethodInfo
+data DOMHTMLFieldSetElementSetDisabledMethodInfo
+data DOMHTMLFieldSetElementSetNameMethodInfo

@@ -1,0 +1,28 @@
+module GI.Gio.Objects.ApplicationCommandLine where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ApplicationCommandLine = ApplicationCommandLine (ForeignPtr ApplicationCommandLine)
+instance GObject ApplicationCommandLine where
+class GObject o => ApplicationCommandLineK o
+instance (GObject o, IsDescendantOf ApplicationCommandLine o) => ApplicationCommandLineK o
+data ApplicationCommandLineArgumentsPropertyInfo
+data ApplicationCommandLineIsRemotePropertyInfo
+data ApplicationCommandLineOptionsPropertyInfo
+data ApplicationCommandLinePlatformDataPropertyInfo
+data ApplicationCommandLineCreateFileForArgMethodInfo
+data ApplicationCommandLineGetArgumentsMethodInfo
+data ApplicationCommandLineGetCwdMethodInfo
+data ApplicationCommandLineGetEnvironMethodInfo
+data ApplicationCommandLineGetExitStatusMethodInfo
+data ApplicationCommandLineGetIsRemoteMethodInfo
+data ApplicationCommandLineGetOptionsDictMethodInfo
+data ApplicationCommandLineGetPlatformDataMethodInfo
+data ApplicationCommandLineGetStdinMethodInfo
+data ApplicationCommandLineGetenvMethodInfo
+data ApplicationCommandLineSetExitStatusMethodInfo

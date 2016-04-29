@@ -1,0 +1,36 @@
+module GI.Gio.Objects.OutputStream where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype OutputStream = OutputStream (ForeignPtr OutputStream)
+instance GObject OutputStream where
+class GObject o => OutputStreamK o
+instance (GObject o, IsDescendantOf OutputStream o) => OutputStreamK o
+data OutputStreamClearPendingMethodInfo
+data OutputStreamCloseMethodInfo
+data OutputStreamCloseAsyncMethodInfo
+data OutputStreamCloseFinishMethodInfo
+data OutputStreamFlushMethodInfo
+data OutputStreamFlushAsyncMethodInfo
+data OutputStreamFlushFinishMethodInfo
+data OutputStreamHasPendingMethodInfo
+data OutputStreamIsClosedMethodInfo
+data OutputStreamIsClosingMethodInfo
+data OutputStreamSetPendingMethodInfo
+data OutputStreamSpliceMethodInfo
+data OutputStreamSpliceAsyncMethodInfo
+data OutputStreamSpliceFinishMethodInfo
+data OutputStreamWriteMethodInfo
+data OutputStreamWriteAllMethodInfo
+data OutputStreamWriteAllAsyncMethodInfo
+data OutputStreamWriteAllFinishMethodInfo
+data OutputStreamWriteAsyncMethodInfo
+data OutputStreamWriteBytesMethodInfo
+data OutputStreamWriteBytesAsyncMethodInfo
+data OutputStreamWriteBytesFinishMethodInfo
+data OutputStreamWriteFinishMethodInfo

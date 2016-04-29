@@ -1,0 +1,50 @@
+module GI.Gst.Structs.Message where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Message = Message (ForeignPtr Message)
+instance BoxedObject Message where
+data MessageGetSeqnumMethodInfo
+data MessageGetStreamStatusObjectMethodInfo
+data MessageGetStructureMethodInfo
+data MessageHasNameMethodInfo
+data MessageParseAsyncDoneMethodInfo
+data MessageParseBufferingMethodInfo
+data MessageParseBufferingStatsMethodInfo
+data MessageParseClockLostMethodInfo
+data MessageParseClockProvideMethodInfo
+data MessageParseContextTypeMethodInfo
+data MessageParseDeviceAddedMethodInfo
+data MessageParseDeviceRemovedMethodInfo
+data MessageParseErrorMethodInfo
+data MessageParseGroupIdMethodInfo
+data MessageParseHaveContextMethodInfo
+data MessageParseInfoMethodInfo
+data MessageParseNewClockMethodInfo
+data MessageParseProgressMethodInfo
+data MessageParseQosMethodInfo
+data MessageParseQosStatsMethodInfo
+data MessageParseQosValuesMethodInfo
+data MessageParseRequestStateMethodInfo
+data MessageParseResetTimeMethodInfo
+data MessageParseSegmentDoneMethodInfo
+data MessageParseSegmentStartMethodInfo
+data MessageParseStateChangedMethodInfo
+data MessageParseStepDoneMethodInfo
+data MessageParseStepStartMethodInfo
+data MessageParseStreamStatusMethodInfo
+data MessageParseStructureChangeMethodInfo
+data MessageParseTagMethodInfo
+data MessageParseTocMethodInfo
+data MessageParseWarningMethodInfo
+data MessageSetBufferingStatsMethodInfo
+data MessageSetGroupIdMethodInfo
+data MessageSetQosStatsMethodInfo
+data MessageSetQosValuesMethodInfo
+data MessageSetSeqnumMethodInfo
+data MessageSetStreamStatusObjectMethodInfo

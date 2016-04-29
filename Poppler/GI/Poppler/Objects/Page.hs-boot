@@ -1,0 +1,45 @@
+module GI.Poppler.Objects.Page where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Page = Page (ForeignPtr Page)
+instance GObject Page where
+class GObject o => PageK o
+instance (GObject o, IsDescendantOf Page o) => PageK o
+data PageLabelPropertyInfo
+data PageAddAnnotMethodInfo
+data PageFindTextMethodInfo
+data PageFindTextWithOptionsMethodInfo
+data PageGetAnnotMappingMethodInfo
+data PageGetCropBoxMethodInfo
+data PageGetDurationMethodInfo
+data PageGetFormFieldMappingMethodInfo
+data PageGetImageMethodInfo
+data PageGetImageMappingMethodInfo
+data PageGetIndexMethodInfo
+data PageGetLabelMethodInfo
+data PageGetLinkMappingMethodInfo
+data PageGetSelectedRegionMethodInfo
+data PageGetSelectedTextMethodInfo
+data PageGetSelectionRegionMethodInfo
+data PageGetSizeMethodInfo
+data PageGetTextMethodInfo
+data PageGetTextAttributesMethodInfo
+data PageGetTextAttributesForAreaMethodInfo
+data PageGetTextForAreaMethodInfo
+data PageGetTextLayoutMethodInfo
+data PageGetTextLayoutForAreaMethodInfo
+data PageGetThumbnailMethodInfo
+data PageGetThumbnailSizeMethodInfo
+data PageGetTransitionMethodInfo
+data PageRemoveAnnotMethodInfo
+data PageRenderMethodInfo
+data PageRenderForPrintingMethodInfo
+data PageRenderForPrintingWithOptionsMethodInfo
+data PageRenderSelectionMethodInfo
+data PageRenderToPsMethodInfo

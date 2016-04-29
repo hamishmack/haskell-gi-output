@@ -1,0 +1,29 @@
+module GI.WebKit.Objects.DOMXPathResult where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMXPathResult = DOMXPathResult (ForeignPtr DOMXPathResult)
+instance GObject DOMXPathResult where
+class GObject o => DOMXPathResultK o
+instance (GObject o, IsDescendantOf DOMXPathResult o) => DOMXPathResultK o
+data DOMXPathResultBooleanValuePropertyInfo
+data DOMXPathResultInvalidIteratorStatePropertyInfo
+data DOMXPathResultNumberValuePropertyInfo
+data DOMXPathResultResultTypePropertyInfo
+data DOMXPathResultSingleNodeValuePropertyInfo
+data DOMXPathResultSnapshotLengthPropertyInfo
+data DOMXPathResultStringValuePropertyInfo
+data DOMXPathResultGetBooleanValueMethodInfo
+data DOMXPathResultGetInvalidIteratorStateMethodInfo
+data DOMXPathResultGetNumberValueMethodInfo
+data DOMXPathResultGetResultTypeMethodInfo
+data DOMXPathResultGetSingleNodeValueMethodInfo
+data DOMXPathResultGetSnapshotLengthMethodInfo
+data DOMXPathResultGetStringValueMethodInfo
+data DOMXPathResultIterateNextMethodInfo
+data DOMXPathResultSnapshotItemMethodInfo

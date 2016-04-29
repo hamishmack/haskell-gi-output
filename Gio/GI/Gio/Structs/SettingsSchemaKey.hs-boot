@@ -1,0 +1,20 @@
+module GI.Gio.Structs.SettingsSchemaKey where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype SettingsSchemaKey = SettingsSchemaKey (ForeignPtr SettingsSchemaKey)
+instance BoxedObject SettingsSchemaKey where
+data SettingsSchemaKeyGetDefaultValueMethodInfo
+data SettingsSchemaKeyGetDescriptionMethodInfo
+data SettingsSchemaKeyGetNameMethodInfo
+data SettingsSchemaKeyGetRangeMethodInfo
+data SettingsSchemaKeyGetSummaryMethodInfo
+data SettingsSchemaKeyGetValueTypeMethodInfo
+data SettingsSchemaKeyRangeCheckMethodInfo
+data SettingsSchemaKeyRefMethodInfo
+data SettingsSchemaKeyUnrefMethodInfo

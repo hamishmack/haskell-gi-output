@@ -1,0 +1,32 @@
+module GI.Gtk.Objects.ThemingEngine where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ThemingEngine = ThemingEngine (ForeignPtr ThemingEngine)
+instance GObject ThemingEngine where
+class GObject o => ThemingEngineK o
+instance (GObject o, IsDescendantOf ThemingEngine o) => ThemingEngineK o
+data ThemingEngineNamePropertyInfo
+data ThemingEngineGetBackgroundColorMethodInfo
+data ThemingEngineGetBorderMethodInfo
+data ThemingEngineGetBorderColorMethodInfo
+data ThemingEngineGetColorMethodInfo
+data ThemingEngineGetDirectionMethodInfo
+data ThemingEngineGetFontMethodInfo
+data ThemingEngineGetJunctionSidesMethodInfo
+data ThemingEngineGetMarginMethodInfo
+data ThemingEngineGetPaddingMethodInfo
+data ThemingEngineGetPathMethodInfo
+data ThemingEngineGetPropertyMethodInfo
+data ThemingEngineGetScreenMethodInfo
+data ThemingEngineGetStateMethodInfo
+data ThemingEngineGetStylePropertyMethodInfo
+data ThemingEngineHasClassMethodInfo
+data ThemingEngineHasRegionMethodInfo
+data ThemingEngineLookupColorMethodInfo
+data ThemingEngineStateIsRunningMethodInfo

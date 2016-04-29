@@ -1,0 +1,26 @@
+module GI.GtkSource.Interfaces.CompletionProvider where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype CompletionProvider = CompletionProvider (ForeignPtr CompletionProvider)
+instance GObject CompletionProvider where
+class GObject o => CompletionProviderK o
+instance (GObject o, IsDescendantOf CompletionProvider o) => CompletionProviderK o
+data CompletionProviderActivateProposalMethodInfo
+data CompletionProviderGetActivationMethodInfo
+data CompletionProviderGetGiconMethodInfo
+data CompletionProviderGetIconMethodInfo
+data CompletionProviderGetIconNameMethodInfo
+data CompletionProviderGetInfoWidgetMethodInfo
+data CompletionProviderGetInteractiveDelayMethodInfo
+data CompletionProviderGetNameMethodInfo
+data CompletionProviderGetPriorityMethodInfo
+data CompletionProviderGetStartIterMethodInfo
+data CompletionProviderMatchMethodInfo
+data CompletionProviderPopulateMethodInfo
+data CompletionProviderUpdateInfoMethodInfo

@@ -1,0 +1,38 @@
+module GI.Gtk.Objects.UIManager where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype UIManager = UIManager (ForeignPtr UIManager)
+instance GObject UIManager where
+class GObject o => UIManagerK o
+instance (GObject o, IsDescendantOf UIManager o) => UIManagerK o
+data UIManagerAddTearoffsPropertyInfo
+data UIManagerUiPropertyInfo
+data UIManagerActionsChangedSignalInfo
+data UIManagerAddWidgetSignalInfo
+data UIManagerConnectProxySignalInfo
+data UIManagerDisconnectProxySignalInfo
+data UIManagerPostActivateSignalInfo
+data UIManagerPreActivateSignalInfo
+data UIManagerAddUiMethodInfo
+data UIManagerAddUiFromFileMethodInfo
+data UIManagerAddUiFromResourceMethodInfo
+data UIManagerAddUiFromStringMethodInfo
+data UIManagerEnsureUpdateMethodInfo
+data UIManagerGetAccelGroupMethodInfo
+data UIManagerGetActionMethodInfo
+data UIManagerGetActionGroupsMethodInfo
+data UIManagerGetAddTearoffsMethodInfo
+data UIManagerGetToplevelsMethodInfo
+data UIManagerGetUiMethodInfo
+data UIManagerGetWidgetMethodInfo
+data UIManagerInsertActionGroupMethodInfo
+data UIManagerNewMergeIdMethodInfo
+data UIManagerRemoveActionGroupMethodInfo
+data UIManagerRemoveUiMethodInfo
+data UIManagerSetAddTearoffsMethodInfo

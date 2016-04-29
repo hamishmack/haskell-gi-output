@@ -1,0 +1,43 @@
+module GI.Gtk.Interfaces.TreeModel where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype TreeModel = TreeModel (ForeignPtr TreeModel)
+data TreeModelRowChangedSignalInfo
+data TreeModelRowDeletedSignalInfo
+data TreeModelRowHasChildToggledSignalInfo
+data TreeModelRowInsertedSignalInfo
+instance GObject TreeModel where
+class GObject o => TreeModelK o
+instance (GObject o, IsDescendantOf TreeModel o) => TreeModelK o
+data TreeModelFilterNewMethodInfo
+data TreeModelForeachMethodInfo
+data TreeModelGetColumnTypeMethodInfo
+data TreeModelGetFlagsMethodInfo
+data TreeModelGetIterMethodInfo
+data TreeModelGetIterFirstMethodInfo
+data TreeModelGetIterFromStringMethodInfo
+data TreeModelGetNColumnsMethodInfo
+data TreeModelGetPathMethodInfo
+data TreeModelGetStringFromIterMethodInfo
+data TreeModelGetValueMethodInfo
+data TreeModelIterChildrenMethodInfo
+data TreeModelIterHasChildMethodInfo
+data TreeModelIterNChildrenMethodInfo
+data TreeModelIterNextMethodInfo
+data TreeModelIterNthChildMethodInfo
+data TreeModelIterParentMethodInfo
+data TreeModelIterPreviousMethodInfo
+data TreeModelRefNodeMethodInfo
+data TreeModelRowChangedMethodInfo
+data TreeModelRowDeletedMethodInfo
+data TreeModelRowHasChildToggledMethodInfo
+data TreeModelRowInsertedMethodInfo
+data TreeModelRowsReorderedMethodInfo
+data TreeModelSortNewWithModelMethodInfo
+data TreeModelUnrefNodeMethodInfo

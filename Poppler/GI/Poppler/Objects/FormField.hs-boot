@@ -1,0 +1,45 @@
+module GI.Poppler.Objects.FormField where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype FormField = FormField (ForeignPtr FormField)
+instance GObject FormField where
+class GObject o => FormFieldK o
+instance (GObject o, IsDescendantOf FormField o) => FormFieldK o
+data FormFieldButtonGetButtonTypeMethodInfo
+data FormFieldButtonGetStateMethodInfo
+data FormFieldButtonSetStateMethodInfo
+data FormFieldChoiceCanSelectMultipleMethodInfo
+data FormFieldChoiceCommitOnChangeMethodInfo
+data FormFieldChoiceDoSpellCheckMethodInfo
+data FormFieldChoiceGetChoiceTypeMethodInfo
+data FormFieldChoiceGetItemMethodInfo
+data FormFieldChoiceGetNItemsMethodInfo
+data FormFieldChoiceGetTextMethodInfo
+data FormFieldChoiceIsEditableMethodInfo
+data FormFieldChoiceIsItemSelectedMethodInfo
+data FormFieldChoiceSelectItemMethodInfo
+data FormFieldChoiceSetTextMethodInfo
+data FormFieldChoiceToggleItemMethodInfo
+data FormFieldChoiceUnselectAllMethodInfo
+data FormFieldGetActionMethodInfo
+data FormFieldGetFieldTypeMethodInfo
+data FormFieldGetFontSizeMethodInfo
+data FormFieldGetIdMethodInfo
+data FormFieldGetMappingNameMethodInfo
+data FormFieldGetNameMethodInfo
+data FormFieldGetPartialNameMethodInfo
+data FormFieldIsReadOnlyMethodInfo
+data FormFieldTextDoScrollMethodInfo
+data FormFieldTextDoSpellCheckMethodInfo
+data FormFieldTextGetMaxLenMethodInfo
+data FormFieldTextGetTextMethodInfo
+data FormFieldTextGetTextTypeMethodInfo
+data FormFieldTextIsPasswordMethodInfo
+data FormFieldTextIsRichTextMethodInfo
+data FormFieldTextSetTextMethodInfo

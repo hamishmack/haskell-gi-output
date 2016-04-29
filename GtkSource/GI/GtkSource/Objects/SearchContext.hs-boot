@@ -1,0 +1,37 @@
+module GI.GtkSource.Objects.SearchContext where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype SearchContext = SearchContext (ForeignPtr SearchContext)
+instance GObject SearchContext where
+class GObject o => SearchContextK o
+instance (GObject o, IsDescendantOf SearchContext o) => SearchContextK o
+data SearchContextBufferPropertyInfo
+data SearchContextHighlightPropertyInfo
+data SearchContextMatchStylePropertyInfo
+data SearchContextOccurrencesCountPropertyInfo
+data SearchContextRegexErrorPropertyInfo
+data SearchContextSettingsPropertyInfo
+data SearchContextBackwardMethodInfo
+data SearchContextBackwardAsyncMethodInfo
+data SearchContextBackwardFinishMethodInfo
+data SearchContextForwardMethodInfo
+data SearchContextForwardAsyncMethodInfo
+data SearchContextForwardFinishMethodInfo
+data SearchContextGetBufferMethodInfo
+data SearchContextGetHighlightMethodInfo
+data SearchContextGetMatchStyleMethodInfo
+data SearchContextGetOccurrencePositionMethodInfo
+data SearchContextGetOccurrencesCountMethodInfo
+data SearchContextGetRegexErrorMethodInfo
+data SearchContextGetSettingsMethodInfo
+data SearchContextReplaceMethodInfo
+data SearchContextReplaceAllMethodInfo
+data SearchContextSetHighlightMethodInfo
+data SearchContextSetMatchStyleMethodInfo
+data SearchContextSetSettingsMethodInfo

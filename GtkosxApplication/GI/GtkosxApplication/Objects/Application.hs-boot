@@ -1,0 +1,31 @@
+module GI.GtkosxApplication.Objects.Application where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Application = Application (ForeignPtr Application)
+instance GObject Application where
+class GObject o => ApplicationK o
+instance (GObject o, IsDescendantOf Application o) => ApplicationK o
+data ApplicationNSApplicationBlockTerminationSignalInfo
+data ApplicationNSApplicationDidBecomeActiveSignalInfo
+data ApplicationNSApplicationOpenFileSignalInfo
+data ApplicationNSApplicationWillResignActiveSignalInfo
+data ApplicationNSApplicationWillTerminateSignalInfo
+data ApplicationAttentionRequestMethodInfo
+data ApplicationCancelAttentionRequestMethodInfo
+data ApplicationInsertAppMenuItemMethodInfo
+data ApplicationReadyMethodInfo
+data ApplicationSetDockIconPixbufMethodInfo
+data ApplicationSetDockIconResourceMethodInfo
+data ApplicationSetDockMenuMethodInfo
+data ApplicationSetHelpMenuMethodInfo
+data ApplicationSetMenuBarMethodInfo
+data ApplicationSetUseQuartzAcceleratorsMethodInfo
+data ApplicationSetWindowMenuMethodInfo
+data ApplicationSyncMenubarMethodInfo
+data ApplicationUseQuartzAcceleratorsMethodInfo

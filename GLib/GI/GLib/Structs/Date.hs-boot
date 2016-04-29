@@ -1,0 +1,45 @@
+module GI.GLib.Structs.Date where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Date = Date (ForeignPtr Date)
+instance BoxedObject Date where
+data DateAddDaysMethodInfo
+data DateAddMonthsMethodInfo
+data DateAddYearsMethodInfo
+data DateClampMethodInfo
+data DateClearMethodInfo
+data DateCompareMethodInfo
+data DateDaysBetweenMethodInfo
+data DateFreeMethodInfo
+data DateGetDayMethodInfo
+data DateGetDayOfYearMethodInfo
+data DateGetIso8601WeekOfYearMethodInfo
+data DateGetJulianMethodInfo
+data DateGetMondayWeekOfYearMethodInfo
+data DateGetMonthMethodInfo
+data DateGetSundayWeekOfYearMethodInfo
+data DateGetWeekdayMethodInfo
+data DateGetYearMethodInfo
+data DateIsFirstOfMonthMethodInfo
+data DateIsLastOfMonthMethodInfo
+data DateOrderMethodInfo
+data DateSetDayMethodInfo
+data DateSetDmyMethodInfo
+data DateSetJulianMethodInfo
+data DateSetMonthMethodInfo
+data DateSetParseMethodInfo
+data DateSetTimeMethodInfo
+data DateSetTimeTMethodInfo
+data DateSetTimeValMethodInfo
+data DateSetYearMethodInfo
+data DateSubtractDaysMethodInfo
+data DateSubtractMonthsMethodInfo
+data DateSubtractYearsMethodInfo
+data DateToStructTmMethodInfo
+data DateValidMethodInfo

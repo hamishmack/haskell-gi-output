@@ -1,0 +1,36 @@
+module GI.Gtk.Objects.IconTheme where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype IconTheme = IconTheme (ForeignPtr IconTheme)
+instance GObject IconTheme where
+class GObject o => IconThemeK o
+instance (GObject o, IsDescendantOf IconTheme o) => IconThemeK o
+data IconThemeChangedSignalInfo
+data IconThemeAddResourcePathMethodInfo
+data IconThemeAppendSearchPathMethodInfo
+data IconThemeChooseIconMethodInfo
+data IconThemeChooseIconForScaleMethodInfo
+data IconThemeGetExampleIconNameMethodInfo
+data IconThemeGetIconSizesMethodInfo
+data IconThemeGetSearchPathMethodInfo
+data IconThemeHasIconMethodInfo
+data IconThemeListContextsMethodInfo
+data IconThemeListIconsMethodInfo
+data IconThemeLoadIconMethodInfo
+data IconThemeLoadIconForScaleMethodInfo
+data IconThemeLoadSurfaceMethodInfo
+data IconThemeLookupByGiconMethodInfo
+data IconThemeLookupByGiconForScaleMethodInfo
+data IconThemeLookupIconMethodInfo
+data IconThemeLookupIconForScaleMethodInfo
+data IconThemePrependSearchPathMethodInfo
+data IconThemeRescanIfNeededMethodInfo
+data IconThemeSetCustomThemeMethodInfo
+data IconThemeSetScreenMethodInfo
+data IconThemeSetSearchPathMethodInfo

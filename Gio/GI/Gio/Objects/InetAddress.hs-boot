@@ -1,0 +1,39 @@
+module GI.Gio.Objects.InetAddress where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype InetAddress = InetAddress (ForeignPtr InetAddress)
+instance GObject InetAddress where
+class GObject o => InetAddressK o
+instance (GObject o, IsDescendantOf InetAddress o) => InetAddressK o
+data InetAddressBytesPropertyInfo
+data InetAddressFamilyPropertyInfo
+data InetAddressIsAnyPropertyInfo
+data InetAddressIsLinkLocalPropertyInfo
+data InetAddressIsLoopbackPropertyInfo
+data InetAddressIsMcGlobalPropertyInfo
+data InetAddressIsMcLinkLocalPropertyInfo
+data InetAddressIsMcNodeLocalPropertyInfo
+data InetAddressIsMcOrgLocalPropertyInfo
+data InetAddressIsMcSiteLocalPropertyInfo
+data InetAddressIsMulticastPropertyInfo
+data InetAddressIsSiteLocalPropertyInfo
+data InetAddressEqualMethodInfo
+data InetAddressGetFamilyMethodInfo
+data InetAddressGetIsAnyMethodInfo
+data InetAddressGetIsLinkLocalMethodInfo
+data InetAddressGetIsLoopbackMethodInfo
+data InetAddressGetIsMcGlobalMethodInfo
+data InetAddressGetIsMcLinkLocalMethodInfo
+data InetAddressGetIsMcNodeLocalMethodInfo
+data InetAddressGetIsMcOrgLocalMethodInfo
+data InetAddressGetIsMcSiteLocalMethodInfo
+data InetAddressGetIsMulticastMethodInfo
+data InetAddressGetIsSiteLocalMethodInfo
+data InetAddressGetNativeSizeMethodInfo
+data InetAddressToStringMethodInfo

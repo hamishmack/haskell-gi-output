@@ -1,0 +1,48 @@
+module GI.Gtk.Objects.Container where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Container = Container (ForeignPtr Container)
+instance GObject Container where
+class GObject o => ContainerK o
+instance (GObject o, IsDescendantOf Container o) => ContainerK o
+data ContainerBorderWidthPropertyInfo
+data ContainerChildPropertyInfo
+data ContainerResizeModePropertyInfo
+data ContainerAddSignalInfo
+data ContainerCheckResizeSignalInfo
+data ContainerRemoveSignalInfo
+data ContainerSetFocusChildSignalInfo
+data ContainerAddMethodInfo
+data ContainerCheckResizeMethodInfo
+data ContainerChildGetPropertyMethodInfo
+data ContainerChildNotifyMethodInfo
+data ContainerChildNotifyByPspecMethodInfo
+data ContainerChildSetPropertyMethodInfo
+data ContainerChildTypeMethodInfo
+data ContainerForallMethodInfo
+data ContainerForeachMethodInfo
+data ContainerGetBorderWidthMethodInfo
+data ContainerGetChildrenMethodInfo
+data ContainerGetFocusChainMethodInfo
+data ContainerGetFocusChildMethodInfo
+data ContainerGetFocusHadjustmentMethodInfo
+data ContainerGetFocusVadjustmentMethodInfo
+data ContainerGetPathForChildMethodInfo
+data ContainerGetResizeModeMethodInfo
+data ContainerPropagateDrawMethodInfo
+data ContainerRemoveMethodInfo
+data ContainerResizeChildrenMethodInfo
+data ContainerSetBorderWidthMethodInfo
+data ContainerSetFocusChainMethodInfo
+data ContainerSetFocusChildMethodInfo
+data ContainerSetFocusHadjustmentMethodInfo
+data ContainerSetFocusVadjustmentMethodInfo
+data ContainerSetReallocateRedrawsMethodInfo
+data ContainerSetResizeModeMethodInfo
+data ContainerUnsetFocusChainMethodInfo

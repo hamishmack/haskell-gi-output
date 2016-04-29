@@ -1,0 +1,27 @@
+module GI.Gst.Objects.ElementFactory where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ElementFactory = ElementFactory (ForeignPtr ElementFactory)
+instance GObject ElementFactory where
+class GObject o => ElementFactoryK o
+instance (GObject o, IsDescendantOf ElementFactory o) => ElementFactoryK o
+data ElementFactoryCanSinkAllCapsMethodInfo
+data ElementFactoryCanSinkAnyCapsMethodInfo
+data ElementFactoryCanSrcAllCapsMethodInfo
+data ElementFactoryCanSrcAnyCapsMethodInfo
+data ElementFactoryCreateMethodInfo
+data ElementFactoryGetElementTypeMethodInfo
+data ElementFactoryGetMetadataMethodInfo
+data ElementFactoryGetMetadataKeysMethodInfo
+data ElementFactoryGetNumPadTemplatesMethodInfo
+data ElementFactoryGetStaticPadTemplatesMethodInfo
+data ElementFactoryGetUriProtocolsMethodInfo
+data ElementFactoryGetUriTypeMethodInfo
+data ElementFactoryHasInterfaceMethodInfo
+data ElementFactoryListIsTypeMethodInfo

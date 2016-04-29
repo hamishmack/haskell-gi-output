@@ -1,0 +1,36 @@
+module GI.WebKit.Objects.DOMHTMLTableRowElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLTableRowElement = DOMHTMLTableRowElement (ForeignPtr DOMHTMLTableRowElement)
+instance GObject DOMHTMLTableRowElement where
+class GObject o => DOMHTMLTableRowElementK o
+instance (GObject o, IsDescendantOf DOMHTMLTableRowElement o) => DOMHTMLTableRowElementK o
+data DOMHTMLTableRowElementAlignPropertyInfo
+data DOMHTMLTableRowElementBgColorPropertyInfo
+data DOMHTMLTableRowElementCellsPropertyInfo
+data DOMHTMLTableRowElementChPropertyInfo
+data DOMHTMLTableRowElementChOffPropertyInfo
+data DOMHTMLTableRowElementRowIndexPropertyInfo
+data DOMHTMLTableRowElementSectionRowIndexPropertyInfo
+data DOMHTMLTableRowElementVAlignPropertyInfo
+data DOMHTMLTableRowElementDeleteCellMethodInfo
+data DOMHTMLTableRowElementGetAlignMethodInfo
+data DOMHTMLTableRowElementGetBgColorMethodInfo
+data DOMHTMLTableRowElementGetCellsMethodInfo
+data DOMHTMLTableRowElementGetChMethodInfo
+data DOMHTMLTableRowElementGetChOffMethodInfo
+data DOMHTMLTableRowElementGetRowIndexMethodInfo
+data DOMHTMLTableRowElementGetSectionRowIndexMethodInfo
+data DOMHTMLTableRowElementGetVAlignMethodInfo
+data DOMHTMLTableRowElementInsertCellMethodInfo
+data DOMHTMLTableRowElementSetAlignMethodInfo
+data DOMHTMLTableRowElementSetBgColorMethodInfo
+data DOMHTMLTableRowElementSetChMethodInfo
+data DOMHTMLTableRowElementSetChOffMethodInfo
+data DOMHTMLTableRowElementSetVAlignMethodInfo

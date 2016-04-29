@@ -1,0 +1,31 @@
+module GI.Pango.Structs.LayoutIter where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype LayoutIter = LayoutIter (ForeignPtr LayoutIter)
+instance BoxedObject LayoutIter where
+data LayoutIterAtLastLineMethodInfo
+data LayoutIterCopyMethodInfo
+data LayoutIterFreeMethodInfo
+data LayoutIterGetBaselineMethodInfo
+data LayoutIterGetCharExtentsMethodInfo
+data LayoutIterGetClusterExtentsMethodInfo
+data LayoutIterGetIndexMethodInfo
+data LayoutIterGetLayoutMethodInfo
+data LayoutIterGetLayoutExtentsMethodInfo
+data LayoutIterGetLineMethodInfo
+data LayoutIterGetLineExtentsMethodInfo
+data LayoutIterGetLineReadonlyMethodInfo
+data LayoutIterGetLineYrangeMethodInfo
+data LayoutIterGetRunMethodInfo
+data LayoutIterGetRunExtentsMethodInfo
+data LayoutIterGetRunReadonlyMethodInfo
+data LayoutIterNextCharMethodInfo
+data LayoutIterNextClusterMethodInfo
+data LayoutIterNextLineMethodInfo
+data LayoutIterNextRunMethodInfo

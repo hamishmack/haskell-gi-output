@@ -1,0 +1,30 @@
+module GI.WebKit.Objects.DOMShadowRoot where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMShadowRoot = DOMShadowRoot (ForeignPtr DOMShadowRoot)
+instance GObject DOMShadowRoot where
+class GObject o => DOMShadowRootK o
+instance (GObject o, IsDescendantOf DOMShadowRoot o) => DOMShadowRootK o
+data DOMShadowRootActiveElementPropertyInfo
+data DOMShadowRootApplyAuthorStylesPropertyInfo
+data DOMShadowRootInnerHtmlPropertyInfo
+data DOMShadowRootResetStyleInheritancePropertyInfo
+data DOMShadowRootElementFromPointMethodInfo
+data DOMShadowRootGetActiveElementMethodInfo
+data DOMShadowRootGetApplyAuthorStylesMethodInfo
+data DOMShadowRootGetElementByIdMethodInfo
+data DOMShadowRootGetElementsByClassNameMethodInfo
+data DOMShadowRootGetElementsByTagNameMethodInfo
+data DOMShadowRootGetElementsByTagNameNsMethodInfo
+data DOMShadowRootGetInnerHtmlMethodInfo
+data DOMShadowRootGetResetStyleInheritanceMethodInfo
+data DOMShadowRootGetSelectionMethodInfo
+data DOMShadowRootSetApplyAuthorStylesMethodInfo
+data DOMShadowRootSetInnerHtmlMethodInfo
+data DOMShadowRootSetResetStyleInheritanceMethodInfo

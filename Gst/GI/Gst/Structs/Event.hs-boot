@@ -1,0 +1,39 @@
+module GI.Gst.Structs.Event where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Event = Event (ForeignPtr Event)
+instance BoxedObject Event where
+data EventCopySegmentMethodInfo
+data EventGetRunningTimeOffsetMethodInfo
+data EventGetSeqnumMethodInfo
+data EventGetStructureMethodInfo
+data EventHasNameMethodInfo
+data EventParseBufferSizeMethodInfo
+data EventParseCapsMethodInfo
+data EventParseFlushStopMethodInfo
+data EventParseGapMethodInfo
+data EventParseGroupIdMethodInfo
+data EventParseLatencyMethodInfo
+data EventParseProtectionMethodInfo
+data EventParseQosMethodInfo
+data EventParseSeekMethodInfo
+data EventParseSegmentMethodInfo
+data EventParseSegmentDoneMethodInfo
+data EventParseSinkMessageMethodInfo
+data EventParseStepMethodInfo
+data EventParseStreamFlagsMethodInfo
+data EventParseStreamStartMethodInfo
+data EventParseTagMethodInfo
+data EventParseTocMethodInfo
+data EventParseTocSelectMethodInfo
+data EventSetGroupIdMethodInfo
+data EventSetRunningTimeOffsetMethodInfo
+data EventSetSeqnumMethodInfo
+data EventSetStreamFlagsMethodInfo
+data EventWritableStructureMethodInfo

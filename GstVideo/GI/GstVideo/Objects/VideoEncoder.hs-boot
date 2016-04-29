@@ -1,0 +1,29 @@
+module GI.GstVideo.Objects.VideoEncoder where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype VideoEncoder = VideoEncoder (ForeignPtr VideoEncoder)
+instance GObject VideoEncoder where
+class GObject o => VideoEncoderK o
+instance (GObject o, IsDescendantOf VideoEncoder o) => VideoEncoderK o
+data VideoEncoderAllocateOutputBufferMethodInfo
+data VideoEncoderAllocateOutputFrameMethodInfo
+data VideoEncoderFinishFrameMethodInfo
+data VideoEncoderGetAllocatorMethodInfo
+data VideoEncoderGetFrameMethodInfo
+data VideoEncoderGetFramesMethodInfo
+data VideoEncoderGetLatencyMethodInfo
+data VideoEncoderGetOldestFrameMethodInfo
+data VideoEncoderGetOutputStateMethodInfo
+data VideoEncoderMergeTagsMethodInfo
+data VideoEncoderNegotiateMethodInfo
+data VideoEncoderProxyGetcapsMethodInfo
+data VideoEncoderSetHeadersMethodInfo
+data VideoEncoderSetLatencyMethodInfo
+data VideoEncoderSetMinPtsMethodInfo
+data VideoEncoderSetOutputStateMethodInfo

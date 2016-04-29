@@ -1,0 +1,45 @@
+module GI.GstAudio.Objects.AudioDecoder where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AudioDecoder = AudioDecoder (ForeignPtr AudioDecoder)
+instance GObject AudioDecoder where
+class GObject o => AudioDecoderK o
+instance (GObject o, IsDescendantOf AudioDecoder o) => AudioDecoderK o
+data AudioDecoderMinLatencyPropertyInfo
+data AudioDecoderPlcPropertyInfo
+data AudioDecoderTolerancePropertyInfo
+data AudioDecoderAllocateOutputBufferMethodInfo
+data AudioDecoderFinishFrameMethodInfo
+data AudioDecoderGetAllocatorMethodInfo
+data AudioDecoderGetAudioInfoMethodInfo
+data AudioDecoderGetDelayMethodInfo
+data AudioDecoderGetDrainableMethodInfo
+data AudioDecoderGetEstimateRateMethodInfo
+data AudioDecoderGetLatencyMethodInfo
+data AudioDecoderGetMaxErrorsMethodInfo
+data AudioDecoderGetMinLatencyMethodInfo
+data AudioDecoderGetNeedsFormatMethodInfo
+data AudioDecoderGetParseStateMethodInfo
+data AudioDecoderGetPlcMethodInfo
+data AudioDecoderGetPlcAwareMethodInfo
+data AudioDecoderGetToleranceMethodInfo
+data AudioDecoderMergeTagsMethodInfo
+data AudioDecoderNegotiateMethodInfo
+data AudioDecoderProxyGetcapsMethodInfo
+data AudioDecoderSetDrainableMethodInfo
+data AudioDecoderSetEstimateRateMethodInfo
+data AudioDecoderSetLatencyMethodInfo
+data AudioDecoderSetMaxErrorsMethodInfo
+data AudioDecoderSetMinLatencyMethodInfo
+data AudioDecoderSetNeedsFormatMethodInfo
+data AudioDecoderSetOutputFormatMethodInfo
+data AudioDecoderSetPlcMethodInfo
+data AudioDecoderSetPlcAwareMethodInfo
+data AudioDecoderSetToleranceMethodInfo
+data AudioDecoderSetUseDefaultPadAcceptcapsMethodInfo

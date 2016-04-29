@@ -1,0 +1,38 @@
+module GI.Gtk.Objects.Expander where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Expander = Expander (ForeignPtr Expander)
+instance GObject Expander where
+class GObject o => ExpanderK o
+instance (GObject o, IsDescendantOf Expander o) => ExpanderK o
+data ExpanderExpandedPropertyInfo
+data ExpanderLabelPropertyInfo
+data ExpanderLabelFillPropertyInfo
+data ExpanderLabelWidgetPropertyInfo
+data ExpanderResizeToplevelPropertyInfo
+data ExpanderSpacingPropertyInfo
+data ExpanderUseMarkupPropertyInfo
+data ExpanderUseUnderlinePropertyInfo
+data ExpanderActivateSignalInfo
+data ExpanderGetExpandedMethodInfo
+data ExpanderGetLabelMethodInfo
+data ExpanderGetLabelFillMethodInfo
+data ExpanderGetLabelWidgetMethodInfo
+data ExpanderGetResizeToplevelMethodInfo
+data ExpanderGetSpacingMethodInfo
+data ExpanderGetUseMarkupMethodInfo
+data ExpanderGetUseUnderlineMethodInfo
+data ExpanderSetExpandedMethodInfo
+data ExpanderSetLabelMethodInfo
+data ExpanderSetLabelFillMethodInfo
+data ExpanderSetLabelWidgetMethodInfo
+data ExpanderSetResizeToplevelMethodInfo
+data ExpanderSetSpacingMethodInfo
+data ExpanderSetUseMarkupMethodInfo
+data ExpanderSetUseUnderlineMethodInfo

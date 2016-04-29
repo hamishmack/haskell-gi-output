@@ -1,0 +1,48 @@
+module GI.Atk.Interfaces.Table where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Table = Table (ForeignPtr Table)
+data TableColumnDeletedSignalInfo
+data TableColumnInsertedSignalInfo
+data TableColumnReorderedSignalInfo
+data TableModelChangedSignalInfo
+data TableRowDeletedSignalInfo
+data TableRowInsertedSignalInfo
+data TableRowReorderedSignalInfo
+class ForeignPtrNewtype a => TableK a
+instance (ForeignPtrNewtype o, IsDescendantOf Table o) => TableK o
+data TableAddColumnSelectionMethodInfo
+data TableAddRowSelectionMethodInfo
+data TableGetCaptionMethodInfo
+data TableGetColumnAtIndexMethodInfo
+data TableGetColumnDescriptionMethodInfo
+data TableGetColumnExtentAtMethodInfo
+data TableGetColumnHeaderMethodInfo
+data TableGetIndexAtMethodInfo
+data TableGetNColumnsMethodInfo
+data TableGetNRowsMethodInfo
+data TableGetRowAtIndexMethodInfo
+data TableGetRowDescriptionMethodInfo
+data TableGetRowExtentAtMethodInfo
+data TableGetRowHeaderMethodInfo
+data TableGetSelectedColumnsMethodInfo
+data TableGetSelectedRowsMethodInfo
+data TableGetSummaryMethodInfo
+data TableIsColumnSelectedMethodInfo
+data TableIsRowSelectedMethodInfo
+data TableIsSelectedMethodInfo
+data TableRefAtMethodInfo
+data TableRemoveColumnSelectionMethodInfo
+data TableRemoveRowSelectionMethodInfo
+data TableSetCaptionMethodInfo
+data TableSetColumnDescriptionMethodInfo
+data TableSetColumnHeaderMethodInfo
+data TableSetRowDescriptionMethodInfo
+data TableSetRowHeaderMethodInfo
+data TableSetSummaryMethodInfo

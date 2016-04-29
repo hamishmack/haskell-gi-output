@@ -1,0 +1,50 @@
+module GI.Gst.Structs.TagList where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype TagList = TagList (ForeignPtr TagList)
+instance BoxedObject TagList where
+data TagListAddValueMethodInfo
+data TagListForeachMethodInfo
+data TagListGetBooleanMethodInfo
+data TagListGetBooleanIndexMethodInfo
+data TagListGetDateMethodInfo
+data TagListGetDateIndexMethodInfo
+data TagListGetDateTimeMethodInfo
+data TagListGetDateTimeIndexMethodInfo
+data TagListGetDoubleMethodInfo
+data TagListGetDoubleIndexMethodInfo
+data TagListGetFloatMethodInfo
+data TagListGetFloatIndexMethodInfo
+data TagListGetIntMethodInfo
+data TagListGetInt64MethodInfo
+data TagListGetInt64IndexMethodInfo
+data TagListGetIntIndexMethodInfo
+data TagListGetPointerMethodInfo
+data TagListGetPointerIndexMethodInfo
+data TagListGetSampleMethodInfo
+data TagListGetSampleIndexMethodInfo
+data TagListGetScopeMethodInfo
+data TagListGetStringMethodInfo
+data TagListGetStringIndexMethodInfo
+data TagListGetTagSizeMethodInfo
+data TagListGetUintMethodInfo
+data TagListGetUint64MethodInfo
+data TagListGetUint64IndexMethodInfo
+data TagListGetUintIndexMethodInfo
+data TagListGetValueIndexMethodInfo
+data TagListInsertMethodInfo
+data TagListIsEmptyMethodInfo
+data TagListIsEqualMethodInfo
+data TagListMergeMethodInfo
+data TagListNTagsMethodInfo
+data TagListNthTagNameMethodInfo
+data TagListPeekStringIndexMethodInfo
+data TagListRemoveTagMethodInfo
+data TagListSetScopeMethodInfo
+data TagListToStringMethodInfo
