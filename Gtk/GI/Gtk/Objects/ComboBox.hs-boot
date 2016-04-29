@@ -1,0 +1,68 @@
+module GI.Gtk.Objects.ComboBox where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ComboBox = ComboBox (ForeignPtr ComboBox)
+instance GObject ComboBox where
+class GObject o => ComboBoxK o
+instance (GObject o, IsDescendantOf ComboBox o) => ComboBoxK o
+data ComboBoxActivePropertyInfo
+data ComboBoxActiveIdPropertyInfo
+data ComboBoxAddTearoffsPropertyInfo
+data ComboBoxButtonSensitivityPropertyInfo
+data ComboBoxCellAreaPropertyInfo
+data ComboBoxColumnSpanColumnPropertyInfo
+data ComboBoxEntryTextColumnPropertyInfo
+data ComboBoxHasEntryPropertyInfo
+data ComboBoxHasFramePropertyInfo
+data ComboBoxIdColumnPropertyInfo
+data ComboBoxModelPropertyInfo
+data ComboBoxPopupFixedWidthPropertyInfo
+data ComboBoxPopupShownPropertyInfo
+data ComboBoxRowSpanColumnPropertyInfo
+data ComboBoxTearoffTitlePropertyInfo
+data ComboBoxWrapWidthPropertyInfo
+data ComboBoxChangedSignalInfo
+data ComboBoxFormatEntryTextSignalInfo
+data ComboBoxMoveActiveSignalInfo
+data ComboBoxPopdownSignalInfo
+data ComboBoxPopupSignalInfo
+data ComboBoxGetActiveMethodInfo
+data ComboBoxGetActiveIdMethodInfo
+data ComboBoxGetActiveIterMethodInfo
+data ComboBoxGetAddTearoffsMethodInfo
+data ComboBoxGetButtonSensitivityMethodInfo
+data ComboBoxGetColumnSpanColumnMethodInfo
+data ComboBoxGetEntryTextColumnMethodInfo
+data ComboBoxGetFocusOnClickMethodInfo
+data ComboBoxGetHasEntryMethodInfo
+data ComboBoxGetIdColumnMethodInfo
+data ComboBoxGetModelMethodInfo
+data ComboBoxGetPopupAccessibleMethodInfo
+data ComboBoxGetPopupFixedWidthMethodInfo
+data ComboBoxGetRowSpanColumnMethodInfo
+data ComboBoxGetTitleMethodInfo
+data ComboBoxGetWrapWidthMethodInfo
+data ComboBoxPopdownMethodInfo
+data ComboBoxPopupMethodInfo
+data ComboBoxPopupForDeviceMethodInfo
+data ComboBoxSetActiveMethodInfo
+data ComboBoxSetActiveIdMethodInfo
+data ComboBoxSetActiveIterMethodInfo
+data ComboBoxSetAddTearoffsMethodInfo
+data ComboBoxSetButtonSensitivityMethodInfo
+data ComboBoxSetColumnSpanColumnMethodInfo
+data ComboBoxSetEntryTextColumnMethodInfo
+data ComboBoxSetFocusOnClickMethodInfo
+data ComboBoxSetIdColumnMethodInfo
+data ComboBoxSetModelMethodInfo
+data ComboBoxSetPopupFixedWidthMethodInfo
+data ComboBoxSetRowSeparatorFuncMethodInfo
+data ComboBoxSetRowSpanColumnMethodInfo
+data ComboBoxSetTitleMethodInfo
+data ComboBoxSetWrapWidthMethodInfo

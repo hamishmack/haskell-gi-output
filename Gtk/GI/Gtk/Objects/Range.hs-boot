@@ -1,0 +1,53 @@
+module GI.Gtk.Objects.Range where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Range = Range (ForeignPtr Range)
+instance GObject Range where
+class GObject o => RangeK o
+instance (GObject o, IsDescendantOf Range o) => RangeK o
+data RangeAdjustmentPropertyInfo
+data RangeFillLevelPropertyInfo
+data RangeInvertedPropertyInfo
+data RangeLowerStepperSensitivityPropertyInfo
+data RangeRestrictToFillLevelPropertyInfo
+data RangeRoundDigitsPropertyInfo
+data RangeShowFillLevelPropertyInfo
+data RangeUpperStepperSensitivityPropertyInfo
+data RangeAdjustBoundsSignalInfo
+data RangeChangeValueSignalInfo
+data RangeMoveSliderSignalInfo
+data RangeValueChangedSignalInfo
+data RangeGetAdjustmentMethodInfo
+data RangeGetFillLevelMethodInfo
+data RangeGetFlippableMethodInfo
+data RangeGetInvertedMethodInfo
+data RangeGetLowerStepperSensitivityMethodInfo
+data RangeGetMinSliderSizeMethodInfo
+data RangeGetRangeRectMethodInfo
+data RangeGetRestrictToFillLevelMethodInfo
+data RangeGetRoundDigitsMethodInfo
+data RangeGetShowFillLevelMethodInfo
+data RangeGetSliderRangeMethodInfo
+data RangeGetSliderSizeFixedMethodInfo
+data RangeGetUpperStepperSensitivityMethodInfo
+data RangeGetValueMethodInfo
+data RangeSetAdjustmentMethodInfo
+data RangeSetFillLevelMethodInfo
+data RangeSetFlippableMethodInfo
+data RangeSetIncrementsMethodInfo
+data RangeSetInvertedMethodInfo
+data RangeSetLowerStepperSensitivityMethodInfo
+data RangeSetMinSliderSizeMethodInfo
+data RangeSetRangeMethodInfo
+data RangeSetRestrictToFillLevelMethodInfo
+data RangeSetRoundDigitsMethodInfo
+data RangeSetShowFillLevelMethodInfo
+data RangeSetSliderSizeFixedMethodInfo
+data RangeSetUpperStepperSensitivityMethodInfo
+data RangeSetValueMethodInfo

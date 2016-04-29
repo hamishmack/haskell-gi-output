@@ -1,0 +1,50 @@
+module GI.WebKit.Objects.DOMMouseEvent where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMMouseEvent = DOMMouseEvent (ForeignPtr DOMMouseEvent)
+instance GObject DOMMouseEvent where
+class GObject o => DOMMouseEventK o
+instance (GObject o, IsDescendantOf DOMMouseEvent o) => DOMMouseEventK o
+data DOMMouseEventAltKeyPropertyInfo
+data DOMMouseEventButtonPropertyInfo
+data DOMMouseEventClientXPropertyInfo
+data DOMMouseEventClientYPropertyInfo
+data DOMMouseEventCtrlKeyPropertyInfo
+data DOMMouseEventFromElementPropertyInfo
+data DOMMouseEventMetaKeyPropertyInfo
+data DOMMouseEventOffsetXPropertyInfo
+data DOMMouseEventOffsetYPropertyInfo
+data DOMMouseEventRelatedTargetPropertyInfo
+data DOMMouseEventScreenXPropertyInfo
+data DOMMouseEventScreenYPropertyInfo
+data DOMMouseEventShiftKeyPropertyInfo
+data DOMMouseEventToElementPropertyInfo
+data DOMMouseEventWebkitMovementXPropertyInfo
+data DOMMouseEventWebkitMovementYPropertyInfo
+data DOMMouseEventXPropertyInfo
+data DOMMouseEventYPropertyInfo
+data DOMMouseEventGetAltKeyMethodInfo
+data DOMMouseEventGetButtonMethodInfo
+data DOMMouseEventGetClientXMethodInfo
+data DOMMouseEventGetClientYMethodInfo
+data DOMMouseEventGetCtrlKeyMethodInfo
+data DOMMouseEventGetFromElementMethodInfo
+data DOMMouseEventGetMetaKeyMethodInfo
+data DOMMouseEventGetOffsetXMethodInfo
+data DOMMouseEventGetOffsetYMethodInfo
+data DOMMouseEventGetRelatedTargetMethodInfo
+data DOMMouseEventGetScreenXMethodInfo
+data DOMMouseEventGetScreenYMethodInfo
+data DOMMouseEventGetShiftKeyMethodInfo
+data DOMMouseEventGetToElementMethodInfo
+data DOMMouseEventGetWebkitMovementXMethodInfo
+data DOMMouseEventGetWebkitMovementYMethodInfo
+data DOMMouseEventGetXMethodInfo
+data DOMMouseEventGetYMethodInfo
+data DOMMouseEventInitMouseEventMethodInfo

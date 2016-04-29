@@ -1,0 +1,56 @@
+module GI.Gtk.Interfaces.RecentChooser where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype RecentChooser = RecentChooser (ForeignPtr RecentChooser)
+data RecentChooserFilterPropertyInfo
+data RecentChooserLimitPropertyInfo
+data RecentChooserLocalOnlyPropertyInfo
+data RecentChooserRecentManagerPropertyInfo
+data RecentChooserSelectMultiplePropertyInfo
+data RecentChooserShowIconsPropertyInfo
+data RecentChooserShowNotFoundPropertyInfo
+data RecentChooserShowPrivatePropertyInfo
+data RecentChooserShowTipsPropertyInfo
+data RecentChooserSortTypePropertyInfo
+data RecentChooserItemActivatedSignalInfo
+data RecentChooserSelectionChangedSignalInfo
+instance GObject RecentChooser where
+class GObject o => RecentChooserK o
+instance (GObject o, IsDescendantOf RecentChooser o) => RecentChooserK o
+data RecentChooserAddFilterMethodInfo
+data RecentChooserGetCurrentItemMethodInfo
+data RecentChooserGetCurrentUriMethodInfo
+data RecentChooserGetFilterMethodInfo
+data RecentChooserGetItemsMethodInfo
+data RecentChooserGetLimitMethodInfo
+data RecentChooserGetLocalOnlyMethodInfo
+data RecentChooserGetSelectMultipleMethodInfo
+data RecentChooserGetShowIconsMethodInfo
+data RecentChooserGetShowNotFoundMethodInfo
+data RecentChooserGetShowPrivateMethodInfo
+data RecentChooserGetShowTipsMethodInfo
+data RecentChooserGetSortTypeMethodInfo
+data RecentChooserGetUrisMethodInfo
+data RecentChooserListFiltersMethodInfo
+data RecentChooserRemoveFilterMethodInfo
+data RecentChooserSelectAllMethodInfo
+data RecentChooserSelectUriMethodInfo
+data RecentChooserSetCurrentUriMethodInfo
+data RecentChooserSetFilterMethodInfo
+data RecentChooserSetLimitMethodInfo
+data RecentChooserSetLocalOnlyMethodInfo
+data RecentChooserSetSelectMultipleMethodInfo
+data RecentChooserSetShowIconsMethodInfo
+data RecentChooserSetShowNotFoundMethodInfo
+data RecentChooserSetShowPrivateMethodInfo
+data RecentChooserSetShowTipsMethodInfo
+data RecentChooserSetSortFuncMethodInfo
+data RecentChooserSetSortTypeMethodInfo
+data RecentChooserUnselectAllMethodInfo
+data RecentChooserUnselectUriMethodInfo

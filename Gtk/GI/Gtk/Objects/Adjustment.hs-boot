@@ -1,0 +1,38 @@
+module GI.Gtk.Objects.Adjustment where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Adjustment = Adjustment (ForeignPtr Adjustment)
+instance GObject Adjustment where
+class GObject o => AdjustmentK o
+instance (GObject o, IsDescendantOf Adjustment o) => AdjustmentK o
+data AdjustmentLowerPropertyInfo
+data AdjustmentPageIncrementPropertyInfo
+data AdjustmentPageSizePropertyInfo
+data AdjustmentStepIncrementPropertyInfo
+data AdjustmentUpperPropertyInfo
+data AdjustmentValuePropertyInfo
+data AdjustmentChangedSignalInfo
+data AdjustmentValueChangedSignalInfo
+data AdjustmentChangedMethodInfo
+data AdjustmentClampPageMethodInfo
+data AdjustmentConfigureMethodInfo
+data AdjustmentGetLowerMethodInfo
+data AdjustmentGetMinimumIncrementMethodInfo
+data AdjustmentGetPageIncrementMethodInfo
+data AdjustmentGetPageSizeMethodInfo
+data AdjustmentGetStepIncrementMethodInfo
+data AdjustmentGetUpperMethodInfo
+data AdjustmentGetValueMethodInfo
+data AdjustmentSetLowerMethodInfo
+data AdjustmentSetPageIncrementMethodInfo
+data AdjustmentSetPageSizeMethodInfo
+data AdjustmentSetStepIncrementMethodInfo
+data AdjustmentSetUpperMethodInfo
+data AdjustmentSetValueMethodInfo
+data AdjustmentValueChangedMethodInfo

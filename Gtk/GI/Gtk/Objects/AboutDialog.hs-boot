@@ -1,0 +1,60 @@
+module GI.Gtk.Objects.AboutDialog where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AboutDialog = AboutDialog (ForeignPtr AboutDialog)
+instance GObject AboutDialog where
+class GObject o => AboutDialogK o
+instance (GObject o, IsDescendantOf AboutDialog o) => AboutDialogK o
+data AboutDialogArtistsPropertyInfo
+data AboutDialogAuthorsPropertyInfo
+data AboutDialogCommentsPropertyInfo
+data AboutDialogCopyrightPropertyInfo
+data AboutDialogDocumentersPropertyInfo
+data AboutDialogLicensePropertyInfo
+data AboutDialogLicenseTypePropertyInfo
+data AboutDialogLogoPropertyInfo
+data AboutDialogLogoIconNamePropertyInfo
+data AboutDialogProgramNamePropertyInfo
+data AboutDialogTranslatorCreditsPropertyInfo
+data AboutDialogVersionPropertyInfo
+data AboutDialogWebsitePropertyInfo
+data AboutDialogWebsiteLabelPropertyInfo
+data AboutDialogWrapLicensePropertyInfo
+data AboutDialogActivateLinkSignalInfo
+data AboutDialogAddCreditSectionMethodInfo
+data AboutDialogGetArtistsMethodInfo
+data AboutDialogGetAuthorsMethodInfo
+data AboutDialogGetCommentsMethodInfo
+data AboutDialogGetCopyrightMethodInfo
+data AboutDialogGetDocumentersMethodInfo
+data AboutDialogGetLicenseMethodInfo
+data AboutDialogGetLicenseTypeMethodInfo
+data AboutDialogGetLogoMethodInfo
+data AboutDialogGetLogoIconNameMethodInfo
+data AboutDialogGetProgramNameMethodInfo
+data AboutDialogGetTranslatorCreditsMethodInfo
+data AboutDialogGetVersionMethodInfo
+data AboutDialogGetWebsiteMethodInfo
+data AboutDialogGetWebsiteLabelMethodInfo
+data AboutDialogGetWrapLicenseMethodInfo
+data AboutDialogSetArtistsMethodInfo
+data AboutDialogSetAuthorsMethodInfo
+data AboutDialogSetCommentsMethodInfo
+data AboutDialogSetCopyrightMethodInfo
+data AboutDialogSetDocumentersMethodInfo
+data AboutDialogSetLicenseMethodInfo
+data AboutDialogSetLicenseTypeMethodInfo
+data AboutDialogSetLogoMethodInfo
+data AboutDialogSetLogoIconNameMethodInfo
+data AboutDialogSetProgramNameMethodInfo
+data AboutDialogSetTranslatorCreditsMethodInfo
+data AboutDialogSetVersionMethodInfo
+data AboutDialogSetWebsiteMethodInfo
+data AboutDialogSetWebsiteLabelMethodInfo
+data AboutDialogSetWrapLicenseMethodInfo

@@ -1,0 +1,57 @@
+module GI.Gdk.Objects.Display where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Display = Display (ForeignPtr Display)
+instance GObject Display where
+class GObject o => DisplayK o
+instance (GObject o, IsDescendantOf Display o) => DisplayK o
+data DisplayClosedSignalInfo
+data DisplayOpenedSignalInfo
+data DisplaySeatAddedSignalInfo
+data DisplaySeatRemovedSignalInfo
+data DisplayBeepMethodInfo
+data DisplayCloseMethodInfo
+data DisplayDeviceIsGrabbedMethodInfo
+data DisplayFlushMethodInfo
+data DisplayGetAppLaunchContextMethodInfo
+data DisplayGetDefaultCursorSizeMethodInfo
+data DisplayGetDefaultGroupMethodInfo
+data DisplayGetDefaultScreenMethodInfo
+data DisplayGetDefaultSeatMethodInfo
+data DisplayGetDeviceManagerMethodInfo
+data DisplayGetEventMethodInfo
+data DisplayGetMaximalCursorSizeMethodInfo
+data DisplayGetNScreensMethodInfo
+data DisplayGetNameMethodInfo
+data DisplayGetPointerMethodInfo
+data DisplayGetScreenMethodInfo
+data DisplayGetWindowAtPointerMethodInfo
+data DisplayHasPendingMethodInfo
+data DisplayIsClosedMethodInfo
+data DisplayKeyboardUngrabMethodInfo
+data DisplayListDevicesMethodInfo
+data DisplayListSeatsMethodInfo
+data DisplayNotifyStartupCompleteMethodInfo
+data DisplayPeekEventMethodInfo
+data DisplayPointerIsGrabbedMethodInfo
+data DisplayPointerUngrabMethodInfo
+data DisplayPutEventMethodInfo
+data DisplayRequestSelectionNotificationMethodInfo
+data DisplaySetDoubleClickDistanceMethodInfo
+data DisplaySetDoubleClickTimeMethodInfo
+data DisplayStoreClipboardMethodInfo
+data DisplaySupportsClipboardPersistenceMethodInfo
+data DisplaySupportsCompositeMethodInfo
+data DisplaySupportsCursorAlphaMethodInfo
+data DisplaySupportsCursorColorMethodInfo
+data DisplaySupportsInputShapesMethodInfo
+data DisplaySupportsSelectionNotificationMethodInfo
+data DisplaySupportsShapesMethodInfo
+data DisplaySyncMethodInfo
+data DisplayWarpPointerMethodInfo

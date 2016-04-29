@@ -1,0 +1,46 @@
+module GI.Gtk.Objects.Assistant where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Assistant = Assistant (ForeignPtr Assistant)
+instance GObject Assistant where
+class GObject o => AssistantK o
+instance (GObject o, IsDescendantOf Assistant o) => AssistantK o
+data AssistantUseHeaderBarPropertyInfo
+data AssistantApplySignalInfo
+data AssistantCancelSignalInfo
+data AssistantCloseSignalInfo
+data AssistantEscapeSignalInfo
+data AssistantPrepareSignalInfo
+data AssistantAddActionWidgetMethodInfo
+data AssistantAppendPageMethodInfo
+data AssistantCommitMethodInfo
+data AssistantGetCurrentPageMethodInfo
+data AssistantGetNPagesMethodInfo
+data AssistantGetNthPageMethodInfo
+data AssistantGetPageCompleteMethodInfo
+data AssistantGetPageHasPaddingMethodInfo
+data AssistantGetPageHeaderImageMethodInfo
+data AssistantGetPageSideImageMethodInfo
+data AssistantGetPageTitleMethodInfo
+data AssistantGetPageTypeMethodInfo
+data AssistantInsertPageMethodInfo
+data AssistantNextPageMethodInfo
+data AssistantPrependPageMethodInfo
+data AssistantPreviousPageMethodInfo
+data AssistantRemoveActionWidgetMethodInfo
+data AssistantRemovePageMethodInfo
+data AssistantSetCurrentPageMethodInfo
+data AssistantSetForwardPageFuncMethodInfo
+data AssistantSetPageCompleteMethodInfo
+data AssistantSetPageHasPaddingMethodInfo
+data AssistantSetPageHeaderImageMethodInfo
+data AssistantSetPageSideImageMethodInfo
+data AssistantSetPageTitleMethodInfo
+data AssistantSetPageTypeMethodInfo
+data AssistantUpdateButtonsStateMethodInfo

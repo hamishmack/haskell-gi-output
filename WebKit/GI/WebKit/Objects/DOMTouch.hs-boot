@@ -1,0 +1,37 @@
+module GI.WebKit.Objects.DOMTouch where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMTouch = DOMTouch (ForeignPtr DOMTouch)
+instance GObject DOMTouch where
+class GObject o => DOMTouchK o
+instance (GObject o, IsDescendantOf DOMTouch o) => DOMTouchK o
+data DOMTouchClientXPropertyInfo
+data DOMTouchClientYPropertyInfo
+data DOMTouchIdentifierPropertyInfo
+data DOMTouchPageXPropertyInfo
+data DOMTouchPageYPropertyInfo
+data DOMTouchScreenXPropertyInfo
+data DOMTouchScreenYPropertyInfo
+data DOMTouchTargetPropertyInfo
+data DOMTouchWebkitForcePropertyInfo
+data DOMTouchWebkitRadiusXPropertyInfo
+data DOMTouchWebkitRadiusYPropertyInfo
+data DOMTouchWebkitRotationAnglePropertyInfo
+data DOMTouchGetClientXMethodInfo
+data DOMTouchGetClientYMethodInfo
+data DOMTouchGetIdentifierMethodInfo
+data DOMTouchGetPageXMethodInfo
+data DOMTouchGetPageYMethodInfo
+data DOMTouchGetScreenXMethodInfo
+data DOMTouchGetScreenYMethodInfo
+data DOMTouchGetTargetMethodInfo
+data DOMTouchGetWebkitForceMethodInfo
+data DOMTouchGetWebkitRadiusXMethodInfo
+data DOMTouchGetWebkitRadiusYMethodInfo
+data DOMTouchGetWebkitRotationAngleMethodInfo

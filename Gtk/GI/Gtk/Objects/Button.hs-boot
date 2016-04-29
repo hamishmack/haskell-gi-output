@@ -1,0 +1,52 @@
+module GI.Gtk.Objects.Button where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Button = Button (ForeignPtr Button)
+instance GObject Button where
+class GObject o => ButtonK o
+instance (GObject o, IsDescendantOf Button o) => ButtonK o
+data ButtonAlwaysShowImagePropertyInfo
+data ButtonImagePropertyInfo
+data ButtonImagePositionPropertyInfo
+data ButtonLabelPropertyInfo
+data ButtonReliefPropertyInfo
+data ButtonUseStockPropertyInfo
+data ButtonUseUnderlinePropertyInfo
+data ButtonXalignPropertyInfo
+data ButtonYalignPropertyInfo
+data ButtonActivateSignalInfo
+data ButtonClickedSignalInfo
+data ButtonEnterSignalInfo
+data ButtonLeaveSignalInfo
+data ButtonPressedSignalInfo
+data ButtonReleasedSignalInfo
+data ButtonClickedMethodInfo
+data ButtonEnterMethodInfo
+data ButtonGetAlignmentMethodInfo
+data ButtonGetAlwaysShowImageMethodInfo
+data ButtonGetEventWindowMethodInfo
+data ButtonGetFocusOnClickMethodInfo
+data ButtonGetImageMethodInfo
+data ButtonGetImagePositionMethodInfo
+data ButtonGetLabelMethodInfo
+data ButtonGetReliefMethodInfo
+data ButtonGetUseStockMethodInfo
+data ButtonGetUseUnderlineMethodInfo
+data ButtonLeaveMethodInfo
+data ButtonPressedMethodInfo
+data ButtonReleasedMethodInfo
+data ButtonSetAlignmentMethodInfo
+data ButtonSetAlwaysShowImageMethodInfo
+data ButtonSetFocusOnClickMethodInfo
+data ButtonSetImageMethodInfo
+data ButtonSetImagePositionMethodInfo
+data ButtonSetLabelMethodInfo
+data ButtonSetReliefMethodInfo
+data ButtonSetUseStockMethodInfo
+data ButtonSetUseUnderlineMethodInfo

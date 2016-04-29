@@ -1,0 +1,26 @@
+module GI.Gio.Objects.DBusMethodInvocation where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DBusMethodInvocation = DBusMethodInvocation (ForeignPtr DBusMethodInvocation)
+instance GObject DBusMethodInvocation where
+class GObject o => DBusMethodInvocationK o
+instance (GObject o, IsDescendantOf DBusMethodInvocation o) => DBusMethodInvocationK o
+data DBusMethodInvocationGetConnectionMethodInfo
+data DBusMethodInvocationGetInterfaceNameMethodInfo
+data DBusMethodInvocationGetMessageMethodInfo
+data DBusMethodInvocationGetMethodInfoMethodInfo
+data DBusMethodInvocationGetMethodNameMethodInfo
+data DBusMethodInvocationGetObjectPathMethodInfo
+data DBusMethodInvocationGetParametersMethodInfo
+data DBusMethodInvocationGetPropertyInfoMethodInfo
+data DBusMethodInvocationGetSenderMethodInfo
+data DBusMethodInvocationReturnDbusErrorMethodInfo
+data DBusMethodInvocationReturnErrorLiteralMethodInfo
+data DBusMethodInvocationReturnGerrorMethodInfo
+data DBusMethodInvocationReturnValueMethodInfo

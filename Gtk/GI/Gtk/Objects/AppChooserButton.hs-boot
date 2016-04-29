@@ -1,0 +1,26 @@
+module GI.Gtk.Objects.AppChooserButton where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AppChooserButton = AppChooserButton (ForeignPtr AppChooserButton)
+instance GObject AppChooserButton where
+class GObject o => AppChooserButtonK o
+instance (GObject o, IsDescendantOf AppChooserButton o) => AppChooserButtonK o
+data AppChooserButtonHeadingPropertyInfo
+data AppChooserButtonShowDefaultItemPropertyInfo
+data AppChooserButtonShowDialogItemPropertyInfo
+data AppChooserButtonCustomItemActivatedSignalInfo
+data AppChooserButtonAppendCustomItemMethodInfo
+data AppChooserButtonAppendSeparatorMethodInfo
+data AppChooserButtonGetHeadingMethodInfo
+data AppChooserButtonGetShowDefaultItemMethodInfo
+data AppChooserButtonGetShowDialogItemMethodInfo
+data AppChooserButtonSetActiveCustomItemMethodInfo
+data AppChooserButtonSetHeadingMethodInfo
+data AppChooserButtonSetShowDefaultItemMethodInfo
+data AppChooserButtonSetShowDialogItemMethodInfo

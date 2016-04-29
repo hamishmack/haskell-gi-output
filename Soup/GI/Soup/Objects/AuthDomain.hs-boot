@@ -1,0 +1,33 @@
+module GI.Soup.Objects.AuthDomain where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AuthDomain = AuthDomain (ForeignPtr AuthDomain)
+instance GObject AuthDomain where
+class GObject o => AuthDomainK o
+instance (GObject o, IsDescendantOf AuthDomain o) => AuthDomainK o
+data AuthDomainAddPathPropertyInfo
+data AuthDomainFilterPropertyInfo
+data AuthDomainFilterDataPropertyInfo
+data AuthDomainGenericAuthCallbackPropertyInfo
+data AuthDomainGenericAuthDataPropertyInfo
+data AuthDomainProxyPropertyInfo
+data AuthDomainRealmPropertyInfo
+data AuthDomainRemovePathPropertyInfo
+data AuthDomainAcceptsMethodInfo
+data AuthDomainAddPathMethodInfo
+data AuthDomainBasicSetAuthCallbackMethodInfo
+data AuthDomainChallengeMethodInfo
+data AuthDomainCheckPasswordMethodInfo
+data AuthDomainCoversMethodInfo
+data AuthDomainDigestSetAuthCallbackMethodInfo
+data AuthDomainGetRealmMethodInfo
+data AuthDomainRemovePathMethodInfo
+data AuthDomainSetFilterMethodInfo
+data AuthDomainSetGenericAuthCallbackMethodInfo
+data AuthDomainTryGenericAuthCallbackMethodInfo

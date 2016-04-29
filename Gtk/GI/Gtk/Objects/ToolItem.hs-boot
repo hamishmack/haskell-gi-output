@@ -1,0 +1,45 @@
+module GI.Gtk.Objects.ToolItem where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ToolItem = ToolItem (ForeignPtr ToolItem)
+instance GObject ToolItem where
+class GObject o => ToolItemK o
+instance (GObject o, IsDescendantOf ToolItem o) => ToolItemK o
+data ToolItemIsImportantPropertyInfo
+data ToolItemVisibleHorizontalPropertyInfo
+data ToolItemVisibleVerticalPropertyInfo
+data ToolItemCreateMenuProxySignalInfo
+data ToolItemToolbarReconfiguredSignalInfo
+data ToolItemGetEllipsizeModeMethodInfo
+data ToolItemGetExpandMethodInfo
+data ToolItemGetHomogeneousMethodInfo
+data ToolItemGetIconSizeMethodInfo
+data ToolItemGetIsImportantMethodInfo
+data ToolItemGetOrientationMethodInfo
+data ToolItemGetProxyMenuItemMethodInfo
+data ToolItemGetReliefStyleMethodInfo
+data ToolItemGetTextAlignmentMethodInfo
+data ToolItemGetTextOrientationMethodInfo
+data ToolItemGetTextSizeGroupMethodInfo
+data ToolItemGetToolbarStyleMethodInfo
+data ToolItemGetUseDragWindowMethodInfo
+data ToolItemGetVisibleHorizontalMethodInfo
+data ToolItemGetVisibleVerticalMethodInfo
+data ToolItemRebuildMenuMethodInfo
+data ToolItemRetrieveProxyMenuItemMethodInfo
+data ToolItemSetExpandMethodInfo
+data ToolItemSetHomogeneousMethodInfo
+data ToolItemSetIsImportantMethodInfo
+data ToolItemSetProxyMenuItemMethodInfo
+data ToolItemSetTooltipMarkupMethodInfo
+data ToolItemSetTooltipTextMethodInfo
+data ToolItemSetUseDragWindowMethodInfo
+data ToolItemSetVisibleHorizontalMethodInfo
+data ToolItemSetVisibleVerticalMethodInfo
+data ToolItemToolbarReconfiguredMethodInfo

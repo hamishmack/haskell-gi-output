@@ -1,0 +1,31 @@
+module GI.Gio.Interfaces.ActionGroup where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ActionGroup = ActionGroup (ForeignPtr ActionGroup)
+data ActionGroupActionAddedSignalInfo
+data ActionGroupActionEnabledChangedSignalInfo
+data ActionGroupActionRemovedSignalInfo
+data ActionGroupActionStateChangedSignalInfo
+instance GObject ActionGroup where
+class GObject o => ActionGroupK o
+instance (GObject o, IsDescendantOf ActionGroup o) => ActionGroupK o
+data ActionGroupActionAddedMethodInfo
+data ActionGroupActionEnabledChangedMethodInfo
+data ActionGroupActionRemovedMethodInfo
+data ActionGroupActionStateChangedMethodInfo
+data ActionGroupActivateActionMethodInfo
+data ActionGroupChangeActionStateMethodInfo
+data ActionGroupGetActionEnabledMethodInfo
+data ActionGroupGetActionParameterTypeMethodInfo
+data ActionGroupGetActionStateMethodInfo
+data ActionGroupGetActionStateHintMethodInfo
+data ActionGroupGetActionStateTypeMethodInfo
+data ActionGroupHasActionMethodInfo
+data ActionGroupListActionsMethodInfo
+data ActionGroupQueryActionMethodInfo

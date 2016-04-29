@@ -1,0 +1,62 @@
+module GI.Gtk.Objects.StatusIcon where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype StatusIcon = StatusIcon (ForeignPtr StatusIcon)
+instance GObject StatusIcon where
+class GObject o => StatusIconK o
+instance (GObject o, IsDescendantOf StatusIcon o) => StatusIconK o
+data StatusIconEmbeddedPropertyInfo
+data StatusIconFilePropertyInfo
+data StatusIconGiconPropertyInfo
+data StatusIconHasTooltipPropertyInfo
+data StatusIconIconNamePropertyInfo
+data StatusIconOrientationPropertyInfo
+data StatusIconPixbufPropertyInfo
+data StatusIconScreenPropertyInfo
+data StatusIconSizePropertyInfo
+data StatusIconStockPropertyInfo
+data StatusIconStorageTypePropertyInfo
+data StatusIconTitlePropertyInfo
+data StatusIconTooltipMarkupPropertyInfo
+data StatusIconTooltipTextPropertyInfo
+data StatusIconVisiblePropertyInfo
+data StatusIconActivateSignalInfo
+data StatusIconButtonPressEventSignalInfo
+data StatusIconButtonReleaseEventSignalInfo
+data StatusIconPopupMenuSignalInfo
+data StatusIconQueryTooltipSignalInfo
+data StatusIconScrollEventSignalInfo
+data StatusIconSizeChangedSignalInfo
+data StatusIconGetGeometryMethodInfo
+data StatusIconGetGiconMethodInfo
+data StatusIconGetHasTooltipMethodInfo
+data StatusIconGetIconNameMethodInfo
+data StatusIconGetPixbufMethodInfo
+data StatusIconGetScreenMethodInfo
+data StatusIconGetSizeMethodInfo
+data StatusIconGetStockMethodInfo
+data StatusIconGetStorageTypeMethodInfo
+data StatusIconGetTitleMethodInfo
+data StatusIconGetTooltipMarkupMethodInfo
+data StatusIconGetTooltipTextMethodInfo
+data StatusIconGetVisibleMethodInfo
+data StatusIconGetX11WindowIdMethodInfo
+data StatusIconIsEmbeddedMethodInfo
+data StatusIconSetFromFileMethodInfo
+data StatusIconSetFromGiconMethodInfo
+data StatusIconSetFromIconNameMethodInfo
+data StatusIconSetFromPixbufMethodInfo
+data StatusIconSetFromStockMethodInfo
+data StatusIconSetHasTooltipMethodInfo
+data StatusIconSetNameMethodInfo
+data StatusIconSetScreenMethodInfo
+data StatusIconSetTitleMethodInfo
+data StatusIconSetTooltipMarkupMethodInfo
+data StatusIconSetTooltipTextMethodInfo
+data StatusIconSetVisibleMethodInfo

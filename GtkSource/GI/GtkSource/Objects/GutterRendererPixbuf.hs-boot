@@ -1,0 +1,25 @@
+module GI.GtkSource.Objects.GutterRendererPixbuf where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype GutterRendererPixbuf = GutterRendererPixbuf (ForeignPtr GutterRendererPixbuf)
+instance GObject GutterRendererPixbuf where
+class GObject o => GutterRendererPixbufK o
+instance (GObject o, IsDescendantOf GutterRendererPixbuf o) => GutterRendererPixbufK o
+data GutterRendererPixbufGiconPropertyInfo
+data GutterRendererPixbufIconNamePropertyInfo
+data GutterRendererPixbufPixbufPropertyInfo
+data GutterRendererPixbufStockIdPropertyInfo
+data GutterRendererPixbufGetGiconMethodInfo
+data GutterRendererPixbufGetIconNameMethodInfo
+data GutterRendererPixbufGetPixbufMethodInfo
+data GutterRendererPixbufGetStockIdMethodInfo
+data GutterRendererPixbufSetGiconMethodInfo
+data GutterRendererPixbufSetIconNameMethodInfo
+data GutterRendererPixbufSetPixbufMethodInfo
+data GutterRendererPixbufSetStockIdMethodInfo

@@ -1,0 +1,29 @@
+module GI.WebKit.Objects.DOMHTMLTableSectionElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLTableSectionElement = DOMHTMLTableSectionElement (ForeignPtr DOMHTMLTableSectionElement)
+instance GObject DOMHTMLTableSectionElement where
+class GObject o => DOMHTMLTableSectionElementK o
+instance (GObject o, IsDescendantOf DOMHTMLTableSectionElement o) => DOMHTMLTableSectionElementK o
+data DOMHTMLTableSectionElementAlignPropertyInfo
+data DOMHTMLTableSectionElementChPropertyInfo
+data DOMHTMLTableSectionElementChOffPropertyInfo
+data DOMHTMLTableSectionElementRowsPropertyInfo
+data DOMHTMLTableSectionElementVAlignPropertyInfo
+data DOMHTMLTableSectionElementDeleteRowMethodInfo
+data DOMHTMLTableSectionElementGetAlignMethodInfo
+data DOMHTMLTableSectionElementGetChMethodInfo
+data DOMHTMLTableSectionElementGetChOffMethodInfo
+data DOMHTMLTableSectionElementGetRowsMethodInfo
+data DOMHTMLTableSectionElementGetVAlignMethodInfo
+data DOMHTMLTableSectionElementInsertRowMethodInfo
+data DOMHTMLTableSectionElementSetAlignMethodInfo
+data DOMHTMLTableSectionElementSetChMethodInfo
+data DOMHTMLTableSectionElementSetChOffMethodInfo
+data DOMHTMLTableSectionElementSetVAlignMethodInfo

@@ -1,0 +1,33 @@
+module GI.Soup.Structs.Cookie where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Cookie = Cookie (ForeignPtr Cookie)
+instance BoxedObject Cookie where
+data CookieAppliesToUriMethodInfo
+data CookieCopyMethodInfo
+data CookieDomainMatchesMethodInfo
+data CookieEqualMethodInfo
+data CookieFreeMethodInfo
+data CookieGetDomainMethodInfo
+data CookieGetExpiresMethodInfo
+data CookieGetHttpOnlyMethodInfo
+data CookieGetNameMethodInfo
+data CookieGetPathMethodInfo
+data CookieGetSecureMethodInfo
+data CookieGetValueMethodInfo
+data CookieSetDomainMethodInfo
+data CookieSetExpiresMethodInfo
+data CookieSetHttpOnlyMethodInfo
+data CookieSetMaxAgeMethodInfo
+data CookieSetNameMethodInfo
+data CookieSetPathMethodInfo
+data CookieSetSecureMethodInfo
+data CookieSetValueMethodInfo
+data CookieToCookieHeaderMethodInfo
+data CookieToSetCookieHeaderMethodInfo

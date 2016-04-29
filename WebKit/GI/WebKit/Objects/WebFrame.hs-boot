@@ -1,0 +1,55 @@
+module GI.WebKit.Objects.WebFrame where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype WebFrame = WebFrame (ForeignPtr WebFrame)
+instance GObject WebFrame where
+class GObject o => WebFrameK o
+instance (GObject o, IsDescendantOf WebFrame o) => WebFrameK o
+data WebFrameHorizontalScrollbarPolicyPropertyInfo
+data WebFrameLoadStatusPropertyInfo
+data WebFrameNamePropertyInfo
+data WebFrameTitlePropertyInfo
+data WebFrameUriPropertyInfo
+data WebFrameVerticalScrollbarPolicyPropertyInfo
+data WebFrameClearedSignalInfo
+data WebFrameHoveringOverLinkSignalInfo
+data WebFrameInsecureContentRunSignalInfo
+data WebFrameLoadCommittedSignalInfo
+data WebFrameResourceContentLengthReceivedSignalInfo
+data WebFrameResourceLoadFailedSignalInfo
+data WebFrameResourceLoadFinishedSignalInfo
+data WebFrameResourceRequestStartingSignalInfo
+data WebFrameResourceResponseReceivedSignalInfo
+data WebFrameScrollbarsPolicyChangedSignalInfo
+data WebFrameTitleChangedSignalInfo
+data WebFrameFindFrameMethodInfo
+data WebFrameGetDataSourceMethodInfo
+data WebFrameGetDomDocumentMethodInfo
+data WebFrameGetGlobalContextMethodInfo
+data WebFrameGetHorizontalScrollbarPolicyMethodInfo
+data WebFrameGetLoadStatusMethodInfo
+data WebFrameGetNameMethodInfo
+data WebFrameGetNetworkResponseMethodInfo
+data WebFrameGetParentMethodInfo
+data WebFrameGetProvisionalDataSourceMethodInfo
+data WebFrameGetRangeForWordAroundCaretMethodInfo
+data WebFrameGetSecurityOriginMethodInfo
+data WebFrameGetTitleMethodInfo
+data WebFrameGetUriMethodInfo
+data WebFrameGetVerticalScrollbarPolicyMethodInfo
+data WebFrameGetWebViewMethodInfo
+data WebFrameLoadAlternateStringMethodInfo
+data WebFrameLoadRequestMethodInfo
+data WebFrameLoadStringMethodInfo
+data WebFrameLoadUriMethodInfo
+data WebFramePrintMethodInfo
+data WebFramePrintFullMethodInfo
+data WebFrameReloadMethodInfo
+data WebFrameReplaceSelectionMethodInfo
+data WebFrameStopLoadingMethodInfo

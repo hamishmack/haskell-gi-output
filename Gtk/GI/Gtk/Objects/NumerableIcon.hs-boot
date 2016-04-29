@@ -1,0 +1,28 @@
+module GI.Gtk.Objects.NumerableIcon where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype NumerableIcon = NumerableIcon (ForeignPtr NumerableIcon)
+instance GObject NumerableIcon where
+class GObject o => NumerableIconK o
+instance (GObject o, IsDescendantOf NumerableIcon o) => NumerableIconK o
+data NumerableIconBackgroundIconPropertyInfo
+data NumerableIconBackgroundIconNamePropertyInfo
+data NumerableIconCountPropertyInfo
+data NumerableIconLabelPropertyInfo
+data NumerableIconStyleContextPropertyInfo
+data NumerableIconGetBackgroundGiconMethodInfo
+data NumerableIconGetBackgroundIconNameMethodInfo
+data NumerableIconGetCountMethodInfo
+data NumerableIconGetLabelMethodInfo
+data NumerableIconGetStyleContextMethodInfo
+data NumerableIconSetBackgroundGiconMethodInfo
+data NumerableIconSetBackgroundIconNameMethodInfo
+data NumerableIconSetCountMethodInfo
+data NumerableIconSetLabelMethodInfo
+data NumerableIconSetStyleContextMethodInfo

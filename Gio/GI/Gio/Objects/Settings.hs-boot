@@ -1,0 +1,58 @@
+module GI.Gio.Objects.Settings where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Settings = Settings (ForeignPtr Settings)
+instance GObject Settings where
+class GObject o => SettingsK o
+instance (GObject o, IsDescendantOf Settings o) => SettingsK o
+data SettingsDelayApplyPropertyInfo
+data SettingsHasUnappliedPropertyInfo
+data SettingsPathPropertyInfo
+data SettingsSchemaPropertyInfo
+data SettingsSchemaIdPropertyInfo
+data SettingsSettingsSchemaPropertyInfo
+data SettingsChangeEventSignalInfo
+data SettingsChangedSignalInfo
+data SettingsWritableChangeEventSignalInfo
+data SettingsWritableChangedSignalInfo
+data SettingsApplyMethodInfo
+data SettingsBindMethodInfo
+data SettingsBindWritableMethodInfo
+data SettingsCreateActionMethodInfo
+data SettingsDelayMethodInfo
+data SettingsGetBooleanMethodInfo
+data SettingsGetChildMethodInfo
+data SettingsGetDefaultValueMethodInfo
+data SettingsGetDoubleMethodInfo
+data SettingsGetEnumMethodInfo
+data SettingsGetFlagsMethodInfo
+data SettingsGetHasUnappliedMethodInfo
+data SettingsGetIntMethodInfo
+data SettingsGetMappedMethodInfo
+data SettingsGetRangeMethodInfo
+data SettingsGetStringMethodInfo
+data SettingsGetStrvMethodInfo
+data SettingsGetUintMethodInfo
+data SettingsGetUserValueMethodInfo
+data SettingsGetValueMethodInfo
+data SettingsIsWritableMethodInfo
+data SettingsListChildrenMethodInfo
+data SettingsListKeysMethodInfo
+data SettingsRangeCheckMethodInfo
+data SettingsResetMethodInfo
+data SettingsRevertMethodInfo
+data SettingsSetBooleanMethodInfo
+data SettingsSetDoubleMethodInfo
+data SettingsSetEnumMethodInfo
+data SettingsSetFlagsMethodInfo
+data SettingsSetIntMethodInfo
+data SettingsSetStringMethodInfo
+data SettingsSetStrvMethodInfo
+data SettingsSetUintMethodInfo
+data SettingsSetValueMethodInfo

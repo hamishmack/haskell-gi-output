@@ -1,0 +1,31 @@
+module GI.Gtk.Structs.IconSource where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype IconSource = IconSource (ForeignPtr IconSource)
+instance BoxedObject IconSource where
+data IconSourceCopyMethodInfo
+data IconSourceFreeMethodInfo
+data IconSourceGetDirectionMethodInfo
+data IconSourceGetDirectionWildcardedMethodInfo
+data IconSourceGetFilenameMethodInfo
+data IconSourceGetIconNameMethodInfo
+data IconSourceGetPixbufMethodInfo
+data IconSourceGetSizeMethodInfo
+data IconSourceGetSizeWildcardedMethodInfo
+data IconSourceGetStateMethodInfo
+data IconSourceGetStateWildcardedMethodInfo
+data IconSourceSetDirectionMethodInfo
+data IconSourceSetDirectionWildcardedMethodInfo
+data IconSourceSetFilenameMethodInfo
+data IconSourceSetIconNameMethodInfo
+data IconSourceSetPixbufMethodInfo
+data IconSourceSetSizeMethodInfo
+data IconSourceSetSizeWildcardedMethodInfo
+data IconSourceSetStateMethodInfo
+data IconSourceSetStateWildcardedMethodInfo

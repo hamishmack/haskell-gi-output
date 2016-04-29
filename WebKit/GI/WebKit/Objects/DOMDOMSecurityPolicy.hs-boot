@@ -1,0 +1,33 @@
+module GI.WebKit.Objects.DOMDOMSecurityPolicy where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMDOMSecurityPolicy = DOMDOMSecurityPolicy (ForeignPtr DOMDOMSecurityPolicy)
+instance GObject DOMDOMSecurityPolicy where
+class GObject o => DOMDOMSecurityPolicyK o
+instance (GObject o, IsDescendantOf DOMDOMSecurityPolicy o) => DOMDOMSecurityPolicyK o
+data DOMDOMSecurityPolicyAllowsEvalPropertyInfo
+data DOMDOMSecurityPolicyAllowsInlineScriptPropertyInfo
+data DOMDOMSecurityPolicyAllowsInlineStylePropertyInfo
+data DOMDOMSecurityPolicyIsActivePropertyInfo
+data DOMDOMSecurityPolicyReportUrIsPropertyInfo
+data DOMDOMSecurityPolicyAllowsConnectionToMethodInfo
+data DOMDOMSecurityPolicyAllowsFontFromMethodInfo
+data DOMDOMSecurityPolicyAllowsFormActionMethodInfo
+data DOMDOMSecurityPolicyAllowsFrameFromMethodInfo
+data DOMDOMSecurityPolicyAllowsImageFromMethodInfo
+data DOMDOMSecurityPolicyAllowsMediaFromMethodInfo
+data DOMDOMSecurityPolicyAllowsObjectFromMethodInfo
+data DOMDOMSecurityPolicyAllowsPluginTypeMethodInfo
+data DOMDOMSecurityPolicyAllowsScriptFromMethodInfo
+data DOMDOMSecurityPolicyAllowsStyleFromMethodInfo
+data DOMDOMSecurityPolicyGetAllowsEvalMethodInfo
+data DOMDOMSecurityPolicyGetAllowsInlineScriptMethodInfo
+data DOMDOMSecurityPolicyGetAllowsInlineStyleMethodInfo
+data DOMDOMSecurityPolicyGetIsActiveMethodInfo
+data DOMDOMSecurityPolicyGetReportUrIsMethodInfo

@@ -1,0 +1,35 @@
+module GI.Gtk.Objects.HeaderBar where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype HeaderBar = HeaderBar (ForeignPtr HeaderBar)
+instance GObject HeaderBar where
+class GObject o => HeaderBarK o
+instance (GObject o, IsDescendantOf HeaderBar o) => HeaderBarK o
+data HeaderBarCustomTitlePropertyInfo
+data HeaderBarDecorationLayoutPropertyInfo
+data HeaderBarDecorationLayoutSetPropertyInfo
+data HeaderBarHasSubtitlePropertyInfo
+data HeaderBarShowCloseButtonPropertyInfo
+data HeaderBarSpacingPropertyInfo
+data HeaderBarSubtitlePropertyInfo
+data HeaderBarTitlePropertyInfo
+data HeaderBarGetCustomTitleMethodInfo
+data HeaderBarGetDecorationLayoutMethodInfo
+data HeaderBarGetHasSubtitleMethodInfo
+data HeaderBarGetShowCloseButtonMethodInfo
+data HeaderBarGetSubtitleMethodInfo
+data HeaderBarGetTitleMethodInfo
+data HeaderBarPackEndMethodInfo
+data HeaderBarPackStartMethodInfo
+data HeaderBarSetCustomTitleMethodInfo
+data HeaderBarSetDecorationLayoutMethodInfo
+data HeaderBarSetHasSubtitleMethodInfo
+data HeaderBarSetShowCloseButtonMethodInfo
+data HeaderBarSetSubtitleMethodInfo
+data HeaderBarSetTitleMethodInfo

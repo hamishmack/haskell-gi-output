@@ -1,0 +1,39 @@
+module GI.Gtk.Objects.Application where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Application = Application (ForeignPtr Application)
+instance GObject Application where
+class GObject o => ApplicationK o
+instance (GObject o, IsDescendantOf Application o) => ApplicationK o
+data ApplicationActiveWindowPropertyInfo
+data ApplicationAppMenuPropertyInfo
+data ApplicationMenubarPropertyInfo
+data ApplicationRegisterSessionPropertyInfo
+data ApplicationWindowAddedSignalInfo
+data ApplicationWindowRemovedSignalInfo
+data ApplicationAddAcceleratorMethodInfo
+data ApplicationAddWindowMethodInfo
+data ApplicationGetAccelsForActionMethodInfo
+data ApplicationGetActionsForAccelMethodInfo
+data ApplicationGetActiveWindowMethodInfo
+data ApplicationGetAppMenuMethodInfo
+data ApplicationGetMenuByIdMethodInfo
+data ApplicationGetMenubarMethodInfo
+data ApplicationGetWindowByIdMethodInfo
+data ApplicationGetWindowsMethodInfo
+data ApplicationInhibitMethodInfo
+data ApplicationIsInhibitedMethodInfo
+data ApplicationListActionDescriptionsMethodInfo
+data ApplicationPrefersAppMenuMethodInfo
+data ApplicationRemoveAcceleratorMethodInfo
+data ApplicationRemoveWindowMethodInfo
+data ApplicationSetAccelsForActionMethodInfo
+data ApplicationSetAppMenuMethodInfo
+data ApplicationSetMenubarMethodInfo
+data ApplicationUninhibitMethodInfo

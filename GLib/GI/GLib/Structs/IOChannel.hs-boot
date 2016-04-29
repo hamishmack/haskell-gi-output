@@ -1,0 +1,44 @@
+module GI.GLib.Structs.IOChannel where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype IOChannel = IOChannel (ForeignPtr IOChannel)
+instance BoxedObject IOChannel where
+data IOChannelCloseMethodInfo
+data IOChannelFlushMethodInfo
+data IOChannelGetBufferConditionMethodInfo
+data IOChannelGetBufferSizeMethodInfo
+data IOChannelGetBufferedMethodInfo
+data IOChannelGetCloseOnUnrefMethodInfo
+data IOChannelGetEncodingMethodInfo
+data IOChannelGetFlagsMethodInfo
+data IOChannelGetLineTermMethodInfo
+data IOChannelInitMethodInfo
+data IOChannelReadMethodInfo
+data IOChannelReadCharsMethodInfo
+data IOChannelReadLineMethodInfo
+data IOChannelReadToEndMethodInfo
+data IOChannelReadUnicharMethodInfo
+data IOChannelRefMethodInfo
+data IOChannelSeekMethodInfo
+data IOChannelSeekPositionMethodInfo
+data IOChannelSetBufferSizeMethodInfo
+data IOChannelSetBufferedMethodInfo
+data IOChannelSetCloseOnUnrefMethodInfo
+data IOChannelSetEncodingMethodInfo
+data IOChannelSetFlagsMethodInfo
+data IOChannelSetLineTermMethodInfo
+data IOChannelShutdownMethodInfo
+data IOChannelUnixGetFdMethodInfo
+data IOChannelUnrefMethodInfo
+data IOChannelWin32GetFdMethodInfo
+data IOChannelWin32MakePollfdMethodInfo
+data IOChannelWin32SetDebugMethodInfo
+data IOChannelWriteMethodInfo
+data IOChannelWriteCharsMethodInfo
+data IOChannelWriteUnicharMethodInfo

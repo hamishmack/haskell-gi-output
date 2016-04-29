@@ -1,0 +1,32 @@
+module GI.GLib.Structs.MainContext where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MainContext = MainContext (ForeignPtr MainContext)
+instance BoxedObject MainContext where
+data MainContextAcquireMethodInfo
+data MainContextAddPollMethodInfo
+data MainContextCheckMethodInfo
+data MainContextDispatchMethodInfo
+data MainContextFindSourceByFuncsUserDataMethodInfo
+data MainContextFindSourceByIdMethodInfo
+data MainContextFindSourceByUserDataMethodInfo
+data MainContextInvokeFullMethodInfo
+data MainContextIsOwnerMethodInfo
+data MainContextIterationMethodInfo
+data MainContextPendingMethodInfo
+data MainContextPopThreadDefaultMethodInfo
+data MainContextPrepareMethodInfo
+data MainContextPushThreadDefaultMethodInfo
+data MainContextQueryMethodInfo
+data MainContextRefMethodInfo
+data MainContextReleaseMethodInfo
+data MainContextRemovePollMethodInfo
+data MainContextUnrefMethodInfo
+data MainContextWaitMethodInfo
+data MainContextWakeupMethodInfo

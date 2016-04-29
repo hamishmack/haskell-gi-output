@@ -1,0 +1,78 @@
+module GI.Soup.Objects.Message where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Message = Message (ForeignPtr Message)
+instance GObject Message where
+class GObject o => MessageK o
+instance (GObject o, IsDescendantOf Message o) => MessageK o
+data MessageFirstPartyPropertyInfo
+data MessageFlagsPropertyInfo
+data MessageHttpVersionPropertyInfo
+data MessageMethodPropertyInfo
+data MessagePriorityPropertyInfo
+data MessageReasonPhrasePropertyInfo
+data MessageRequestBodyPropertyInfo
+data MessageRequestBodyDataPropertyInfo
+data MessageRequestHeadersPropertyInfo
+data MessageResponseBodyPropertyInfo
+data MessageResponseBodyDataPropertyInfo
+data MessageResponseHeadersPropertyInfo
+data MessageServerSidePropertyInfo
+data MessageStatusCodePropertyInfo
+data MessageTlsCertificatePropertyInfo
+data MessageTlsErrorsPropertyInfo
+data MessageUriPropertyInfo
+data MessageContentSniffedSignalInfo
+data MessageFinishedSignalInfo
+data MessageGotBodySignalInfo
+data MessageGotChunkSignalInfo
+data MessageGotHeadersSignalInfo
+data MessageGotInformationalSignalInfo
+data MessageNetworkEventSignalInfo
+data MessageRestartedSignalInfo
+data MessageStartingSignalInfo
+data MessageWroteBodySignalInfo
+data MessageWroteBodyDataSignalInfo
+data MessageWroteChunkSignalInfo
+data MessageWroteHeadersSignalInfo
+data MessageWroteInformationalSignalInfo
+data MessageContentSniffedMethodInfo
+data MessageDisableFeatureMethodInfo
+data MessageFinishedMethodInfo
+data MessageGetAddressMethodInfo
+data MessageGetFirstPartyMethodInfo
+data MessageGetFlagsMethodInfo
+data MessageGetHttpVersionMethodInfo
+data MessageGetHttpsStatusMethodInfo
+data MessageGetPriorityMethodInfo
+data MessageGetSoupRequestMethodInfo
+data MessageGetUriMethodInfo
+data MessageGotBodyMethodInfo
+data MessageGotChunkMethodInfo
+data MessageGotHeadersMethodInfo
+data MessageGotInformationalMethodInfo
+data MessageIsKeepaliveMethodInfo
+data MessageRestartedMethodInfo
+data MessageSetChunkAllocatorMethodInfo
+data MessageSetFirstPartyMethodInfo
+data MessageSetFlagsMethodInfo
+data MessageSetHttpVersionMethodInfo
+data MessageSetPriorityMethodInfo
+data MessageSetRedirectMethodInfo
+data MessageSetRequestMethodInfo
+data MessageSetResponseMethodInfo
+data MessageSetStatusMethodInfo
+data MessageSetStatusFullMethodInfo
+data MessageSetUriMethodInfo
+data MessageStartingMethodInfo
+data MessageWroteBodyMethodInfo
+data MessageWroteBodyDataMethodInfo
+data MessageWroteChunkMethodInfo
+data MessageWroteHeadersMethodInfo
+data MessageWroteInformationalMethodInfo

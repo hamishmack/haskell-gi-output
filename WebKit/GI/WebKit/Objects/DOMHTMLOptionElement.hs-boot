@@ -1,0 +1,34 @@
+module GI.WebKit.Objects.DOMHTMLOptionElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLOptionElement = DOMHTMLOptionElement (ForeignPtr DOMHTMLOptionElement)
+instance GObject DOMHTMLOptionElement where
+class GObject o => DOMHTMLOptionElementK o
+instance (GObject o, IsDescendantOf DOMHTMLOptionElement o) => DOMHTMLOptionElementK o
+data DOMHTMLOptionElementDefaultSelectedPropertyInfo
+data DOMHTMLOptionElementDisabledPropertyInfo
+data DOMHTMLOptionElementFormPropertyInfo
+data DOMHTMLOptionElementIndexPropertyInfo
+data DOMHTMLOptionElementLabelPropertyInfo
+data DOMHTMLOptionElementSelectedPropertyInfo
+data DOMHTMLOptionElementTextPropertyInfo
+data DOMHTMLOptionElementValuePropertyInfo
+data DOMHTMLOptionElementGetDefaultSelectedMethodInfo
+data DOMHTMLOptionElementGetDisabledMethodInfo
+data DOMHTMLOptionElementGetFormMethodInfo
+data DOMHTMLOptionElementGetIndexMethodInfo
+data DOMHTMLOptionElementGetLabelMethodInfo
+data DOMHTMLOptionElementGetSelectedMethodInfo
+data DOMHTMLOptionElementGetTextMethodInfo
+data DOMHTMLOptionElementGetValueMethodInfo
+data DOMHTMLOptionElementSetDefaultSelectedMethodInfo
+data DOMHTMLOptionElementSetDisabledMethodInfo
+data DOMHTMLOptionElementSetLabelMethodInfo
+data DOMHTMLOptionElementSetSelectedMethodInfo
+data DOMHTMLOptionElementSetValueMethodInfo

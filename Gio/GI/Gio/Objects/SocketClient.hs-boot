@@ -1,0 +1,54 @@
+module GI.Gio.Objects.SocketClient where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype SocketClient = SocketClient (ForeignPtr SocketClient)
+instance GObject SocketClient where
+class GObject o => SocketClientK o
+instance (GObject o, IsDescendantOf SocketClient o) => SocketClientK o
+data SocketClientEnableProxyPropertyInfo
+data SocketClientFamilyPropertyInfo
+data SocketClientLocalAddressPropertyInfo
+data SocketClientProtocolPropertyInfo
+data SocketClientProxyResolverPropertyInfo
+data SocketClientTimeoutPropertyInfo
+data SocketClientTlsPropertyInfo
+data SocketClientTlsValidationFlagsPropertyInfo
+data SocketClientTypePropertyInfo
+data SocketClientEventSignalInfo
+data SocketClientAddApplicationProxyMethodInfo
+data SocketClientConnectMethodInfo
+data SocketClientConnectAsyncMethodInfo
+data SocketClientConnectFinishMethodInfo
+data SocketClientConnectToHostMethodInfo
+data SocketClientConnectToHostAsyncMethodInfo
+data SocketClientConnectToHostFinishMethodInfo
+data SocketClientConnectToServiceMethodInfo
+data SocketClientConnectToServiceAsyncMethodInfo
+data SocketClientConnectToServiceFinishMethodInfo
+data SocketClientConnectToUriMethodInfo
+data SocketClientConnectToUriAsyncMethodInfo
+data SocketClientConnectToUriFinishMethodInfo
+data SocketClientGetEnableProxyMethodInfo
+data SocketClientGetFamilyMethodInfo
+data SocketClientGetLocalAddressMethodInfo
+data SocketClientGetProtocolMethodInfo
+data SocketClientGetProxyResolverMethodInfo
+data SocketClientGetSocketTypeMethodInfo
+data SocketClientGetTimeoutMethodInfo
+data SocketClientGetTlsMethodInfo
+data SocketClientGetTlsValidationFlagsMethodInfo
+data SocketClientSetEnableProxyMethodInfo
+data SocketClientSetFamilyMethodInfo
+data SocketClientSetLocalAddressMethodInfo
+data SocketClientSetProtocolMethodInfo
+data SocketClientSetProxyResolverMethodInfo
+data SocketClientSetSocketTypeMethodInfo
+data SocketClientSetTimeoutMethodInfo
+data SocketClientSetTlsMethodInfo
+data SocketClientSetTlsValidationFlagsMethodInfo

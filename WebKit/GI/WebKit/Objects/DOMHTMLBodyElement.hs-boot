@@ -1,0 +1,31 @@
+module GI.WebKit.Objects.DOMHTMLBodyElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLBodyElement = DOMHTMLBodyElement (ForeignPtr DOMHTMLBodyElement)
+instance GObject DOMHTMLBodyElement where
+class GObject o => DOMHTMLBodyElementK o
+instance (GObject o, IsDescendantOf DOMHTMLBodyElement o) => DOMHTMLBodyElementK o
+data DOMHTMLBodyElementALinkPropertyInfo
+data DOMHTMLBodyElementBackgroundPropertyInfo
+data DOMHTMLBodyElementBgColorPropertyInfo
+data DOMHTMLBodyElementLinkPropertyInfo
+data DOMHTMLBodyElementTextPropertyInfo
+data DOMHTMLBodyElementVLinkPropertyInfo
+data DOMHTMLBodyElementGetALinkMethodInfo
+data DOMHTMLBodyElementGetBackgroundMethodInfo
+data DOMHTMLBodyElementGetBgColorMethodInfo
+data DOMHTMLBodyElementGetLinkMethodInfo
+data DOMHTMLBodyElementGetTextMethodInfo
+data DOMHTMLBodyElementGetVLinkMethodInfo
+data DOMHTMLBodyElementSetALinkMethodInfo
+data DOMHTMLBodyElementSetBackgroundMethodInfo
+data DOMHTMLBodyElementSetBgColorMethodInfo
+data DOMHTMLBodyElementSetLinkMethodInfo
+data DOMHTMLBodyElementSetTextMethodInfo
+data DOMHTMLBodyElementSetVLinkMethodInfo

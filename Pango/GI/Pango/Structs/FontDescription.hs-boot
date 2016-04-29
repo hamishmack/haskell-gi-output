@@ -1,0 +1,40 @@
+module GI.Pango.Structs.FontDescription where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype FontDescription = FontDescription (ForeignPtr FontDescription)
+instance BoxedObject FontDescription where
+data FontDescriptionBetterMatchMethodInfo
+data FontDescriptionCopyMethodInfo
+data FontDescriptionCopyStaticMethodInfo
+data FontDescriptionEqualMethodInfo
+data FontDescriptionFreeMethodInfo
+data FontDescriptionGetFamilyMethodInfo
+data FontDescriptionGetGravityMethodInfo
+data FontDescriptionGetSetFieldsMethodInfo
+data FontDescriptionGetSizeMethodInfo
+data FontDescriptionGetSizeIsAbsoluteMethodInfo
+data FontDescriptionGetStretchMethodInfo
+data FontDescriptionGetStyleMethodInfo
+data FontDescriptionGetVariantMethodInfo
+data FontDescriptionGetWeightMethodInfo
+data FontDescriptionHashMethodInfo
+data FontDescriptionMergeMethodInfo
+data FontDescriptionMergeStaticMethodInfo
+data FontDescriptionSetAbsoluteSizeMethodInfo
+data FontDescriptionSetFamilyMethodInfo
+data FontDescriptionSetFamilyStaticMethodInfo
+data FontDescriptionSetGravityMethodInfo
+data FontDescriptionSetSizeMethodInfo
+data FontDescriptionSetStretchMethodInfo
+data FontDescriptionSetStyleMethodInfo
+data FontDescriptionSetVariantMethodInfo
+data FontDescriptionSetWeightMethodInfo
+data FontDescriptionToFilenameMethodInfo
+data FontDescriptionToStringMethodInfo
+data FontDescriptionUnsetFieldsMethodInfo

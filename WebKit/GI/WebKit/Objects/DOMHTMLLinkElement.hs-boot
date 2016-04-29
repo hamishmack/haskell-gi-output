@@ -1,0 +1,40 @@
+module GI.WebKit.Objects.DOMHTMLLinkElement where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLLinkElement = DOMHTMLLinkElement (ForeignPtr DOMHTMLLinkElement)
+instance GObject DOMHTMLLinkElement where
+class GObject o => DOMHTMLLinkElementK o
+instance (GObject o, IsDescendantOf DOMHTMLLinkElement o) => DOMHTMLLinkElementK o
+data DOMHTMLLinkElementCharsetPropertyInfo
+data DOMHTMLLinkElementDisabledPropertyInfo
+data DOMHTMLLinkElementHrefPropertyInfo
+data DOMHTMLLinkElementHreflangPropertyInfo
+data DOMHTMLLinkElementMediaPropertyInfo
+data DOMHTMLLinkElementRelPropertyInfo
+data DOMHTMLLinkElementRevPropertyInfo
+data DOMHTMLLinkElementSheetPropertyInfo
+data DOMHTMLLinkElementTargetPropertyInfo
+data DOMHTMLLinkElementTypePropertyInfo
+data DOMHTMLLinkElementGetCharsetMethodInfo
+data DOMHTMLLinkElementGetDisabledMethodInfo
+data DOMHTMLLinkElementGetHrefMethodInfo
+data DOMHTMLLinkElementGetHreflangMethodInfo
+data DOMHTMLLinkElementGetMediaMethodInfo
+data DOMHTMLLinkElementGetRelMethodInfo
+data DOMHTMLLinkElementGetRevMethodInfo
+data DOMHTMLLinkElementGetSheetMethodInfo
+data DOMHTMLLinkElementGetTargetMethodInfo
+data DOMHTMLLinkElementSetCharsetMethodInfo
+data DOMHTMLLinkElementSetDisabledMethodInfo
+data DOMHTMLLinkElementSetHrefMethodInfo
+data DOMHTMLLinkElementSetHreflangMethodInfo
+data DOMHTMLLinkElementSetMediaMethodInfo
+data DOMHTMLLinkElementSetRelMethodInfo
+data DOMHTMLLinkElementSetRevMethodInfo
+data DOMHTMLLinkElementSetTargetMethodInfo

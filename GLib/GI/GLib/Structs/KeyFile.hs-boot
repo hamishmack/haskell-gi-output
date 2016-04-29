@@ -1,0 +1,54 @@
+module GI.GLib.Structs.KeyFile where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype KeyFile = KeyFile (ForeignPtr KeyFile)
+instance BoxedObject KeyFile where
+data KeyFileGetBooleanMethodInfo
+data KeyFileGetBooleanListMethodInfo
+data KeyFileGetCommentMethodInfo
+data KeyFileGetDoubleMethodInfo
+data KeyFileGetDoubleListMethodInfo
+data KeyFileGetGroupsMethodInfo
+data KeyFileGetInt64MethodInfo
+data KeyFileGetIntegerMethodInfo
+data KeyFileGetIntegerListMethodInfo
+data KeyFileGetKeysMethodInfo
+data KeyFileGetLocaleStringMethodInfo
+data KeyFileGetLocaleStringListMethodInfo
+data KeyFileGetStartGroupMethodInfo
+data KeyFileGetStringMethodInfo
+data KeyFileGetStringListMethodInfo
+data KeyFileGetUint64MethodInfo
+data KeyFileGetValueMethodInfo
+data KeyFileHasGroupMethodInfo
+data KeyFileLoadFromDataMethodInfo
+data KeyFileLoadFromDataDirsMethodInfo
+data KeyFileLoadFromDirsMethodInfo
+data KeyFileLoadFromFileMethodInfo
+data KeyFileRemoveCommentMethodInfo
+data KeyFileRemoveGroupMethodInfo
+data KeyFileRemoveKeyMethodInfo
+data KeyFileSaveToFileMethodInfo
+data KeyFileSetBooleanMethodInfo
+data KeyFileSetBooleanListMethodInfo
+data KeyFileSetCommentMethodInfo
+data KeyFileSetDoubleMethodInfo
+data KeyFileSetDoubleListMethodInfo
+data KeyFileSetInt64MethodInfo
+data KeyFileSetIntegerMethodInfo
+data KeyFileSetIntegerListMethodInfo
+data KeyFileSetListSeparatorMethodInfo
+data KeyFileSetLocaleStringMethodInfo
+data KeyFileSetLocaleStringListMethodInfo
+data KeyFileSetStringMethodInfo
+data KeyFileSetStringListMethodInfo
+data KeyFileSetUint64MethodInfo
+data KeyFileSetValueMethodInfo
+data KeyFileToDataMethodInfo
+data KeyFileUnrefMethodInfo

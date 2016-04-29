@@ -1,0 +1,31 @@
+module GI.GLib.Structs.AsyncQueue where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype AsyncQueue = AsyncQueue (ForeignPtr AsyncQueue)
+data AsyncQueueLengthMethodInfo
+data AsyncQueueLengthUnlockedMethodInfo
+data AsyncQueueLockMethodInfo
+data AsyncQueuePopMethodInfo
+data AsyncQueuePopUnlockedMethodInfo
+data AsyncQueuePushMethodInfo
+data AsyncQueuePushFrontMethodInfo
+data AsyncQueuePushFrontUnlockedMethodInfo
+data AsyncQueuePushUnlockedMethodInfo
+data AsyncQueueRefUnlockedMethodInfo
+data AsyncQueueRemoveMethodInfo
+data AsyncQueueRemoveUnlockedMethodInfo
+data AsyncQueueTimedPopMethodInfo
+data AsyncQueueTimedPopUnlockedMethodInfo
+data AsyncQueueTimeoutPopMethodInfo
+data AsyncQueueTimeoutPopUnlockedMethodInfo
+data AsyncQueueTryPopMethodInfo
+data AsyncQueueTryPopUnlockedMethodInfo
+data AsyncQueueUnlockMethodInfo
+data AsyncQueueUnrefMethodInfo
+data AsyncQueueUnrefAndUnlockMethodInfo

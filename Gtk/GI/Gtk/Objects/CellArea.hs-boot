@@ -1,0 +1,59 @@
+module GI.Gtk.Objects.CellArea where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype CellArea = CellArea (ForeignPtr CellArea)
+instance GObject CellArea where
+class GObject o => CellAreaK o
+instance (GObject o, IsDescendantOf CellArea o) => CellAreaK o
+data CellAreaEditWidgetPropertyInfo
+data CellAreaEditedCellPropertyInfo
+data CellAreaFocusCellPropertyInfo
+data CellAreaAddEditableSignalInfo
+data CellAreaApplyAttributesSignalInfo
+data CellAreaFocusChangedSignalInfo
+data CellAreaRemoveEditableSignalInfo
+data CellAreaActivateMethodInfo
+data CellAreaActivateCellMethodInfo
+data CellAreaAddMethodInfo
+data CellAreaAddFocusSiblingMethodInfo
+data CellAreaApplyAttributesMethodInfo
+data CellAreaAttributeConnectMethodInfo
+data CellAreaAttributeDisconnectMethodInfo
+data CellAreaAttributeGetColumnMethodInfo
+data CellAreaCellGetPropertyMethodInfo
+data CellAreaCellSetPropertyMethodInfo
+data CellAreaCopyContextMethodInfo
+data CellAreaCreateContextMethodInfo
+data CellAreaEventMethodInfo
+data CellAreaFocusMethodInfo
+data CellAreaForeachMethodInfo
+data CellAreaForeachAllocMethodInfo
+data CellAreaGetCellAllocationMethodInfo
+data CellAreaGetCellAtPositionMethodInfo
+data CellAreaGetCurrentPathStringMethodInfo
+data CellAreaGetEditWidgetMethodInfo
+data CellAreaGetEditedCellMethodInfo
+data CellAreaGetFocusCellMethodInfo
+data CellAreaGetFocusFromSiblingMethodInfo
+data CellAreaGetFocusSiblingsMethodInfo
+data CellAreaGetPreferredHeightMethodInfo
+data CellAreaGetPreferredHeightForWidthMethodInfo
+data CellAreaGetPreferredWidthMethodInfo
+data CellAreaGetPreferredWidthForHeightMethodInfo
+data CellAreaGetRequestModeMethodInfo
+data CellAreaHasRendererMethodInfo
+data CellAreaInnerCellAreaMethodInfo
+data CellAreaIsActivatableMethodInfo
+data CellAreaIsFocusSiblingMethodInfo
+data CellAreaRemoveMethodInfo
+data CellAreaRemoveFocusSiblingMethodInfo
+data CellAreaRenderMethodInfo
+data CellAreaRequestRendererMethodInfo
+data CellAreaSetFocusCellMethodInfo
+data CellAreaStopEditingMethodInfo

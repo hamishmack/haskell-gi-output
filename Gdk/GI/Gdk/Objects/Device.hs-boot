@@ -1,0 +1,54 @@
+module GI.Gdk.Objects.Device where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Device = Device (ForeignPtr Device)
+instance GObject Device where
+class GObject o => DeviceK o
+instance (GObject o, IsDescendantOf Device o) => DeviceK o
+data DeviceAssociatedDevicePropertyInfo
+data DeviceDeviceManagerPropertyInfo
+data DeviceDisplayPropertyInfo
+data DeviceHasCursorPropertyInfo
+data DeviceInputModePropertyInfo
+data DeviceInputSourcePropertyInfo
+data DeviceNAxesPropertyInfo
+data DeviceNamePropertyInfo
+data DeviceNumTouchesPropertyInfo
+data DeviceProductIdPropertyInfo
+data DeviceSeatPropertyInfo
+data DeviceTypePropertyInfo
+data DeviceVendorIdPropertyInfo
+data DeviceChangedSignalInfo
+data DeviceGetAssociatedDeviceMethodInfo
+data DeviceGetAxisUseMethodInfo
+data DeviceGetDeviceTypeMethodInfo
+data DeviceGetDisplayMethodInfo
+data DeviceGetHasCursorMethodInfo
+data DeviceGetKeyMethodInfo
+data DeviceGetLastEventWindowMethodInfo
+data DeviceGetModeMethodInfo
+data DeviceGetNAxesMethodInfo
+data DeviceGetNKeysMethodInfo
+data DeviceGetNameMethodInfo
+data DeviceGetPositionMethodInfo
+data DeviceGetPositionDoubleMethodInfo
+data DeviceGetProductIdMethodInfo
+data DeviceGetSeatMethodInfo
+data DeviceGetSourceMethodInfo
+data DeviceGetVendorIdMethodInfo
+data DeviceGetWindowAtPositionMethodInfo
+data DeviceGetWindowAtPositionDoubleMethodInfo
+data DeviceGrabMethodInfo
+data DeviceListAxesMethodInfo
+data DeviceListSlaveDevicesMethodInfo
+data DeviceSetAxisUseMethodInfo
+data DeviceSetKeyMethodInfo
+data DeviceSetModeMethodInfo
+data DeviceUngrabMethodInfo
+data DeviceWarpMethodInfo

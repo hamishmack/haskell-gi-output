@@ -1,0 +1,30 @@
+module GI.GLib.Structs.OptionContext where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype OptionContext = OptionContext (ForeignPtr OptionContext)
+data OptionContextAddGroupMethodInfo
+data OptionContextAddMainEntriesMethodInfo
+data OptionContextFreeMethodInfo
+data OptionContextGetDescriptionMethodInfo
+data OptionContextGetHelpMethodInfo
+data OptionContextGetHelpEnabledMethodInfo
+data OptionContextGetIgnoreUnknownOptionsMethodInfo
+data OptionContextGetMainGroupMethodInfo
+data OptionContextGetStrictPosixMethodInfo
+data OptionContextGetSummaryMethodInfo
+data OptionContextParseMethodInfo
+data OptionContextParseStrvMethodInfo
+data OptionContextSetDescriptionMethodInfo
+data OptionContextSetHelpEnabledMethodInfo
+data OptionContextSetIgnoreUnknownOptionsMethodInfo
+data OptionContextSetMainGroupMethodInfo
+data OptionContextSetStrictPosixMethodInfo
+data OptionContextSetSummaryMethodInfo
+data OptionContextSetTranslateFuncMethodInfo
+data OptionContextSetTranslationDomainMethodInfo

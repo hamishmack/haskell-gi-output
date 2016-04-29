@@ -1,0 +1,50 @@
+module GI.WebKit.Objects.DOMTextTrackCue where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMTextTrackCue = DOMTextTrackCue (ForeignPtr DOMTextTrackCue)
+instance GObject DOMTextTrackCue where
+class GObject o => DOMTextTrackCueK o
+instance (GObject o, IsDescendantOf DOMTextTrackCue o) => DOMTextTrackCueK o
+data DOMTextTrackCueAlignPropertyInfo
+data DOMTextTrackCueEndTimePropertyInfo
+data DOMTextTrackCueIdPropertyInfo
+data DOMTextTrackCueLinePropertyInfo
+data DOMTextTrackCuePauseOnExitPropertyInfo
+data DOMTextTrackCuePositionPropertyInfo
+data DOMTextTrackCueSizePropertyInfo
+data DOMTextTrackCueSnapToLinesPropertyInfo
+data DOMTextTrackCueStartTimePropertyInfo
+data DOMTextTrackCueTextPropertyInfo
+data DOMTextTrackCueTrackPropertyInfo
+data DOMTextTrackCueVerticalPropertyInfo
+data DOMTextTrackCueDispatchEventMethodInfo
+data DOMTextTrackCueGetAlignMethodInfo
+data DOMTextTrackCueGetCueAsHtmlMethodInfo
+data DOMTextTrackCueGetEndTimeMethodInfo
+data DOMTextTrackCueGetIdMethodInfo
+data DOMTextTrackCueGetLineMethodInfo
+data DOMTextTrackCueGetPauseOnExitMethodInfo
+data DOMTextTrackCueGetPositionMethodInfo
+data DOMTextTrackCueGetSizeMethodInfo
+data DOMTextTrackCueGetSnapToLinesMethodInfo
+data DOMTextTrackCueGetStartTimeMethodInfo
+data DOMTextTrackCueGetTextMethodInfo
+data DOMTextTrackCueGetTrackMethodInfo
+data DOMTextTrackCueGetVerticalMethodInfo
+data DOMTextTrackCueSetAlignMethodInfo
+data DOMTextTrackCueSetEndTimeMethodInfo
+data DOMTextTrackCueSetIdMethodInfo
+data DOMTextTrackCueSetLineMethodInfo
+data DOMTextTrackCueSetPauseOnExitMethodInfo
+data DOMTextTrackCueSetPositionMethodInfo
+data DOMTextTrackCueSetSizeMethodInfo
+data DOMTextTrackCueSetSnapToLinesMethodInfo
+data DOMTextTrackCueSetStartTimeMethodInfo
+data DOMTextTrackCueSetTextMethodInfo
+data DOMTextTrackCueSetVerticalMethodInfo

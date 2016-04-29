@@ -1,0 +1,32 @@
+module GI.Gtk.Structs.SelectionData where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype SelectionData = SelectionData (ForeignPtr SelectionData)
+instance BoxedObject SelectionData where
+data SelectionDataCopyMethodInfo
+data SelectionDataFreeMethodInfo
+data SelectionDataGetDataTypeMethodInfo
+data SelectionDataGetDataMethodInfo
+data SelectionDataGetDisplayMethodInfo
+data SelectionDataGetFormatMethodInfo
+data SelectionDataGetLengthMethodInfo
+data SelectionDataGetPixbufMethodInfo
+data SelectionDataGetSelectionMethodInfo
+data SelectionDataGetTargetMethodInfo
+data SelectionDataGetTargetsMethodInfo
+data SelectionDataGetTextMethodInfo
+data SelectionDataGetUrisMethodInfo
+data SelectionDataSetMethodInfo
+data SelectionDataSetPixbufMethodInfo
+data SelectionDataSetTextMethodInfo
+data SelectionDataSetUrisMethodInfo
+data SelectionDataTargetsIncludeImageMethodInfo
+data SelectionDataTargetsIncludeRichTextMethodInfo
+data SelectionDataTargetsIncludeTextMethodInfo
+data SelectionDataTargetsIncludeUriMethodInfo

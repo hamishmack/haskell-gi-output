@@ -1,0 +1,38 @@
+module GI.Gtk.Objects.Clipboard where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Clipboard = Clipboard (ForeignPtr Clipboard)
+instance GObject Clipboard where
+class GObject o => ClipboardK o
+instance (GObject o, IsDescendantOf Clipboard o) => ClipboardK o
+data ClipboardOwnerChangeSignalInfo
+data ClipboardClearMethodInfo
+data ClipboardGetDisplayMethodInfo
+data ClipboardGetOwnerMethodInfo
+data ClipboardRequestContentsMethodInfo
+data ClipboardRequestImageMethodInfo
+data ClipboardRequestRichTextMethodInfo
+data ClipboardRequestTargetsMethodInfo
+data ClipboardRequestTextMethodInfo
+data ClipboardRequestUrisMethodInfo
+data ClipboardSetCanStoreMethodInfo
+data ClipboardSetImageMethodInfo
+data ClipboardSetTextMethodInfo
+data ClipboardStoreMethodInfo
+data ClipboardWaitForContentsMethodInfo
+data ClipboardWaitForImageMethodInfo
+data ClipboardWaitForRichTextMethodInfo
+data ClipboardWaitForTargetsMethodInfo
+data ClipboardWaitForTextMethodInfo
+data ClipboardWaitForUrisMethodInfo
+data ClipboardWaitIsImageAvailableMethodInfo
+data ClipboardWaitIsRichTextAvailableMethodInfo
+data ClipboardWaitIsTargetAvailableMethodInfo
+data ClipboardWaitIsTextAvailableMethodInfo
+data ClipboardWaitIsUrisAvailableMethodInfo

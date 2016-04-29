@@ -1,0 +1,35 @@
+module GI.Gtk.Objects.ToolPalette where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ToolPalette = ToolPalette (ForeignPtr ToolPalette)
+instance GObject ToolPalette where
+class GObject o => ToolPaletteK o
+instance (GObject o, IsDescendantOf ToolPalette o) => ToolPaletteK o
+data ToolPaletteIconSizePropertyInfo
+data ToolPaletteIconSizeSetPropertyInfo
+data ToolPaletteToolbarStylePropertyInfo
+data ToolPaletteAddDragDestMethodInfo
+data ToolPaletteGetDragItemMethodInfo
+data ToolPaletteGetDropGroupMethodInfo
+data ToolPaletteGetDropItemMethodInfo
+data ToolPaletteGetExclusiveMethodInfo
+data ToolPaletteGetExpandMethodInfo
+data ToolPaletteGetGroupPositionMethodInfo
+data ToolPaletteGetHadjustmentMethodInfo
+data ToolPaletteGetIconSizeMethodInfo
+data ToolPaletteGetStyleMethodInfo
+data ToolPaletteGetVadjustmentMethodInfo
+data ToolPaletteSetDragSourceMethodInfo
+data ToolPaletteSetExclusiveMethodInfo
+data ToolPaletteSetExpandMethodInfo
+data ToolPaletteSetGroupPositionMethodInfo
+data ToolPaletteSetIconSizeMethodInfo
+data ToolPaletteSetStyleMethodInfo
+data ToolPaletteUnsetIconSizeMethodInfo
+data ToolPaletteUnsetStyleMethodInfo

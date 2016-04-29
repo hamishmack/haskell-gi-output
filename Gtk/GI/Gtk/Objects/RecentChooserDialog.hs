@@ -1,0 +1,531 @@
+
+
+{- |
+Copyright  : Will Thompson, Iñaki García Etxebarria and Jonas Platte
+License    : LGPL-2.1
+Maintainer : Iñaki García Etxebarria (garetxe@gmail.com)
+-}
+
+module GI.Gtk.Objects.RecentChooserDialog
+    ( 
+
+-- * Exported types
+    RecentChooserDialog(..)                 ,
+    RecentChooserDialogK                    ,
+    toRecentChooserDialog                   ,
+    noRecentChooserDialog                   ,
+
+
+    ) where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+import GI.Gtk.Types
+import GI.Gtk.Callbacks
+import qualified GI.Atk as Atk
+import qualified GI.GObject as GObject
+
+newtype RecentChooserDialog = RecentChooserDialog (ForeignPtr RecentChooserDialog)
+foreign import ccall "gtk_recent_chooser_dialog_get_type"
+    c_gtk_recent_chooser_dialog_get_type :: IO GType
+
+type instance ParentTypes RecentChooserDialog = RecentChooserDialogParentTypes
+type RecentChooserDialogParentTypes = '[Dialog, Window, Bin, Container, Widget, GObject.Object, Atk.ImplementorIface, Buildable, RecentChooser]
+
+instance GObject RecentChooserDialog where
+    gobjectIsInitiallyUnowned _ = True
+    gobjectType _ = c_gtk_recent_chooser_dialog_get_type
+    
+
+class GObject o => RecentChooserDialogK o
+instance (GObject o, IsDescendantOf RecentChooserDialog o) => RecentChooserDialogK o
+
+toRecentChooserDialog :: RecentChooserDialogK o => o -> IO RecentChooserDialog
+toRecentChooserDialog = unsafeCastTo RecentChooserDialog
+
+noRecentChooserDialog :: Maybe RecentChooserDialog
+noRecentChooserDialog = Nothing
+
+type family ResolveRecentChooserDialogMethod (t :: Symbol) (o :: *) :: * where
+    ResolveRecentChooserDialogMethod "activate" o = WidgetActivateMethodInfo
+    ResolveRecentChooserDialogMethod "activateDefault" o = WindowActivateDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "activateFocus" o = WindowActivateFocusMethodInfo
+    ResolveRecentChooserDialogMethod "activateKey" o = WindowActivateKeyMethodInfo
+    ResolveRecentChooserDialogMethod "add" o = ContainerAddMethodInfo
+    ResolveRecentChooserDialogMethod "addAccelGroup" o = WindowAddAccelGroupMethodInfo
+    ResolveRecentChooserDialogMethod "addAccelerator" o = WidgetAddAcceleratorMethodInfo
+    ResolveRecentChooserDialogMethod "addActionWidget" o = DialogAddActionWidgetMethodInfo
+    ResolveRecentChooserDialogMethod "addButton" o = DialogAddButtonMethodInfo
+    ResolveRecentChooserDialogMethod "addChild" o = BuildableAddChildMethodInfo
+    ResolveRecentChooserDialogMethod "addDeviceEvents" o = WidgetAddDeviceEventsMethodInfo
+    ResolveRecentChooserDialogMethod "addEvents" o = WidgetAddEventsMethodInfo
+    ResolveRecentChooserDialogMethod "addFilter" o = RecentChooserAddFilterMethodInfo
+    ResolveRecentChooserDialogMethod "addMnemonic" o = WindowAddMnemonicMethodInfo
+    ResolveRecentChooserDialogMethod "addMnemonicLabel" o = WidgetAddMnemonicLabelMethodInfo
+    ResolveRecentChooserDialogMethod "addTickCallback" o = WidgetAddTickCallbackMethodInfo
+    ResolveRecentChooserDialogMethod "beginMoveDrag" o = WindowBeginMoveDragMethodInfo
+    ResolveRecentChooserDialogMethod "beginResizeDrag" o = WindowBeginResizeDragMethodInfo
+    ResolveRecentChooserDialogMethod "bindProperty" o = GObject.ObjectBindPropertyMethodInfo
+    ResolveRecentChooserDialogMethod "bindPropertyFull" o = GObject.ObjectBindPropertyFullMethodInfo
+    ResolveRecentChooserDialogMethod "canActivateAccel" o = WidgetCanActivateAccelMethodInfo
+    ResolveRecentChooserDialogMethod "checkResize" o = ContainerCheckResizeMethodInfo
+    ResolveRecentChooserDialogMethod "childFocus" o = WidgetChildFocusMethodInfo
+    ResolveRecentChooserDialogMethod "childGetProperty" o = ContainerChildGetPropertyMethodInfo
+    ResolveRecentChooserDialogMethod "childNotifyByPspec" o = ContainerChildNotifyByPspecMethodInfo
+    ResolveRecentChooserDialogMethod "childSetProperty" o = ContainerChildSetPropertyMethodInfo
+    ResolveRecentChooserDialogMethod "childType" o = ContainerChildTypeMethodInfo
+    ResolveRecentChooserDialogMethod "classPath" o = WidgetClassPathMethodInfo
+    ResolveRecentChooserDialogMethod "close" o = WindowCloseMethodInfo
+    ResolveRecentChooserDialogMethod "computeExpand" o = WidgetComputeExpandMethodInfo
+    ResolveRecentChooserDialogMethod "constructChild" o = BuildableConstructChildMethodInfo
+    ResolveRecentChooserDialogMethod "createPangoContext" o = WidgetCreatePangoContextMethodInfo
+    ResolveRecentChooserDialogMethod "createPangoLayout" o = WidgetCreatePangoLayoutMethodInfo
+    ResolveRecentChooserDialogMethod "customFinished" o = BuildableCustomFinishedMethodInfo
+    ResolveRecentChooserDialogMethod "customTagEnd" o = BuildableCustomTagEndMethodInfo
+    ResolveRecentChooserDialogMethod "customTagStart" o = BuildableCustomTagStartMethodInfo
+    ResolveRecentChooserDialogMethod "deiconify" o = WindowDeiconifyMethodInfo
+    ResolveRecentChooserDialogMethod "destroy" o = WidgetDestroyMethodInfo
+    ResolveRecentChooserDialogMethod "destroyed" o = WidgetDestroyedMethodInfo
+    ResolveRecentChooserDialogMethod "deviceIsShadowed" o = WidgetDeviceIsShadowedMethodInfo
+    ResolveRecentChooserDialogMethod "dragBegin" o = WidgetDragBeginMethodInfo
+    ResolveRecentChooserDialogMethod "dragBeginWithCoordinates" o = WidgetDragBeginWithCoordinatesMethodInfo
+    ResolveRecentChooserDialogMethod "dragCheckThreshold" o = WidgetDragCheckThresholdMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestAddImageTargets" o = WidgetDragDestAddImageTargetsMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestAddTextTargets" o = WidgetDragDestAddTextTargetsMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestAddUriTargets" o = WidgetDragDestAddUriTargetsMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestFindTarget" o = WidgetDragDestFindTargetMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestGetTargetList" o = WidgetDragDestGetTargetListMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestGetTrackMotion" o = WidgetDragDestGetTrackMotionMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestSet" o = WidgetDragDestSetMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestSetProxy" o = WidgetDragDestSetProxyMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestSetTargetList" o = WidgetDragDestSetTargetListMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestSetTrackMotion" o = WidgetDragDestSetTrackMotionMethodInfo
+    ResolveRecentChooserDialogMethod "dragDestUnset" o = WidgetDragDestUnsetMethodInfo
+    ResolveRecentChooserDialogMethod "dragGetData" o = WidgetDragGetDataMethodInfo
+    ResolveRecentChooserDialogMethod "dragHighlight" o = WidgetDragHighlightMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceAddImageTargets" o = WidgetDragSourceAddImageTargetsMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceAddTextTargets" o = WidgetDragSourceAddTextTargetsMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceAddUriTargets" o = WidgetDragSourceAddUriTargetsMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceGetTargetList" o = WidgetDragSourceGetTargetListMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceSet" o = WidgetDragSourceSetMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceSetIconGicon" o = WidgetDragSourceSetIconGiconMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceSetIconName" o = WidgetDragSourceSetIconNameMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceSetIconPixbuf" o = WidgetDragSourceSetIconPixbufMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceSetIconStock" o = WidgetDragSourceSetIconStockMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceSetTargetList" o = WidgetDragSourceSetTargetListMethodInfo
+    ResolveRecentChooserDialogMethod "dragSourceUnset" o = WidgetDragSourceUnsetMethodInfo
+    ResolveRecentChooserDialogMethod "dragUnhighlight" o = WidgetDragUnhighlightMethodInfo
+    ResolveRecentChooserDialogMethod "draw" o = WidgetDrawMethodInfo
+    ResolveRecentChooserDialogMethod "ensureStyle" o = WidgetEnsureStyleMethodInfo
+    ResolveRecentChooserDialogMethod "errorBell" o = WidgetErrorBellMethodInfo
+    ResolveRecentChooserDialogMethod "event" o = WidgetEventMethodInfo
+    ResolveRecentChooserDialogMethod "forall" o = ContainerForallMethodInfo
+    ResolveRecentChooserDialogMethod "forceFloating" o = GObject.ObjectForceFloatingMethodInfo
+    ResolveRecentChooserDialogMethod "foreach" o = ContainerForeachMethodInfo
+    ResolveRecentChooserDialogMethod "freezeChildNotify" o = WidgetFreezeChildNotifyMethodInfo
+    ResolveRecentChooserDialogMethod "freezeNotify" o = GObject.ObjectFreezeNotifyMethodInfo
+    ResolveRecentChooserDialogMethod "fullscreen" o = WindowFullscreenMethodInfo
+    ResolveRecentChooserDialogMethod "fullscreenOnMonitor" o = WindowFullscreenOnMonitorMethodInfo
+    ResolveRecentChooserDialogMethod "grabAdd" o = WidgetGrabAddMethodInfo
+    ResolveRecentChooserDialogMethod "grabDefault" o = WidgetGrabDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "grabFocus" o = WidgetGrabFocusMethodInfo
+    ResolveRecentChooserDialogMethod "grabRemove" o = WidgetGrabRemoveMethodInfo
+    ResolveRecentChooserDialogMethod "hasDefault" o = WidgetHasDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "hasFocus" o = WidgetHasFocusMethodInfo
+    ResolveRecentChooserDialogMethod "hasGrab" o = WidgetHasGrabMethodInfo
+    ResolveRecentChooserDialogMethod "hasGroup" o = WindowHasGroupMethodInfo
+    ResolveRecentChooserDialogMethod "hasRcStyle" o = WidgetHasRcStyleMethodInfo
+    ResolveRecentChooserDialogMethod "hasScreen" o = WidgetHasScreenMethodInfo
+    ResolveRecentChooserDialogMethod "hasToplevelFocus" o = WindowHasToplevelFocusMethodInfo
+    ResolveRecentChooserDialogMethod "hasVisibleFocus" o = WidgetHasVisibleFocusMethodInfo
+    ResolveRecentChooserDialogMethod "hide" o = WidgetHideMethodInfo
+    ResolveRecentChooserDialogMethod "hideOnDelete" o = WidgetHideOnDeleteMethodInfo
+    ResolveRecentChooserDialogMethod "iconify" o = WindowIconifyMethodInfo
+    ResolveRecentChooserDialogMethod "inDestruction" o = WidgetInDestructionMethodInfo
+    ResolveRecentChooserDialogMethod "initTemplate" o = WidgetInitTemplateMethodInfo
+    ResolveRecentChooserDialogMethod "inputShapeCombineRegion" o = WidgetInputShapeCombineRegionMethodInfo
+    ResolveRecentChooserDialogMethod "insertActionGroup" o = WidgetInsertActionGroupMethodInfo
+    ResolveRecentChooserDialogMethod "intersect" o = WidgetIntersectMethodInfo
+    ResolveRecentChooserDialogMethod "isActive" o = WindowIsActiveMethodInfo
+    ResolveRecentChooserDialogMethod "isAncestor" o = WidgetIsAncestorMethodInfo
+    ResolveRecentChooserDialogMethod "isComposited" o = WidgetIsCompositedMethodInfo
+    ResolveRecentChooserDialogMethod "isDrawable" o = WidgetIsDrawableMethodInfo
+    ResolveRecentChooserDialogMethod "isFloating" o = GObject.ObjectIsFloatingMethodInfo
+    ResolveRecentChooserDialogMethod "isFocus" o = WidgetIsFocusMethodInfo
+    ResolveRecentChooserDialogMethod "isMaximized" o = WindowIsMaximizedMethodInfo
+    ResolveRecentChooserDialogMethod "isSensitive" o = WidgetIsSensitiveMethodInfo
+    ResolveRecentChooserDialogMethod "isToplevel" o = WidgetIsToplevelMethodInfo
+    ResolveRecentChooserDialogMethod "isVisible" o = WidgetIsVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "keynavFailed" o = WidgetKeynavFailedMethodInfo
+    ResolveRecentChooserDialogMethod "listAccelClosures" o = WidgetListAccelClosuresMethodInfo
+    ResolveRecentChooserDialogMethod "listActionPrefixes" o = WidgetListActionPrefixesMethodInfo
+    ResolveRecentChooserDialogMethod "listFilters" o = RecentChooserListFiltersMethodInfo
+    ResolveRecentChooserDialogMethod "listMnemonicLabels" o = WidgetListMnemonicLabelsMethodInfo
+    ResolveRecentChooserDialogMethod "map" o = WidgetMapMethodInfo
+    ResolveRecentChooserDialogMethod "maximize" o = WindowMaximizeMethodInfo
+    ResolveRecentChooserDialogMethod "modifyBase" o = WidgetModifyBaseMethodInfo
+    ResolveRecentChooserDialogMethod "modifyBg" o = WidgetModifyBgMethodInfo
+    ResolveRecentChooserDialogMethod "modifyCursor" o = WidgetModifyCursorMethodInfo
+    ResolveRecentChooserDialogMethod "modifyFg" o = WidgetModifyFgMethodInfo
+    ResolveRecentChooserDialogMethod "modifyFont" o = WidgetModifyFontMethodInfo
+    ResolveRecentChooserDialogMethod "modifyStyle" o = WidgetModifyStyleMethodInfo
+    ResolveRecentChooserDialogMethod "modifyText" o = WidgetModifyTextMethodInfo
+    ResolveRecentChooserDialogMethod "move" o = WindowMoveMethodInfo
+    ResolveRecentChooserDialogMethod "notify" o = GObject.ObjectNotifyMethodInfo
+    ResolveRecentChooserDialogMethod "notifyByPspec" o = GObject.ObjectNotifyByPspecMethodInfo
+    ResolveRecentChooserDialogMethod "overrideBackgroundColor" o = WidgetOverrideBackgroundColorMethodInfo
+    ResolveRecentChooserDialogMethod "overrideColor" o = WidgetOverrideColorMethodInfo
+    ResolveRecentChooserDialogMethod "overrideCursor" o = WidgetOverrideCursorMethodInfo
+    ResolveRecentChooserDialogMethod "overrideFont" o = WidgetOverrideFontMethodInfo
+    ResolveRecentChooserDialogMethod "overrideSymbolicColor" o = WidgetOverrideSymbolicColorMethodInfo
+    ResolveRecentChooserDialogMethod "parseGeometry" o = WindowParseGeometryMethodInfo
+    ResolveRecentChooserDialogMethod "parserFinished" o = BuildableParserFinishedMethodInfo
+    ResolveRecentChooserDialogMethod "path" o = WidgetPathMethodInfo
+    ResolveRecentChooserDialogMethod "present" o = WindowPresentMethodInfo
+    ResolveRecentChooserDialogMethod "presentWithTime" o = WindowPresentWithTimeMethodInfo
+    ResolveRecentChooserDialogMethod "propagateDraw" o = ContainerPropagateDrawMethodInfo
+    ResolveRecentChooserDialogMethod "propagateKeyEvent" o = WindowPropagateKeyEventMethodInfo
+    ResolveRecentChooserDialogMethod "queueAllocate" o = WidgetQueueAllocateMethodInfo
+    ResolveRecentChooserDialogMethod "queueComputeExpand" o = WidgetQueueComputeExpandMethodInfo
+    ResolveRecentChooserDialogMethod "queueDraw" o = WidgetQueueDrawMethodInfo
+    ResolveRecentChooserDialogMethod "queueDrawArea" o = WidgetQueueDrawAreaMethodInfo
+    ResolveRecentChooserDialogMethod "queueDrawRegion" o = WidgetQueueDrawRegionMethodInfo
+    ResolveRecentChooserDialogMethod "queueResize" o = WidgetQueueResizeMethodInfo
+    ResolveRecentChooserDialogMethod "queueResizeNoRedraw" o = WidgetQueueResizeNoRedrawMethodInfo
+    ResolveRecentChooserDialogMethod "realize" o = WidgetRealizeMethodInfo
+    ResolveRecentChooserDialogMethod "ref" o = GObject.ObjectRefMethodInfo
+    ResolveRecentChooserDialogMethod "refSink" o = GObject.ObjectRefSinkMethodInfo
+    ResolveRecentChooserDialogMethod "regionIntersect" o = WidgetRegionIntersectMethodInfo
+    ResolveRecentChooserDialogMethod "registerWindow" o = WidgetRegisterWindowMethodInfo
+    ResolveRecentChooserDialogMethod "remove" o = ContainerRemoveMethodInfo
+    ResolveRecentChooserDialogMethod "removeAccelGroup" o = WindowRemoveAccelGroupMethodInfo
+    ResolveRecentChooserDialogMethod "removeAccelerator" o = WidgetRemoveAcceleratorMethodInfo
+    ResolveRecentChooserDialogMethod "removeFilter" o = RecentChooserRemoveFilterMethodInfo
+    ResolveRecentChooserDialogMethod "removeMnemonic" o = WindowRemoveMnemonicMethodInfo
+    ResolveRecentChooserDialogMethod "removeMnemonicLabel" o = WidgetRemoveMnemonicLabelMethodInfo
+    ResolveRecentChooserDialogMethod "removeTickCallback" o = WidgetRemoveTickCallbackMethodInfo
+    ResolveRecentChooserDialogMethod "renderIcon" o = WidgetRenderIconMethodInfo
+    ResolveRecentChooserDialogMethod "renderIconPixbuf" o = WidgetRenderIconPixbufMethodInfo
+    ResolveRecentChooserDialogMethod "reparent" o = WidgetReparentMethodInfo
+    ResolveRecentChooserDialogMethod "replaceData" o = GObject.ObjectReplaceDataMethodInfo
+    ResolveRecentChooserDialogMethod "replaceQdata" o = GObject.ObjectReplaceQdataMethodInfo
+    ResolveRecentChooserDialogMethod "resetRcStyles" o = WidgetResetRcStylesMethodInfo
+    ResolveRecentChooserDialogMethod "resetStyle" o = WidgetResetStyleMethodInfo
+    ResolveRecentChooserDialogMethod "reshowWithInitialSize" o = WindowReshowWithInitialSizeMethodInfo
+    ResolveRecentChooserDialogMethod "resize" o = WindowResizeMethodInfo
+    ResolveRecentChooserDialogMethod "resizeChildren" o = ContainerResizeChildrenMethodInfo
+    ResolveRecentChooserDialogMethod "resizeGripIsVisible" o = WindowResizeGripIsVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "resizeToGeometry" o = WindowResizeToGeometryMethodInfo
+    ResolveRecentChooserDialogMethod "response" o = DialogResponseMethodInfo
+    ResolveRecentChooserDialogMethod "run" o = DialogRunMethodInfo
+    ResolveRecentChooserDialogMethod "runDispose" o = GObject.ObjectRunDisposeMethodInfo
+    ResolveRecentChooserDialogMethod "selectAll" o = RecentChooserSelectAllMethodInfo
+    ResolveRecentChooserDialogMethod "selectUri" o = RecentChooserSelectUriMethodInfo
+    ResolveRecentChooserDialogMethod "sendExpose" o = WidgetSendExposeMethodInfo
+    ResolveRecentChooserDialogMethod "sendFocusChange" o = WidgetSendFocusChangeMethodInfo
+    ResolveRecentChooserDialogMethod "shapeCombineRegion" o = WidgetShapeCombineRegionMethodInfo
+    ResolveRecentChooserDialogMethod "show" o = WidgetShowMethodInfo
+    ResolveRecentChooserDialogMethod "showAll" o = WidgetShowAllMethodInfo
+    ResolveRecentChooserDialogMethod "showNow" o = WidgetShowNowMethodInfo
+    ResolveRecentChooserDialogMethod "sizeAllocate" o = WidgetSizeAllocateMethodInfo
+    ResolveRecentChooserDialogMethod "sizeAllocateWithBaseline" o = WidgetSizeAllocateWithBaselineMethodInfo
+    ResolveRecentChooserDialogMethod "sizeRequest" o = WidgetSizeRequestMethodInfo
+    ResolveRecentChooserDialogMethod "stealData" o = GObject.ObjectStealDataMethodInfo
+    ResolveRecentChooserDialogMethod "stealQdata" o = GObject.ObjectStealQdataMethodInfo
+    ResolveRecentChooserDialogMethod "stick" o = WindowStickMethodInfo
+    ResolveRecentChooserDialogMethod "styleAttach" o = WidgetStyleAttachMethodInfo
+    ResolveRecentChooserDialogMethod "styleGetProperty" o = WidgetStyleGetPropertyMethodInfo
+    ResolveRecentChooserDialogMethod "thawChildNotify" o = WidgetThawChildNotifyMethodInfo
+    ResolveRecentChooserDialogMethod "thawNotify" o = GObject.ObjectThawNotifyMethodInfo
+    ResolveRecentChooserDialogMethod "translateCoordinates" o = WidgetTranslateCoordinatesMethodInfo
+    ResolveRecentChooserDialogMethod "triggerTooltipQuery" o = WidgetTriggerTooltipQueryMethodInfo
+    ResolveRecentChooserDialogMethod "unfullscreen" o = WindowUnfullscreenMethodInfo
+    ResolveRecentChooserDialogMethod "unmap" o = WidgetUnmapMethodInfo
+    ResolveRecentChooserDialogMethod "unmaximize" o = WindowUnmaximizeMethodInfo
+    ResolveRecentChooserDialogMethod "unparent" o = WidgetUnparentMethodInfo
+    ResolveRecentChooserDialogMethod "unrealize" o = WidgetUnrealizeMethodInfo
+    ResolveRecentChooserDialogMethod "unref" o = GObject.ObjectUnrefMethodInfo
+    ResolveRecentChooserDialogMethod "unregisterWindow" o = WidgetUnregisterWindowMethodInfo
+    ResolveRecentChooserDialogMethod "unselectAll" o = RecentChooserUnselectAllMethodInfo
+    ResolveRecentChooserDialogMethod "unselectUri" o = RecentChooserUnselectUriMethodInfo
+    ResolveRecentChooserDialogMethod "unsetFocusChain" o = ContainerUnsetFocusChainMethodInfo
+    ResolveRecentChooserDialogMethod "unsetStateFlags" o = WidgetUnsetStateFlagsMethodInfo
+    ResolveRecentChooserDialogMethod "unstick" o = WindowUnstickMethodInfo
+    ResolveRecentChooserDialogMethod "watchClosure" o = GObject.ObjectWatchClosureMethodInfo
+    ResolveRecentChooserDialogMethod "getAcceptFocus" o = WindowGetAcceptFocusMethodInfo
+    ResolveRecentChooserDialogMethod "getAccessible" o = WidgetGetAccessibleMethodInfo
+    ResolveRecentChooserDialogMethod "getActionArea" o = DialogGetActionAreaMethodInfo
+    ResolveRecentChooserDialogMethod "getActionGroup" o = WidgetGetActionGroupMethodInfo
+    ResolveRecentChooserDialogMethod "getAllocatedBaseline" o = WidgetGetAllocatedBaselineMethodInfo
+    ResolveRecentChooserDialogMethod "getAllocatedHeight" o = WidgetGetAllocatedHeightMethodInfo
+    ResolveRecentChooserDialogMethod "getAllocatedSize" o = WidgetGetAllocatedSizeMethodInfo
+    ResolveRecentChooserDialogMethod "getAllocatedWidth" o = WidgetGetAllocatedWidthMethodInfo
+    ResolveRecentChooserDialogMethod "getAllocation" o = WidgetGetAllocationMethodInfo
+    ResolveRecentChooserDialogMethod "getAncestor" o = WidgetGetAncestorMethodInfo
+    ResolveRecentChooserDialogMethod "getAppPaintable" o = WidgetGetAppPaintableMethodInfo
+    ResolveRecentChooserDialogMethod "getApplication" o = WindowGetApplicationMethodInfo
+    ResolveRecentChooserDialogMethod "getAttachedTo" o = WindowGetAttachedToMethodInfo
+    ResolveRecentChooserDialogMethod "getBorderWidth" o = ContainerGetBorderWidthMethodInfo
+    ResolveRecentChooserDialogMethod "getCanDefault" o = WidgetGetCanDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "getCanFocus" o = WidgetGetCanFocusMethodInfo
+    ResolveRecentChooserDialogMethod "getChild" o = BinGetChildMethodInfo
+    ResolveRecentChooserDialogMethod "getChildRequisition" o = WidgetGetChildRequisitionMethodInfo
+    ResolveRecentChooserDialogMethod "getChildVisible" o = WidgetGetChildVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "getChildren" o = ContainerGetChildrenMethodInfo
+    ResolveRecentChooserDialogMethod "getClip" o = WidgetGetClipMethodInfo
+    ResolveRecentChooserDialogMethod "getClipboard" o = WidgetGetClipboardMethodInfo
+    ResolveRecentChooserDialogMethod "getCompositeName" o = WidgetGetCompositeNameMethodInfo
+    ResolveRecentChooserDialogMethod "getContentArea" o = DialogGetContentAreaMethodInfo
+    ResolveRecentChooserDialogMethod "getCurrentItem" o = RecentChooserGetCurrentItemMethodInfo
+    ResolveRecentChooserDialogMethod "getCurrentUri" o = RecentChooserGetCurrentUriMethodInfo
+    ResolveRecentChooserDialogMethod "getData" o = GObject.ObjectGetDataMethodInfo
+    ResolveRecentChooserDialogMethod "getDecorated" o = WindowGetDecoratedMethodInfo
+    ResolveRecentChooserDialogMethod "getDefaultSize" o = WindowGetDefaultSizeMethodInfo
+    ResolveRecentChooserDialogMethod "getDefaultWidget" o = WindowGetDefaultWidgetMethodInfo
+    ResolveRecentChooserDialogMethod "getDeletable" o = WindowGetDeletableMethodInfo
+    ResolveRecentChooserDialogMethod "getDestroyWithParent" o = WindowGetDestroyWithParentMethodInfo
+    ResolveRecentChooserDialogMethod "getDeviceEnabled" o = WidgetGetDeviceEnabledMethodInfo
+    ResolveRecentChooserDialogMethod "getDeviceEvents" o = WidgetGetDeviceEventsMethodInfo
+    ResolveRecentChooserDialogMethod "getDirection" o = WidgetGetDirectionMethodInfo
+    ResolveRecentChooserDialogMethod "getDisplay" o = WidgetGetDisplayMethodInfo
+    ResolveRecentChooserDialogMethod "getDoubleBuffered" o = WidgetGetDoubleBufferedMethodInfo
+    ResolveRecentChooserDialogMethod "getEvents" o = WidgetGetEventsMethodInfo
+    ResolveRecentChooserDialogMethod "getFilter" o = RecentChooserGetFilterMethodInfo
+    ResolveRecentChooserDialogMethod "getFocus" o = WindowGetFocusMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusChain" o = ContainerGetFocusChainMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusChild" o = ContainerGetFocusChildMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusHadjustment" o = ContainerGetFocusHadjustmentMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusOnClick" o = WidgetGetFocusOnClickMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusOnMap" o = WindowGetFocusOnMapMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusVadjustment" o = ContainerGetFocusVadjustmentMethodInfo
+    ResolveRecentChooserDialogMethod "getFocusVisible" o = WindowGetFocusVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "getFontMap" o = WidgetGetFontMapMethodInfo
+    ResolveRecentChooserDialogMethod "getFontOptions" o = WidgetGetFontOptionsMethodInfo
+    ResolveRecentChooserDialogMethod "getFrameClock" o = WidgetGetFrameClockMethodInfo
+    ResolveRecentChooserDialogMethod "getGravity" o = WindowGetGravityMethodInfo
+    ResolveRecentChooserDialogMethod "getGroup" o = WindowGetGroupMethodInfo
+    ResolveRecentChooserDialogMethod "getHalign" o = WidgetGetHalignMethodInfo
+    ResolveRecentChooserDialogMethod "getHasResizeGrip" o = WindowGetHasResizeGripMethodInfo
+    ResolveRecentChooserDialogMethod "getHasTooltip" o = WidgetGetHasTooltipMethodInfo
+    ResolveRecentChooserDialogMethod "getHasWindow" o = WidgetGetHasWindowMethodInfo
+    ResolveRecentChooserDialogMethod "getHeaderBar" o = DialogGetHeaderBarMethodInfo
+    ResolveRecentChooserDialogMethod "getHexpand" o = WidgetGetHexpandMethodInfo
+    ResolveRecentChooserDialogMethod "getHexpandSet" o = WidgetGetHexpandSetMethodInfo
+    ResolveRecentChooserDialogMethod "getHideTitlebarWhenMaximized" o = WindowGetHideTitlebarWhenMaximizedMethodInfo
+    ResolveRecentChooserDialogMethod "getIcon" o = WindowGetIconMethodInfo
+    ResolveRecentChooserDialogMethod "getIconList" o = WindowGetIconListMethodInfo
+    ResolveRecentChooserDialogMethod "getIconName" o = WindowGetIconNameMethodInfo
+    ResolveRecentChooserDialogMethod "getInternalChild" o = BuildableGetInternalChildMethodInfo
+    ResolveRecentChooserDialogMethod "getItems" o = RecentChooserGetItemsMethodInfo
+    ResolveRecentChooserDialogMethod "getLimit" o = RecentChooserGetLimitMethodInfo
+    ResolveRecentChooserDialogMethod "getLocalOnly" o = RecentChooserGetLocalOnlyMethodInfo
+    ResolveRecentChooserDialogMethod "getMapped" o = WidgetGetMappedMethodInfo
+    ResolveRecentChooserDialogMethod "getMarginBottom" o = WidgetGetMarginBottomMethodInfo
+    ResolveRecentChooserDialogMethod "getMarginEnd" o = WidgetGetMarginEndMethodInfo
+    ResolveRecentChooserDialogMethod "getMarginLeft" o = WidgetGetMarginLeftMethodInfo
+    ResolveRecentChooserDialogMethod "getMarginRight" o = WidgetGetMarginRightMethodInfo
+    ResolveRecentChooserDialogMethod "getMarginStart" o = WidgetGetMarginStartMethodInfo
+    ResolveRecentChooserDialogMethod "getMarginTop" o = WidgetGetMarginTopMethodInfo
+    ResolveRecentChooserDialogMethod "getMnemonicModifier" o = WindowGetMnemonicModifierMethodInfo
+    ResolveRecentChooserDialogMethod "getMnemonicsVisible" o = WindowGetMnemonicsVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "getModal" o = WindowGetModalMethodInfo
+    ResolveRecentChooserDialogMethod "getModifierMask" o = WidgetGetModifierMaskMethodInfo
+    ResolveRecentChooserDialogMethod "getModifierStyle" o = WidgetGetModifierStyleMethodInfo
+    ResolveRecentChooserDialogMethod "getNoShowAll" o = WidgetGetNoShowAllMethodInfo
+    ResolveRecentChooserDialogMethod "getPangoContext" o = WidgetGetPangoContextMethodInfo
+    ResolveRecentChooserDialogMethod "getParent" o = WidgetGetParentMethodInfo
+    ResolveRecentChooserDialogMethod "getParentWindow" o = WidgetGetParentWindowMethodInfo
+    ResolveRecentChooserDialogMethod "getPath" o = WidgetGetPathMethodInfo
+    ResolveRecentChooserDialogMethod "getPathForChild" o = ContainerGetPathForChildMethodInfo
+    ResolveRecentChooserDialogMethod "getPointer" o = WidgetGetPointerMethodInfo
+    ResolveRecentChooserDialogMethod "getPosition" o = WindowGetPositionMethodInfo
+    ResolveRecentChooserDialogMethod "getPreferredHeight" o = WidgetGetPreferredHeightMethodInfo
+    ResolveRecentChooserDialogMethod "getPreferredHeightAndBaselineForWidth" o = WidgetGetPreferredHeightAndBaselineForWidthMethodInfo
+    ResolveRecentChooserDialogMethod "getPreferredHeightForWidth" o = WidgetGetPreferredHeightForWidthMethodInfo
+    ResolveRecentChooserDialogMethod "getPreferredSize" o = WidgetGetPreferredSizeMethodInfo
+    ResolveRecentChooserDialogMethod "getPreferredWidth" o = WidgetGetPreferredWidthMethodInfo
+    ResolveRecentChooserDialogMethod "getPreferredWidthForHeight" o = WidgetGetPreferredWidthForHeightMethodInfo
+    ResolveRecentChooserDialogMethod "getProperty" o = GObject.ObjectGetPropertyMethodInfo
+    ResolveRecentChooserDialogMethod "getQdata" o = GObject.ObjectGetQdataMethodInfo
+    ResolveRecentChooserDialogMethod "getRealized" o = WidgetGetRealizedMethodInfo
+    ResolveRecentChooserDialogMethod "getReceivesDefault" o = WidgetGetReceivesDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "getRequestMode" o = WidgetGetRequestModeMethodInfo
+    ResolveRecentChooserDialogMethod "getRequisition" o = WidgetGetRequisitionMethodInfo
+    ResolveRecentChooserDialogMethod "getResizable" o = WindowGetResizableMethodInfo
+    ResolveRecentChooserDialogMethod "getResizeGripArea" o = WindowGetResizeGripAreaMethodInfo
+    ResolveRecentChooserDialogMethod "getResizeMode" o = ContainerGetResizeModeMethodInfo
+    ResolveRecentChooserDialogMethod "getResponseForWidget" o = DialogGetResponseForWidgetMethodInfo
+    ResolveRecentChooserDialogMethod "getRole" o = WindowGetRoleMethodInfo
+    ResolveRecentChooserDialogMethod "getRootWindow" o = WidgetGetRootWindowMethodInfo
+    ResolveRecentChooserDialogMethod "getScaleFactor" o = WidgetGetScaleFactorMethodInfo
+    ResolveRecentChooserDialogMethod "getSelectMultiple" o = RecentChooserGetSelectMultipleMethodInfo
+    ResolveRecentChooserDialogMethod "getSensitive" o = WidgetGetSensitiveMethodInfo
+    ResolveRecentChooserDialogMethod "getSettings" o = WidgetGetSettingsMethodInfo
+    ResolveRecentChooserDialogMethod "getShowIcons" o = RecentChooserGetShowIconsMethodInfo
+    ResolveRecentChooserDialogMethod "getShowNotFound" o = RecentChooserGetShowNotFoundMethodInfo
+    ResolveRecentChooserDialogMethod "getShowPrivate" o = RecentChooserGetShowPrivateMethodInfo
+    ResolveRecentChooserDialogMethod "getShowTips" o = RecentChooserGetShowTipsMethodInfo
+    ResolveRecentChooserDialogMethod "getSize" o = WindowGetSizeMethodInfo
+    ResolveRecentChooserDialogMethod "getSizeRequest" o = WidgetGetSizeRequestMethodInfo
+    ResolveRecentChooserDialogMethod "getSkipPagerHint" o = WindowGetSkipPagerHintMethodInfo
+    ResolveRecentChooserDialogMethod "getSkipTaskbarHint" o = WindowGetSkipTaskbarHintMethodInfo
+    ResolveRecentChooserDialogMethod "getSortType" o = RecentChooserGetSortTypeMethodInfo
+    ResolveRecentChooserDialogMethod "getState" o = WidgetGetStateMethodInfo
+    ResolveRecentChooserDialogMethod "getStateFlags" o = WidgetGetStateFlagsMethodInfo
+    ResolveRecentChooserDialogMethod "getStyle" o = WidgetGetStyleMethodInfo
+    ResolveRecentChooserDialogMethod "getStyleContext" o = WidgetGetStyleContextMethodInfo
+    ResolveRecentChooserDialogMethod "getSupportMultidevice" o = WidgetGetSupportMultideviceMethodInfo
+    ResolveRecentChooserDialogMethod "getTemplateChild" o = WidgetGetTemplateChildMethodInfo
+    ResolveRecentChooserDialogMethod "getTitle" o = WindowGetTitleMethodInfo
+    ResolveRecentChooserDialogMethod "getTitlebar" o = WindowGetTitlebarMethodInfo
+    ResolveRecentChooserDialogMethod "getTooltipMarkup" o = WidgetGetTooltipMarkupMethodInfo
+    ResolveRecentChooserDialogMethod "getTooltipText" o = WidgetGetTooltipTextMethodInfo
+    ResolveRecentChooserDialogMethod "getTooltipWindow" o = WidgetGetTooltipWindowMethodInfo
+    ResolveRecentChooserDialogMethod "getToplevel" o = WidgetGetToplevelMethodInfo
+    ResolveRecentChooserDialogMethod "getTransientFor" o = WindowGetTransientForMethodInfo
+    ResolveRecentChooserDialogMethod "getTypeHint" o = WindowGetTypeHintMethodInfo
+    ResolveRecentChooserDialogMethod "getUrgencyHint" o = WindowGetUrgencyHintMethodInfo
+    ResolveRecentChooserDialogMethod "getUris" o = RecentChooserGetUrisMethodInfo
+    ResolveRecentChooserDialogMethod "getValign" o = WidgetGetValignMethodInfo
+    ResolveRecentChooserDialogMethod "getValignWithBaseline" o = WidgetGetValignWithBaselineMethodInfo
+    ResolveRecentChooserDialogMethod "getVexpand" o = WidgetGetVexpandMethodInfo
+    ResolveRecentChooserDialogMethod "getVexpandSet" o = WidgetGetVexpandSetMethodInfo
+    ResolveRecentChooserDialogMethod "getVisible" o = WidgetGetVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "getVisual" o = WidgetGetVisualMethodInfo
+    ResolveRecentChooserDialogMethod "getWidgetForResponse" o = DialogGetWidgetForResponseMethodInfo
+    ResolveRecentChooserDialogMethod "getWindow" o = WidgetGetWindowMethodInfo
+    ResolveRecentChooserDialogMethod "getWindowType" o = WindowGetWindowTypeMethodInfo
+    ResolveRecentChooserDialogMethod "setAccelPath" o = WidgetSetAccelPathMethodInfo
+    ResolveRecentChooserDialogMethod "setAcceptFocus" o = WindowSetAcceptFocusMethodInfo
+    ResolveRecentChooserDialogMethod "setAllocation" o = WidgetSetAllocationMethodInfo
+    ResolveRecentChooserDialogMethod "setAlternativeButtonOrderFromArray" o = DialogSetAlternativeButtonOrderFromArrayMethodInfo
+    ResolveRecentChooserDialogMethod "setAppPaintable" o = WidgetSetAppPaintableMethodInfo
+    ResolveRecentChooserDialogMethod "setApplication" o = WindowSetApplicationMethodInfo
+    ResolveRecentChooserDialogMethod "setAttachedTo" o = WindowSetAttachedToMethodInfo
+    ResolveRecentChooserDialogMethod "setBorderWidth" o = ContainerSetBorderWidthMethodInfo
+    ResolveRecentChooserDialogMethod "setBuildableProperty" o = BuildableSetBuildablePropertyMethodInfo
+    ResolveRecentChooserDialogMethod "setCanDefault" o = WidgetSetCanDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "setCanFocus" o = WidgetSetCanFocusMethodInfo
+    ResolveRecentChooserDialogMethod "setChildVisible" o = WidgetSetChildVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "setClip" o = WidgetSetClipMethodInfo
+    ResolveRecentChooserDialogMethod "setCompositeName" o = WidgetSetCompositeNameMethodInfo
+    ResolveRecentChooserDialogMethod "setCurrentUri" o = RecentChooserSetCurrentUriMethodInfo
+    ResolveRecentChooserDialogMethod "setData" o = GObject.ObjectSetDataMethodInfo
+    ResolveRecentChooserDialogMethod "setDecorated" o = WindowSetDecoratedMethodInfo
+    ResolveRecentChooserDialogMethod "setDefault" o = WindowSetDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "setDefaultGeometry" o = WindowSetDefaultGeometryMethodInfo
+    ResolveRecentChooserDialogMethod "setDefaultResponse" o = DialogSetDefaultResponseMethodInfo
+    ResolveRecentChooserDialogMethod "setDefaultSize" o = WindowSetDefaultSizeMethodInfo
+    ResolveRecentChooserDialogMethod "setDeletable" o = WindowSetDeletableMethodInfo
+    ResolveRecentChooserDialogMethod "setDestroyWithParent" o = WindowSetDestroyWithParentMethodInfo
+    ResolveRecentChooserDialogMethod "setDeviceEnabled" o = WidgetSetDeviceEnabledMethodInfo
+    ResolveRecentChooserDialogMethod "setDeviceEvents" o = WidgetSetDeviceEventsMethodInfo
+    ResolveRecentChooserDialogMethod "setDirection" o = WidgetSetDirectionMethodInfo
+    ResolveRecentChooserDialogMethod "setDoubleBuffered" o = WidgetSetDoubleBufferedMethodInfo
+    ResolveRecentChooserDialogMethod "setEvents" o = WidgetSetEventsMethodInfo
+    ResolveRecentChooserDialogMethod "setFilter" o = RecentChooserSetFilterMethodInfo
+    ResolveRecentChooserDialogMethod "setFocus" o = WindowSetFocusMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusChain" o = ContainerSetFocusChainMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusChild" o = ContainerSetFocusChildMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusHadjustment" o = ContainerSetFocusHadjustmentMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusOnClick" o = WidgetSetFocusOnClickMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusOnMap" o = WindowSetFocusOnMapMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusVadjustment" o = ContainerSetFocusVadjustmentMethodInfo
+    ResolveRecentChooserDialogMethod "setFocusVisible" o = WindowSetFocusVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "setFontMap" o = WidgetSetFontMapMethodInfo
+    ResolveRecentChooserDialogMethod "setFontOptions" o = WidgetSetFontOptionsMethodInfo
+    ResolveRecentChooserDialogMethod "setGeometryHints" o = WindowSetGeometryHintsMethodInfo
+    ResolveRecentChooserDialogMethod "setGravity" o = WindowSetGravityMethodInfo
+    ResolveRecentChooserDialogMethod "setHalign" o = WidgetSetHalignMethodInfo
+    ResolveRecentChooserDialogMethod "setHasResizeGrip" o = WindowSetHasResizeGripMethodInfo
+    ResolveRecentChooserDialogMethod "setHasTooltip" o = WidgetSetHasTooltipMethodInfo
+    ResolveRecentChooserDialogMethod "setHasUserRefCount" o = WindowSetHasUserRefCountMethodInfo
+    ResolveRecentChooserDialogMethod "setHasWindow" o = WidgetSetHasWindowMethodInfo
+    ResolveRecentChooserDialogMethod "setHexpand" o = WidgetSetHexpandMethodInfo
+    ResolveRecentChooserDialogMethod "setHexpandSet" o = WidgetSetHexpandSetMethodInfo
+    ResolveRecentChooserDialogMethod "setHideTitlebarWhenMaximized" o = WindowSetHideTitlebarWhenMaximizedMethodInfo
+    ResolveRecentChooserDialogMethod "setIcon" o = WindowSetIconMethodInfo
+    ResolveRecentChooserDialogMethod "setIconFromFile" o = WindowSetIconFromFileMethodInfo
+    ResolveRecentChooserDialogMethod "setIconList" o = WindowSetIconListMethodInfo
+    ResolveRecentChooserDialogMethod "setIconName" o = WindowSetIconNameMethodInfo
+    ResolveRecentChooserDialogMethod "setKeepAbove" o = WindowSetKeepAboveMethodInfo
+    ResolveRecentChooserDialogMethod "setKeepBelow" o = WindowSetKeepBelowMethodInfo
+    ResolveRecentChooserDialogMethod "setLimit" o = RecentChooserSetLimitMethodInfo
+    ResolveRecentChooserDialogMethod "setLocalOnly" o = RecentChooserSetLocalOnlyMethodInfo
+    ResolveRecentChooserDialogMethod "setMapped" o = WidgetSetMappedMethodInfo
+    ResolveRecentChooserDialogMethod "setMarginBottom" o = WidgetSetMarginBottomMethodInfo
+    ResolveRecentChooserDialogMethod "setMarginEnd" o = WidgetSetMarginEndMethodInfo
+    ResolveRecentChooserDialogMethod "setMarginLeft" o = WidgetSetMarginLeftMethodInfo
+    ResolveRecentChooserDialogMethod "setMarginRight" o = WidgetSetMarginRightMethodInfo
+    ResolveRecentChooserDialogMethod "setMarginStart" o = WidgetSetMarginStartMethodInfo
+    ResolveRecentChooserDialogMethod "setMarginTop" o = WidgetSetMarginTopMethodInfo
+    ResolveRecentChooserDialogMethod "setMnemonicModifier" o = WindowSetMnemonicModifierMethodInfo
+    ResolveRecentChooserDialogMethod "setMnemonicsVisible" o = WindowSetMnemonicsVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "setModal" o = WindowSetModalMethodInfo
+    ResolveRecentChooserDialogMethod "setNoShowAll" o = WidgetSetNoShowAllMethodInfo
+    ResolveRecentChooserDialogMethod "setParent" o = WidgetSetParentMethodInfo
+    ResolveRecentChooserDialogMethod "setParentWindow" o = WidgetSetParentWindowMethodInfo
+    ResolveRecentChooserDialogMethod "setPosition" o = WindowSetPositionMethodInfo
+    ResolveRecentChooserDialogMethod "setProperty" o = GObject.ObjectSetPropertyMethodInfo
+    ResolveRecentChooserDialogMethod "setRealized" o = WidgetSetRealizedMethodInfo
+    ResolveRecentChooserDialogMethod "setReallocateRedraws" o = ContainerSetReallocateRedrawsMethodInfo
+    ResolveRecentChooserDialogMethod "setReceivesDefault" o = WidgetSetReceivesDefaultMethodInfo
+    ResolveRecentChooserDialogMethod "setRedrawOnAllocate" o = WidgetSetRedrawOnAllocateMethodInfo
+    ResolveRecentChooserDialogMethod "setResizable" o = WindowSetResizableMethodInfo
+    ResolveRecentChooserDialogMethod "setResizeMode" o = ContainerSetResizeModeMethodInfo
+    ResolveRecentChooserDialogMethod "setResponseSensitive" o = DialogSetResponseSensitiveMethodInfo
+    ResolveRecentChooserDialogMethod "setRole" o = WindowSetRoleMethodInfo
+    ResolveRecentChooserDialogMethod "setScreen" o = WindowSetScreenMethodInfo
+    ResolveRecentChooserDialogMethod "setSelectMultiple" o = RecentChooserSetSelectMultipleMethodInfo
+    ResolveRecentChooserDialogMethod "setSensitive" o = WidgetSetSensitiveMethodInfo
+    ResolveRecentChooserDialogMethod "setShowIcons" o = RecentChooserSetShowIconsMethodInfo
+    ResolveRecentChooserDialogMethod "setShowNotFound" o = RecentChooserSetShowNotFoundMethodInfo
+    ResolveRecentChooserDialogMethod "setShowPrivate" o = RecentChooserSetShowPrivateMethodInfo
+    ResolveRecentChooserDialogMethod "setShowTips" o = RecentChooserSetShowTipsMethodInfo
+    ResolveRecentChooserDialogMethod "setSizeRequest" o = WidgetSetSizeRequestMethodInfo
+    ResolveRecentChooserDialogMethod "setSkipPagerHint" o = WindowSetSkipPagerHintMethodInfo
+    ResolveRecentChooserDialogMethod "setSkipTaskbarHint" o = WindowSetSkipTaskbarHintMethodInfo
+    ResolveRecentChooserDialogMethod "setSortFunc" o = RecentChooserSetSortFuncMethodInfo
+    ResolveRecentChooserDialogMethod "setSortType" o = RecentChooserSetSortTypeMethodInfo
+    ResolveRecentChooserDialogMethod "setStartupId" o = WindowSetStartupIdMethodInfo
+    ResolveRecentChooserDialogMethod "setState" o = WidgetSetStateMethodInfo
+    ResolveRecentChooserDialogMethod "setStateFlags" o = WidgetSetStateFlagsMethodInfo
+    ResolveRecentChooserDialogMethod "setStyle" o = WidgetSetStyleMethodInfo
+    ResolveRecentChooserDialogMethod "setSupportMultidevice" o = WidgetSetSupportMultideviceMethodInfo
+    ResolveRecentChooserDialogMethod "setTitle" o = WindowSetTitleMethodInfo
+    ResolveRecentChooserDialogMethod "setTitlebar" o = WindowSetTitlebarMethodInfo
+    ResolveRecentChooserDialogMethod "setTooltipMarkup" o = WidgetSetTooltipMarkupMethodInfo
+    ResolveRecentChooserDialogMethod "setTooltipText" o = WidgetSetTooltipTextMethodInfo
+    ResolveRecentChooserDialogMethod "setTooltipWindow" o = WidgetSetTooltipWindowMethodInfo
+    ResolveRecentChooserDialogMethod "setTransientFor" o = WindowSetTransientForMethodInfo
+    ResolveRecentChooserDialogMethod "setTypeHint" o = WindowSetTypeHintMethodInfo
+    ResolveRecentChooserDialogMethod "setUrgencyHint" o = WindowSetUrgencyHintMethodInfo
+    ResolveRecentChooserDialogMethod "setValign" o = WidgetSetValignMethodInfo
+    ResolveRecentChooserDialogMethod "setVexpand" o = WidgetSetVexpandMethodInfo
+    ResolveRecentChooserDialogMethod "setVexpandSet" o = WidgetSetVexpandSetMethodInfo
+    ResolveRecentChooserDialogMethod "setVisible" o = WidgetSetVisibleMethodInfo
+    ResolveRecentChooserDialogMethod "setVisual" o = WidgetSetVisualMethodInfo
+    ResolveRecentChooserDialogMethod "setWindow" o = WidgetSetWindowMethodInfo
+    ResolveRecentChooserDialogMethod "setWmclass" o = WindowSetWmclassMethodInfo
+    ResolveRecentChooserDialogMethod l o = MethodResolutionFailed l o
+
+instance (info ~ ResolveRecentChooserDialogMethod t RecentChooserDialog, MethodInfo info RecentChooserDialog p) => IsLabelProxy t (RecentChooserDialog -> p) where
+    fromLabelProxy _ = overloadedMethod (MethodProxy :: MethodProxy info)
+
+#if MIN_VERSION_base(4,9,0)
+instance (info ~ ResolveRecentChooserDialogMethod t RecentChooserDialog, MethodInfo info RecentChooserDialog p) => IsLabel t (RecentChooserDialog -> p) where
+    fromLabel _ = overloadedMethod (MethodProxy :: MethodProxy info)
+#endif
+
+type instance AttributeList RecentChooserDialog = RecentChooserDialogAttributeList
+type RecentChooserDialogAttributeList = ('[ '("acceptFocus", WindowAcceptFocusPropertyInfo), '("appPaintable", WidgetAppPaintablePropertyInfo), '("application", WindowApplicationPropertyInfo), '("attachedTo", WindowAttachedToPropertyInfo), '("borderWidth", ContainerBorderWidthPropertyInfo), '("canDefault", WidgetCanDefaultPropertyInfo), '("canFocus", WidgetCanFocusPropertyInfo), '("child", ContainerChildPropertyInfo), '("compositeChild", WidgetCompositeChildPropertyInfo), '("decorated", WindowDecoratedPropertyInfo), '("defaultHeight", WindowDefaultHeightPropertyInfo), '("defaultWidth", WindowDefaultWidthPropertyInfo), '("deletable", WindowDeletablePropertyInfo), '("destroyWithParent", WindowDestroyWithParentPropertyInfo), '("doubleBuffered", WidgetDoubleBufferedPropertyInfo), '("events", WidgetEventsPropertyInfo), '("expand", WidgetExpandPropertyInfo), '("filter", RecentChooserFilterPropertyInfo), '("focusOnClick", WidgetFocusOnClickPropertyInfo), '("focusOnMap", WindowFocusOnMapPropertyInfo), '("focusVisible", WindowFocusVisiblePropertyInfo), '("gravity", WindowGravityPropertyInfo), '("halign", WidgetHalignPropertyInfo), '("hasDefault", WidgetHasDefaultPropertyInfo), '("hasFocus", WidgetHasFocusPropertyInfo), '("hasResizeGrip", WindowHasResizeGripPropertyInfo), '("hasTooltip", WidgetHasTooltipPropertyInfo), '("hasToplevelFocus", WindowHasToplevelFocusPropertyInfo), '("heightRequest", WidgetHeightRequestPropertyInfo), '("hexpand", WidgetHexpandPropertyInfo), '("hexpandSet", WidgetHexpandSetPropertyInfo), '("hideTitlebarWhenMaximized", WindowHideTitlebarWhenMaximizedPropertyInfo), '("icon", WindowIconPropertyInfo), '("iconName", WindowIconNamePropertyInfo), '("isActive", WindowIsActivePropertyInfo), '("isFocus", WidgetIsFocusPropertyInfo), '("isMaximized", WindowIsMaximizedPropertyInfo), '("limit", RecentChooserLimitPropertyInfo), '("localOnly", RecentChooserLocalOnlyPropertyInfo), '("margin", WidgetMarginPropertyInfo), '("marginBottom", WidgetMarginBottomPropertyInfo), '("marginEnd", WidgetMarginEndPropertyInfo), '("marginLeft", WidgetMarginLeftPropertyInfo), '("marginRight", WidgetMarginRightPropertyInfo), '("marginStart", WidgetMarginStartPropertyInfo), '("marginTop", WidgetMarginTopPropertyInfo), '("mnemonicsVisible", WindowMnemonicsVisiblePropertyInfo), '("modal", WindowModalPropertyInfo), '("name", WidgetNamePropertyInfo), '("noShowAll", WidgetNoShowAllPropertyInfo), '("opacity", WidgetOpacityPropertyInfo), '("parent", WidgetParentPropertyInfo), '("receivesDefault", WidgetReceivesDefaultPropertyInfo), '("recentManager", RecentChooserRecentManagerPropertyInfo), '("resizable", WindowResizablePropertyInfo), '("resizeGripVisible", WindowResizeGripVisiblePropertyInfo), '("resizeMode", ContainerResizeModePropertyInfo), '("role", WindowRolePropertyInfo), '("scaleFactor", WidgetScaleFactorPropertyInfo), '("screen", WindowScreenPropertyInfo), '("selectMultiple", RecentChooserSelectMultiplePropertyInfo), '("sensitive", WidgetSensitivePropertyInfo), '("showIcons", RecentChooserShowIconsPropertyInfo), '("showNotFound", RecentChooserShowNotFoundPropertyInfo), '("showPrivate", RecentChooserShowPrivatePropertyInfo), '("showTips", RecentChooserShowTipsPropertyInfo), '("skipPagerHint", WindowSkipPagerHintPropertyInfo), '("skipTaskbarHint", WindowSkipTaskbarHintPropertyInfo), '("sortType", RecentChooserSortTypePropertyInfo), '("startupId", WindowStartupIdPropertyInfo), '("style", WidgetStylePropertyInfo), '("title", WindowTitlePropertyInfo), '("tooltipMarkup", WidgetTooltipMarkupPropertyInfo), '("tooltipText", WidgetTooltipTextPropertyInfo), '("transientFor", WindowTransientForPropertyInfo), '("type", WindowTypePropertyInfo), '("typeHint", WindowTypeHintPropertyInfo), '("urgencyHint", WindowUrgencyHintPropertyInfo), '("useHeaderBar", DialogUseHeaderBarPropertyInfo), '("valign", WidgetValignPropertyInfo), '("vexpand", WidgetVexpandPropertyInfo), '("vexpandSet", WidgetVexpandSetPropertyInfo), '("visible", WidgetVisiblePropertyInfo), '("widthRequest", WidgetWidthRequestPropertyInfo), '("window", WidgetWindowPropertyInfo), '("windowPosition", WindowWindowPositionPropertyInfo)] :: [(Symbol, *)])
+
+type instance SignalList RecentChooserDialog = RecentChooserDialogSignalList
+type RecentChooserDialogSignalList = ('[ '("accelClosuresChanged", WidgetAccelClosuresChangedSignalInfo), '("activateDefault", WindowActivateDefaultSignalInfo), '("activateFocus", WindowActivateFocusSignalInfo), '("add", ContainerAddSignalInfo), '("buttonPressEvent", WidgetButtonPressEventSignalInfo), '("buttonReleaseEvent", WidgetButtonReleaseEventSignalInfo), '("canActivateAccel", WidgetCanActivateAccelSignalInfo), '("checkResize", ContainerCheckResizeSignalInfo), '("childNotify", WidgetChildNotifySignalInfo), '("close", DialogCloseSignalInfo), '("compositedChanged", WidgetCompositedChangedSignalInfo), '("configureEvent", WidgetConfigureEventSignalInfo), '("damageEvent", WidgetDamageEventSignalInfo), '("deleteEvent", WidgetDeleteEventSignalInfo), '("destroy", WidgetDestroySignalInfo), '("destroyEvent", WidgetDestroyEventSignalInfo), '("directionChanged", WidgetDirectionChangedSignalInfo), '("dragBegin", WidgetDragBeginSignalInfo), '("dragDataDelete", WidgetDragDataDeleteSignalInfo), '("dragDataGet", WidgetDragDataGetSignalInfo), '("dragDataReceived", WidgetDragDataReceivedSignalInfo), '("dragDrop", WidgetDragDropSignalInfo), '("dragEnd", WidgetDragEndSignalInfo), '("dragFailed", WidgetDragFailedSignalInfo), '("dragLeave", WidgetDragLeaveSignalInfo), '("dragMotion", WidgetDragMotionSignalInfo), '("draw", WidgetDrawSignalInfo), '("enableDebugging", WindowEnableDebuggingSignalInfo), '("enterNotifyEvent", WidgetEnterNotifyEventSignalInfo), '("event", WidgetEventSignalInfo), '("eventAfter", WidgetEventAfterSignalInfo), '("focus", WidgetFocusSignalInfo), '("focusInEvent", WidgetFocusInEventSignalInfo), '("focusOutEvent", WidgetFocusOutEventSignalInfo), '("grabBrokenEvent", WidgetGrabBrokenEventSignalInfo), '("grabFocus", WidgetGrabFocusSignalInfo), '("grabNotify", WidgetGrabNotifySignalInfo), '("hide", WidgetHideSignalInfo), '("hierarchyChanged", WidgetHierarchyChangedSignalInfo), '("itemActivated", RecentChooserItemActivatedSignalInfo), '("keyPressEvent", WidgetKeyPressEventSignalInfo), '("keyReleaseEvent", WidgetKeyReleaseEventSignalInfo), '("keynavFailed", WidgetKeynavFailedSignalInfo), '("keysChanged", WindowKeysChangedSignalInfo), '("leaveNotifyEvent", WidgetLeaveNotifyEventSignalInfo), '("map", WidgetMapSignalInfo), '("mapEvent", WidgetMapEventSignalInfo), '("mnemonicActivate", WidgetMnemonicActivateSignalInfo), '("motionNotifyEvent", WidgetMotionNotifyEventSignalInfo), '("moveFocus", WidgetMoveFocusSignalInfo), '("notify", GObject.ObjectNotifySignalInfo), '("parentSet", WidgetParentSetSignalInfo), '("popupMenu", WidgetPopupMenuSignalInfo), '("propertyNotifyEvent", WidgetPropertyNotifyEventSignalInfo), '("proximityInEvent", WidgetProximityInEventSignalInfo), '("proximityOutEvent", WidgetProximityOutEventSignalInfo), '("queryTooltip", WidgetQueryTooltipSignalInfo), '("realize", WidgetRealizeSignalInfo), '("remove", ContainerRemoveSignalInfo), '("response", DialogResponseSignalInfo), '("screenChanged", WidgetScreenChangedSignalInfo), '("scrollEvent", WidgetScrollEventSignalInfo), '("selectionChanged", RecentChooserSelectionChangedSignalInfo), '("selectionClearEvent", WidgetSelectionClearEventSignalInfo), '("selectionGet", WidgetSelectionGetSignalInfo), '("selectionNotifyEvent", WidgetSelectionNotifyEventSignalInfo), '("selectionReceived", WidgetSelectionReceivedSignalInfo), '("selectionRequestEvent", WidgetSelectionRequestEventSignalInfo), '("setFocus", WindowSetFocusSignalInfo), '("setFocusChild", ContainerSetFocusChildSignalInfo), '("show", WidgetShowSignalInfo), '("showHelp", WidgetShowHelpSignalInfo), '("sizeAllocate", WidgetSizeAllocateSignalInfo), '("stateChanged", WidgetStateChangedSignalInfo), '("stateFlagsChanged", WidgetStateFlagsChangedSignalInfo), '("styleSet", WidgetStyleSetSignalInfo), '("styleUpdated", WidgetStyleUpdatedSignalInfo), '("touchEvent", WidgetTouchEventSignalInfo), '("unmap", WidgetUnmapSignalInfo), '("unmapEvent", WidgetUnmapEventSignalInfo), '("unrealize", WidgetUnrealizeSignalInfo), '("visibilityNotifyEvent", WidgetVisibilityNotifyEventSignalInfo), '("windowStateEvent", WidgetWindowStateEventSignalInfo)] :: [(Symbol, *)])
+
+

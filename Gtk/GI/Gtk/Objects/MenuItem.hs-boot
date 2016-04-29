@@ -1,0 +1,41 @@
+module GI.Gtk.Objects.MenuItem where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MenuItem = MenuItem (ForeignPtr MenuItem)
+instance GObject MenuItem where
+class GObject o => MenuItemK o
+instance (GObject o, IsDescendantOf MenuItem o) => MenuItemK o
+data MenuItemAccelPathPropertyInfo
+data MenuItemLabelPropertyInfo
+data MenuItemRightJustifiedPropertyInfo
+data MenuItemSubmenuPropertyInfo
+data MenuItemUseUnderlinePropertyInfo
+data MenuItemActivateSignalInfo
+data MenuItemActivateItemSignalInfo
+data MenuItemDeselectSignalInfo
+data MenuItemSelectSignalInfo
+data MenuItemToggleSizeAllocateSignalInfo
+data MenuItemToggleSizeRequestSignalInfo
+data MenuItemActivateMethodInfo
+data MenuItemDeselectMethodInfo
+data MenuItemGetAccelPathMethodInfo
+data MenuItemGetLabelMethodInfo
+data MenuItemGetReserveIndicatorMethodInfo
+data MenuItemGetRightJustifiedMethodInfo
+data MenuItemGetSubmenuMethodInfo
+data MenuItemGetUseUnderlineMethodInfo
+data MenuItemSelectMethodInfo
+data MenuItemSetAccelPathMethodInfo
+data MenuItemSetLabelMethodInfo
+data MenuItemSetReserveIndicatorMethodInfo
+data MenuItemSetRightJustifiedMethodInfo
+data MenuItemSetSubmenuMethodInfo
+data MenuItemSetUseUnderlineMethodInfo
+data MenuItemToggleSizeAllocateMethodInfo
+data MenuItemToggleSizeRequestMethodInfo

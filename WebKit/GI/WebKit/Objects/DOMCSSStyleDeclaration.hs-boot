@@ -1,0 +1,28 @@
+module GI.WebKit.Objects.DOMCSSStyleDeclaration where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMCSSStyleDeclaration = DOMCSSStyleDeclaration (ForeignPtr DOMCSSStyleDeclaration)
+instance GObject DOMCSSStyleDeclaration where
+class GObject o => DOMCSSStyleDeclarationK o
+instance (GObject o, IsDescendantOf DOMCSSStyleDeclaration o) => DOMCSSStyleDeclarationK o
+data DOMCSSStyleDeclarationCssTextPropertyInfo
+data DOMCSSStyleDeclarationLengthPropertyInfo
+data DOMCSSStyleDeclarationParentRulePropertyInfo
+data DOMCSSStyleDeclarationGetCssTextMethodInfo
+data DOMCSSStyleDeclarationGetLengthMethodInfo
+data DOMCSSStyleDeclarationGetParentRuleMethodInfo
+data DOMCSSStyleDeclarationGetPropertyCssValueMethodInfo
+data DOMCSSStyleDeclarationGetPropertyPriorityMethodInfo
+data DOMCSSStyleDeclarationGetPropertyShorthandMethodInfo
+data DOMCSSStyleDeclarationGetPropertyValueMethodInfo
+data DOMCSSStyleDeclarationIsPropertyImplicitMethodInfo
+data DOMCSSStyleDeclarationItemMethodInfo
+data DOMCSSStyleDeclarationRemovePropertyMethodInfo
+data DOMCSSStyleDeclarationSetCssTextMethodInfo
+data DOMCSSStyleDeclarationSetPropertyMethodInfo

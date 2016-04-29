@@ -1,0 +1,28 @@
+module GI.Gio.Objects.DBusObjectManagerClient where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DBusObjectManagerClient = DBusObjectManagerClient (ForeignPtr DBusObjectManagerClient)
+instance GObject DBusObjectManagerClient where
+class GObject o => DBusObjectManagerClientK o
+instance (GObject o, IsDescendantOf DBusObjectManagerClient o) => DBusObjectManagerClientK o
+data DBusObjectManagerClientBusTypePropertyInfo
+data DBusObjectManagerClientConnectionPropertyInfo
+data DBusObjectManagerClientFlagsPropertyInfo
+data DBusObjectManagerClientGetProxyTypeDestroyNotifyPropertyInfo
+data DBusObjectManagerClientGetProxyTypeFuncPropertyInfo
+data DBusObjectManagerClientGetProxyTypeUserDataPropertyInfo
+data DBusObjectManagerClientNamePropertyInfo
+data DBusObjectManagerClientNameOwnerPropertyInfo
+data DBusObjectManagerClientObjectPathPropertyInfo
+data DBusObjectManagerClientInterfaceProxyPropertiesChangedSignalInfo
+data DBusObjectManagerClientInterfaceProxySignalSignalInfo
+data DBusObjectManagerClientGetConnectionMethodInfo
+data DBusObjectManagerClientGetFlagsMethodInfo
+data DBusObjectManagerClientGetNameMethodInfo
+data DBusObjectManagerClientGetNameOwnerMethodInfo

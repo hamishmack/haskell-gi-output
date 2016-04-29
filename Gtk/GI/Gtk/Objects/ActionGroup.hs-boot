@@ -1,0 +1,36 @@
+module GI.Gtk.Objects.ActionGroup where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ActionGroup = ActionGroup (ForeignPtr ActionGroup)
+instance GObject ActionGroup where
+class GObject o => ActionGroupK o
+instance (GObject o, IsDescendantOf ActionGroup o) => ActionGroupK o
+data ActionGroupAccelGroupPropertyInfo
+data ActionGroupNamePropertyInfo
+data ActionGroupSensitivePropertyInfo
+data ActionGroupVisiblePropertyInfo
+data ActionGroupConnectProxySignalInfo
+data ActionGroupDisconnectProxySignalInfo
+data ActionGroupPostActivateSignalInfo
+data ActionGroupPreActivateSignalInfo
+data ActionGroupAddActionMethodInfo
+data ActionGroupAddActionWithAccelMethodInfo
+data ActionGroupGetAccelGroupMethodInfo
+data ActionGroupGetActionMethodInfo
+data ActionGroupGetNameMethodInfo
+data ActionGroupGetSensitiveMethodInfo
+data ActionGroupGetVisibleMethodInfo
+data ActionGroupListActionsMethodInfo
+data ActionGroupRemoveActionMethodInfo
+data ActionGroupSetAccelGroupMethodInfo
+data ActionGroupSetSensitiveMethodInfo
+data ActionGroupSetTranslateFuncMethodInfo
+data ActionGroupSetTranslationDomainMethodInfo
+data ActionGroupSetVisibleMethodInfo
+data ActionGroupTranslateStringMethodInfo

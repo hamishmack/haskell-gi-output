@@ -1,0 +1,38 @@
+module GI.Atk.Interfaces.Text where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Text = Text (ForeignPtr Text)
+data TextTextAttributesChangedSignalInfo
+data TextTextCaretMovedSignalInfo
+data TextTextChangedSignalInfo
+data TextTextInsertSignalInfo
+data TextTextRemoveSignalInfo
+data TextTextSelectionChangedSignalInfo
+class ForeignPtrNewtype a => TextK a
+instance (ForeignPtrNewtype o, IsDescendantOf Text o) => TextK o
+data TextAddSelectionMethodInfo
+data TextGetBoundedRangesMethodInfo
+data TextGetCaretOffsetMethodInfo
+data TextGetCharacterAtOffsetMethodInfo
+data TextGetCharacterCountMethodInfo
+data TextGetCharacterExtentsMethodInfo
+data TextGetDefaultAttributesMethodInfo
+data TextGetNSelectionsMethodInfo
+data TextGetOffsetAtPointMethodInfo
+data TextGetRangeExtentsMethodInfo
+data TextGetRunAttributesMethodInfo
+data TextGetSelectionMethodInfo
+data TextGetStringAtOffsetMethodInfo
+data TextGetTextMethodInfo
+data TextGetTextAfterOffsetMethodInfo
+data TextGetTextAtOffsetMethodInfo
+data TextGetTextBeforeOffsetMethodInfo
+data TextRemoveSelectionMethodInfo
+data TextSetCaretOffsetMethodInfo
+data TextSetSelectionMethodInfo

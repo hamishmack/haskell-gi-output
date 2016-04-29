@@ -1,0 +1,35 @@
+module GI.WebKit.Objects.Download where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Download = Download (ForeignPtr Download)
+instance GObject Download where
+class GObject o => DownloadK o
+instance (GObject o, IsDescendantOf Download o) => DownloadK o
+data DownloadCurrentSizePropertyInfo
+data DownloadDestinationUriPropertyInfo
+data DownloadNetworkRequestPropertyInfo
+data DownloadNetworkResponsePropertyInfo
+data DownloadProgressPropertyInfo
+data DownloadStatusPropertyInfo
+data DownloadSuggestedFilenamePropertyInfo
+data DownloadTotalSizePropertyInfo
+data DownloadErrorSignalInfo
+data DownloadCancelMethodInfo
+data DownloadGetCurrentSizeMethodInfo
+data DownloadGetDestinationUriMethodInfo
+data DownloadGetElapsedTimeMethodInfo
+data DownloadGetNetworkRequestMethodInfo
+data DownloadGetNetworkResponseMethodInfo
+data DownloadGetProgressMethodInfo
+data DownloadGetStatusMethodInfo
+data DownloadGetSuggestedFilenameMethodInfo
+data DownloadGetTotalSizeMethodInfo
+data DownloadGetUriMethodInfo
+data DownloadSetDestinationUriMethodInfo
+data DownloadStartMethodInfo

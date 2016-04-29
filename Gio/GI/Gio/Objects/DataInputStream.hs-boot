@@ -1,0 +1,37 @@
+module GI.Gio.Objects.DataInputStream where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DataInputStream = DataInputStream (ForeignPtr DataInputStream)
+instance GObject DataInputStream where
+class GObject o => DataInputStreamK o
+instance (GObject o, IsDescendantOf DataInputStream o) => DataInputStreamK o
+data DataInputStreamByteOrderPropertyInfo
+data DataInputStreamNewlineTypePropertyInfo
+data DataInputStreamGetByteOrderMethodInfo
+data DataInputStreamGetNewlineTypeMethodInfo
+data DataInputStreamReadByteMethodInfo
+data DataInputStreamReadInt16MethodInfo
+data DataInputStreamReadInt32MethodInfo
+data DataInputStreamReadInt64MethodInfo
+data DataInputStreamReadLineMethodInfo
+data DataInputStreamReadLineAsyncMethodInfo
+data DataInputStreamReadLineFinishMethodInfo
+data DataInputStreamReadLineFinishUtf8MethodInfo
+data DataInputStreamReadLineUtf8MethodInfo
+data DataInputStreamReadUint16MethodInfo
+data DataInputStreamReadUint32MethodInfo
+data DataInputStreamReadUint64MethodInfo
+data DataInputStreamReadUntilMethodInfo
+data DataInputStreamReadUntilAsyncMethodInfo
+data DataInputStreamReadUntilFinishMethodInfo
+data DataInputStreamReadUptoMethodInfo
+data DataInputStreamReadUptoAsyncMethodInfo
+data DataInputStreamReadUptoFinishMethodInfo
+data DataInputStreamSetByteOrderMethodInfo
+data DataInputStreamSetNewlineTypeMethodInfo

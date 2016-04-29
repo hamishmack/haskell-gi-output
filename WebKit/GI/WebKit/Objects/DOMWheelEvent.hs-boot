@@ -1,0 +1,30 @@
+module GI.WebKit.Objects.DOMWheelEvent where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMWheelEvent = DOMWheelEvent (ForeignPtr DOMWheelEvent)
+instance GObject DOMWheelEvent where
+class GObject o => DOMWheelEventK o
+instance (GObject o, IsDescendantOf DOMWheelEvent o) => DOMWheelEventK o
+data DOMWheelEventDeltaModePropertyInfo
+data DOMWheelEventDeltaXPropertyInfo
+data DOMWheelEventDeltaYPropertyInfo
+data DOMWheelEventDeltaZPropertyInfo
+data DOMWheelEventWebkitDirectionInvertedFromDevicePropertyInfo
+data DOMWheelEventWheelDeltaPropertyInfo
+data DOMWheelEventWheelDeltaXPropertyInfo
+data DOMWheelEventWheelDeltaYPropertyInfo
+data DOMWheelEventGetDeltaModeMethodInfo
+data DOMWheelEventGetDeltaXMethodInfo
+data DOMWheelEventGetDeltaYMethodInfo
+data DOMWheelEventGetDeltaZMethodInfo
+data DOMWheelEventGetWebkitDirectionInvertedFromDeviceMethodInfo
+data DOMWheelEventGetWheelDeltaMethodInfo
+data DOMWheelEventGetWheelDeltaXMethodInfo
+data DOMWheelEventGetWheelDeltaYMethodInfo
+data DOMWheelEventInitWheelEventMethodInfo

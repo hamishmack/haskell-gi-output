@@ -1,0 +1,29 @@
+module GI.WebKit.Objects.WebBackForwardList where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype WebBackForwardList = WebBackForwardList (ForeignPtr WebBackForwardList)
+instance GObject WebBackForwardList where
+class GObject o => WebBackForwardListK o
+instance (GObject o, IsDescendantOf WebBackForwardList o) => WebBackForwardListK o
+data WebBackForwardListAddItemMethodInfo
+data WebBackForwardListClearMethodInfo
+data WebBackForwardListContainsItemMethodInfo
+data WebBackForwardListGetBackItemMethodInfo
+data WebBackForwardListGetBackLengthMethodInfo
+data WebBackForwardListGetBackListWithLimitMethodInfo
+data WebBackForwardListGetCurrentItemMethodInfo
+data WebBackForwardListGetForwardItemMethodInfo
+data WebBackForwardListGetForwardLengthMethodInfo
+data WebBackForwardListGetForwardListWithLimitMethodInfo
+data WebBackForwardListGetLimitMethodInfo
+data WebBackForwardListGetNthItemMethodInfo
+data WebBackForwardListGoBackMethodInfo
+data WebBackForwardListGoForwardMethodInfo
+data WebBackForwardListGoToItemMethodInfo
+data WebBackForwardListSetLimitMethodInfo

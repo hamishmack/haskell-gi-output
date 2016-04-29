@@ -1,0 +1,88 @@
+module GI.Gtk.Objects.Label where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Label = Label (ForeignPtr Label)
+instance GObject Label where
+class GObject o => LabelK o
+instance (GObject o, IsDescendantOf Label o) => LabelK o
+data LabelAnglePropertyInfo
+data LabelAttributesPropertyInfo
+data LabelCursorPositionPropertyInfo
+data LabelEllipsizePropertyInfo
+data LabelJustifyPropertyInfo
+data LabelLabelPropertyInfo
+data LabelLinesPropertyInfo
+data LabelMaxWidthCharsPropertyInfo
+data LabelMnemonicKeyvalPropertyInfo
+data LabelMnemonicWidgetPropertyInfo
+data LabelPatternPropertyInfo
+data LabelSelectablePropertyInfo
+data LabelSelectionBoundPropertyInfo
+data LabelSingleLineModePropertyInfo
+data LabelTrackVisitedLinksPropertyInfo
+data LabelUseMarkupPropertyInfo
+data LabelUseUnderlinePropertyInfo
+data LabelWidthCharsPropertyInfo
+data LabelWrapPropertyInfo
+data LabelWrapModePropertyInfo
+data LabelXalignPropertyInfo
+data LabelYalignPropertyInfo
+data LabelActivateCurrentLinkSignalInfo
+data LabelActivateLinkSignalInfo
+data LabelCopyClipboardSignalInfo
+data LabelMoveCursorSignalInfo
+data LabelPopulatePopupSignalInfo
+data LabelGetAngleMethodInfo
+data LabelGetAttributesMethodInfo
+data LabelGetCurrentUriMethodInfo
+data LabelGetEllipsizeMethodInfo
+data LabelGetJustifyMethodInfo
+data LabelGetLabelMethodInfo
+data LabelGetLayoutMethodInfo
+data LabelGetLayoutOffsetsMethodInfo
+data LabelGetLineWrapMethodInfo
+data LabelGetLineWrapModeMethodInfo
+data LabelGetLinesMethodInfo
+data LabelGetMaxWidthCharsMethodInfo
+data LabelGetMnemonicKeyvalMethodInfo
+data LabelGetMnemonicWidgetMethodInfo
+data LabelGetSelectableMethodInfo
+data LabelGetSelectionBoundsMethodInfo
+data LabelGetSingleLineModeMethodInfo
+data LabelGetTextMethodInfo
+data LabelGetTrackVisitedLinksMethodInfo
+data LabelGetUseMarkupMethodInfo
+data LabelGetUseUnderlineMethodInfo
+data LabelGetWidthCharsMethodInfo
+data LabelGetXalignMethodInfo
+data LabelGetYalignMethodInfo
+data LabelSelectRegionMethodInfo
+data LabelSetAngleMethodInfo
+data LabelSetAttributesMethodInfo
+data LabelSetEllipsizeMethodInfo
+data LabelSetJustifyMethodInfo
+data LabelSetLabelMethodInfo
+data LabelSetLineWrapMethodInfo
+data LabelSetLineWrapModeMethodInfo
+data LabelSetLinesMethodInfo
+data LabelSetMarkupMethodInfo
+data LabelSetMarkupWithMnemonicMethodInfo
+data LabelSetMaxWidthCharsMethodInfo
+data LabelSetMnemonicWidgetMethodInfo
+data LabelSetPatternMethodInfo
+data LabelSetSelectableMethodInfo
+data LabelSetSingleLineModeMethodInfo
+data LabelSetTextMethodInfo
+data LabelSetTextWithMnemonicMethodInfo
+data LabelSetTrackVisitedLinksMethodInfo
+data LabelSetUseMarkupMethodInfo
+data LabelSetUseUnderlineMethodInfo
+data LabelSetWidthCharsMethodInfo
+data LabelSetXalignMethodInfo
+data LabelSetYalignMethodInfo

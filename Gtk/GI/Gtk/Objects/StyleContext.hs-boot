@@ -1,0 +1,67 @@
+module GI.Gtk.Objects.StyleContext where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype StyleContext = StyleContext (ForeignPtr StyleContext)
+instance GObject StyleContext where
+class GObject o => StyleContextK o
+instance (GObject o, IsDescendantOf StyleContext o) => StyleContextK o
+data StyleContextDirectionPropertyInfo
+data StyleContextPaintClockPropertyInfo
+data StyleContextParentPropertyInfo
+data StyleContextScreenPropertyInfo
+data StyleContextChangedSignalInfo
+data StyleContextAddClassMethodInfo
+data StyleContextAddProviderMethodInfo
+data StyleContextAddRegionMethodInfo
+data StyleContextCancelAnimationsMethodInfo
+data StyleContextGetBackgroundColorMethodInfo
+data StyleContextGetBorderMethodInfo
+data StyleContextGetBorderColorMethodInfo
+data StyleContextGetColorMethodInfo
+data StyleContextGetDirectionMethodInfo
+data StyleContextGetFontMethodInfo
+data StyleContextGetFrameClockMethodInfo
+data StyleContextGetJunctionSidesMethodInfo
+data StyleContextGetMarginMethodInfo
+data StyleContextGetPaddingMethodInfo
+data StyleContextGetParentMethodInfo
+data StyleContextGetPathMethodInfo
+data StyleContextGetPropertyMethodInfo
+data StyleContextGetScaleMethodInfo
+data StyleContextGetScreenMethodInfo
+data StyleContextGetSectionMethodInfo
+data StyleContextGetStateMethodInfo
+data StyleContextGetStylePropertyMethodInfo
+data StyleContextHasClassMethodInfo
+data StyleContextHasRegionMethodInfo
+data StyleContextInvalidateMethodInfo
+data StyleContextListClassesMethodInfo
+data StyleContextListRegionsMethodInfo
+data StyleContextLookupColorMethodInfo
+data StyleContextLookupIconSetMethodInfo
+data StyleContextNotifyStateChangeMethodInfo
+data StyleContextPopAnimatableRegionMethodInfo
+data StyleContextPushAnimatableRegionMethodInfo
+data StyleContextRemoveClassMethodInfo
+data StyleContextRemoveProviderMethodInfo
+data StyleContextRemoveRegionMethodInfo
+data StyleContextRestoreMethodInfo
+data StyleContextSaveMethodInfo
+data StyleContextScrollAnimationsMethodInfo
+data StyleContextSetBackgroundMethodInfo
+data StyleContextSetDirectionMethodInfo
+data StyleContextSetFrameClockMethodInfo
+data StyleContextSetJunctionSidesMethodInfo
+data StyleContextSetParentMethodInfo
+data StyleContextSetPathMethodInfo
+data StyleContextSetScaleMethodInfo
+data StyleContextSetScreenMethodInfo
+data StyleContextSetStateMethodInfo
+data StyleContextStateIsRunningMethodInfo
+data StyleContextToStringMethodInfo

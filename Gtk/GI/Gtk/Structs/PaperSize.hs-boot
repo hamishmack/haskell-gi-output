@@ -1,0 +1,27 @@
+module GI.Gtk.Structs.PaperSize where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype PaperSize = PaperSize (ForeignPtr PaperSize)
+instance BoxedObject PaperSize where
+data PaperSizeCopyMethodInfo
+data PaperSizeFreeMethodInfo
+data PaperSizeGetDefaultBottomMarginMethodInfo
+data PaperSizeGetDefaultLeftMarginMethodInfo
+data PaperSizeGetDefaultRightMarginMethodInfo
+data PaperSizeGetDefaultTopMarginMethodInfo
+data PaperSizeGetDisplayNameMethodInfo
+data PaperSizeGetHeightMethodInfo
+data PaperSizeGetNameMethodInfo
+data PaperSizeGetPpdNameMethodInfo
+data PaperSizeGetWidthMethodInfo
+data PaperSizeIsCustomMethodInfo
+data PaperSizeIsEqualMethodInfo
+data PaperSizeIsIppMethodInfo
+data PaperSizeSetSizeMethodInfo
+data PaperSizeToKeyFileMethodInfo

@@ -1,0 +1,38 @@
+module GI.Gio.Objects.MountOperation where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MountOperation = MountOperation (ForeignPtr MountOperation)
+instance GObject MountOperation where
+class GObject o => MountOperationK o
+instance (GObject o, IsDescendantOf MountOperation o) => MountOperationK o
+data MountOperationAnonymousPropertyInfo
+data MountOperationChoicePropertyInfo
+data MountOperationDomainPropertyInfo
+data MountOperationPasswordPropertyInfo
+data MountOperationPasswordSavePropertyInfo
+data MountOperationUsernamePropertyInfo
+data MountOperationAbortedSignalInfo
+data MountOperationAskPasswordSignalInfo
+data MountOperationAskQuestionSignalInfo
+data MountOperationReplySignalInfo
+data MountOperationShowProcessesSignalInfo
+data MountOperationShowUnmountProgressSignalInfo
+data MountOperationGetAnonymousMethodInfo
+data MountOperationGetChoiceMethodInfo
+data MountOperationGetDomainMethodInfo
+data MountOperationGetPasswordMethodInfo
+data MountOperationGetPasswordSaveMethodInfo
+data MountOperationGetUsernameMethodInfo
+data MountOperationReplyMethodInfo
+data MountOperationSetAnonymousMethodInfo
+data MountOperationSetChoiceMethodInfo
+data MountOperationSetDomainMethodInfo
+data MountOperationSetPasswordMethodInfo
+data MountOperationSetPasswordSaveMethodInfo
+data MountOperationSetUsernameMethodInfo

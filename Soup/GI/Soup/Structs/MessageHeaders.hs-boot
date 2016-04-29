@@ -1,0 +1,40 @@
+module GI.Soup.Structs.MessageHeaders where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MessageHeaders = MessageHeaders (ForeignPtr MessageHeaders)
+instance BoxedObject MessageHeaders where
+data MessageHeadersAppendMethodInfo
+data MessageHeadersCleanConnectionHeadersMethodInfo
+data MessageHeadersClearMethodInfo
+data MessageHeadersForeachMethodInfo
+data MessageHeadersFreeMethodInfo
+data MessageHeadersFreeRangesMethodInfo
+data MessageHeadersGetMethodInfo
+data MessageHeadersGetContentDispositionMethodInfo
+data MessageHeadersGetContentLengthMethodInfo
+data MessageHeadersGetContentRangeMethodInfo
+data MessageHeadersGetContentTypeMethodInfo
+data MessageHeadersGetEncodingMethodInfo
+data MessageHeadersGetExpectationsMethodInfo
+data MessageHeadersGetHeadersTypeMethodInfo
+data MessageHeadersGetListMethodInfo
+data MessageHeadersGetOneMethodInfo
+data MessageHeadersGetRangesMethodInfo
+data MessageHeadersHeaderContainsMethodInfo
+data MessageHeadersHeaderEqualsMethodInfo
+data MessageHeadersRemoveMethodInfo
+data MessageHeadersReplaceMethodInfo
+data MessageHeadersSetContentDispositionMethodInfo
+data MessageHeadersSetContentLengthMethodInfo
+data MessageHeadersSetContentRangeMethodInfo
+data MessageHeadersSetContentTypeMethodInfo
+data MessageHeadersSetEncodingMethodInfo
+data MessageHeadersSetExpectationsMethodInfo
+data MessageHeadersSetRangeMethodInfo
+data MessageHeadersSetRangesMethodInfo

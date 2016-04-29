@@ -1,0 +1,19 @@
+module GI.Gio.Structs.FileAttributeMatcher where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype FileAttributeMatcher = FileAttributeMatcher (ForeignPtr FileAttributeMatcher)
+instance BoxedObject FileAttributeMatcher where
+data FileAttributeMatcherEnumerateNamespaceMethodInfo
+data FileAttributeMatcherEnumerateNextMethodInfo
+data FileAttributeMatcherMatchesMethodInfo
+data FileAttributeMatcherMatchesOnlyMethodInfo
+data FileAttributeMatcherRefMethodInfo
+data FileAttributeMatcherSubtractMethodInfo
+data FileAttributeMatcherToStringMethodInfo
+data FileAttributeMatcherUnrefMethodInfo

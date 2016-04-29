@@ -1,0 +1,35 @@
+module GI.Gtk.Objects.PageSetup where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype PageSetup = PageSetup (ForeignPtr PageSetup)
+instance GObject PageSetup where
+class GObject o => PageSetupK o
+instance (GObject o, IsDescendantOf PageSetup o) => PageSetupK o
+data PageSetupCopyMethodInfo
+data PageSetupGetBottomMarginMethodInfo
+data PageSetupGetLeftMarginMethodInfo
+data PageSetupGetOrientationMethodInfo
+data PageSetupGetPageHeightMethodInfo
+data PageSetupGetPageWidthMethodInfo
+data PageSetupGetPaperHeightMethodInfo
+data PageSetupGetPaperSizeMethodInfo
+data PageSetupGetPaperWidthMethodInfo
+data PageSetupGetRightMarginMethodInfo
+data PageSetupGetTopMarginMethodInfo
+data PageSetupLoadFileMethodInfo
+data PageSetupLoadKeyFileMethodInfo
+data PageSetupSetBottomMarginMethodInfo
+data PageSetupSetLeftMarginMethodInfo
+data PageSetupSetOrientationMethodInfo
+data PageSetupSetPaperSizeMethodInfo
+data PageSetupSetPaperSizeAndDefaultMarginsMethodInfo
+data PageSetupSetRightMarginMethodInfo
+data PageSetupSetTopMarginMethodInfo
+data PageSetupToFileMethodInfo
+data PageSetupToKeyFileMethodInfo

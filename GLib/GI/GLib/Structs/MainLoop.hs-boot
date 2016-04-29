@@ -1,0 +1,17 @@
+module GI.GLib.Structs.MainLoop where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype MainLoop = MainLoop (ForeignPtr MainLoop)
+instance BoxedObject MainLoop where
+data MainLoopGetContextMethodInfo
+data MainLoopIsRunningMethodInfo
+data MainLoopQuitMethodInfo
+data MainLoopRefMethodInfo
+data MainLoopRunMethodInfo
+data MainLoopUnrefMethodInfo

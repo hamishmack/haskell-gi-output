@@ -1,0 +1,26 @@
+module GI.Gio.Objects.TlsDatabase where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype TlsDatabase = TlsDatabase (ForeignPtr TlsDatabase)
+instance GObject TlsDatabase where
+class GObject o => TlsDatabaseK o
+instance (GObject o, IsDescendantOf TlsDatabase o) => TlsDatabaseK o
+data TlsDatabaseCreateCertificateHandleMethodInfo
+data TlsDatabaseLookupCertificateForHandleMethodInfo
+data TlsDatabaseLookupCertificateForHandleAsyncMethodInfo
+data TlsDatabaseLookupCertificateForHandleFinishMethodInfo
+data TlsDatabaseLookupCertificateIssuerMethodInfo
+data TlsDatabaseLookupCertificateIssuerAsyncMethodInfo
+data TlsDatabaseLookupCertificateIssuerFinishMethodInfo
+data TlsDatabaseLookupCertificatesIssuedByMethodInfo
+data TlsDatabaseLookupCertificatesIssuedByAsyncMethodInfo
+data TlsDatabaseLookupCertificatesIssuedByFinishMethodInfo
+data TlsDatabaseVerifyChainMethodInfo
+data TlsDatabaseVerifyChainAsyncMethodInfo
+data TlsDatabaseVerifyChainFinishMethodInfo

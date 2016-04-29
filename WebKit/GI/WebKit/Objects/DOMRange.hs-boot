@@ -1,0 +1,51 @@
+module GI.WebKit.Objects.DOMRange where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMRange = DOMRange (ForeignPtr DOMRange)
+instance GObject DOMRange where
+class GObject o => DOMRangeK o
+instance (GObject o, IsDescendantOf DOMRange o) => DOMRangeK o
+data DOMRangeCollapsedPropertyInfo
+data DOMRangeCommonAncestorContainerPropertyInfo
+data DOMRangeEndContainerPropertyInfo
+data DOMRangeEndOffsetPropertyInfo
+data DOMRangeStartContainerPropertyInfo
+data DOMRangeStartOffsetPropertyInfo
+data DOMRangeTextPropertyInfo
+data DOMRangeCloneContentsMethodInfo
+data DOMRangeCloneRangeMethodInfo
+data DOMRangeCollapseMethodInfo
+data DOMRangeCompareBoundaryPointsMethodInfo
+data DOMRangeCompareNodeMethodInfo
+data DOMRangeComparePointMethodInfo
+data DOMRangeCreateContextualFragmentMethodInfo
+data DOMRangeDeleteContentsMethodInfo
+data DOMRangeDetachMethodInfo
+data DOMRangeExpandMethodInfo
+data DOMRangeExtractContentsMethodInfo
+data DOMRangeGetCollapsedMethodInfo
+data DOMRangeGetCommonAncestorContainerMethodInfo
+data DOMRangeGetEndContainerMethodInfo
+data DOMRangeGetEndOffsetMethodInfo
+data DOMRangeGetStartContainerMethodInfo
+data DOMRangeGetStartOffsetMethodInfo
+data DOMRangeGetTextMethodInfo
+data DOMRangeInsertNodeMethodInfo
+data DOMRangeIntersectsNodeMethodInfo
+data DOMRangeIsPointInRangeMethodInfo
+data DOMRangeSelectNodeMethodInfo
+data DOMRangeSelectNodeContentsMethodInfo
+data DOMRangeSetEndMethodInfo
+data DOMRangeSetEndAfterMethodInfo
+data DOMRangeSetEndBeforeMethodInfo
+data DOMRangeSetStartMethodInfo
+data DOMRangeSetStartAfterMethodInfo
+data DOMRangeSetStartBeforeMethodInfo
+data DOMRangeSurroundContentsMethodInfo
+data DOMRangeToStringMethodInfo

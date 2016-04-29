@@ -1,0 +1,36 @@
+module GI.Gtk.Objects.ColorSelection where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype ColorSelection = ColorSelection (ForeignPtr ColorSelection)
+instance GObject ColorSelection where
+class GObject o => ColorSelectionK o
+instance (GObject o, IsDescendantOf ColorSelection o) => ColorSelectionK o
+data ColorSelectionCurrentAlphaPropertyInfo
+data ColorSelectionCurrentColorPropertyInfo
+data ColorSelectionCurrentRgbaPropertyInfo
+data ColorSelectionHasOpacityControlPropertyInfo
+data ColorSelectionHasPalettePropertyInfo
+data ColorSelectionColorChangedSignalInfo
+data ColorSelectionGetCurrentAlphaMethodInfo
+data ColorSelectionGetCurrentColorMethodInfo
+data ColorSelectionGetCurrentRgbaMethodInfo
+data ColorSelectionGetHasOpacityControlMethodInfo
+data ColorSelectionGetHasPaletteMethodInfo
+data ColorSelectionGetPreviousAlphaMethodInfo
+data ColorSelectionGetPreviousColorMethodInfo
+data ColorSelectionGetPreviousRgbaMethodInfo
+data ColorSelectionIsAdjustingMethodInfo
+data ColorSelectionSetCurrentAlphaMethodInfo
+data ColorSelectionSetCurrentColorMethodInfo
+data ColorSelectionSetCurrentRgbaMethodInfo
+data ColorSelectionSetHasOpacityControlMethodInfo
+data ColorSelectionSetHasPaletteMethodInfo
+data ColorSelectionSetPreviousAlphaMethodInfo
+data ColorSelectionSetPreviousColorMethodInfo
+data ColorSelectionSetPreviousRgbaMethodInfo

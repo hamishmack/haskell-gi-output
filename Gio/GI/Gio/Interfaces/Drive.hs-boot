@@ -1,0 +1,44 @@
+module GI.Gio.Interfaces.Drive where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype Drive = Drive (ForeignPtr Drive)
+data DriveChangedSignalInfo
+data DriveDisconnectedSignalInfo
+data DriveEjectButtonSignalInfo
+data DriveStopButtonSignalInfo
+instance GObject Drive where
+class GObject o => DriveK o
+instance (GObject o, IsDescendantOf Drive o) => DriveK o
+data DriveCanEjectMethodInfo
+data DriveCanPollForMediaMethodInfo
+data DriveCanStartMethodInfo
+data DriveCanStartDegradedMethodInfo
+data DriveCanStopMethodInfo
+data DriveEjectMethodInfo
+data DriveEjectFinishMethodInfo
+data DriveEjectWithOperationMethodInfo
+data DriveEjectWithOperationFinishMethodInfo
+data DriveEnumerateIdentifiersMethodInfo
+data DriveGetIconMethodInfo
+data DriveGetIdentifierMethodInfo
+data DriveGetNameMethodInfo
+data DriveGetSortKeyMethodInfo
+data DriveGetStartStopTypeMethodInfo
+data DriveGetSymbolicIconMethodInfo
+data DriveGetVolumesMethodInfo
+data DriveHasMediaMethodInfo
+data DriveHasVolumesMethodInfo
+data DriveIsMediaCheckAutomaticMethodInfo
+data DriveIsMediaRemovableMethodInfo
+data DrivePollForMediaMethodInfo
+data DrivePollForMediaFinishMethodInfo
+data DriveStartMethodInfo
+data DriveStartFinishMethodInfo
+data DriveStopMethodInfo
+data DriveStopFinishMethodInfo

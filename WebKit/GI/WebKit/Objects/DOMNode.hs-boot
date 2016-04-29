@@ -1,0 +1,66 @@
+module GI.WebKit.Objects.DOMNode where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMNode = DOMNode (ForeignPtr DOMNode)
+instance GObject DOMNode where
+class GObject o => DOMNodeK o
+instance (GObject o, IsDescendantOf DOMNode o) => DOMNodeK o
+data DOMNodeBaseUriPropertyInfo
+data DOMNodeChildNodesPropertyInfo
+data DOMNodeFirstChildPropertyInfo
+data DOMNodeLastChildPropertyInfo
+data DOMNodeLocalNamePropertyInfo
+data DOMNodeNamespaceUriPropertyInfo
+data DOMNodeNextSiblingPropertyInfo
+data DOMNodeNodeNamePropertyInfo
+data DOMNodeNodeTypePropertyInfo
+data DOMNodeNodeValuePropertyInfo
+data DOMNodeOwnerDocumentPropertyInfo
+data DOMNodeParentElementPropertyInfo
+data DOMNodeParentNodePropertyInfo
+data DOMNodePrefixPropertyInfo
+data DOMNodePreviousSiblingPropertyInfo
+data DOMNodeTextContentPropertyInfo
+data DOMNodeAppendChildMethodInfo
+data DOMNodeCloneNodeMethodInfo
+data DOMNodeCompareDocumentPositionMethodInfo
+data DOMNodeContainsMethodInfo
+data DOMNodeDispatchEventMethodInfo
+data DOMNodeGetAttributesMethodInfo
+data DOMNodeGetBaseUriMethodInfo
+data DOMNodeGetChildNodesMethodInfo
+data DOMNodeGetFirstChildMethodInfo
+data DOMNodeGetLastChildMethodInfo
+data DOMNodeGetLocalNameMethodInfo
+data DOMNodeGetNamespaceUriMethodInfo
+data DOMNodeGetNextSiblingMethodInfo
+data DOMNodeGetNodeNameMethodInfo
+data DOMNodeGetNodeTypeMethodInfo
+data DOMNodeGetNodeValueMethodInfo
+data DOMNodeGetOwnerDocumentMethodInfo
+data DOMNodeGetParentElementMethodInfo
+data DOMNodeGetParentNodeMethodInfo
+data DOMNodeGetPrefixMethodInfo
+data DOMNodeGetPreviousSiblingMethodInfo
+data DOMNodeGetTextContentMethodInfo
+data DOMNodeHasAttributesMethodInfo
+data DOMNodeHasChildNodesMethodInfo
+data DOMNodeInsertBeforeMethodInfo
+data DOMNodeIsDefaultNamespaceMethodInfo
+data DOMNodeIsEqualNodeMethodInfo
+data DOMNodeIsSameNodeMethodInfo
+data DOMNodeIsSupportedMethodInfo
+data DOMNodeLookupNamespaceUriMethodInfo
+data DOMNodeLookupPrefixMethodInfo
+data DOMNodeNormalizeMethodInfo
+data DOMNodeRemoveChildMethodInfo
+data DOMNodeReplaceChildMethodInfo
+data DOMNodeSetNodeValueMethodInfo
+data DOMNodeSetPrefixMethodInfo
+data DOMNodeSetTextContentMethodInfo

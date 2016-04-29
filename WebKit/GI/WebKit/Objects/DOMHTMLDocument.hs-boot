@@ -1,0 +1,54 @@
+module GI.WebKit.Objects.DOMHTMLDocument where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype DOMHTMLDocument = DOMHTMLDocument (ForeignPtr DOMHTMLDocument)
+instance GObject DOMHTMLDocument where
+class GObject o => DOMHTMLDocumentK o
+instance (GObject o, IsDescendantOf DOMHTMLDocument o) => DOMHTMLDocumentK o
+data DOMHTMLDocumentActiveElementPropertyInfo
+data DOMHTMLDocumentAlinkColorPropertyInfo
+data DOMHTMLDocumentBgColorPropertyInfo
+data DOMHTMLDocumentCompatModePropertyInfo
+data DOMHTMLDocumentDesignModePropertyInfo
+data DOMHTMLDocumentDirPropertyInfo
+data DOMHTMLDocumentEmbedsPropertyInfo
+data DOMHTMLDocumentFgColorPropertyInfo
+data DOMHTMLDocumentHeightPropertyInfo
+data DOMHTMLDocumentLinkColorPropertyInfo
+data DOMHTMLDocumentPluginsPropertyInfo
+data DOMHTMLDocumentScriptsPropertyInfo
+data DOMHTMLDocumentVlinkColorPropertyInfo
+data DOMHTMLDocumentWidthPropertyInfo
+data DOMHTMLDocumentCaptureEventsMethodInfo
+data DOMHTMLDocumentClearMethodInfo
+data DOMHTMLDocumentCloseMethodInfo
+data DOMHTMLDocumentGetActiveElementMethodInfo
+data DOMHTMLDocumentGetAlinkColorMethodInfo
+data DOMHTMLDocumentGetBgColorMethodInfo
+data DOMHTMLDocumentGetCompatModeMethodInfo
+data DOMHTMLDocumentGetDesignModeMethodInfo
+data DOMHTMLDocumentGetDirMethodInfo
+data DOMHTMLDocumentGetEmbedsMethodInfo
+data DOMHTMLDocumentGetFgColorMethodInfo
+data DOMHTMLDocumentGetHeightMethodInfo
+data DOMHTMLDocumentGetLinkColorMethodInfo
+data DOMHTMLDocumentGetPluginsMethodInfo
+data DOMHTMLDocumentGetScriptsMethodInfo
+data DOMHTMLDocumentGetVlinkColorMethodInfo
+data DOMHTMLDocumentGetWidthMethodInfo
+data DOMHTMLDocumentHasFocusMethodInfo
+data DOMHTMLDocumentOpenMethodInfo
+data DOMHTMLDocumentReleaseEventsMethodInfo
+data DOMHTMLDocumentSetAlinkColorMethodInfo
+data DOMHTMLDocumentSetBgColorMethodInfo
+data DOMHTMLDocumentSetDesignModeMethodInfo
+data DOMHTMLDocumentSetDirMethodInfo
+data DOMHTMLDocumentSetFgColorMethodInfo
+data DOMHTMLDocumentSetLinkColorMethodInfo
+data DOMHTMLDocumentSetVlinkColorMethodInfo

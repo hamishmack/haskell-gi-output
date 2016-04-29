@@ -1,0 +1,25 @@
+module GI.Gtk.Objects.CellRendererToggle where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype CellRendererToggle = CellRendererToggle (ForeignPtr CellRendererToggle)
+instance GObject CellRendererToggle where
+class GObject o => CellRendererToggleK o
+instance (GObject o, IsDescendantOf CellRendererToggle o) => CellRendererToggleK o
+data CellRendererToggleActivatablePropertyInfo
+data CellRendererToggleActivePropertyInfo
+data CellRendererToggleInconsistentPropertyInfo
+data CellRendererToggleIndicatorSizePropertyInfo
+data CellRendererToggleRadioPropertyInfo
+data CellRendererToggleToggledSignalInfo
+data CellRendererToggleGetActivatableMethodInfo
+data CellRendererToggleGetActiveMethodInfo
+data CellRendererToggleGetRadioMethodInfo
+data CellRendererToggleSetActivatableMethodInfo
+data CellRendererToggleSetActiveMethodInfo
+data CellRendererToggleSetRadioMethodInfo

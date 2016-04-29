@@ -1,0 +1,41 @@
+module GI.Gio.Objects.TlsConnection where
+
+import Data.GI.Base.ShortPrelude
+
+import qualified Data.GI.Base.Attributes as GI.Attributes
+import qualified Data.Text as T
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map as Map
+
+newtype TlsConnection = TlsConnection (ForeignPtr TlsConnection)
+instance GObject TlsConnection where
+class GObject o => TlsConnectionK o
+instance (GObject o, IsDescendantOf TlsConnection o) => TlsConnectionK o
+data TlsConnectionBaseIoStreamPropertyInfo
+data TlsConnectionCertificatePropertyInfo
+data TlsConnectionDatabasePropertyInfo
+data TlsConnectionInteractionPropertyInfo
+data TlsConnectionPeerCertificatePropertyInfo
+data TlsConnectionPeerCertificateErrorsPropertyInfo
+data TlsConnectionRehandshakeModePropertyInfo
+data TlsConnectionRequireCloseNotifyPropertyInfo
+data TlsConnectionUseSystemCertdbPropertyInfo
+data TlsConnectionAcceptCertificateSignalInfo
+data TlsConnectionEmitAcceptCertificateMethodInfo
+data TlsConnectionGetCertificateMethodInfo
+data TlsConnectionGetDatabaseMethodInfo
+data TlsConnectionGetInteractionMethodInfo
+data TlsConnectionGetPeerCertificateMethodInfo
+data TlsConnectionGetPeerCertificateErrorsMethodInfo
+data TlsConnectionGetRehandshakeModeMethodInfo
+data TlsConnectionGetRequireCloseNotifyMethodInfo
+data TlsConnectionGetUseSystemCertdbMethodInfo
+data TlsConnectionHandshakeMethodInfo
+data TlsConnectionHandshakeAsyncMethodInfo
+data TlsConnectionHandshakeFinishMethodInfo
+data TlsConnectionSetCertificateMethodInfo
+data TlsConnectionSetDatabaseMethodInfo
+data TlsConnectionSetInteractionMethodInfo
+data TlsConnectionSetRehandshakeModeMethodInfo
+data TlsConnectionSetRequireCloseNotifyMethodInfo
+data TlsConnectionSetUseSystemCertdbMethodInfo
