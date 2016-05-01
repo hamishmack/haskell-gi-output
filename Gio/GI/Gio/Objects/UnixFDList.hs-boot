@@ -11,8 +11,3 @@ newtype UnixFDList = UnixFDList (ForeignPtr UnixFDList)
 instance GObject UnixFDList where
 class GObject o => UnixFDListK o
 instance (GObject o, IsDescendantOf UnixFDList o) => UnixFDListK o
-data UnixFDListAppendMethodInfo
-data UnixFDListGetMethodInfo
-data UnixFDListGetLengthMethodInfo
-data UnixFDListPeekFdsMethodInfo
-data UnixFDListStealFdsMethodInfo

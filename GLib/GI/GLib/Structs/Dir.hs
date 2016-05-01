@@ -93,7 +93,7 @@ instance (signature ~ (m ()), MonadIO m) => MethodInfo DirCloseMethodInfo Dir si
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_dir_read_name" g_dir_read_name :: 
+foreign import ccall "g_dir_read_name_utf8" g_dir_read_name_utf8 :: 
     Ptr Dir ->                              -- _obj : TInterface "GLib" "Dir"
     IO CString
 
@@ -104,8 +104,8 @@ dirReadName ::
     -> m T.Text                             -- result
 dirReadName _obj = liftIO $ do
     let _obj' = unsafeManagedPtrGetPtr _obj
-    result <- g_dir_read_name _obj'
-    checkUnexpectedReturnNULL "g_dir_read_name" result
+    result <- g_dir_read_name_utf8 _obj'
+    checkUnexpectedReturnNULL "g_dir_read_name_utf8" result
     result' <- cstringToText result
     touchManagedPtr _obj
     return result'

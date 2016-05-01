@@ -11,7 +11,6 @@ newtype Source = Source (ForeignPtr Source)
 instance BoxedObject Source where
 data SourceAddChildSourceMethodInfo
 data SourceAddPollMethodInfo
-data SourceAddUnixFdMethodInfo
 data SourceAttachMethodInfo
 data SourceDestroyMethodInfo
 data SourceGetCanRecurseMethodInfo
@@ -23,12 +22,9 @@ data SourceGetPriorityMethodInfo
 data SourceGetReadyTimeMethodInfo
 data SourceGetTimeMethodInfo
 data SourceIsDestroyedMethodInfo
-data SourceModifyUnixFdMethodInfo
-data SourceQueryUnixFdMethodInfo
 data SourceRefMethodInfo
 data SourceRemoveChildSourceMethodInfo
 data SourceRemovePollMethodInfo
-data SourceRemoveUnixFdMethodInfo
 data SourceSetCallbackMethodInfo
 data SourceSetCallbackIndirectMethodInfo
 data SourceSetCanRecurseMethodInfo

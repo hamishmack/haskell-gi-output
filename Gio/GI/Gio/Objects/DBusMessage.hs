@@ -116,11 +116,6 @@ module GI.Gio.Objects.DBusMessage
     dBusMessageGetSignature                 ,
 
 
--- ** dBusMessageGetUnixFdList
-    DBusMessageGetUnixFdListMethodInfo      ,
-    dBusMessageGetUnixFdList                ,
-
-
 -- ** dBusMessageLock
     DBusMessageLockMethodInfo               ,
     dBusMessageLock                         ,
@@ -232,11 +227,6 @@ module GI.Gio.Objects.DBusMessage
     dBusMessageSetSignature                 ,
 
 
--- ** dBusMessageSetUnixFdList
-    DBusMessageSetUnixFdListMethodInfo      ,
-    dBusMessageSetUnixFdList                ,
-
-
 -- ** dBusMessageToBlob
     DBusMessageToBlobMethodInfo             ,
     dBusMessageToBlob                       ,
@@ -338,7 +328,6 @@ type family ResolveDBusMessageMethod (t :: Symbol) (o :: *) :: * where
     ResolveDBusMessageMethod "getSender" o = DBusMessageGetSenderMethodInfo
     ResolveDBusMessageMethod "getSerial" o = DBusMessageGetSerialMethodInfo
     ResolveDBusMessageMethod "getSignature" o = DBusMessageGetSignatureMethodInfo
-    ResolveDBusMessageMethod "getUnixFdList" o = DBusMessageGetUnixFdListMethodInfo
     ResolveDBusMessageMethod "setBody" o = DBusMessageSetBodyMethodInfo
     ResolveDBusMessageMethod "setByteOrder" o = DBusMessageSetByteOrderMethodInfo
     ResolveDBusMessageMethod "setData" o = GObject.ObjectSetDataMethodInfo
@@ -356,7 +345,6 @@ type family ResolveDBusMessageMethod (t :: Symbol) (o :: *) :: * where
     ResolveDBusMessageMethod "setSender" o = DBusMessageSetSenderMethodInfo
     ResolveDBusMessageMethod "setSerial" o = DBusMessageSetSerialMethodInfo
     ResolveDBusMessageMethod "setSignature" o = DBusMessageSetSignatureMethodInfo
-    ResolveDBusMessageMethod "setUnixFdList" o = DBusMessageSetUnixFdListMethodInfo
     ResolveDBusMessageMethod l o = MethodResolutionFailed l o
 
 instance (info ~ ResolveDBusMessageMethod t DBusMessage, MethodInfo info DBusMessage p) => IsLabelProxy t (DBusMessage -> p) where
@@ -1079,35 +1067,6 @@ data DBusMessageGetSignatureMethodInfo
 instance (signature ~ (m T.Text), MonadIO m, DBusMessageK a) => MethodInfo DBusMessageGetSignatureMethodInfo a signature where
     overloadedMethod _ = dBusMessageGetSignature
 
--- method DBusMessage::get_unix_fd_list
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "Gio" "DBusMessage", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TInterface "Gio" "UnixFDList")
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_dbus_message_get_unix_fd_list" g_dbus_message_get_unix_fd_list :: 
-    Ptr DBusMessage ->                      -- _obj : TInterface "Gio" "DBusMessage"
-    IO (Ptr UnixFDList)
-
-
-dBusMessageGetUnixFdList ::
-    (MonadIO m, DBusMessageK a) =>
-    a                                       -- _obj
-    -> m UnixFDList                         -- result
-dBusMessageGetUnixFdList _obj = liftIO $ do
-    let _obj' = unsafeManagedPtrCastPtr _obj
-    result <- g_dbus_message_get_unix_fd_list _obj'
-    checkUnexpectedReturnNULL "g_dbus_message_get_unix_fd_list" result
-    result' <- (newObject UnixFDList) result
-    touchManagedPtr _obj
-    return result'
-
-data DBusMessageGetUnixFdListMethodInfo
-instance (signature ~ (m UnixFDList), MonadIO m, DBusMessageK a) => MethodInfo DBusMessageGetUnixFdListMethodInfo a signature where
-    overloadedMethod _ = dBusMessageGetUnixFdList
-
 -- method DBusMessage::lock
 -- method type : OrdinaryMethod
 -- Args : [Arg {argCName = "_obj", argType = TInterface "Gio" "DBusMessage", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
@@ -1693,41 +1652,6 @@ dBusMessageSetSignature _obj value = liftIO $ do
 data DBusMessageSetSignatureMethodInfo
 instance (signature ~ (T.Text -> m ()), MonadIO m, DBusMessageK a) => MethodInfo DBusMessageSetSignatureMethodInfo a signature where
     overloadedMethod _ = dBusMessageSetSignature
-
--- method DBusMessage::set_unix_fd_list
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "Gio" "DBusMessage", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "fd_list", argType = TInterface "Gio" "UnixFDList", direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Nothing
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_dbus_message_set_unix_fd_list" g_dbus_message_set_unix_fd_list :: 
-    Ptr DBusMessage ->                      -- _obj : TInterface "Gio" "DBusMessage"
-    Ptr UnixFDList ->                       -- fd_list : TInterface "Gio" "UnixFDList"
-    IO ()
-
-
-dBusMessageSetUnixFdList ::
-    (MonadIO m, DBusMessageK a, UnixFDListK b) =>
-    a                                       -- _obj
-    -> Maybe (b)                            -- fdList
-    -> m ()                                 -- result
-dBusMessageSetUnixFdList _obj fdList = liftIO $ do
-    let _obj' = unsafeManagedPtrCastPtr _obj
-    maybeFdList <- case fdList of
-        Nothing -> return nullPtr
-        Just jFdList -> do
-            let jFdList' = unsafeManagedPtrCastPtr jFdList
-            return jFdList'
-    g_dbus_message_set_unix_fd_list _obj' maybeFdList
-    touchManagedPtr _obj
-    whenJust fdList touchManagedPtr
-    return ()
-
-data DBusMessageSetUnixFdListMethodInfo
-instance (signature ~ (Maybe (b) -> m ()), MonadIO m, DBusMessageK a, UnixFDListK b) => MethodInfo DBusMessageSetUnixFdListMethodInfo a signature where
-    overloadedMethod _ = dBusMessageSetUnixFdList
 
 -- method DBusMessage::to_blob
 -- method type : OrdinaryMethod

@@ -29,11 +29,6 @@ module GI.GLib.Structs.Source
     sourceAddPoll                           ,
 
 
--- ** sourceAddUnixFd
-    SourceAddUnixFdMethodInfo               ,
-    sourceAddUnixFd                         ,
-
-
 -- ** sourceAttach
     SourceAttachMethodInfo                  ,
     sourceAttach                            ,
@@ -89,18 +84,8 @@ module GI.GLib.Structs.Source
     sourceIsDestroyed                       ,
 
 
--- ** sourceModifyUnixFd
-    SourceModifyUnixFdMethodInfo            ,
-    sourceModifyUnixFd                      ,
-
-
 -- ** sourceNew
     sourceNew                               ,
-
-
--- ** sourceQueryUnixFd
-    SourceQueryUnixFdMethodInfo             ,
-    sourceQueryUnixFd                       ,
 
 
 -- ** sourceRef
@@ -128,11 +113,6 @@ module GI.GLib.Structs.Source
 -- ** sourceRemovePoll
     SourceRemovePollMethodInfo              ,
     sourceRemovePoll                        ,
-
-
--- ** sourceRemoveUnixFd
-    SourceRemoveUnixFdMethodInfo            ,
-    sourceRemoveUnixFd                      ,
 
 
 -- ** sourceSetCallback
@@ -306,38 +286,6 @@ sourceAddPoll _obj fd = liftIO $ do
 data SourceAddPollMethodInfo
 instance (signature ~ (PollFD -> m ()), MonadIO m) => MethodInfo SourceAddPollMethodInfo Source signature where
     overloadedMethod _ = sourceAddPoll
-
--- method Source::add_unix_fd
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "GLib" "Source", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "fd", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "events", argType = TInterface "GLib" "IOCondition", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TBasicType TPtr)
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_source_add_unix_fd" g_source_add_unix_fd :: 
-    Ptr Source ->                           -- _obj : TInterface "GLib" "Source"
-    Int32 ->                                -- fd : TBasicType TInt
-    CUInt ->                                -- events : TInterface "GLib" "IOCondition"
-    IO (Ptr ())
-
-
-sourceAddUnixFd ::
-    (MonadIO m) =>
-    Source                                  -- _obj
-    -> Int32                                -- fd
-    -> [IOCondition]                        -- events
-    -> m (Ptr ())                           -- result
-sourceAddUnixFd _obj fd events = liftIO $ do
-    let _obj' = unsafeManagedPtrGetPtr _obj
-    let events' = gflagsToWord events
-    result <- g_source_add_unix_fd _obj' fd events'
-    touchManagedPtr _obj
-    return result
-
-data SourceAddUnixFdMethodInfo
-instance (signature ~ (Int32 -> [IOCondition] -> m (Ptr ())), MonadIO m) => MethodInfo SourceAddUnixFdMethodInfo Source signature where
-    overloadedMethod _ = sourceAddUnixFd
 
 -- method Source::attach
 -- method type : OrdinaryMethod
@@ -655,68 +603,6 @@ data SourceIsDestroyedMethodInfo
 instance (signature ~ (m Bool), MonadIO m) => MethodInfo SourceIsDestroyedMethodInfo Source signature where
     overloadedMethod _ = sourceIsDestroyed
 
--- method Source::modify_unix_fd
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "GLib" "Source", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "tag", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "new_events", argType = TInterface "GLib" "IOCondition", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Nothing
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_source_modify_unix_fd" g_source_modify_unix_fd :: 
-    Ptr Source ->                           -- _obj : TInterface "GLib" "Source"
-    Ptr () ->                               -- tag : TBasicType TPtr
-    CUInt ->                                -- new_events : TInterface "GLib" "IOCondition"
-    IO ()
-
-
-sourceModifyUnixFd ::
-    (MonadIO m) =>
-    Source                                  -- _obj
-    -> Ptr ()                               -- tag
-    -> [IOCondition]                        -- newEvents
-    -> m ()                                 -- result
-sourceModifyUnixFd _obj tag newEvents = liftIO $ do
-    let _obj' = unsafeManagedPtrGetPtr _obj
-    let newEvents' = gflagsToWord newEvents
-    g_source_modify_unix_fd _obj' tag newEvents'
-    touchManagedPtr _obj
-    return ()
-
-data SourceModifyUnixFdMethodInfo
-instance (signature ~ (Ptr () -> [IOCondition] -> m ()), MonadIO m) => MethodInfo SourceModifyUnixFdMethodInfo Source signature where
-    overloadedMethod _ = sourceModifyUnixFd
-
--- method Source::query_unix_fd
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "GLib" "Source", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "tag", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TInterface "GLib" "IOCondition")
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_source_query_unix_fd" g_source_query_unix_fd :: 
-    Ptr Source ->                           -- _obj : TInterface "GLib" "Source"
-    Ptr () ->                               -- tag : TBasicType TPtr
-    IO CUInt
-
-
-sourceQueryUnixFd ::
-    (MonadIO m) =>
-    Source                                  -- _obj
-    -> Ptr ()                               -- tag
-    -> m [IOCondition]                      -- result
-sourceQueryUnixFd _obj tag = liftIO $ do
-    let _obj' = unsafeManagedPtrGetPtr _obj
-    result <- g_source_query_unix_fd _obj' tag
-    let result' = wordToGFlags result
-    touchManagedPtr _obj
-    return result'
-
-data SourceQueryUnixFdMethodInfo
-instance (signature ~ (Ptr () -> m [IOCondition]), MonadIO m) => MethodInfo SourceQueryUnixFdMethodInfo Source signature where
-    overloadedMethod _ = sourceQueryUnixFd
-
 -- method Source::ref
 -- method type : OrdinaryMethod
 -- Args : [Arg {argCName = "_obj", argType = TInterface "GLib" "Source", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
@@ -807,35 +693,6 @@ sourceRemovePoll _obj fd = liftIO $ do
 data SourceRemovePollMethodInfo
 instance (signature ~ (PollFD -> m ()), MonadIO m) => MethodInfo SourceRemovePollMethodInfo Source signature where
     overloadedMethod _ = sourceRemovePoll
-
--- method Source::remove_unix_fd
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "GLib" "Source", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "tag", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Nothing
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_source_remove_unix_fd" g_source_remove_unix_fd :: 
-    Ptr Source ->                           -- _obj : TInterface "GLib" "Source"
-    Ptr () ->                               -- tag : TBasicType TPtr
-    IO ()
-
-
-sourceRemoveUnixFd ::
-    (MonadIO m) =>
-    Source                                  -- _obj
-    -> Ptr ()                               -- tag
-    -> m ()                                 -- result
-sourceRemoveUnixFd _obj tag = liftIO $ do
-    let _obj' = unsafeManagedPtrGetPtr _obj
-    g_source_remove_unix_fd _obj' tag
-    touchManagedPtr _obj
-    return ()
-
-data SourceRemoveUnixFdMethodInfo
-instance (signature ~ (Ptr () -> m ()), MonadIO m) => MethodInfo SourceRemoveUnixFdMethodInfo Source signature where
-    overloadedMethod _ = sourceRemoveUnixFd
 
 -- method Source::set_callback
 -- method type : OrdinaryMethod
@@ -1179,16 +1036,12 @@ sourceSetNameById tag name = liftIO $ do
 type family ResolveSourceMethod (t :: Symbol) (o :: *) :: * where
     ResolveSourceMethod "addChildSource" o = SourceAddChildSourceMethodInfo
     ResolveSourceMethod "addPoll" o = SourceAddPollMethodInfo
-    ResolveSourceMethod "addUnixFd" o = SourceAddUnixFdMethodInfo
     ResolveSourceMethod "attach" o = SourceAttachMethodInfo
     ResolveSourceMethod "destroy" o = SourceDestroyMethodInfo
     ResolveSourceMethod "isDestroyed" o = SourceIsDestroyedMethodInfo
-    ResolveSourceMethod "modifyUnixFd" o = SourceModifyUnixFdMethodInfo
-    ResolveSourceMethod "queryUnixFd" o = SourceQueryUnixFdMethodInfo
     ResolveSourceMethod "ref" o = SourceRefMethodInfo
     ResolveSourceMethod "removeChildSource" o = SourceRemoveChildSourceMethodInfo
     ResolveSourceMethod "removePoll" o = SourceRemovePollMethodInfo
-    ResolveSourceMethod "removeUnixFd" o = SourceRemoveUnixFdMethodInfo
     ResolveSourceMethod "unref" o = SourceUnrefMethodInfo
     ResolveSourceMethod "getCanRecurse" o = SourceGetCanRecurseMethodInfo
     ResolveSourceMethod "getContext" o = SourceGetContextMethodInfo

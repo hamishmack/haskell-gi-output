@@ -82,11 +82,6 @@ module GI.Gio.Objects.DBusMethodInvocation
     dBusMethodInvocationReturnValue         ,
 
 
--- ** dBusMethodInvocationReturnValueWithUnixFdList
-    DBusMethodInvocationReturnValueWithUnixFdListMethodInfo,
-    dBusMethodInvocationReturnValueWithUnixFdList,
-
-
 
 
     ) where
@@ -139,7 +134,6 @@ type family ResolveDBusMethodInvocationMethod (t :: Symbol) (o :: *) :: * where
     ResolveDBusMethodInvocationMethod "returnErrorLiteral" o = DBusMethodInvocationReturnErrorLiteralMethodInfo
     ResolveDBusMethodInvocationMethod "returnGerror" o = DBusMethodInvocationReturnGerrorMethodInfo
     ResolveDBusMethodInvocationMethod "returnValue" o = DBusMethodInvocationReturnValueMethodInfo
-    ResolveDBusMethodInvocationMethod "returnValueWithUnixFdList" o = DBusMethodInvocationReturnValueWithUnixFdListMethodInfo
     ResolveDBusMethodInvocationMethod "runDispose" o = GObject.ObjectRunDisposeMethodInfo
     ResolveDBusMethodInvocationMethod "stealData" o = GObject.ObjectStealDataMethodInfo
     ResolveDBusMethodInvocationMethod "stealQdata" o = GObject.ObjectStealQdataMethodInfo
@@ -571,47 +565,5 @@ dBusMethodInvocationReturnValue _obj parameters = liftIO $ do
 data DBusMethodInvocationReturnValueMethodInfo
 instance (signature ~ (Maybe (GVariant) -> m ()), MonadIO m, DBusMethodInvocationK a) => MethodInfo DBusMethodInvocationReturnValueMethodInfo a signature where
     overloadedMethod _ = dBusMethodInvocationReturnValue
-
--- method DBusMethodInvocation::return_value_with_unix_fd_list
--- method type : OrdinaryMethod
--- Args : [Arg {argCName = "_obj", argType = TInterface "Gio" "DBusMethodInvocation", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "parameters", argType = TVariant, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "fd_list", argType = TInterface "Gio" "UnixFDList", direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Nothing
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_dbus_method_invocation_return_value_with_unix_fd_list" g_dbus_method_invocation_return_value_with_unix_fd_list :: 
-    Ptr DBusMethodInvocation ->             -- _obj : TInterface "Gio" "DBusMethodInvocation"
-    Ptr GVariant ->                         -- parameters : TVariant
-    Ptr UnixFDList ->                       -- fd_list : TInterface "Gio" "UnixFDList"
-    IO ()
-
-
-dBusMethodInvocationReturnValueWithUnixFdList ::
-    (MonadIO m, DBusMethodInvocationK a, UnixFDListK b) =>
-    a                                       -- _obj
-    -> Maybe (GVariant)                     -- parameters
-    -> Maybe (b)                            -- fdList
-    -> m ()                                 -- result
-dBusMethodInvocationReturnValueWithUnixFdList _obj parameters fdList = liftIO $ do
-    let _obj' = unsafeManagedPtrCastPtr _obj
-    maybeParameters <- case parameters of
-        Nothing -> return nullPtr
-        Just jParameters -> do
-            let jParameters' = unsafeManagedPtrGetPtr jParameters
-            return jParameters'
-    maybeFdList <- case fdList of
-        Nothing -> return nullPtr
-        Just jFdList -> do
-            let jFdList' = unsafeManagedPtrCastPtr jFdList
-            return jFdList'
-    g_dbus_method_invocation_return_value_with_unix_fd_list _obj' maybeParameters maybeFdList
-    touchManagedPtr _obj
-    whenJust fdList touchManagedPtr
-    return ()
-
-data DBusMethodInvocationReturnValueWithUnixFdListMethodInfo
-instance (signature ~ (Maybe (GVariant) -> Maybe (b) -> m ()), MonadIO m, DBusMethodInvocationK a, UnixFDListK b) => MethodInfo DBusMethodInvocationReturnValueWithUnixFdListMethodInfo a signature where
-    overloadedMethod _ = dBusMethodInvocationReturnValueWithUnixFdList
 
 

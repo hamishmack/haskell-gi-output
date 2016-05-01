@@ -152,7 +152,7 @@ type PixbufAnimationSignalList = ('[ '("notify", GObject.ObjectNotifySignalInfo)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "gdk_pixbuf_animation_new_from_file" gdk_pixbuf_animation_new_from_file :: 
+foreign import ccall "gdk_pixbuf_animation_new_from_file_utf8" gdk_pixbuf_animation_new_from_file_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     Ptr (Ptr GError) ->                     -- error
     IO (Ptr PixbufAnimation)
@@ -165,8 +165,8 @@ pixbufAnimationNewFromFile ::
 pixbufAnimationNewFromFile filename = liftIO $ do
     filename' <- textToCString filename
     onException (do
-        result <- propagateGError $ gdk_pixbuf_animation_new_from_file filename'
-        checkUnexpectedReturnNULL "gdk_pixbuf_animation_new_from_file" result
+        result <- propagateGError $ gdk_pixbuf_animation_new_from_file_utf8 filename'
+        checkUnexpectedReturnNULL "gdk_pixbuf_animation_new_from_file_utf8" result
         result' <- (wrapObject PixbufAnimation) result
         freeMem filename'
         return result'

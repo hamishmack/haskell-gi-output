@@ -1398,34 +1398,6 @@ module GI.GLib.Functions
     unicodeScriptToIso15924                 ,
 
 
--- ** unixErrorQuark
-    unixErrorQuark                          ,
-
-
--- ** unixFdAddFull
-    unixFdAddFull                           ,
-
-
--- ** unixFdSourceNew
-    unixFdSourceNew                         ,
-
-
--- ** unixOpenPipe
-    unixOpenPipe                            ,
-
-
--- ** unixSetFdNonblocking
-    unixSetFdNonblocking                    ,
-
-
--- ** unixSignalAdd
-    unixSignalAdd                           ,
-
-
--- ** unixSignalSourceNew
-    unixSignalSourceNew                     ,
-
-
 -- ** unlink
     unlink                                  ,
 
@@ -2372,14 +2344,14 @@ uriEscapeString unescaped reservedCharsAllowed allowUtf8 = liftIO $ do
     return result'
 
 
--- function g_unsetenv
+-- function g_unsetenv_utf8
 -- Args : [Arg {argCName = "variable", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Nothing
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_unsetenv" g_unsetenv :: 
+foreign import ccall "g_unsetenv_utf8" g_unsetenv_utf8 :: 
     CString ->                              -- variable : TBasicType TUTF8
     IO ()
 
@@ -2390,7 +2362,7 @@ unsetenv ::
     -> m ()                                 -- result
 unsetenv variable = liftIO $ do
     variable' <- textToCString variable
-    g_unsetenv variable'
+    g_unsetenv_utf8 variable'
     freeMem variable'
     return ()
 
@@ -2415,194 +2387,6 @@ unlink filename = liftIO $ do
     filename' <- textToCString filename
     result <- g_unlink filename'
     freeMem filename'
-    return result
-
-
--- function g_unix_signal_source_new
--- Args : [Arg {argCName = "signum", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TInterface "GLib" "Source")
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_unix_signal_source_new" g_unix_signal_source_new :: 
-    Int32 ->                                -- signum : TBasicType TInt
-    IO (Ptr Source)
-
-
-unixSignalSourceNew ::
-    (MonadIO m) =>
-    Int32                                   -- signum
-    -> m Source                             -- result
-unixSignalSourceNew signum = liftIO $ do
-    result <- g_unix_signal_source_new signum
-    checkUnexpectedReturnNULL "g_unix_signal_source_new" result
-    result' <- (wrapBoxed Source) result
-    return result'
-
-
--- function g_unix_signal_add_full
--- Args : [Arg {argCName = "priority", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "signum", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "handler", argType = TInterface "GLib" "SourceFunc", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeNotified, argClosure = 3, argDestroy = 4, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "user_data", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "notify", argType = TInterface "GLib" "DestroyNotify", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeAsync, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TBasicType TUInt)
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_unix_signal_add_full" g_unix_signal_add_full :: 
-    Int32 ->                                -- priority : TBasicType TInt
-    Int32 ->                                -- signum : TBasicType TInt
-    FunPtr SourceFuncC ->                   -- handler : TInterface "GLib" "SourceFunc"
-    Ptr () ->                               -- user_data : TBasicType TPtr
-    FunPtr DestroyNotifyC ->                -- notify : TInterface "GLib" "DestroyNotify"
-    IO Word32
-
-
-unixSignalAdd ::
-    (MonadIO m) =>
-    Int32                                   -- priority
-    -> Int32                                -- signum
-    -> SourceFunc                           -- handler
-    -> m Word32                             -- result
-unixSignalAdd priority signum handler = liftIO $ do
-    handler' <- mkSourceFunc (sourceFuncWrapper Nothing handler)
-    let userData = castFunPtrToPtr handler'
-    let notify = safeFreeFunPtrPtr
-    result <- g_unix_signal_add_full priority signum handler' userData notify
-    return result
-
-
--- function g_unix_set_fd_nonblocking
--- Args : [Arg {argCName = "fd", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "nonblock", argType = TBasicType TBoolean, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TBasicType TBoolean)
--- throws : True
--- Skip return : False
-
-foreign import ccall "g_unix_set_fd_nonblocking" g_unix_set_fd_nonblocking :: 
-    Int32 ->                                -- fd : TBasicType TInt
-    CInt ->                                 -- nonblock : TBasicType TBoolean
-    Ptr (Ptr GError) ->                     -- error
-    IO CInt
-
-
-unixSetFdNonblocking ::
-    (MonadIO m) =>
-    Int32                                   -- fd
-    -> Bool                                 -- nonblock
-    -> m ()                                 -- result
-unixSetFdNonblocking fd nonblock = liftIO $ do
-    let nonblock' = (fromIntegral . fromEnum) nonblock
-    onException (do
-        _ <- propagateGError $ g_unix_set_fd_nonblocking fd nonblock'
-        return ()
-     ) (do
-        return ()
-     )
-
-
--- function g_unix_open_pipe
--- Args : [Arg {argCName = "fds", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "flags", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TBasicType TBoolean)
--- throws : True
--- Skip return : False
-
-foreign import ccall "g_unix_open_pipe" g_unix_open_pipe :: 
-    Int32 ->                                -- fds : TBasicType TInt
-    Int32 ->                                -- flags : TBasicType TInt
-    Ptr (Ptr GError) ->                     -- error
-    IO CInt
-
-
-unixOpenPipe ::
-    (MonadIO m) =>
-    Int32                                   -- fds
-    -> Int32                                -- flags
-    -> m ()                                 -- result
-unixOpenPipe fds flags = liftIO $ do
-    onException (do
-        _ <- propagateGError $ g_unix_open_pipe fds flags
-        return ()
-     ) (do
-        return ()
-     )
-
-
--- function g_unix_fd_source_new
--- Args : [Arg {argCName = "fd", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "condition", argType = TInterface "GLib" "IOCondition", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TInterface "GLib" "Source")
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_unix_fd_source_new" g_unix_fd_source_new :: 
-    Int32 ->                                -- fd : TBasicType TInt
-    CUInt ->                                -- condition : TInterface "GLib" "IOCondition"
-    IO (Ptr Source)
-
-
-unixFdSourceNew ::
-    (MonadIO m) =>
-    Int32                                   -- fd
-    -> [IOCondition]                        -- condition
-    -> m Source                             -- result
-unixFdSourceNew fd condition = liftIO $ do
-    let condition' = gflagsToWord condition
-    result <- g_unix_fd_source_new fd condition'
-    checkUnexpectedReturnNULL "g_unix_fd_source_new" result
-    result' <- (wrapBoxed Source) result
-    return result'
-
-
--- function g_unix_fd_add_full
--- Args : [Arg {argCName = "priority", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "fd", argType = TBasicType TInt, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "condition", argType = TInterface "GLib" "IOCondition", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "function", argType = TInterface "GLib" "UnixFDSourceFunc", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeNotified, argClosure = 4, argDestroy = 5, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "user_data", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "notify", argType = TInterface "GLib" "DestroyNotify", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeAsync, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
--- Lengths : []
--- returnType : Just (TBasicType TUInt)
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_unix_fd_add_full" g_unix_fd_add_full :: 
-    Int32 ->                                -- priority : TBasicType TInt
-    Int32 ->                                -- fd : TBasicType TInt
-    CUInt ->                                -- condition : TInterface "GLib" "IOCondition"
-    FunPtr UnixFDSourceFuncC ->             -- function : TInterface "GLib" "UnixFDSourceFunc"
-    Ptr () ->                               -- user_data : TBasicType TPtr
-    FunPtr DestroyNotifyC ->                -- notify : TInterface "GLib" "DestroyNotify"
-    IO Word32
-
-
-unixFdAddFull ::
-    (MonadIO m) =>
-    Int32                                   -- priority
-    -> Int32                                -- fd
-    -> [IOCondition]                        -- condition
-    -> UnixFDSourceFunc                     -- function
-    -> m Word32                             -- result
-unixFdAddFull priority fd condition function = liftIO $ do
-    let condition' = gflagsToWord condition
-    function' <- mkUnixFDSourceFunc (unixFDSourceFuncWrapper Nothing function)
-    let userData = castFunPtrToPtr function'
-    let notify = safeFreeFunPtrPtr
-    result <- g_unix_fd_add_full priority fd condition' function' userData notify
-    return result
-
-
--- function g_unix_error_quark
--- Args : []
--- Lengths : []
--- returnType : Just (TBasicType TUInt32)
--- throws : False
--- Skip return : False
-
-foreign import ccall "g_unix_error_quark" g_unix_error_quark :: 
-    IO Word32
-
-
-unixErrorQuark ::
-    (MonadIO m) =>
-    m Word32                                -- result
-unixErrorQuark  = liftIO $ do
-    result <- g_unix_error_quark
     return result
 
 
@@ -5555,14 +5339,14 @@ stpcpy dest src = liftIO $ do
     return result'
 
 
--- function g_spawn_sync
+-- function g_spawn_sync_utf8
 -- Args : [Arg {argCName = "working_directory", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "argv", argType = TCArray True (-1) (-1) (TBasicType TUTF8), direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "envp", argType = TCArray True (-1) (-1) (TBasicType TUTF8), direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "flags", argType = TInterface "GLib" "SpawnFlags", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "child_setup", argType = TInterface "GLib" "SpawnChildSetupFunc", direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeAsync, argClosure = 5, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "user_data", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "standard_output", argType = TCArray True (-1) (-1) (TBasicType TUInt8), direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "standard_error", argType = TCArray True (-1) (-1) (TBasicType TUInt8), direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "exit_status", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_spawn_sync" g_spawn_sync :: 
+foreign import ccall "g_spawn_sync_utf8" g_spawn_sync_utf8 :: 
     CString ->                              -- working_directory : TBasicType TUTF8
     Ptr CString ->                          -- argv : TCArray True (-1) (-1) (TBasicType TUTF8)
     Ptr CString ->                          -- envp : TCArray True (-1) (-1) (TBasicType TUTF8)
@@ -5609,7 +5393,7 @@ spawnSync workingDirectory argv envp flags childSetup = liftIO $ do
     exitStatus <- allocMem :: IO (Ptr Int32)
     let userData = nullPtr
     onException (do
-        _ <- propagateGError $ g_spawn_sync maybeWorkingDirectory argv' maybeEnvp flags' maybeChildSetup userData standardOutput standardError exitStatus
+        _ <- propagateGError $ g_spawn_sync_utf8 maybeWorkingDirectory argv' maybeEnvp flags' maybeChildSetup userData standardOutput standardError exitStatus
         standardOutput' <- peek standardOutput
         standardOutput'' <- unpackZeroTerminatedByteString standardOutput'
         freeMem standardOutput'
@@ -5676,14 +5460,14 @@ spawnErrorQuark  = liftIO $ do
     return result
 
 
--- function g_spawn_command_line_sync
+-- function g_spawn_command_line_sync_utf8
 -- Args : [Arg {argCName = "command_line", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "standard_output", argType = TCArray True (-1) (-1) (TBasicType TUInt8), direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "standard_error", argType = TCArray True (-1) (-1) (TBasicType TUInt8), direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "exit_status", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_spawn_command_line_sync" g_spawn_command_line_sync :: 
+foreign import ccall "g_spawn_command_line_sync_utf8" g_spawn_command_line_sync_utf8 :: 
     CString ->                              -- command_line : TBasicType TUTF8
     Ptr (Ptr Word8) ->                      -- standard_output : TCArray True (-1) (-1) (TBasicType TUInt8)
     Ptr (Ptr Word8) ->                      -- standard_error : TCArray True (-1) (-1) (TBasicType TUInt8)
@@ -5702,7 +5486,7 @@ spawnCommandLineSync commandLine = liftIO $ do
     standardError <- allocMem :: IO (Ptr (Ptr Word8))
     exitStatus <- allocMem :: IO (Ptr Int32)
     onException (do
-        _ <- propagateGError $ g_spawn_command_line_sync commandLine' standardOutput standardError exitStatus
+        _ <- propagateGError $ g_spawn_command_line_sync_utf8 commandLine' standardOutput standardError exitStatus
         standardOutput' <- peek standardOutput
         standardOutput'' <- unpackZeroTerminatedByteString standardOutput'
         freeMem standardOutput'
@@ -5723,14 +5507,14 @@ spawnCommandLineSync commandLine = liftIO $ do
      )
 
 
--- function g_spawn_command_line_async
+-- function g_spawn_command_line_async_utf8
 -- Args : [Arg {argCName = "command_line", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_spawn_command_line_async" g_spawn_command_line_async :: 
+foreign import ccall "g_spawn_command_line_async_utf8" g_spawn_command_line_async_utf8 :: 
     CString ->                              -- command_line : TBasicType TUTF8
     Ptr (Ptr GError) ->                     -- error
     IO CInt
@@ -5743,7 +5527,7 @@ spawnCommandLineAsync ::
 spawnCommandLineAsync commandLine = liftIO $ do
     commandLine' <- textToCString commandLine
     onException (do
-        _ <- propagateGError $ g_spawn_command_line_async commandLine'
+        _ <- propagateGError $ g_spawn_command_line_async_utf8 commandLine'
         freeMem commandLine'
         return ()
      ) (do
@@ -5798,14 +5582,14 @@ spawnCheckExitStatus exitStatus = liftIO $ do
      )
 
 
--- function g_spawn_async_with_pipes
+-- function g_spawn_async_with_pipes_utf8
 -- Args : [Arg {argCName = "working_directory", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "argv", argType = TCArray True (-1) (-1) (TBasicType TUTF8), direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "envp", argType = TCArray True (-1) (-1) (TBasicType TUTF8), direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "flags", argType = TInterface "GLib" "SpawnFlags", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "child_setup", argType = TInterface "GLib" "SpawnChildSetupFunc", direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeAsync, argClosure = 5, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "user_data", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "child_pid", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "standard_input", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "standard_output", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "standard_error", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_spawn_async_with_pipes" g_spawn_async_with_pipes :: 
+foreign import ccall "g_spawn_async_with_pipes_utf8" g_spawn_async_with_pipes_utf8 :: 
     CString ->                              -- working_directory : TBasicType TUTF8
     Ptr CString ->                          -- argv : TCArray True (-1) (-1) (TBasicType TUTF8)
     Ptr CString ->                          -- envp : TCArray True (-1) (-1) (TBasicType TUTF8)
@@ -5854,7 +5638,7 @@ spawnAsyncWithPipes workingDirectory argv envp flags childSetup = liftIO $ do
     standardError <- allocMem :: IO (Ptr Int32)
     let userData = nullPtr
     onException (do
-        _ <- propagateGError $ g_spawn_async_with_pipes maybeWorkingDirectory argv' maybeEnvp flags' maybeChildSetup userData childPid standardInput standardOutput standardError
+        _ <- propagateGError $ g_spawn_async_with_pipes_utf8 maybeWorkingDirectory argv' maybeEnvp flags' maybeChildSetup userData childPid standardInput standardOutput standardError
         childPid' <- peek childPid
         standardInput' <- peek standardInput
         standardOutput' <- peek standardOutput
@@ -5882,14 +5666,14 @@ spawnAsyncWithPipes workingDirectory argv envp flags childSetup = liftIO $ do
      )
 
 
--- function g_spawn_async
+-- function g_spawn_async_utf8
 -- Args : [Arg {argCName = "working_directory", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "argv", argType = TCArray True (-1) (-1) (TBasicType TUTF8), direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "envp", argType = TCArray True (-1) (-1) (TBasicType TUTF8), direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "flags", argType = TInterface "GLib" "SpawnFlags", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "child_setup", argType = TInterface "GLib" "SpawnChildSetupFunc", direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeAsync, argClosure = 5, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "user_data", argType = TBasicType TPtr, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "child_pid", argType = TBasicType TInt, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_spawn_async" g_spawn_async :: 
+foreign import ccall "g_spawn_async_utf8" g_spawn_async_utf8 :: 
     CString ->                              -- working_directory : TBasicType TUTF8
     Ptr CString ->                          -- argv : TCArray True (-1) (-1) (TBasicType TUTF8)
     Ptr CString ->                          -- envp : TCArray True (-1) (-1) (TBasicType TUTF8)
@@ -5932,7 +5716,7 @@ spawnAsync workingDirectory argv envp flags childSetup = liftIO $ do
     childPid <- allocMem :: IO (Ptr Int32)
     let userData = nullPtr
     onException (do
-        _ <- propagateGError $ g_spawn_async maybeWorkingDirectory argv' maybeEnvp flags' maybeChildSetup userData childPid
+        _ <- propagateGError $ g_spawn_async_utf8 maybeWorkingDirectory argv' maybeEnvp flags' maybeChildSetup userData childPid
         childPid' <- peek childPid
         freeMem maybeWorkingDirectory
         mapZeroTerminatedCArray freeMem argv'
@@ -6274,14 +6058,14 @@ shellErrorQuark  = liftIO $ do
     return result
 
 
--- function g_setenv
+-- function g_setenv_utf8
 -- Args : [Arg {argCName = "variable", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "value", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "overwrite", argType = TBasicType TBoolean, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_setenv" g_setenv :: 
+foreign import ccall "g_setenv_utf8" g_setenv_utf8 :: 
     CString ->                              -- variable : TBasicType TUTF8
     CString ->                              -- value : TBasicType TUTF8
     CInt ->                                 -- overwrite : TBasicType TBoolean
@@ -6298,7 +6082,7 @@ setenv variable value overwrite = liftIO $ do
     variable' <- textToCString variable
     value' <- textToCString value
     let overwrite' = (fromIntegral . fromEnum) overwrite
-    result <- g_setenv variable' value' overwrite'
+    result <- g_setenv_utf8 variable' value' overwrite'
     let result' = (/= 0) result
     freeMem variable'
     freeMem value'
@@ -7153,14 +6937,14 @@ mkstempFull tmpl flags mode = liftIO $ do
     return result
 
 
--- function g_mkstemp
+-- function g_mkstemp_utf8
 -- Args : [Arg {argCName = "tmpl", argType = TBasicType TFileName, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Just (TBasicType TInt)
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_mkstemp" g_mkstemp :: 
+foreign import ccall "g_mkstemp_utf8" g_mkstemp_utf8 :: 
     CString ->                              -- tmpl : TBasicType TFileName
     IO Int32
 
@@ -7171,7 +6955,7 @@ mkstemp ::
     -> m Int32                              -- result
 mkstemp tmpl = liftIO $ do
     tmpl' <- stringToCString tmpl
-    result <- g_mkstemp tmpl'
+    result <- g_mkstemp_utf8 tmpl'
     freeMem tmpl'
     return result
 
@@ -8217,14 +8001,14 @@ hostnameIsAsciiEncoded hostname = liftIO $ do
     return result'
 
 
--- function g_getenv
+-- function g_getenv_utf8
 -- Args : [Arg {argCName = "variable", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Just (TBasicType TUTF8)
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_getenv" g_getenv :: 
+foreign import ccall "g_getenv_utf8" g_getenv_utf8 :: 
     CString ->                              -- variable : TBasicType TUTF8
     IO CString
 
@@ -8235,8 +8019,8 @@ getenv ::
     -> m T.Text                             -- result
 getenv variable = liftIO $ do
     variable' <- textToCString variable
-    result <- g_getenv variable'
-    checkUnexpectedReturnNULL "g_getenv" result
+    result <- g_getenv_utf8 variable'
+    checkUnexpectedReturnNULL "g_getenv_utf8" result
     result' <- cstringToText result
     freeMem variable'
     return result'
@@ -8693,14 +8477,14 @@ getCurrentTime result_ = liftIO $ do
     return ()
 
 
--- function g_get_current_dir
+-- function g_get_current_dir_utf8
 -- Args : []
 -- Lengths : []
 -- returnType : Just (TBasicType TUTF8)
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_get_current_dir" g_get_current_dir :: 
+foreign import ccall "g_get_current_dir_utf8" g_get_current_dir_utf8 :: 
     IO CString
 
 
@@ -8708,8 +8492,8 @@ getCurrentDir ::
     (MonadIO m) =>
     m T.Text                                -- result
 getCurrentDir  = liftIO $ do
-    result <- g_get_current_dir
-    checkUnexpectedReturnNULL "g_get_current_dir" result
+    result <- g_get_current_dir_utf8
+    checkUnexpectedReturnNULL "g_get_current_dir_utf8" result
     result' <- cstringToText result
     freeMem result
     return result'
@@ -8905,14 +8689,14 @@ findProgramInPath program = liftIO $ do
     return result'
 
 
--- function g_filename_to_utf8
+-- function g_filename_to_utf8_utf8
 -- Args : [Arg {argCName = "opsysstring", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "len", argType = TBasicType TInt64, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "bytes_read", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "bytes_written", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TUTF8)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_filename_to_utf8" g_filename_to_utf8 :: 
+foreign import ccall "g_filename_to_utf8_utf8" g_filename_to_utf8_utf8 :: 
     CString ->                              -- opsysstring : TBasicType TUTF8
     Int64 ->                                -- len : TBasicType TInt64
     Ptr Word64 ->                           -- bytes_read : TBasicType TUInt64
@@ -8931,8 +8715,8 @@ filenameToUtf8 opsysstring len = liftIO $ do
     bytesRead <- allocMem :: IO (Ptr Word64)
     bytesWritten <- allocMem :: IO (Ptr Word64)
     onException (do
-        result <- propagateGError $ g_filename_to_utf8 opsysstring' len bytesRead bytesWritten
-        checkUnexpectedReturnNULL "g_filename_to_utf8" result
+        result <- propagateGError $ g_filename_to_utf8_utf8 opsysstring' len bytesRead bytesWritten
+        checkUnexpectedReturnNULL "g_filename_to_utf8_utf8" result
         result' <- cstringToText result
         freeMem result
         bytesRead' <- peek bytesRead
@@ -8948,14 +8732,14 @@ filenameToUtf8 opsysstring len = liftIO $ do
      )
 
 
--- function g_filename_to_uri
+-- function g_filename_to_uri_utf8
 -- Args : [Arg {argCName = "filename", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "hostname", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Just (TBasicType TUTF8)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_filename_to_uri" g_filename_to_uri :: 
+foreign import ccall "g_filename_to_uri_utf8" g_filename_to_uri_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     CString ->                              -- hostname : TBasicType TUTF8
     Ptr (Ptr GError) ->                     -- error
@@ -8975,8 +8759,8 @@ filenameToUri filename hostname = liftIO $ do
             jHostname' <- textToCString jHostname
             return jHostname'
     onException (do
-        result <- propagateGError $ g_filename_to_uri filename' maybeHostname
-        checkUnexpectedReturnNULL "g_filename_to_uri" result
+        result <- propagateGError $ g_filename_to_uri_utf8 filename' maybeHostname
+        checkUnexpectedReturnNULL "g_filename_to_uri_utf8" result
         result' <- cstringToText result
         freeMem result
         freeMem filename'
@@ -8988,14 +8772,14 @@ filenameToUri filename hostname = liftIO $ do
      )
 
 
--- function g_filename_from_utf8
+-- function g_filename_from_utf8_utf8
 -- Args : [Arg {argCName = "utf8string", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "len", argType = TBasicType TInt64, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "bytes_read", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "bytes_written", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : [Arg {argCName = "bytes_written", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- returnType : Just (TCArray False (-1) 3 (TBasicType TUInt8))
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_filename_from_utf8" g_filename_from_utf8 :: 
+foreign import ccall "g_filename_from_utf8_utf8" g_filename_from_utf8_utf8 :: 
     CString ->                              -- utf8string : TBasicType TUTF8
     Int64 ->                                -- len : TBasicType TInt64
     Ptr Word64 ->                           -- bytes_read : TBasicType TUInt64
@@ -9014,9 +8798,9 @@ filenameFromUtf8 utf8string len = liftIO $ do
     bytesRead <- allocMem :: IO (Ptr Word64)
     bytesWritten <- allocMem :: IO (Ptr Word64)
     onException (do
-        result <- propagateGError $ g_filename_from_utf8 utf8string' len bytesRead bytesWritten
+        result <- propagateGError $ g_filename_from_utf8_utf8 utf8string' len bytesRead bytesWritten
         bytesWritten' <- peek bytesWritten
-        checkUnexpectedReturnNULL "g_filename_from_utf8" result
+        checkUnexpectedReturnNULL "g_filename_from_utf8_utf8" result
         result' <- (unpackByteStringWithLength bytesWritten') result
         freeMem result
         bytesRead' <- peek bytesRead
@@ -9031,14 +8815,14 @@ filenameFromUtf8 utf8string len = liftIO $ do
      )
 
 
--- function g_filename_from_uri
+-- function g_filename_from_uri_utf8
 -- Args : [Arg {argCName = "uri", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "hostname", argType = TBasicType TUTF8, direction = DirectionOut, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TFileName)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_filename_from_uri" g_filename_from_uri :: 
+foreign import ccall "g_filename_from_uri_utf8" g_filename_from_uri_utf8 :: 
     CString ->                              -- uri : TBasicType TUTF8
     Ptr CString ->                          -- hostname : TBasicType TUTF8
     Ptr (Ptr GError) ->                     -- error
@@ -9053,8 +8837,8 @@ filenameFromUri uri = liftIO $ do
     uri' <- textToCString uri
     hostname <- allocMem :: IO (Ptr CString)
     onException (do
-        result <- propagateGError $ g_filename_from_uri uri' hostname
-        checkUnexpectedReturnNULL "g_filename_from_uri" result
+        result <- propagateGError $ g_filename_from_uri_utf8 uri' hostname
+        checkUnexpectedReturnNULL "g_filename_from_uri_utf8" result
         result' <- cstringToString result
         freeMem result
         hostname' <- peek hostname
@@ -9123,14 +8907,14 @@ filenameDisplayBasename filename = liftIO $ do
     return result'
 
 
--- function g_file_test
+-- function g_file_test_utf8
 -- Args : [Arg {argCName = "filename", argType = TBasicType TUTF8, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "test", argType = TInterface "GLib" "FileTest", direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing}]
 -- Lengths : []
 -- returnType : Just (TBasicType TBoolean)
 -- throws : False
 -- Skip return : False
 
-foreign import ccall "g_file_test" g_file_test :: 
+foreign import ccall "g_file_test_utf8" g_file_test_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     CUInt ->                                -- test : TInterface "GLib" "FileTest"
     IO CInt
@@ -9144,7 +8928,7 @@ fileTest ::
 fileTest filename test = liftIO $ do
     filename' <- textToCString filename
     let test' = gflagsToWord test
-    result <- g_file_test filename' test'
+    result <- g_file_test_utf8 filename' test'
     let result' = (/= 0) result
     freeMem filename'
     return result'
@@ -9216,14 +9000,14 @@ fileReadLink filename = liftIO $ do
      )
 
 
--- function g_file_open_tmp
+-- function g_file_open_tmp_utf8
 -- Args : [Arg {argCName = "tmpl", argType = TBasicType TFileName, direction = DirectionIn, mayBeNull = True, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "name_used", argType = TBasicType TFileName, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : []
 -- returnType : Just (TBasicType TInt)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_file_open_tmp" g_file_open_tmp :: 
+foreign import ccall "g_file_open_tmp_utf8" g_file_open_tmp_utf8 :: 
     CString ->                              -- tmpl : TBasicType TFileName
     Ptr CString ->                          -- name_used : TBasicType TFileName
     Ptr (Ptr GError) ->                     -- error
@@ -9242,7 +9026,7 @@ fileOpenTmp tmpl = liftIO $ do
             return jTmpl'
     nameUsed <- allocMem :: IO (Ptr CString)
     onException (do
-        result <- propagateGError $ g_file_open_tmp maybeTmpl nameUsed
+        result <- propagateGError $ g_file_open_tmp_utf8 maybeTmpl nameUsed
         nameUsed' <- peek nameUsed
         nameUsed'' <- cstringToString nameUsed'
         freeMem nameUsed'
@@ -9255,14 +9039,14 @@ fileOpenTmp tmpl = liftIO $ do
      )
 
 
--- function g_file_get_contents
+-- function g_file_get_contents_utf8
 -- Args : [Arg {argCName = "filename", argType = TBasicType TFileName, direction = DirectionIn, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferNothing},Arg {argCName = "contents", argType = TCArray False (-1) 2 (TBasicType TUInt8), direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything},Arg {argCName = "length", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- Lengths : [Arg {argCName = "length", argType = TBasicType TUInt64, direction = DirectionOut, mayBeNull = False, argScope = ScopeTypeInvalid, argClosure = -1, argDestroy = -1, argCallerAllocates = False, transfer = TransferEverything}]
 -- returnType : Just (TBasicType TBoolean)
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_file_get_contents" g_file_get_contents :: 
+foreign import ccall "g_file_get_contents_utf8" g_file_get_contents_utf8 :: 
     CString ->                              -- filename : TBasicType TFileName
     Ptr (Ptr Word8) ->                      -- contents : TCArray False (-1) 2 (TBasicType TUInt8)
     Ptr Word64 ->                           -- length : TBasicType TUInt64
@@ -9279,7 +9063,7 @@ fileGetContents filename = liftIO $ do
     contents <- allocMem :: IO (Ptr (Ptr Word8))
     length_ <- allocMem :: IO (Ptr Word64)
     onException (do
-        _ <- propagateGError $ g_file_get_contents filename' contents length_
+        _ <- propagateGError $ g_file_get_contents_utf8 filename' contents length_
         length_' <- peek length_
         contents' <- peek contents
         contents'' <- (unpackByteStringWithLength length_') contents'

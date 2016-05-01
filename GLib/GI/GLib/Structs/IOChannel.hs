@@ -233,7 +233,7 @@ type IOChannelAttributeList = ('[ ] :: [(Symbol, *)])
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "g_io_channel_new_file" g_io_channel_new_file :: 
+foreign import ccall "g_io_channel_new_file_utf8" g_io_channel_new_file_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     CString ->                              -- mode : TBasicType TUTF8
     Ptr (Ptr GError) ->                     -- error
@@ -249,8 +249,8 @@ iOChannelNewFile filename mode = liftIO $ do
     filename' <- textToCString filename
     mode' <- textToCString mode
     onException (do
-        result <- propagateGError $ g_io_channel_new_file filename' mode'
-        checkUnexpectedReturnNULL "g_io_channel_new_file" result
+        result <- propagateGError $ g_io_channel_new_file_utf8 filename' mode'
+        checkUnexpectedReturnNULL "g_io_channel_new_file_utf8" result
         result' <- (wrapBoxed IOChannel) result
         freeMem filename'
         freeMem mode'

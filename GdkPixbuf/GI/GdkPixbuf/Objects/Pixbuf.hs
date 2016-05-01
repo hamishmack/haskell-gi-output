@@ -791,7 +791,7 @@ pixbufNewFromData data_ colorspace hasAlpha bitsPerSample width height rowstride
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "gdk_pixbuf_new_from_file" gdk_pixbuf_new_from_file :: 
+foreign import ccall "gdk_pixbuf_new_from_file_utf8" gdk_pixbuf_new_from_file_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     Ptr (Ptr GError) ->                     -- error
     IO (Ptr Pixbuf)
@@ -804,8 +804,8 @@ pixbufNewFromFile ::
 pixbufNewFromFile filename = liftIO $ do
     filename' <- textToCString filename
     onException (do
-        result <- propagateGError $ gdk_pixbuf_new_from_file filename'
-        checkUnexpectedReturnNULL "gdk_pixbuf_new_from_file" result
+        result <- propagateGError $ gdk_pixbuf_new_from_file_utf8 filename'
+        checkUnexpectedReturnNULL "gdk_pixbuf_new_from_file_utf8" result
         result' <- (wrapObject Pixbuf) result
         freeMem filename'
         return result'
@@ -821,7 +821,7 @@ pixbufNewFromFile filename = liftIO $ do
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "gdk_pixbuf_new_from_file_at_scale" gdk_pixbuf_new_from_file_at_scale :: 
+foreign import ccall "gdk_pixbuf_new_from_file_at_scale_utf8" gdk_pixbuf_new_from_file_at_scale_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     Int32 ->                                -- width : TBasicType TInt
     Int32 ->                                -- height : TBasicType TInt
@@ -841,8 +841,8 @@ pixbufNewFromFileAtScale filename width height preserveAspectRatio = liftIO $ do
     filename' <- textToCString filename
     let preserveAspectRatio' = (fromIntegral . fromEnum) preserveAspectRatio
     onException (do
-        result <- propagateGError $ gdk_pixbuf_new_from_file_at_scale filename' width height preserveAspectRatio'
-        checkUnexpectedReturnNULL "gdk_pixbuf_new_from_file_at_scale" result
+        result <- propagateGError $ gdk_pixbuf_new_from_file_at_scale_utf8 filename' width height preserveAspectRatio'
+        checkUnexpectedReturnNULL "gdk_pixbuf_new_from_file_at_scale_utf8" result
         result' <- (wrapObject Pixbuf) result
         freeMem filename'
         return result'
@@ -858,7 +858,7 @@ pixbufNewFromFileAtScale filename width height preserveAspectRatio = liftIO $ do
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "gdk_pixbuf_new_from_file_at_size" gdk_pixbuf_new_from_file_at_size :: 
+foreign import ccall "gdk_pixbuf_new_from_file_at_size_utf8" gdk_pixbuf_new_from_file_at_size_utf8 :: 
     CString ->                              -- filename : TBasicType TUTF8
     Int32 ->                                -- width : TBasicType TInt
     Int32 ->                                -- height : TBasicType TInt
@@ -875,8 +875,8 @@ pixbufNewFromFileAtSize ::
 pixbufNewFromFileAtSize filename width height = liftIO $ do
     filename' <- textToCString filename
     onException (do
-        result <- propagateGError $ gdk_pixbuf_new_from_file_at_size filename' width height
-        checkUnexpectedReturnNULL "gdk_pixbuf_new_from_file_at_size" result
+        result <- propagateGError $ gdk_pixbuf_new_from_file_at_size_utf8 filename' width height
+        checkUnexpectedReturnNULL "gdk_pixbuf_new_from_file_at_size_utf8" result
         result' <- (wrapObject Pixbuf) result
         freeMem filename'
         return result'
@@ -2073,7 +2073,7 @@ instance (signature ~ (PixbufSaveFunc -> T.Text -> [T.Text] -> [T.Text] -> m ())
 -- throws : True
 -- Skip return : False
 
-foreign import ccall "gdk_pixbuf_savev" gdk_pixbuf_savev :: 
+foreign import ccall "gdk_pixbuf_savev_utf8" gdk_pixbuf_savev_utf8 :: 
     Ptr Pixbuf ->                           -- _obj : TInterface "GdkPixbuf" "Pixbuf"
     CString ->                              -- filename : TBasicType TUTF8
     CString ->                              -- type : TBasicType TUTF8
@@ -2098,7 +2098,7 @@ pixbufSavev _obj filename type_ optionKeys optionValues = liftIO $ do
     optionKeys' <- packZeroTerminatedUTF8CArray optionKeys
     optionValues' <- packZeroTerminatedUTF8CArray optionValues
     onException (do
-        _ <- propagateGError $ gdk_pixbuf_savev _obj' filename' type_' optionKeys' optionValues'
+        _ <- propagateGError $ gdk_pixbuf_savev_utf8 _obj' filename' type_' optionKeys' optionValues'
         touchManagedPtr _obj
         freeMem filename'
         freeMem type_'

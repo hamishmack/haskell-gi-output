@@ -31,7 +31,6 @@ data DBusMessageGetReplySerialMethodInfo
 data DBusMessageGetSenderMethodInfo
 data DBusMessageGetSerialMethodInfo
 data DBusMessageGetSignatureMethodInfo
-data DBusMessageGetUnixFdListMethodInfo
 data DBusMessageLockMethodInfo
 data DBusMessageNewMethodErrorLiteralMethodInfo
 data DBusMessageNewMethodReplyMethodInfo
@@ -51,6 +50,5 @@ data DBusMessageSetReplySerialMethodInfo
 data DBusMessageSetSenderMethodInfo
 data DBusMessageSetSerialMethodInfo
 data DBusMessageSetSignatureMethodInfo
-data DBusMessageSetUnixFdListMethodInfo
 data DBusMessageToBlobMethodInfo
 data DBusMessageToGerrorMethodInfo
